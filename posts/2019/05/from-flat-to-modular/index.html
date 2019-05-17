@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="Andi Rückauer ">
+<meta name="description"
+    content="Transforming of a flat application structure to a modular one in a Zend Expressive project
+In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure." />
+<meta name="keywords" content="andi, rückauer, blog, software, development" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://arueckauer.github.io/posts/2019/05/from-flat-to-modular/" />
+
+
+<title>
+    
+    From Flat to Modular :: Andi Rückauer  — Thoughts container
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://arueckauer.github.io/main.min.91687bbfc139d7ff1a244bb6d7324425f9c4f424eaaad242b478e3b3cf56396a.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://arueckauer.github.io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://arueckauer.github.io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://arueckauer.github.io/favicon-16x16.png">
+<link rel="manifest" href="https://arueckauer.github.io/site.webmanifest">
+<link rel="mask-icon" href="https://arueckauer.github.io/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
+<meta name="theme-color" content="#252627">
+<meta itemprop="name" content="From Flat to Modular">
+<meta itemprop="description" content="Transforming of a flat application structure to a modular one in a Zend Expressive project
+In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure.">
+
+
+<meta itemprop="datePublished" content="2019-05-17T06:30:00&#43;02:00" />
+<meta itemprop="dateModified" content="2019-05-17T07:32:50&#43;02:00" />
+<meta itemprop="wordCount" content="488">
+
+
+
+<meta itemprop="keywords" content="zend-expressive," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://arueckauer.github.io/"/>
+
+<meta name="twitter:title" content="From Flat to Modular"/>
+<meta name="twitter:description" content="Transforming of a flat application structure to a modular one in a Zend Expressive project
+In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure."/>
+
+
+
+
+<meta property="article:published_time" content="2019-05-17 06:30:00 &#43;0200 CEST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://arueckauer.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">Thoughts Container</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://arueckauer.github.io/about">About</a></li><li><a href="https://arueckauer.github.io/posts">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>3 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://arueckauer.github.io/posts/2019/05/from-flat-to-modular/">From Flat to Modular</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<p><em>Transforming of a flat application structure to a modular one in a Zend Expressive project</em></p>
+
+<p>In an <a href="https://docs.zendframework.com/zend-expressive/" target="_blank">Expressive</a> project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the <a href="https://github.com/zendframework/zend-expressive-skeleton" target="_blank">Expressive Skeleton</a>. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure. It also means not only having separate modules but also separate namespaces. This makes handling class names much easier.</p>
+
+<p>Looking back on it now I tend to always choose a modular structure. The only use case for a flat structure would be a micro application with very little backend code. Even then it is questionable as to why not using a modular structure, since the difference between the two are not that big and converting the structure later on is much more effort. But I am getting ahead of myself.</p>
+
+<p>So the single module horded a ton of classes with their factories. This got quite heavy and sometimes confusing. To clear up all the confusion I decided to convert the code structure from flat to modular.</p>
+
+<h2 id="flat-vs-modular-the-comparison">Flat vs. modular: the comparison</h2>
+
+<p>I could not find any documentation or user contributions on how to convert the structure. To find out what the differences are, I decided to create two new projects: one with a flat and one with a modular structure and then compare the two.</p>
+
+<p>I create a new project with flat code structure. All default selections were chosen.</p>
+
+<pre><code class="language-bash">$ composer create-project zendframework/zend-expressive-skeleton expressive-flat
+</code></pre>
+
+<p>For modular structure first question <em>What type of installation would you like?</em> was answered with 3 - Modular. For all other options the default selections where chosen.</p>
+
+<pre><code class="language-bash">$ composer create-project zendframework/zend-expressive-skeleton expressive-modular
+</code></pre>
+
+<p><img src="https://arueckauer.github.io/img/from-flat-to-modular/create-project-with-modular-code-structure.png" alt="Create project with modular code structure" /></p>
+
+<p>The structural differences of the two projects are (1) the location of the source file within the <code>App</code> module, (2) a template folder and (3) the autoloading configuration.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Flat</th>
+<th>Modular</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Source App Module</td>
+<td><code>src/App</code></td>
+<td><code>src/App/src</code></td>
+</tr>
+
+<tr>
+<td>Template Ordner</td>
+<td><em>n/a</em></td>
+<td><code>src/App/templates</code></td>
+</tr>
+
+<tr>
+<td>Autoload configuration</td>
+<td><code>&quot;App\\&quot;: &quot;src/App/&quot;</code></td>
+<td><code>&quot;App\\&quot;: &quot;src/App/src/&quot;</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="making-the-transition">Making the transition</h2>
+
+<p>Consequently, I needed to make the following changes to convert the project structure:</p>
+
+<ol>
+<li>Move contents of <code>src/App</code> to <code>src/App/src</code></li>
+<li><em>Optional:</em> Move the templates from within the <code>App</code> folder to <code>src /App/templates</code> and adjust the configured templates path (in my case in <code>config/autoload/application.global.php</code>)</li>
+<li>Update the autoload configuration in <code>composer.json</code> to <code>&quot;App\\&quot;: &quot;src/App/src/&quot;</code></li>
+<li>Execute <code>composer dump-autoload</code> to update the autoloading classes</li>
+</ol>
+
+<p>That&rsquo;s it, the transition is made.</p>
+
+<p>But my initial issue was not solved. I went ahead and re-organized the <code>App</code> module, moving various folders into their own module. For each folder I repeated the following steps.</p>
+
+<ol>
+<li>Create a new module <code>$ composer expressive module:create {ModuleName}</code></li>
+<li>Moved classes from <code>src/App/src/{ModuleName}/</code> to <code>src/{ModuleName}/src/</code></li>
+<li>Updated namespace of classes and imports from <code>App\{ModuleName}</code> to <code>{ModuleName}</code></li>
+<li>Moved dependencies definitions from <code>backend/App/src/ConfigProvider.php</code> to <code>backend/{ModuleName}/src/ConfigProvider.php</code></li>
+</ol>
+
+<p>Tadaa! Now the setup is much cleaner and simpler. Mission accomplished.</p>
+
+<p>Gude Laune!</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://arueckauer.github.io/tags/zend-expressive">zend-expressive</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>488 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-05-17 06:30 &#43;0200</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/3ca30d632524d363272aa4f054da6599604682e0" target="_blank" rel="noopener">3ca30d6</a> @ 2019-05-17</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://arueckauer.github.io/posts/2019/05/just-do-it/">
+                                <span class="button__text">Just do it</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2019</span>
+            
+                <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="https://arueckauer.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.cf7871ed49474a80ed457154d24e61f7881adbe0f9384951a74ac46b688a39a4dbfa68bc6d37baeb058186de354ead3487d4ee7f083ea4cba860c48600b694f3.js" integrity="sha512-z3hx7UlHSoDtRXFU0k5h94ga2&#43;D5OElRp0rEa2iKOaTb&#43;mi8bTe66wWBht41Tq00h9Tufwg&#43;pMuoYMSGALaU8w=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-35992501-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+	
+		<script src="https://unpkg.com/feather-icons"></script>
+	
+
+
+<script>
+    feather.replace()
+</script>
+
+    </body>
+</html>
