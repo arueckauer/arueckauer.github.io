@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 20 May 2019 06:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 20 May 2019 08:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>https://arueckauer.github.io/about/</link>
+      <pubDate>Mon, 20 May 2019 08:00:00 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/about/</guid>
+      <description>Hi, my name is Andi Rückauer. I am an Application Engineer at Intelliact AG.
+I&amp;rsquo;m originally from Stuttgart, Germany and am living in Switzerland, home of my beautiful wife, since 2014. We have two children who keep us on our toes.
+Besides my interest in software development and technology in general, I greatly enjoy scuba diving and photography.</description>
+    </item>
     
     <item>
       <title>100 Days of Code</title>
