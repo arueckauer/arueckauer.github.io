@@ -6,8 +6,26 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 20 May 2019 06:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 20 May 2019 22:00:00 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Day 1: Getting started with Terraform</title>
+            <link>https://arueckauer.github.io/posts/2019/05/day-1-getting-started-with-terraform/</link>
+            <pubDate>Mon, 20 May 2019 22:00:00 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/05/day-1-getting-started-with-terraform/</guid>
+            <description>This year I attended the Global Azure Bootcamp in Zürich. It was a very well organized conference with lots of interesting sessions. I definitely will go again next year!
+One of my favorites was Terraform and Azure - How to GitOps by Sandro Koechli and Jörn Stenkamp. They introduced the idea of managing infrastructure as code with Git. This concept was new to me and very exciting. Unfortunately time did not allow for some demo.</description>
+            <content type="html"><![CDATA[<p>This year I attended the <a href="https://www.zurich.azurebootcamp.net/" target="_blank">Global Azure Bootcamp in Zürich</a>. It was a very well organized conference with lots of interesting sessions. I definitely will go again next year!</p>
+
+<p>One of my favorites was <em><a href="https://speakerdeck.com/azurezurich/gabc2019-terraform-and-azure-how-to-gitops-by-sandro-kochli-and-jorn-stenkamp" target="_blank">Terraform and Azure - How to GitOps</a></em> by <a href="https://www.linkedin.com/in/sandro-koechli/" target="_blank">Sandro Koechli</a> and <a href="https://www.linkedin.com/in/joern-stenkamp-732b58100/" target="_blank">Jörn Stenkamp</a>. They introduced the idea of managing infrastructure as code with Git. This concept was new to me and very exciting. Unfortunately time did not allow for some demo.</p>
+
+<p>Today I worked through the <a href="https://learn.hashicorp.com/terraform/getting-started/build" target="_blank">Getting Started</a> chapter for <a href="https://www.terraform.io/" target="_blank">Terraform</a>. I set up an AWS account and wrote my first Terraform configuration. Via the CLI an infrastructure can be initialized, applied, changed and destroyed (among other commands like plan and show).</p>
+
+<p>I gained a basic understanding of how Terraform works. The configuration of <a href="https://www.terraform.io/docs/providers/index.html" target="_blank">Providers</a> and Resources is still very overwhelming.</p>
+]]></content>
+        </item>
         
         <item>
             <title>100 Days of Code</title>

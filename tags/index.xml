@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 20 May 2019 06:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 20 May 2019 22:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>100-days-of-code</title>
       <link>https://arueckauer.github.io/tags/100-days-of-code/</link>
-      <pubDate>Mon, 20 May 2019 06:00:00 +0200</pubDate>
+      <pubDate>Mon, 20 May 2019 22:00:00 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/tags/100-days-of-code/</guid>
       <description></description>
@@ -24,9 +24,18 @@
     <item>
       <title>DevOps</title>
       <link>https://arueckauer.github.io/tags/devops/</link>
-      <pubDate>Mon, 20 May 2019 06:00:00 +0200</pubDate>
+      <pubDate>Mon, 20 May 2019 22:00:00 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terraform</title>
+      <link>https://arueckauer.github.io/tags/terraform/</link>
+      <pubDate>Mon, 20 May 2019 22:00:00 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/terraform/</guid>
       <description></description>
     </item>
     
