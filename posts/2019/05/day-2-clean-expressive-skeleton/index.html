@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="Andi Rückauer ">
+<meta name="description"
+    content="Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
+ code structure, DI container, router, template engine and error handler.  It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bit and pieces were actually there which could be removed." />
+<meta name="keywords" content="andi, rückauer, blog, software, development" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/" />
+
+
+<title>
+    
+    Day 2: Clean Expressive Skeleton :: Andi Rückauer  — Thoughts container
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://arueckauer.github.io/main.min.91687bbfc139d7ff1a244bb6d7324425f9c4f424eaaad242b478e3b3cf56396a.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://arueckauer.github.io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://arueckauer.github.io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://arueckauer.github.io/favicon-16x16.png">
+<link rel="manifest" href="https://arueckauer.github.io/site.webmanifest">
+<link rel="mask-icon" href="https://arueckauer.github.io/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
+<meta name="theme-color" content="#252627">
+<meta itemprop="name" content="Day 2: Clean Expressive Skeleton">
+<meta itemprop="description" content="Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
+ code structure, DI container, router, template engine and error handler.  It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bit and pieces were actually there which could be removed.">
+
+
+<meta itemprop="datePublished" content="2019-05-21T20:45:00&#43;02:00" />
+<meta itemprop="dateModified" content="2019-05-21T21:51:51&#43;02:00" />
+<meta itemprop="wordCount" content="580">
+
+
+
+<meta itemprop="keywords" content="zend-expressive,laminas," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://arueckauer.github.io/"/>
+
+<meta name="twitter:title" content="Day 2: Clean Expressive Skeleton"/>
+<meta name="twitter:description" content="Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
+ code structure, DI container, router, template engine and error handler.  It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bit and pieces were actually there which could be removed."/>
+
+
+
+
+<meta property="article:published_time" content="2019-05-21 20:45:00 &#43;0200 CEST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://arueckauer.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">Thoughts Container</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://arueckauer.github.io/about">About</a></li><li><a href="https://arueckauer.github.io/posts">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>3 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/">Day 2: Clean Expressive Skeleton</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<p>Whenever starting a new <a href="https://getexpressive.org" target="_blank">Zend Expressive</a> project, I use the handy <code>zendframework/zend-expressive-skeleton</code>. It creates an almost empty Expressive application structure with your choice of</p>
+
+<ul>
+<li>code structure,</li>
+<li>DI container,</li>
+<li>router,</li>
+<li>template engine and</li>
+<li>error handler.</li>
+</ul>
+
+<p>It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bit and pieces were actually there which could be removed.</p>
+
+<h2 id="create-a-new-project">Create a new project</h2>
+
+<p>To create a new skeleton application, I used <code>composer create-project</code>.</p>
+
+<pre><code class="language-powershell">composer create-project zendframework/zend-expressive-skeleton clean-skeleton
+</code></pre>
+
+<h2 id="composer-json">composer.json</h2>
+
+<p>First stop is the <code>composer.json</code>. I update the following section to my needs.</p>
+
+<ul>
+<li><code>name</code></li>
+<li><code>description</code></li>
+<li><code>homepage</code></li>
+<li><code>license</code></li>
+</ul>
+
+<p>Then I removed the following sections - you may want to update these to your needs, especially if you plan to publish your project/library on <a href="https://packagist.org" target="_blank">Packagist</a>.</p>
+
+<ul>
+<li><code>keywords</code></li>
+<li><code>extra</code></li>
+<li><code>support</code></li>
+</ul>
+
+<p>Then I removed the <code>post-create-project-cmd</code> from the <code>scripts</code> section.</p>
+
+<h3 id="further-changes">Further changes</h3>
+
+<p>If you&rsquo;re using some other code style tool like [PHP-CS-Fixer]<a href="https://cs.symfony.com/)" target="_blank">https://cs.symfony.com/)</a>, you may want to update the <code>require-dev</code> and in the <code>scripts</code> section the <code>cs-check</code> and <code>cs-fix</code> commands accordingly. Since I sticked to the defaults, I left them as they were.</p>
+
+<p>In the end, my <code>composer.json</code> looked like the following.</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;arueckauer/clean-skeleton&quot;,
+  &quot;description&quot;: &quot;A zend expressive skeleton purged of all unnecessary items&quot;,
+  &quot;type&quot;: &quot;project&quot;,
+  &quot;homepage&quot;: &quot;https://github.com/arueckauer/clean-skeleton&quot;,
+  &quot;license&quot;: &quot;MIT&quot;,
+  &quot;config&quot;: {
+    &quot;sort-packages&quot;: true
+  },
+  &quot;require&quot;: {
+    &quot;php&quot;: &quot;^7.1&quot;,
+    &quot;zendframework/zend-component-installer&quot;: &quot;^2.1.1&quot;,
+    &quot;zendframework/zend-config-aggregator&quot;: &quot;^1.0&quot;,
+    &quot;zendframework/zend-diactoros&quot;: &quot;^1.7.1 || ^2.0&quot;,
+    &quot;zendframework/zend-expressive&quot;: &quot;^3.0.1&quot;,
+    &quot;zendframework/zend-expressive-helpers&quot;: &quot;^5.0&quot;,
+    &quot;zendframework/zend-stdlib&quot;: &quot;^3.1&quot;,
+    &quot;zendframework/zend-servicemanager&quot;: &quot;^3.3&quot;,
+    &quot;zendframework/zend-expressive-fastroute&quot;: &quot;^3.0&quot;
+  },
+  &quot;require-dev&quot;: {
+    &quot;phpunit/phpunit&quot;: &quot;^7.0.1&quot;,
+    &quot;roave/security-advisories&quot;: &quot;dev-master&quot;,
+    &quot;squizlabs/php_codesniffer&quot;: &quot;^2.9.1&quot;,
+    &quot;zendframework/zend-expressive-tooling&quot;: &quot;^1.0&quot;,
+    &quot;zfcampus/zf-development-mode&quot;: &quot;^3.1&quot;,
+    &quot;filp/whoops&quot;: &quot;^2.1.12&quot;
+  },
+  &quot;autoload&quot;: {
+    &quot;psr-4&quot;: {
+      &quot;App\\&quot;: &quot;src/App/src/&quot;
+    }
+  },
+  &quot;autoload-dev&quot;: {
+    &quot;psr-4&quot;: {
+      &quot;AppTest\\&quot;: &quot;test/AppTest/&quot;
+    }
+  },
+  &quot;scripts&quot;: {
+    &quot;development-disable&quot;: &quot;zf-development-mode disable&quot;,
+    &quot;development-enable&quot;: &quot;zf-development-mode enable&quot;,
+    &quot;development-status&quot;: &quot;zf-development-mode status&quot;,
+    &quot;expressive&quot;: &quot;expressive --ansi&quot;,
+    &quot;check&quot;: [&quot;@cs-check&quot;, &quot;@test&quot;],
+    &quot;clear-config-cache&quot;: &quot;php bin/clear-config-cache.php&quot;,
+    &quot;cs-check&quot;: &quot;phpcs&quot;,
+    &quot;cs-fix&quot;: &quot;phpcbf&quot;,
+    &quot;serve&quot;: &quot;php -S 0.0.0.0:8080 -t public/&quot;,
+    &quot;test&quot;: &quot;phpunit --colors=always&quot;,
+    &quot;test-coverage&quot;: &quot;phpunit --colors=always --coverage-clover clover.xml&quot;
+  }
+}
+</code></pre>
+
+<p>A <code>composer update</code> confirmed that no updates were required after making the adjustments.</p>
+
+<h2 id="license">License</h2>
+
+<p>I replaced the LICENSE file with the <a href="https://choosealicense.com" target="_blank">license of my choice</a>.</p>
+
+<h2 id="coding-standard">Coding Standard</h2>
+
+<p>If desired, you can update name and rules in <code>phpcs.xml.dist</code>. For the purpose of this test, they remained unchanged in my case.</p>
+
+<h2 id="readme">Readme</h2>
+
+<p>I emptied the readme file, leaving only an h1 with the project name. Usually I fill the readme up with information about the package, setup etc. as the project grows.</p>
+
+<h2 id="shipped-handlers">Shipped Handlers</h2>
+
+<p>Next, I removed the Handler classes with its containing folder, tests and configuration references.</p>
+
+<p>Deleted directories:</p>
+
+<ul>
+<li><code>src/App/src/Handler</code></li>
+<li><code>test/AppTest/Handler</code></li>
+</ul>
+
+<p>Also, I removed the defined routes in <code>config/routes.php</code> and the dependency definitions in <code>src/App/src/ConfigProvider.php</code>.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>In <code>config/config.php</code> I removed Swoole config. If you&rsquo;re using Swoole, you can replace it by an explicit inclusion of the ConfigProvider.</p>
+
+<h2 id="done">Done</h2>
+
+<p>To be honest, my first impression of what can be purged of the skeleton was much more. But there is no clutter whatsoever, just some examples. This challenge has helped me better understand the setup of the skeleton package and showed me just how neat it is organized. I love it.</p>
+
+<h2 id="other-skeleton-resources">Other Skeleton resources</h2>
+
+<p>There are two other skeletons for PHP applications which I want to mention at this point. They both are a closer look worth it, if you&rsquo;re starting new PHP projects on a fairly regular basis or want some reference from time to time.</p>
+
+<ol>
+<li><a href="https://github.com/thephpleague/skeleton" target="_blank">thephpleague/skeleton</a> and</li>
+<li><a href="https://github.com/php-pds/skeleton" target="_blank">php-pds/skeleton</a></li>
+</ol>
+
+<p>The thephpleague/skeleton comes with templates for GitHub issues and pull-requests. And also, a <a href="https://github.com/thephpleague/skeleton/blob/master/prefill.php" target="_blank">prefill</a> command which replaces variables like vendor and package names and urls throughout the cloned repo.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://arueckauer.github.io/tags/zend-expressive">zend-expressive</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/laminas">laminas</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>580 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-05-21 20:45 &#43;0200</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/27d14239038c1cd92bbf3b730fffb6c29aabb8bc" target="_blank" rel="noopener">27d1423</a> @ 2019-05-21</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://arueckauer.github.io/posts/2019/05/day-1-getting-started-with-terraform/">
+                                <span class="button__text">Day 1: Getting started with Terraform</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2019</span>
+            
+                <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="https://arueckauer.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.cf7871ed49474a80ed457154d24e61f7881adbe0f9384951a74ac46b688a39a4dbfa68bc6d37baeb058186de354ead3487d4ee7f083ea4cba860c48600b694f3.js" integrity="sha512-z3hx7UlHSoDtRXFU0k5h94ga2&#43;D5OElRp0rEa2iKOaTb&#43;mi8bTe66wWBht41Tq00h9Tufwg&#43;pMuoYMSGALaU8w=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-35992501-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+	
+		<script src="https://unpkg.com/feather-icons"></script>
+	
+
+
+<script>
+    feather.replace()
+</script>
+
+    </body>
+</html>

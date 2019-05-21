@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 20 May 2019 22:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 21 May 2019 20:45:00 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Day 2: Clean Expressive Skeleton</title>
+      <link>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</link>
+      <pubDate>Tue, 21 May 2019 20:45:00 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</guid>
+      <description>Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
+ code structure, DI container, router, template engine and error handler.  It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bit and pieces were actually there which could be removed.</description>
+    </item>
     
     <item>
       <title>Day 1: Getting started with Terraform</title>

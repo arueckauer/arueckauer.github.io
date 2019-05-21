@@ -6,8 +6,166 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 20 May 2019 22:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Tue, 21 May 2019 20:45:00 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Day 2: Clean Expressive Skeleton</title>
+            <link>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</link>
+            <pubDate>Tue, 21 May 2019 20:45:00 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</guid>
+            <description>Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
+ code structure, DI container, router, template engine and error handler.  It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bit and pieces were actually there which could be removed.</description>
+            <content type="html"><![CDATA[
+
+<p>Whenever starting a new <a href="https://getexpressive.org" target="_blank">Zend Expressive</a> project, I use the handy <code>zendframework/zend-expressive-skeleton</code>. It creates an almost empty Expressive application structure with your choice of</p>
+
+<ul>
+<li>code structure,</li>
+<li>DI container,</li>
+<li>router,</li>
+<li>template engine and</li>
+<li>error handler.</li>
+</ul>
+
+<p>It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bit and pieces were actually there which could be removed.</p>
+
+<h2 id="create-a-new-project">Create a new project</h2>
+
+<p>To create a new skeleton application, I used <code>composer create-project</code>.</p>
+
+<pre><code class="language-powershell">composer create-project zendframework/zend-expressive-skeleton clean-skeleton
+</code></pre>
+
+<h2 id="composer-json">composer.json</h2>
+
+<p>First stop is the <code>composer.json</code>. I update the following section to my needs.</p>
+
+<ul>
+<li><code>name</code></li>
+<li><code>description</code></li>
+<li><code>homepage</code></li>
+<li><code>license</code></li>
+</ul>
+
+<p>Then I removed the following sections - you may want to update these to your needs, especially if you plan to publish your project/library on <a href="https://packagist.org" target="_blank">Packagist</a>.</p>
+
+<ul>
+<li><code>keywords</code></li>
+<li><code>extra</code></li>
+<li><code>support</code></li>
+</ul>
+
+<p>Then I removed the <code>post-create-project-cmd</code> from the <code>scripts</code> section.</p>
+
+<h3 id="further-changes">Further changes</h3>
+
+<p>If you&rsquo;re using some other code style tool like [PHP-CS-Fixer]<a href="https://cs.symfony.com/)" target="_blank">https://cs.symfony.com/)</a>, you may want to update the <code>require-dev</code> and in the <code>scripts</code> section the <code>cs-check</code> and <code>cs-fix</code> commands accordingly. Since I sticked to the defaults, I left them as they were.</p>
+
+<p>In the end, my <code>composer.json</code> looked like the following.</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;arueckauer/clean-skeleton&quot;,
+  &quot;description&quot;: &quot;A zend expressive skeleton purged of all unnecessary items&quot;,
+  &quot;type&quot;: &quot;project&quot;,
+  &quot;homepage&quot;: &quot;https://github.com/arueckauer/clean-skeleton&quot;,
+  &quot;license&quot;: &quot;MIT&quot;,
+  &quot;config&quot;: {
+    &quot;sort-packages&quot;: true
+  },
+  &quot;require&quot;: {
+    &quot;php&quot;: &quot;^7.1&quot;,
+    &quot;zendframework/zend-component-installer&quot;: &quot;^2.1.1&quot;,
+    &quot;zendframework/zend-config-aggregator&quot;: &quot;^1.0&quot;,
+    &quot;zendframework/zend-diactoros&quot;: &quot;^1.7.1 || ^2.0&quot;,
+    &quot;zendframework/zend-expressive&quot;: &quot;^3.0.1&quot;,
+    &quot;zendframework/zend-expressive-helpers&quot;: &quot;^5.0&quot;,
+    &quot;zendframework/zend-stdlib&quot;: &quot;^3.1&quot;,
+    &quot;zendframework/zend-servicemanager&quot;: &quot;^3.3&quot;,
+    &quot;zendframework/zend-expressive-fastroute&quot;: &quot;^3.0&quot;
+  },
+  &quot;require-dev&quot;: {
+    &quot;phpunit/phpunit&quot;: &quot;^7.0.1&quot;,
+    &quot;roave/security-advisories&quot;: &quot;dev-master&quot;,
+    &quot;squizlabs/php_codesniffer&quot;: &quot;^2.9.1&quot;,
+    &quot;zendframework/zend-expressive-tooling&quot;: &quot;^1.0&quot;,
+    &quot;zfcampus/zf-development-mode&quot;: &quot;^3.1&quot;,
+    &quot;filp/whoops&quot;: &quot;^2.1.12&quot;
+  },
+  &quot;autoload&quot;: {
+    &quot;psr-4&quot;: {
+      &quot;App\\&quot;: &quot;src/App/src/&quot;
+    }
+  },
+  &quot;autoload-dev&quot;: {
+    &quot;psr-4&quot;: {
+      &quot;AppTest\\&quot;: &quot;test/AppTest/&quot;
+    }
+  },
+  &quot;scripts&quot;: {
+    &quot;development-disable&quot;: &quot;zf-development-mode disable&quot;,
+    &quot;development-enable&quot;: &quot;zf-development-mode enable&quot;,
+    &quot;development-status&quot;: &quot;zf-development-mode status&quot;,
+    &quot;expressive&quot;: &quot;expressive --ansi&quot;,
+    &quot;check&quot;: [&quot;@cs-check&quot;, &quot;@test&quot;],
+    &quot;clear-config-cache&quot;: &quot;php bin/clear-config-cache.php&quot;,
+    &quot;cs-check&quot;: &quot;phpcs&quot;,
+    &quot;cs-fix&quot;: &quot;phpcbf&quot;,
+    &quot;serve&quot;: &quot;php -S 0.0.0.0:8080 -t public/&quot;,
+    &quot;test&quot;: &quot;phpunit --colors=always&quot;,
+    &quot;test-coverage&quot;: &quot;phpunit --colors=always --coverage-clover clover.xml&quot;
+  }
+}
+</code></pre>
+
+<p>A <code>composer update</code> confirmed that no updates were required after making the adjustments.</p>
+
+<h2 id="license">License</h2>
+
+<p>I replaced the LICENSE file with the <a href="https://choosealicense.com" target="_blank">license of my choice</a>.</p>
+
+<h2 id="coding-standard">Coding Standard</h2>
+
+<p>If desired, you can update name and rules in <code>phpcs.xml.dist</code>. For the purpose of this test, they remained unchanged in my case.</p>
+
+<h2 id="readme">Readme</h2>
+
+<p>I emptied the readme file, leaving only an h1 with the project name. Usually I fill the readme up with information about the package, setup etc. as the project grows.</p>
+
+<h2 id="shipped-handlers">Shipped Handlers</h2>
+
+<p>Next, I removed the Handler classes with its containing folder, tests and configuration references.</p>
+
+<p>Deleted directories:</p>
+
+<ul>
+<li><code>src/App/src/Handler</code></li>
+<li><code>test/AppTest/Handler</code></li>
+</ul>
+
+<p>Also, I removed the defined routes in <code>config/routes.php</code> and the dependency definitions in <code>src/App/src/ConfigProvider.php</code>.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>In <code>config/config.php</code> I removed Swoole config. If you&rsquo;re using Swoole, you can replace it by an explicit inclusion of the ConfigProvider.</p>
+
+<h2 id="done">Done</h2>
+
+<p>To be honest, my first impression of what can be purged of the skeleton was much more. But there is no clutter whatsoever, just some examples. This challenge has helped me better understand the setup of the skeleton package and showed me just how neat it is organized. I love it.</p>
+
+<h2 id="other-skeleton-resources">Other Skeleton resources</h2>
+
+<p>There are two other skeletons for PHP applications which I want to mention at this point. They both are a closer look worth it, if you&rsquo;re starting new PHP projects on a fairly regular basis or want some reference from time to time.</p>
+
+<ol>
+<li><a href="https://github.com/thephpleague/skeleton" target="_blank">thephpleague/skeleton</a> and</li>
+<li><a href="https://github.com/php-pds/skeleton" target="_blank">php-pds/skeleton</a></li>
+</ol>
+
+<p>The thephpleague/skeleton comes with templates for GitHub issues and pull-requests. And also, a <a href="https://github.com/thephpleague/skeleton/blob/master/prefill.php" target="_blank">prefill</a> command which replaces variables like vendor and package names and urls throughout the cloned repo.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Day 1: Getting started with Terraform</title>
