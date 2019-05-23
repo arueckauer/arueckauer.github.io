@@ -6,8 +6,112 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Wed, 22 May 2019 20:39:27 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 23 May 2019 23:00:00 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Day 4: Autoloading Optimization in Composer</title>
+            <link>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</link>
+            <pubDate>Thu, 23 May 2019 23:00:00 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</guid>
+            <description>Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
+Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
+Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.
+ Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative class maps Optimization Level 2/B: APCu cache  I will not get into detail, which level and options is doing what.</description>
+            <content type="html"><![CDATA[
+
+<p>Today I&rsquo;m studying the <a href="https://getcomposer.org/doc/articles/autoloader-optimization.md" target="_blank">Autoloader Optimization</a> article of the Composer documentation.</p>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.</p>
+
+<h2 id="optimization-levels">Optimization levels</h2>
+
+<p>There are two levels of optimization and the second level comes with two options. These two options cannot be combined.</p>
+
+<ul>
+<li>Optimization Level 1: Class map generation</li>
+<li>Optimization Level 2/A: Authoritative class maps</li>
+<li>Optimization Level 2/B: APCu cache</li>
+</ul>
+
+<p>I will not get into detail, which level and options is doing what. The article is very brief and clear already.</p>
+
+<h2 id="meat-on-the-bone">Meat on the bone</h2>
+
+<p>Now, what does this actually look like in practice? To compare the differences, I will test it on an actual application. I will compare</p>
+
+<ul>
+<li>Level 0: No optimization - <code>composer install</code>,</li>
+<li>Level 1: Class map generation - <code>composer dump-autoload -a</code> and</li>
+<li>Level 2/A: Authoritative class maps - <code>composer dump-autoload -o</code>.</li>
+</ul>
+
+<h3 id="create-new-project">Create new project</h3>
+
+<p>To compare the different optimization levels any application utilizing the PSR-4 standard will do. I choose an empty <a href="https://symfony.com/" target="_blank">Symfony</a> application.</p>
+
+<pre><code class="language-powershell">composer create-project symfony/website-skeleton my-project
+</code></pre>
+
+<h3 id="create-autoloading-with-optimization-levels-0-1-and-2-a">Create autoloading with optimization levels 0, 1 and 2/A</h3>
+
+<p>The <code>create-project</code> command will already execute an <code>install</code>. The application has now no autoloading optimization and is ready for development. I copy the <code>.\vendor\composer</code> folder to a different location. I then execute <code>composer dump-autoload -o</code> and <code>composer dump-autoload -a</code> and copy the <code>.\vendor\composer</code> after each command execution.</p>
+
+<h3 id="what-s-the-difference">What&rsquo;s the difference?</h3>
+
+<p>I then compare the three copies:</p>
+
+<h4 id="level-0">Level 0</h4>
+
+<p>If no optimization is done, the autoloading is missing the class map which is generated for the other two options in <code>autoload_classmap.php</code> and <code>autoload_static.php</code>.</p>
+
+<h4 id="level-1">Level 1</h4>
+
+<p>Level 1 registers PSR-0 and PSR-4 directories to the <code>Composer\Autoload\ClassLoader</code>. If a given class cannot be found, it falls back to look in the filesystem according to the registered rules.</p>
+
+<p><code>.\vendor\composer\autoload_real.php</code></p>
+
+<pre><code class="language-php">// [..]
+            $map = require __DIR__ . '/autoload_namespaces.php';
+            foreach ($map as $namespace =&gt; $path) {
+                $loader-&gt;set($namespace, $path);
+            }
+
+            $map = require __DIR__ . '/autoload_psr4.php';
+            foreach ($map as $namespace =&gt; $path) {
+                $loader-&gt;setPsr4($namespace, $path);
+            }
+// [..]
+</code></pre>
+
+<h4 id="level-2-a">Level 2/A</h4>
+
+<p>Whereas Level 2/A does not register PSR-0 and PSR-4 directories and instead sets <code>$classMapAuthoritative</code>in <code>Composer\Autoload\ClassLoader</code> to <code>true</code>.</p>
+
+<blockquote>
+<p>Turns off searching the prefix and fallback directories for classes that have not been registered with the class map.</p>
+</blockquote>
+
+<p><code>.\vendor\composer\autoload_real.php</code></p>
+
+<pre><code class="language-php">// [..]
+        $loader-&gt;setClassMapAuthoritative(true);
+// [..]
+</code></pre>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This study has helped me gain a better understanding of what is happening behind the scene in composer&rsquo;s autoloading. Although everything is already very well documented in the article, I learn much better, if I take things apart.</p>
+
+<p>So definitely in production.</p>
+
+<pre><code class="language-powershell">composer install --no-ansi --no-dev --no-interaction --no-progress --no-scripts --classmap-authoritative
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Day 3: Keep a Changelog</title>
