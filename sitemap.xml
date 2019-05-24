@@ -4,13 +4,42 @@
   
   <url>
     <loc>https://arueckauer.github.io/tags/100-days-of-code/</loc>
-    <lastmod>2019-05-23T23:33:13+02:00</lastmod>
+    <lastmod>2019-05-25T00:11:52+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/</loc>
-    <lastmod>2019-05-23T23:33:13+02:00</lastmod>
+    <lastmod>2019-05-25T00:11:52+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/posts/2019/05/day-5-a-change-for-the-better/</loc>
+    <lastmod>2019-05-25T00:11:52+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/posts/</loc>
+    <lastmod>2019-05-25T00:11:52+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/</loc>
+    <lastmod>2019-05-25T00:11:52+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/automation/</loc>
+    <lastmod>2019-05-25T00:11:52+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/composer/</loc>
+    <lastmod>2019-05-25T00:11:52+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -20,25 +49,7 @@
   </url>
   
   <url>
-    <loc>https://arueckauer.github.io/posts/</loc>
-    <lastmod>2019-05-23T23:33:13+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/</loc>
-    <lastmod>2019-05-23T23:33:13+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://arueckauer.github.io/tags/autoloading/</loc>
-    <lastmod>2019-05-23T23:33:13+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/composer/</loc>
     <lastmod>2019-05-23T23:33:13+02:00</lastmod>
     <priority>0</priority>
   </url>

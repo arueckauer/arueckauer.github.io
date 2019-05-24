@@ -6,8 +6,100 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Thu, 23 May 2019 23:00:00 +0200</lastBuildDate>
+        <lastBuildDate>Fri, 24 May 2019 12:03:39 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Day 5: A change for the better</title>
+            <link>https://arueckauer.github.io/posts/2019/05/day-5-a-change-for-the-better/</link>
+            <pubDate>Fri, 24 May 2019 12:03:39 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/05/day-5-a-change-for-the-better/</guid>
+            <description>Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
+I see some issues with that.
+ Build has a dependency on configuration. The build process for an application should stay the same. It must not produce a different outcome depending on the local setup.</description>
+            <content type="html"><![CDATA[
+
+<p>Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.</p>
+
+<p>I see some issues with that.</p>
+
+<ol>
+<li><strong>Build has a dependency on configuration.</strong> The build process for an application should stay the same. It must not produce a different outcome depending on the local setup.</li>
+<li><strong>Build process will not run on CI/CD.</strong> In this setup the application will never be run in CI/CD.</li>
+<li><strong>Repetitive tasks</strong>. Why should every developer manage configuration, if it can be automated? Automation will lower risk of human error and speed up the process. On the topic of automating things, I can recommend following <a href="https://github.com/rdbartram" target="_blank">Ryan Bartram</a>, the author of <a href="https://www.dftai.ch/" target="_blank">Don&rsquo;t forget to automate it</a>. I got the chance to get to know him on the <a href="https://www.zurich.azurebootcamp.net/" target="_blank">Global Azure Bootcamp</a>, great and funny guy!</li>
+</ol>
+
+<h2 id="proper-way">Proper way</h2>
+
+<p>The proper way to fix this, is to address the author of the <del>abomination</del> feature and improve the build process. This is what I will do.</p>
+
+<h2 id="a-connected-issue">A connected issue</h2>
+
+<p>While solving the issue of getting the build to work, I was thinking about the application setup. Most of our projects require local configuration before they are able to run. If you&rsquo;re not familiar with an application, it can be a tedious task to find out all requirements and dependencies. Oftentimes we end up sharing our local configuration files. ¯\_(ツ)\_/¯</p>
+
+<p>But what if you could checkout a project which would run out-of-the-box? For development you typically would use virtualization with a configured machine/container laying in the repository, boot up the machine and voilà.</p>
+
+<h2 id="small-steps">Small steps</h2>
+
+<p>Before configuring virtualizations, I wanted to make a smaller step which I and others could use instantly. The idea was to automate the process of copying required configuration files. Some manual steps like database credentials would still be required, but at least the configuration files/templates exist.</p>
+
+<h2 id="configuration-types">Configuration types</h2>
+
+<p>There are different types of configurations.</p>
+
+<ol>
+<li><strong>Global</strong> - The application is dependent on it. This could be a default locale, template paths and so on. These settings are committed to the VCS.</li>
+<li><strong>Local</strong> - Database credentials etc. The application depends on them. However, they are not committed to VCS, because they differ from environment to environment and/or they could be sensitive data.</li>
+<li><strong>Development</strong> - Settings that are only required in a development environment. That is displaying debugging information, a turned off cache etc.</li>
+</ol>
+
+<p>The first type is already in the VCS and does not require local adjustments. The local configuration is what really is interesting. The application depends on it, but the configuration may only exist as a distributed configuration file. The development configuration could potentially be automated as well, but this will not be in today&rsquo;s scope.</p>
+
+<h2 id="composer-scripts-ftw">Composer scripts FTW</h2>
+
+<p>Very quickly I found a solution by putting <a href="https://getcomposer.org/doc/articles/scripts.md" target="_blank">Composer scripts</a> to work. At first I put a PHP command directly in the <code>scripts</code> section of the <code>composer.json</code>. However, that just didn&rsquo;t feel right. It was very hard to read and maintain. So, I defined a callback.</p>
+
+<pre><code class="language-json">{
+  // [..]
+  &quot;scripts&quot;: {
+    &quot;post-install-cmd&quot;: [&quot;App\\ComposerScripts::postInstall&quot;]
+    // [..]
+  }
+}
+</code></pre>
+
+<p>Next, I implemented the referenced <code>ComposerScripts</code> to copy the distributed configuration files, if no local copy exists.</p>
+
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types = 1);
+
+namespace App;
+
+class ComposerScripts
+{
+    private static $configurationFiles = [
+        'config/autoload/services.local.php.dist' =&gt; 'config/autoload/services.local.php',
+        'config/autoload/doctrine.local.php.dist' =&gt; 'config/autoload/doctrine.local.php',
+    ];
+
+    public static function postInstall() : void
+    {
+        foreach (static::$configurationFiles as $distributed =&gt; $destination) {
+            if (! file_exists($destination)) {
+                copy($distributed, $destination);
+            }
+        }
+    }
+}
+</code></pre>
+
+<p>Beautiful. It works like a charm.</p>
+
+<p>This for sure is a poor man&rsquo;s solution, quick and dirty. In the sense of Kaizen, it is a change for the better and will continue to improve.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Day 4: Autoloading Optimization in Composer</title>
