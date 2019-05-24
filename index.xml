@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 24 May 2019 12:03:39 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 24 May 2019 23:37:51 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Day 5: A change for the better</title>
       <link>https://arueckauer.github.io/posts/2019/05/day-5-a-change-for-the-better/</link>
-      <pubDate>Fri, 24 May 2019 12:03:39 +0200</pubDate>
+      <pubDate>Fri, 24 May 2019 23:37:51 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-5-a-change-for-the-better/</guid>
       <description>Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
