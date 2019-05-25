@@ -15,14 +15,14 @@
             <pubDate>Sat, 25 May 2019 20:43:15 +0200</pubDate>
             
             <guid>https://arueckauer.github.io/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/</guid>
-            <description>This article is part of my #100DaysOfCode and #100DaysOflogging challenge. R1D6
+            <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D6
  [The Twelve-Factor App] requires strict separation of config from code.
  Taken from factor three of The Twelve-Factor App.
 Today I am studying about how to achieve this requirement making usage of phpdotenv in a Zend Expressive context.
 I will not go into details on and advantages of this concept. A leave that up to other resources.</description>
             <content type="html"><![CDATA[
 
-<p><em>This article is part of my #100DaysOfCode and #100DaysOflogging challenge. R1D6</em></p>
+<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D6</em></p>
 
 <blockquote>
 <p>[The Twelve-Factor App] requires strict separation of config from code.</p>
