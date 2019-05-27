@@ -3,110 +3,127 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://arueckauer.github.io/tags/100-days-of-code/</loc>
-    <lastmod>2019-05-25T21:37:41+02:00</lastmod>
+    <loc>https://arueckauer.github.io/</loc>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://arueckauer.github.io/</loc>
-    <lastmod>2019-05-25T21:37:41+02:00</lastmod>
-    <priority>0</priority>
+    <loc>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</loc>
+    <lastmod>2019-05-27T21:50:50+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/posts/</loc>
-    <lastmod>2019-05-25T21:37:41+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/tags/</loc>
-    <lastmod>2019-05-25T21:37:41+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/exercism/</loc>
+    <lastmod>2019-05-27T21:50:50+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/php/</loc>
+    <lastmod>2019-05-27T21:50:50+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/100-days-of-code/</loc>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/</loc>
-    <lastmod>2019-05-25T21:37:41+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/tags/dotenv/</loc>
-    <lastmod>2019-05-25T21:37:41+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/tags/zend-expressive/</loc>
-    <lastmod>2019-05-25T21:37:41+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/posts/2019/05/day-5-a-change-for-the-better/</loc>
-    <lastmod>2019-05-25T00:18:30+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/tags/automation/</loc>
-    <lastmod>2019-05-25T00:18:30+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/tags/composer/</loc>
-    <lastmod>2019-05-25T00:18:30+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</loc>
-    <lastmod>2019-05-23T23:33:13+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/tags/autoloading/</loc>
-    <lastmod>2019-05-23T23:33:13+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/posts/2019/05/day-3-keep-a-changelog/</loc>
-    <lastmod>2019-05-22T21:44:28+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/tags/keep-a-changelog/</loc>
-    <lastmod>2019-05-22T21:44:28+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</loc>
-    <lastmod>2019-05-22T21:01:44+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/tags/laminas/</loc>
-    <lastmod>2019-05-22T21:01:44+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/posts/2019/05/day-1-getting-started-with-terraform/</loc>
-    <lastmod>2019-05-20T22:04:27+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/tags/devops/</loc>
-    <lastmod>2019-05-20T22:04:27+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/tags/terraform/</loc>
-    <lastmod>2019-05-20T22:04:27+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -117,28 +134,28 @@
   
   <url>
     <loc>https://arueckauer.github.io/posts/2019/05/100-days-of-code/</loc>
-    <lastmod>2019-05-20T07:58:49+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/posts/2019/05/from-flat-to-modular/</loc>
-    <lastmod>2019-05-21T13:55:09+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/posts/2019/05/just-do-it/</loc>
-    <lastmod>2019-05-16T15:00:40+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/tags/blog/</loc>
-    <lastmod>2019-05-16T15:00:40+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/tags/do-it/</loc>
-    <lastmod>2019-05-16T15:00:40+02:00</lastmod>
+    <lastmod>2019-05-27T21:53:34+02:00</lastmod>
     <priority>0</priority>
   </url>
   

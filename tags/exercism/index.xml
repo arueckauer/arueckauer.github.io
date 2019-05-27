@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>exercism on Andi Rückauer</title>
+    <link>https://arueckauer.github.io/tags/exercism/</link>
+    <description>Recent content in exercism on Andi Rückauer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 27 May 2019 20:28:26 +0200</lastBuildDate>
+    
+	<atom:link href="https://arueckauer.github.io/tags/exercism/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Difference of Squares</title>
+      <link>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</link>
+      <pubDate>Mon, 27 May 2019 20:28:26 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</guid>
+      <description>Today I am solving the Difference of Squares of the PHP track on Exercism.
+Exercism offers its users learning new programming languages through exercises with the valuable feedback of mentors. It currently has 50 different language tracks like C#, Go, Kotlin, TypeScript and many others. Head over to Exercism to join.
+Introduction The source of this exercise is Problem 6 of the Euler project.
+ The sum of the squares of the first ten natural numbers is,</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,8 +6,186 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Sat, 25 May 2019 20:43:15 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 27 May 2019 20:28:26 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Difference of Squares</title>
+            <link>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</link>
+            <pubDate>Mon, 27 May 2019 20:28:26 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</guid>
+            <description>Today I am solving the Difference of Squares of the PHP track on Exercism.
+Exercism offers its users learning new programming languages through exercises with the valuable feedback of mentors. It currently has 50 different language tracks like C#, Go, Kotlin, TypeScript and many others. Head over to Exercism to join.
+Introduction The source of this exercise is Problem 6 of the Euler project.
+ The sum of the squares of the first ten natural numbers is,</description>
+            <content type="html"><![CDATA[
+
+<p>Today I am solving the <em>Difference of Squares</em> of the PHP track on <a href="https://exercism.io/" target="_blank">Exercism</a>.</p>
+
+<p>Exercism offers its users learning new programming languages through exercises with the valuable feedback of mentors. It currently has 50 different language tracks like C#, Go, Kotlin, TypeScript and many others. Head over to Exercism to <a href="https://exercism.io/users/sign_up" target="_blank">join</a>.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The source of this exercise is <a href="https://projecteuler.net/problem=6" target="_blank">Problem 6</a> of the Euler project.</p>
+
+<blockquote>
+<p>The sum of the squares of the first ten natural numbers is,</p>
+
+<p><code>12 + 22 + ... + 102 = 385</code></p>
+
+<p>The square of the sum of the first ten natural numbers is,</p>
+
+<p><code>(1 + 2 + ... + 10)2 = 552 = 3025</code></p>
+
+<p>Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is <code>3025 − 385 = 2640</code>.</p>
+
+<p>Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.</p>
+</blockquote>
+
+<h2 id="first-step">First step</h2>
+
+<p>Usually I start by downloading the tests, creating the required file (in this case <code>difference-of-squares.php</code>) and if possible, provide the required function(s) with a correct signature. Since I already know from the introduction section, the <code>difference()</code> function returns the difference of <code>squareOfSum()</code> and <code>sumOfSquares()</code>. So, I go ahead and write that down. I&rsquo;m starting off with the following lines.</p>
+
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types = 1);
+
+function squareOfSum(int $number) : int
+{
+    return 0;
+}
+
+function sumOfSquares(int $number) : int
+{
+    return 0;
+}
+
+function difference(int $number) : int
+{
+    return squareOfSum($number) - sumOfSquares($number);
+}
+</code></pre>
+
+<p>I run the tests. As expected, they are all failing. But it confirms to me, that there are no syntax error or errors of undefined functions. So far, so good.</p>
+
+<p>Next, I like to break down the exercise. I can see, that three functions are required. I start with the first one <code>squareOfSum()</code>. I focus on one test at a time. I comment out all tests except the first and implement its described feature.</p>
+
+<h2 id="square-of-sum">Square of Sum</h2>
+
+<p>The description of <code>squareOfSum()</code> is straight forward. I&rsquo;m thinking of first creating an array of numbers starting from 1 to n. <a href="https://php.net/range" target="_blank">range()</a> seems to be perfect for that. Next, I need to calculate the sum. Since I already have an array, I use <a href="https://php.net/array_sum" target="_blank">array_sum()</a>. And finally, I square the sum and return it.</p>
+
+<pre><code class="language-php">&lt;?php
+
+function squareOfSum(int $number) : int
+{
+    $sum = array_sum(range(1, $number));
+    return $sum * $sum;
+}
+
+</code></pre>
+
+<p>To validate my implementation, I uncomment all tests asserting the result of <code>squareOfSum()</code> and run the tests. Success! 👍</p>
+
+<h2 id="sum-of-squares">Sum of squares</h2>
+
+<p>The second function is doing the same in a different order. My first thought is, if I could abstract any functionality from the first function which I could use in the second. They only have the <code>range()</code> call in common. It would be overkill to abstract that into a separate function. So, I leave it as it is and return to the implementation.</p>
+
+<p>Again, I need a range. This time however I need to square the element values. A simple callback should do with the help of <code>array_map()</code> and followed by <code>array_sum()</code>.</p>
+
+<pre><code class="language-php">&lt;?php
+
+function sumOfSquares(int $number) : int
+{
+    $array = array_map(
+        static function (int $number) {
+            return $number * $number;
+        },
+        range(1, $number)
+    );
+
+    return array_sum($array);
+}
+
+</code></pre>
+
+<p>I uncomment all the remaining tests and run them. Again, successfully. 🙌</p>
+
+<h2 id="clean-up">Clean-up</h2>
+
+<p>Before submitting my solution, I run code analysis tools in PhpStorm and check for error or warnings. Usually this is very helpful. It helps me to (1) learn more about PHP and how I could improve and (2) show potential errors which I did not see.</p>
+
+<p>In this case <a href="https://github.com/vimeo/psalm" target="_blank">Psalm</a> is throwing 4 errors:</p>
+
+<pre><code class="language-powershell">Scanning files...
+Analyzing files...
+
+ERROR: InvalidReturnType - difference-of-squares\difference-of-squares.php:5:37 - The declared return type 'int' for squareOfSum is incorrect, got 'float|int'
+function squareOfSum(int $number) : int
+
+
+ERROR: InvalidReturnStatement - difference-of-squares\difference-of-squares.php:8:12 - The type 'float|int' does not match the declared return type 'int' for squareOfSum
+    return $sum * $sum;
+
+
+ERROR: InvalidReturnType - difference-of-squares\difference-of-squares.php:11:38 - The declared return type 'int' for sumOfSquares is incorrect, got 'int|float'
+function sumOfSquares(int $number) : int
+
+
+ERROR: InvalidReturnStatement - difference-of-squares\difference-of-squares.php:20:12 - The type 'int|float' does not match the declared return type 'int' for sumOfSquares
+    return array_sum($array);
+
+
+------------------------------
+4 errors found
+------------------------------
+
+Checks took 0.37 seconds and used 29.759MB of memory
+Psalm was able to infer types for 100% of the codebase
+</code></pre>
+
+<p>But I am not sure how Psalm can get a <code>float</code> value from adding and square an <code>integer</code> value? So, I leave it as it is and submit my solution.</p>
+
+<h2 id="my-submitted-solution">My submitted solution</h2>
+
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types = 1);
+
+function squareOfSum(int $number) : int
+{
+    $sum = array_sum(range(1, $number));
+    return $sum * $sum;
+}
+
+function sumOfSquares(int $number) : int
+{
+    $array = array_map(
+        static function (int $number) {
+            return $number * $number;
+        },
+        range(1, $number)
+    );
+
+    return array_sum($array);
+}
+
+function difference(int $number) : int
+{
+    return squareOfSum($number) - sumOfSquares($number);
+}
+
+</code></pre>
+
+<h2 id="mentoring">Mentoring</h2>
+
+<p>Within the next few days a mentor will review my code and provide feedback. So far, I have been very blessed with good reviewers who took their time to give suggestions and refer to other resources. This is very helpful.</p>
+
+<p>Sometimes the feedback is not as pleasant as I was hoping. 😄 I then take a step back and take my time before reading it again. This time with an open mind to see, what the mentor is trying to show me. It has always been a great learning experience for me.</p>
+
+<p>As soon as a solution gets accepted, you can share your solution with the community and inspect what others have submitted. This is alxvery helpful and oftentimes an eye opener.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Use dotenv to configure a Zend Expressive application</title>

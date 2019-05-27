@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="Andi Rückauer ">
+<meta name="description"
+    content="Today I am solving the Difference of Squares of the PHP track on Exercism.
+Exercism offers its users learning new programming languages through exercises with the valuable feedback of mentors. It currently has 50 different language tracks like C#, Go, Kotlin, TypeScript and many others. Head over to Exercism to join.
+Introduction The source of this exercise is Problem 6 of the Euler project.
+ The sum of the squares of the first ten natural numbers is," />
+<meta name="keywords" content="andi, rückauer, blog, software, development" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://arueckauer.github.io/posts/2019/05/difference-of-squares/" />
+
+
+<title>
+    
+    Difference of Squares :: Andi Rückauer  — Thoughts container
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://arueckauer.github.io/main.min.91687bbfc139d7ff1a244bb6d7324425f9c4f424eaaad242b478e3b3cf56396a.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://arueckauer.github.io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://arueckauer.github.io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://arueckauer.github.io/favicon-16x16.png">
+<link rel="manifest" href="https://arueckauer.github.io/site.webmanifest">
+<link rel="mask-icon" href="https://arueckauer.github.io/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
+<meta name="theme-color" content="#252627">
+<meta itemprop="name" content="Difference of Squares">
+<meta itemprop="description" content="Today I am solving the Difference of Squares of the PHP track on Exercism.
+Exercism offers its users learning new programming languages through exercises with the valuable feedback of mentors. It currently has 50 different language tracks like C#, Go, Kotlin, TypeScript and many others. Head over to Exercism to join.
+Introduction The source of this exercise is Problem 6 of the Euler project.
+ The sum of the squares of the first ten natural numbers is,">
+
+
+<meta itemprop="datePublished" content="2019-05-27T20:28:26&#43;02:00" />
+<meta itemprop="dateModified" content="2019-05-27T21:50:50&#43;02:00" />
+<meta itemprop="wordCount" content="928">
+
+
+
+<meta itemprop="keywords" content="exercism,php," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://arueckauer.github.io/"/>
+
+<meta name="twitter:title" content="Difference of Squares"/>
+<meta name="twitter:description" content="Today I am solving the Difference of Squares of the PHP track on Exercism.
+Exercism offers its users learning new programming languages through exercises with the valuable feedback of mentors. It currently has 50 different language tracks like C#, Go, Kotlin, TypeScript and many others. Head over to Exercism to join.
+Introduction The source of this exercise is Problem 6 of the Euler project.
+ The sum of the squares of the first ten natural numbers is,"/>
+
+
+
+
+<meta property="article:published_time" content="2019-05-27 20:28:26 &#43;0200 CEST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://arueckauer.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">Thoughts Container</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://arueckauer.github.io/about">About</a></li><li><a href="https://arueckauer.github.io/posts">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>5 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://arueckauer.github.io/posts/2019/05/difference-of-squares/">Difference of Squares</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<p>Today I am solving the <em>Difference of Squares</em> of the PHP track on <a href="https://exercism.io/" target="_blank">Exercism</a>.</p>
+
+<p>Exercism offers its users learning new programming languages through exercises with the valuable feedback of mentors. It currently has 50 different language tracks like C#, Go, Kotlin, TypeScript and many others. Head over to Exercism to <a href="https://exercism.io/users/sign_up" target="_blank">join</a>.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The source of this exercise is <a href="https://projecteuler.net/problem=6" target="_blank">Problem 6</a> of the Euler project.</p>
+
+<blockquote>
+<p>The sum of the squares of the first ten natural numbers is,</p>
+
+<p><code>12 + 22 + ... + 102 = 385</code></p>
+
+<p>The square of the sum of the first ten natural numbers is,</p>
+
+<p><code>(1 + 2 + ... + 10)2 = 552 = 3025</code></p>
+
+<p>Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is <code>3025 − 385 = 2640</code>.</p>
+
+<p>Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.</p>
+</blockquote>
+
+<h2 id="first-step">First step</h2>
+
+<p>Usually I start by downloading the tests, creating the required file (in this case <code>difference-of-squares.php</code>) and if possible, provide the required function(s) with a correct signature. Since I already know from the introduction section, the <code>difference()</code> function returns the difference of <code>squareOfSum()</code> and <code>sumOfSquares()</code>. So, I go ahead and write that down. I&rsquo;m starting off with the following lines.</p>
+
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types = 1);
+
+function squareOfSum(int $number) : int
+{
+    return 0;
+}
+
+function sumOfSquares(int $number) : int
+{
+    return 0;
+}
+
+function difference(int $number) : int
+{
+    return squareOfSum($number) - sumOfSquares($number);
+}
+</code></pre>
+
+<p>I run the tests. As expected, they are all failing. But it confirms to me, that there are no syntax error or errors of undefined functions. So far, so good.</p>
+
+<p>Next, I like to break down the exercise. I can see, that three functions are required. I start with the first one <code>squareOfSum()</code>. I focus on one test at a time. I comment out all tests except the first and implement its described feature.</p>
+
+<h2 id="square-of-sum">Square of Sum</h2>
+
+<p>The description of <code>squareOfSum()</code> is straight forward. I&rsquo;m thinking of first creating an array of numbers starting from 1 to n. <a href="https://php.net/range" target="_blank">range()</a> seems to be perfect for that. Next, I need to calculate the sum. Since I already have an array, I use <a href="https://php.net/array_sum" target="_blank">array_sum()</a>. And finally, I square the sum and return it.</p>
+
+<pre><code class="language-php">&lt;?php
+
+function squareOfSum(int $number) : int
+{
+    $sum = array_sum(range(1, $number));
+    return $sum * $sum;
+}
+
+</code></pre>
+
+<p>To validate my implementation, I uncomment all tests asserting the result of <code>squareOfSum()</code> and run the tests. Success! 👍</p>
+
+<h2 id="sum-of-squares">Sum of squares</h2>
+
+<p>The second function is doing the same in a different order. My first thought is, if I could abstract any functionality from the first function which I could use in the second. They only have the <code>range()</code> call in common. It would be overkill to abstract that into a separate function. So, I leave it as it is and return to the implementation.</p>
+
+<p>Again, I need a range. This time however I need to square the element values. A simple callback should do with the help of <code>array_map()</code> and followed by <code>array_sum()</code>.</p>
+
+<pre><code class="language-php">&lt;?php
+
+function sumOfSquares(int $number) : int
+{
+    $array = array_map(
+        static function (int $number) {
+            return $number * $number;
+        },
+        range(1, $number)
+    );
+
+    return array_sum($array);
+}
+
+</code></pre>
+
+<p>I uncomment all the remaining tests and run them. Again, successfully. 🙌</p>
+
+<h2 id="clean-up">Clean-up</h2>
+
+<p>Before submitting my solution, I run code analysis tools in PhpStorm and check for error or warnings. Usually this is very helpful. It helps me to (1) learn more about PHP and how I could improve and (2) show potential errors which I did not see.</p>
+
+<p>In this case <a href="https://github.com/vimeo/psalm" target="_blank">Psalm</a> is throwing 4 errors:</p>
+
+<pre><code class="language-powershell">Scanning files...
+Analyzing files...
+
+ERROR: InvalidReturnType - difference-of-squares\difference-of-squares.php:5:37 - The declared return type 'int' for squareOfSum is incorrect, got 'float|int'
+function squareOfSum(int $number) : int
+
+
+ERROR: InvalidReturnStatement - difference-of-squares\difference-of-squares.php:8:12 - The type 'float|int' does not match the declared return type 'int' for squareOfSum
+    return $sum * $sum;
+
+
+ERROR: InvalidReturnType - difference-of-squares\difference-of-squares.php:11:38 - The declared return type 'int' for sumOfSquares is incorrect, got 'int|float'
+function sumOfSquares(int $number) : int
+
+
+ERROR: InvalidReturnStatement - difference-of-squares\difference-of-squares.php:20:12 - The type 'int|float' does not match the declared return type 'int' for sumOfSquares
+    return array_sum($array);
+
+
+------------------------------
+4 errors found
+------------------------------
+
+Checks took 0.37 seconds and used 29.759MB of memory
+Psalm was able to infer types for 100% of the codebase
+</code></pre>
+
+<p>But I am not sure how Psalm can get a <code>float</code> value from adding and square an <code>integer</code> value? So, I leave it as it is and submit my solution.</p>
+
+<h2 id="my-submitted-solution">My submitted solution</h2>
+
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types = 1);
+
+function squareOfSum(int $number) : int
+{
+    $sum = array_sum(range(1, $number));
+    return $sum * $sum;
+}
+
+function sumOfSquares(int $number) : int
+{
+    $array = array_map(
+        static function (int $number) {
+            return $number * $number;
+        },
+        range(1, $number)
+    );
+
+    return array_sum($array);
+}
+
+function difference(int $number) : int
+{
+    return squareOfSum($number) - sumOfSquares($number);
+}
+
+</code></pre>
+
+<h2 id="mentoring">Mentoring</h2>
+
+<p>Within the next few days a mentor will review my code and provide feedback. So far, I have been very blessed with good reviewers who took their time to give suggestions and refer to other resources. This is very helpful.</p>
+
+<p>Sometimes the feedback is not as pleasant as I was hoping. 😄 I then take a step back and take my time before reading it again. This time with an open mind to see, what the mentor is trying to show me. It has always been a great learning experience for me.</p>
+
+<p>As soon as a solution gets accepted, you can share your solution with the community and inspect what others have submitted. This is alxvery helpful and oftentimes an eye opener.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://arueckauer.github.io/tags/exercism">exercism</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/php">php</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>928 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-05-27 20:28 &#43;0200</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/9fce8ffdee93d715287b93954d4592ff6ed34cfb" target="_blank" rel="noopener">9fce8ff</a> @ 2019-05-27</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://arueckauer.github.io/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/">
+                                <span class="button__text">Use dotenv to configure a Zend Expressive application</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2019</span>
+            
+                <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="https://arueckauer.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.cf7871ed49474a80ed457154d24e61f7881adbe0f9384951a74ac46b688a39a4dbfa68bc6d37baeb058186de354ead3487d4ee7f083ea4cba860c48600b694f3.js" integrity="sha512-z3hx7UlHSoDtRXFU0k5h94ga2&#43;D5OElRp0rEa2iKOaTb&#43;mi8bTe66wWBht41Tq00h9Tufwg&#43;pMuoYMSGALaU8w=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-35992501-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+	
+		<script src="https://unpkg.com/feather-icons"></script>
+	
+
+
+<script>
+    feather.replace()
+</script>
+
+    </body>
+</html>
