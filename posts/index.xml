@@ -10,13 +10,163 @@
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Php Version Switcher Powershell Module</title>
+            <title>Php Version Switcher: PowerShell Module</title>
             <link>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</link>
             <pubDate>Tue, 28 May 2019 20:36:42 +0200</pubDate>
             
             <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</guid>
-            <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D7</description>
-            <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D7</em></p>
+            <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
+Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.
+Last year a co-worker and I discussed the possibility of providing each project with a Vagrant box for development purposes that runs a comparable setup as the production environment.</description>
+            <content type="html"><![CDATA[
+
+<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D8</em></p>
+
+<p>Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&rsquo;s still not the choice environment for a typical PHP web application.</p>
+
+<p>Last year a co-worker and I discussed the possibility of providing each project with a <a href="https://www.vagrantup.com/" target="_blank">Vagrant</a> box for development purposes that runs a comparable setup as the production environment. Until then each developer had his own WAMP setup and most likely non looked like any other development or production environment. I had a Linux machine in mind. Making the transition from Windows to Linux and providing the necessary infrastructure is not done in just one day.</p>
+
+<p>In the discussion I addressed the laborious manual process of switching in-between PHP versions. Then it dawned on me that by using symlinks, it might be possible to easily switch to another PHP version. Later on, I started working on the setup and wrote a batch file - and surely it worked! 🙌😊</p>
+
+<p>Lately I have become fond of PowerShell. Today I want to start rewriting that batch file of the PHP version switcher into a PowerShell module. For now, I am starting with a PowerShell Module. Tomorrow I continue with the rewrite. An additional feature is a PHP version manager, which would allow the installing and removing PHP versions. I&rsquo;ll see how far that can be automated on another day.</p>
+
+<h2 id="creating-a-powershell-module">Creating a PowerShell Module</h2>
+
+<p>The functionality of the PHP version switcher will be placed in a Cmdlet. The plan is to make the Cmdlet available through a Module and possibly publish it on <a href="https://www.powershellgallery.com/packages/" target="_blank">PowerShell Gallery</a> and/or <a href="https://chocolatey.org/packages" target="_blank">chocolatey</a>.</p>
+
+<p>To create my first PowerShell module, I follow the article <a href="https://docs.microsoft.com/en-us/powershell/developer/module/how-to-write-a-powershell-script-module" target="_blank">How to Write a PowerShell Script Module</a>. Right now I only need steps 1 and 2. If you want to know more about the steps or further steps not mentioned here, head over to the referenced article.</p>
+
+<h3 id="1-save-powershell-script-with-a-psm1-extension">1. Save PowerShell script with a .psm1 extension</h3>
+
+<p>Since I don&rsquo;t have an existing PowerShell script and can&rsquo;t just dump in the batch file, I am starting with a fresh function. For now, I just want to declare my function and parameters. Then give the user some output. The real functionality will be added later.</p>
+
+<pre><code class="language-powershell">function Php-VersionSwitcher
+{
+    Param (
+        [Parameter(Mandatory=$true, ValueFromPipeline=$true)] [Alias(&quot;v&quot;)] [String]$version
+    )
+
+    Write-Host &quot;PHP Version Switcher 1.0.0 by Andi Rückauer&quot; -ForegroundColor Blue
+    Write-Host &quot;&quot;
+    Write-Host &quot;Switching to version: $version...&quot; -ForegroundColor DarkCyan
+    Write-Host &quot;&quot;
+}
+</code></pre>
+
+<p>I save this to the file <code>Php-VersionSwitcher.psm1</code>.</p>
+
+<h3 id="2-export-modulemember">2. Export-ModuleMember</h3>
+
+<p>The function would be exposed by default. It is recommended however, to explicitly declare functions one wants to expose. Here it goes.</p>
+
+<pre><code class="language-powershell">Export-ModuleMember -Function Php-VersionSwitcher
+</code></pre>
+
+<h3 id="create-powershell-module-manifest">Create PowerShell Module Manifest</h3>
+
+<p>Next, I follow the instructions found in <a href="https://docs.microsoft.com/en-us/powershell/developer/module/how-to-write-a-powershell-module-manifest" target="_blank">How to Write a PowerShell Module Manifest</a>. I&rsquo;ll go with option 1.b. and create the Manifest with the <a href="https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest" target="_blank">New-ModuleManifest</a> cmdlet.</p>
+
+<pre><code class="language-powershell">New-ModuleManifest .\Php-VersionSwitcher.psd1 -ModuleVersion 1.0 -Author &quot;Andi Rückauer&quot;
+</code></pre>
+
+<p>I open the <code>Php-VersionSwitcher.psd1</code> and update necessary and removing unnecessary information. This is what it looks like now.</p>
+
+<pre><code class="language-powershell">@{
+
+    # Die diesem Manifest zugeordnete Skript- oder Binärmoduldatei.
+    RootModule          = 'Php-VersionSwitcher.psm1'
+
+    # Die Versionsnummer dieses Moduls
+    ModuleVersion       = '1.0.0'
+
+    # ID zur eindeutigen Kennzeichnung dieses Moduls
+    GUID                = '69305790-69cd-4ffe-af1c-f7ec6e486d13'
+
+    # Autor dieses Moduls
+    Author              = 'Andi Rückauer'
+
+    # Unternehmen oder Hersteller dieses Moduls
+    CompanyName         = 'Unbekannt'
+
+    # Urheberrechtserklärung für dieses Modul
+    Copyright           = '(c) 2019 Andi Rückauer. Alle Rechte vorbehalten.'
+
+    # Beschreibung der von diesem Modul bereitgestellten Funktionen
+    Description         = 'Switching PHP versions on Windows made easy'
+
+    # Die für dieses Modul mindestens erforderliche Version des Windows PowerShell-Moduls
+    PowerShellVersion   = '5.0'
+
+    # Aus diesem Modul zu exportierende Funktionen. Um optimale Leistung zu erzielen, verwenden Sie keine Platzhalter und löschen den Eintrag nicht. Verwenden Sie ein leeres Array, wenn keine zu exportierenden Funktionen vorhanden sind.
+    FunctionsToExport   = @('Php-VersionSwitcher')
+
+    # Aus diesem Modul zu exportierende Cmdlets. Um optimale Leistung zu erzielen, verwenden Sie keine Platzhalter und löschen den Eintrag nicht. Verwenden Sie ein leeres Array, wenn keine zu exportierenden Cmdlets vorhanden sind.
+    CmdletsToExport     = @()
+
+    # Die aus diesem Modul zu exportierenden Variablen
+    VariablesToExport   = '*'
+
+    # Aus diesem Modul zu exportierende Aliase. Um optimale Leistung zu erzielen, verwenden Sie keine Platzhalter und löschen den Eintrag nicht. Verwenden Sie ein leeres Array, wenn keine zu exportierenden Aliase vorhanden sind.
+    AliasesToExport     = @()
+
+    # Die privaten Daten, die an das in &quot;RootModule/ModuleToProcess&quot; angegebene Modul übergeben werden sollen. Diese können auch eine PSData-Hashtabelle mit zusätzlichen von PowerShell verwendeten Modulmetadaten enthalten.
+    PrivateData = @{
+
+        PSData = @{
+
+            # 'Tags' wurde auf das Modul angewendet und unterstützt die Modulermittlung in Onlinekatalogen.
+            Tags         = @('php', 'version')
+
+            # Eine URL zur Lizenz für dieses Modul.
+            LicenseUri   = 'https://github.com/arueckauer/Php-VersionSwitcher/blob/master/LICENSE.txt'
+
+            # Eine URL zur Hauptwebsite für dieses Projekt.
+            ProjectUri   = 'https://github.com/arueckauer/Php-VersionSwitcher'
+
+            # Eine URL zu einem Symbol, das das Modul darstellt.
+            # IconUri = ''
+
+            # 'ReleaseNotes' des Moduls
+            ReleaseNotes = 'https://github.com/arueckauer/Php-VersionSwitcher/blob/master/CHANGELOG.md'
+
+        }
+
+    }
+
+}
+
+</code></pre>
+
+<h2 id="giving-the-module-a-new-home">Giving the module a new home</h2>
+
+<p>Since I am using a custom PowerShell profile and <a href="https://github.com/dahlbyk/posh-git" target="_blank">posh-git</a>, I do already have a <code>WindowsPowerShell</code> folder in my user&rsquo;s documents path (<code>C:\Users\&lt;Username&gt;\Documents\WindowsPowerShell</code>). If you&rsquo;re using a machine, where you don&rsquo;t have that folder, have a look at the <a href="https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Import-Module?view=powershell-6" target="_blank">Import-Module</a> might help you getting there.</p>
+
+<p>I am moving the two created files <code>Php-VersionSwitcher.psm1</code> and <code>Php-VersionSwitcher.psd1</code> to a new home for my custom module: <code>C:\Users\Rueckauer\Documents\WindowsPowerShell\Modules\Php-VersionSwitcher\1.0.0</code>.</p>
+
+<h2 id="import-module">Import-Module</h2>
+
+<p>In my PowerShell profile (<code>C:\Users\Rueckauer\Documents\WindowsPowerShell\profile.ps1</code>) I add a line to import my new module.</p>
+
+<pre><code class="language-powershell">Import-Module Php-VersionSwitcher
+</code></pre>
+
+<h2 id="test-it">Test it</h2>
+
+<p>Now I power up a new PowerShell and try to access the <code>Php-VersionSwitcher</code> function.</p>
+
+<p>Hm, I do get a warning. 🤔</p>
+
+<blockquote>
+<p>WARNUNG: Die Namen einiger importierter Befehle auf Modul &ldquo;Php-VersionSwitcher&rdquo; enthalten nicht genehmigte Verben, sodass deren Auffindbarkeit erschwert werden kann. Wenn Sie die Befehle mit nicht genehmigten Verben finden möchten, führen Sie den Import-Module-Befehl erneut mit dem Verbose-Parameter aus. Sie können durch Eingeben von &ldquo;Get-Verb&rdquo; eine Liste der genehmigten Verben anzeigen.</p>
+</blockquote>
+
+<p>Something is not right with the module name. I need to figure that out later. Let&rsquo;s see, if it works despite the warning.</p>
+
+<p><img src="/img/php-version-switcher-powershell-module/php-versionswitcher.png" alt="Execution of Php-VersionSwitcher" /></p>
+
+<p>Yes, neat! 💪🏻</p>
+
+<p>Okay, that&rsquo;s it for today. Next time I will hope to breath some life into that function.</p>
 ]]></content>
         </item>
         

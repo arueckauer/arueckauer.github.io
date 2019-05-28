@@ -13,12 +13,14 @@
     
     
     <item>
-      <title>Php Version Switcher Powershell Module</title>
+      <title>Php Version Switcher: PowerShell Module</title>
       <link>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</link>
       <pubDate>Tue, 28 May 2019 20:36:42 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D7</description>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
+Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.
+Last year a co-worker and I discussed the possibility of providing each project with a Vagrant box for development purposes that runs a comparable setup as the production environment.</description>
     </item>
     
     <item>
