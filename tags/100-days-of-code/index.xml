@@ -7,10 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 25 May 2019 20:43:15 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 28 May 2019 20:36:42 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/100-days-of-code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Php Version Switcher Powershell Module</title>
+      <link>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</link>
+      <pubDate>Tue, 28 May 2019 20:36:42 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D7</description>
+    </item>
+    
+    <item>
+      <title>Difference of Squares</title>
+      <link>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</link>
+      <pubDate>Mon, 27 May 2019 20:28:26 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D7
+Today I am solving the Difference of Squares of the PHP track on Exercism.
+Exercism offers its users learning new programming languages through exercises with the valuable feedback of mentors. It currently has 50 different language tracks like C#, Go, Kotlin, TypeScript and many others. Head over to Exercism to join.
+Introduction The source of this exercise is Problem 6 of the Euler project.</description>
+    </item>
     
     <item>
       <title>Use dotenv to configure a Zend Expressive application</title>

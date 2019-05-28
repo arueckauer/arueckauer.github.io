@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 27 May 2019 20:28:26 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 28 May 2019 20:36:42 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>100-days-of-code</title>
+      <link>https://arueckauer.github.io/tags/100-days-of-code/</link>
+      <pubDate>Tue, 28 May 2019 20:36:42 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/100-days-of-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>https://arueckauer.github.io/tags/php/</link>
+      <pubDate>Tue, 28 May 2019 20:36:42 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>powershell</title>
+      <link>https://arueckauer.github.io/tags/powershell/</link>
+      <pubDate>Tue, 28 May 2019 20:36:42 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/powershell/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>exercism</title>
@@ -18,24 +45,6 @@
       <pubDate>Mon, 27 May 2019 20:28:26 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/tags/exercism/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>php</title>
-      <link>https://arueckauer.github.io/tags/php/</link>
-      <pubDate>Mon, 27 May 2019 20:28:26 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/tags/php/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>100-days-of-code</title>
-      <link>https://arueckauer.github.io/tags/100-days-of-code/</link>
-      <pubDate>Sat, 25 May 2019 20:43:15 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/tags/100-days-of-code/</guid>
       <description></description>
     </item>
     
