@@ -18,10 +18,10 @@
       <pubDate>Mon, 27 May 2019 20:28:26 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</guid>
-      <description>Today I am solving the Difference of Squares of the PHP track on Exercism.
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D7
+Today I am solving the Difference of Squares of the PHP track on Exercism.
 Exercism offers its users learning new programming languages through exercises with the valuable feedback of mentors. It currently has 50 different language tracks like C#, Go, Kotlin, TypeScript and many others. Head over to Exercism to join.
-Introduction The source of this exercise is Problem 6 of the Euler project.
- The sum of the squares of the first ten natural numbers is,</description>
+Introduction The source of this exercise is Problem 6 of the Euler project.</description>
     </item>
     
     <item>
@@ -43,9 +43,10 @@ I will not go into details on and advantages of this concept. A leave that up to
       <pubDate>Fri, 24 May 2019 23:37:51 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-5-a-change-for-the-better/</guid>
-      <description>Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D5
+Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
 I see some issues with that.
- Build has a dependency on configuration. The build process for an application should stay the same. It must not produce a different outcome depending on the local setup.</description>
+ Build has a dependency on configuration. The build process for an application should stay the same.</description>
     </item>
     
     <item>
@@ -54,10 +55,10 @@ I see some issues with that.
       <pubDate>Thu, 23 May 2019 23:00:00 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</guid>
-      <description>Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
+Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
-Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.
- Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative class maps Optimization Level 2/B: APCu cache  I will not get into detail, which level and options is doing what.</description>
+Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.</description>
     </item>
     
     <item>
@@ -66,7 +67,8 @@ Optimization levels There are two levels of optimization and the second level co
       <pubDate>Wed, 22 May 2019 20:39:27 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-3-keep-a-changelog/</guid>
-      <description>Today I was working with keep a changelog, especially with Matthew Weier O&amp;rsquo;Phinney&amp;rsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D3
+Today I was working with keep a changelog, especially with Matthew Weier O&amp;rsquo;Phinney&amp;rsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
 Installation Setup is thanks to composer straight-forward. You can either install it locally or globally. I went with the latter.
 composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already, remember to add the global composer bin path to your PATH environment variable.</description>
     </item>
@@ -77,7 +79,8 @@ composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already,
       <pubDate>Tue, 21 May 2019 20:45:00 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</guid>
-      <description>Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D2
+Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
  code structure, DI container, router, template engine and error handler.  It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.</description>
     </item>
     

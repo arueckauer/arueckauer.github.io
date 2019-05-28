@@ -18,8 +18,9 @@
       <pubDate>Mon, 20 May 2019 22:00:00 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-1-getting-started-with-terraform/</guid>
-      <description>This year I attended the Global Azure Bootcamp in Zürich. It was a very well organized conference with lots of interesting sessions. I definitely will go again next year!
-One of my favorites was Terraform and Azure - How to GitOps by Sandro Koechli and Jörn Stenkamp. They introduced the idea of managing infrastructure as code with Git. This concept was new to me and very exciting. Unfortunately time did not allow for some demo.</description>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D1
+This year I attended the Global Azure Bootcamp in Zürich. It was a very well organized conference with lots of interesting sessions. I definitely will go again next year!
+One of my favorites was Terraform and Azure - How to GitOps by Sandro Koechli and Jörn Stenkamp. They introduced the idea of managing infrastructure as code with Git. This concept was new to me and very exciting.</description>
     </item>
     
     <item>

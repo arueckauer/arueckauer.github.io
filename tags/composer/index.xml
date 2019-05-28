@@ -18,9 +18,10 @@
       <pubDate>Fri, 24 May 2019 23:37:51 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-5-a-change-for-the-better/</guid>
-      <description>Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D5
+Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
 I see some issues with that.
- Build has a dependency on configuration. The build process for an application should stay the same. It must not produce a different outcome depending on the local setup.</description>
+ Build has a dependency on configuration. The build process for an application should stay the same.</description>
     </item>
     
     <item>
@@ -29,10 +30,10 @@ I see some issues with that.
       <pubDate>Thu, 23 May 2019 23:00:00 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</guid>
-      <description>Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
+Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
-Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.
- Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative class maps Optimization Level 2/B: APCu cache  I will not get into detail, which level and options is doing what.</description>
+Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.</description>
     </item>
     
   </channel>

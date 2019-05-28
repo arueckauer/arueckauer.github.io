@@ -18,10 +18,10 @@
       <pubDate>Thu, 23 May 2019 23:00:00 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</guid>
-      <description>Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
+Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
-Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.
- Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative class maps Optimization Level 2/B: APCu cache  I will not get into detail, which level and options is doing what.</description>
+Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.</description>
     </item>
     
   </channel>
