@@ -6,8 +6,63 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Wed, 29 May 2019 20:03:47 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 30 May 2019 22:47:03 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Php Version Switcher: The Structure</title>
+            <link>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-structure/</link>
+            <pubDate>Thu, 30 May 2019 22:47:03 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-structure/</guid>
+            <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D10
+This is part three of a series of articles about the PHP Version Switcher.
+ Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention  Today I will talk about the structural concept of the PHP Version Switcher.
+On Windows you need to add the path of your PHP location to the system environment variable PATH.</description>
+            <content type="html"><![CDATA[
+
+<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D10</em></p>
+
+<p>This is part three of a series of articles about the <a href="https://github.com/arueckauer/pvs" target="_blank">PHP Version Switcher</a>.</p>
+
+<ul>
+<li>Part One: <a href="/posts/2019/05/php-version-switcher-powershell-module/">Php Version Switcher: PowerShell Module</a></li>
+<li>Part Two: <a href="/posts/2019/05/php-version-switcher-powershell-naming-convention/">Php Version Switcher: PowerShell Naming Convention</a></li>
+</ul>
+
+<hr />
+
+<p>Today I will talk about the structural concept of the PHP Version Switcher.</p>
+
+<p>On Windows you need to add the path of your PHP location to the system environment variable <code>PATH</code>. Switching in-between different PHP versions would mean to also to update the <code>PATH</code> each time. Furthermore, if Apache is supposed to be running the same PHP version, the <code>LoadModule</code> must be updated to the &ldquo;new&rdquo; PHP location. That&rsquo;s just laborious and not fun at all. But PHP Version Switcher to the rescue! 🤹🏼‍♂️</p>
+
+<h2 id="directory-structure">Directory structure</h2>
+
+<p>Everything related to my webserver goes into the directory <code>C:\webserv</code>. There&rsquo;s Apache, CouchDB, Elasticsearch, Ruby, sendmail etc. and the latest versions of PHP 5.6 through 7.4 (the latter being a non-stable snapshot).</p>
+
+<p><img src="/img/php-version-switcher-structure/directory-listing-of-c-webserv.png" alt="Directory listing of C:\webserv" /></p>
+
+<h2 id="symlink">Symlink</h2>
+
+<p>As you might have noticed, among the many PHP directories, there is on just plain called <code>php</code>. This is a symbolic link to the currently set PHP version. This directory is also what I put into my <code>PATH</code> and <code>httpd.conf</code>.</p>
+
+<p>The <code>php_shared</code> folder contains files common among PHP installations. Currently it only houses the <code>cacert.pem</code>.</p>
+
+<h2 id="tasks-of-the-php-version-switcher">Tasks of the PHP Version Switcher</h2>
+
+<p>The <code>pvs</code> now does three things:</p>
+
+<ol>
+<li>Remove the current symlink <code>C:\webserv\php</code>.</li>
+<li>Create a new symlink referring to the provided PHP version.</li>
+<li>Restart the Apache service.</li>
+</ol>
+
+<p>Et voilà, the machine is running a different PHP version.</p>
+
+<p>How this script looks in detail, I will discuss in one of the following posts.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Php Version Switcher: PowerShell Naming Convention</title>
@@ -16,12 +71,20 @@
             
             <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-naming-convention/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D9
-Yesterday I started off, moving for my PHP version switcher to a new home by creating a PowerShell module.
-Whilst the import of the module and invocation of the function worked, the Import-Module throw a warning:
- WARNING: The names of some imported commands from the module &amp;lsquo;Php-VersionSwitcher&amp;rsquo; include unapproved verbs that might make them less discoverable. To find the commands with unapproved verbs, run the Import-Module command again with the Verbose parameter.</description>
+This is part three of a series of articles about the PHP Version Switcher.
+ Part One: Php Version Switcher: PowerShell Module  Yesterday I started off, moving for my PHP version switcher to a new home by creating a PowerShell module.
+Whilst the import of the module and invocation of the function worked, the Import-Module throw a warning:</description>
             <content type="html"><![CDATA[
 
 <p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D9</em></p>
+
+<p>This is part three of a series of articles about the <a href="https://github.com/arueckauer/pvs" target="_blank">PHP Version Switcher</a>.</p>
+
+<ul>
+<li>Part One: <a href="/posts/2019/05/php-version-switcher-powershell-module/">Php Version Switcher: PowerShell Module</a></li>
+</ul>
+
+<hr />
 
 <p><a href="/posts/2019/05/php-version-switcher-powershell-module/">Yesterday</a> I started off, moving for my PHP version switcher to a new home by creating a PowerShell module.</p>
 
@@ -129,6 +192,8 @@ Last year a co-worker and I discussed the possibility of providing each project 
             <content type="html"><![CDATA[
 
 <p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D8</em></p>
+
+<hr />
 
 <p>Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&rsquo;s still not the choice environment for a typical PHP web application.</p>
 
@@ -291,6 +356,8 @@ Introduction The source of this exercise is Problem 6 of the Euler project.</des
             <content type="html"><![CDATA[
 
 <p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D7</em></p>
+
+<hr />
 
 <p>Today I am solving the <em>Difference of Squares</em> of the PHP track on <a href="https://exercism.io/" target="_blank">Exercism</a>.</p>
 
@@ -473,6 +540,8 @@ I will not go into details on and advantages of this concept. A leave that up to
 
 <p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D6</em></p>
 
+<hr />
+
 <blockquote>
 <p>[The Twelve-Factor App] requires strict separation of config from code.</p>
 </blockquote>
@@ -580,6 +649,8 @@ I see some issues with that.
 
 <p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D5</em></p>
 
+<hr />
+
 <p>Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.</p>
 
 <p>I see some issues with that.</p>
@@ -674,6 +745,8 @@ Optimization levels There are two levels of optimization and the second level co
             <content type="html"><![CDATA[
 
 <p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D4</em></p>
+
+<hr />
 
 <p>Today I&rsquo;m studying the <a href="https://getcomposer.org/doc/articles/autoloader-optimization.md" target="_blank">Autoloader Optimization</a> article of the Composer documentation.</p>
 
@@ -781,6 +854,8 @@ composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already,
 
 <p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D3</em></p>
 
+<hr />
+
 <p>Today I was working with <a href="https://keepachangelog.com/" target="_blank">keep a changelog</a>, especially with <a href="https://mwop.net/" target="_blank">Matthew Weier O&rsquo;Phinney</a>&rsquo;s <a href="https://github.com/phly/keep-a-changelog" target="_blank">implementation</a> of it. I am fascinated by the idea of managing the CHANGELOG from the command line.</p>
 
 <h2 id="installation">Installation</h2>
@@ -859,6 +934,8 @@ Whenever starting a new Zend Expressive project, I use the handy zendframework/z
             <content type="html"><![CDATA[
 
 <p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D2</em></p>
+
+<hr />
 
 <p>Whenever starting a new <a href="https://getexpressive.org" target="_blank">Zend Expressive</a> project, I use the handy <code>zendframework/zend-expressive-skeleton</code>. It creates an almost empty Expressive application structure with your choice of</p>
 
@@ -1018,6 +1095,8 @@ Whenever starting a new Zend Expressive project, I use the handy zendframework/z
 This year I attended the Global Azure Bootcamp in Zürich. It was a very well organized conference with lots of interesting sessions. I definitely will go again next year!
 One of my favorites was Terraform and Azure - How to GitOps by Sandro Koechli and Jörn Stenkamp. They introduced the idea of managing infrastructure as code with Git. This concept was new to me and very exciting.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D1</em></p>
+
+<hr />
 
 <p>This year I attended the <a href="https://www.zurich.azurebootcamp.net/" target="_blank">Global Azure Bootcamp in Zürich</a>. It was a very well organized conference with lots of interesting sessions. I definitely will go again next year!</p>
 
