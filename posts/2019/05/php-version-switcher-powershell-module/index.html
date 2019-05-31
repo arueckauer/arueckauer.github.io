@@ -8,8 +8,8 @@
     content="Andi Rückauer ">
 <meta name="description"
     content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
-Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.
-Last year a co-worker and I discussed the possibility of providing each project with a Vagrant box for development purposes that runs a comparable setup as the production environment." />
+This is part one of a series of articles about the PHP Version Switcher.
+ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function  Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application." />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/" />
@@ -41,13 +41,13 @@ Last year a co-worker and I discussed the possibility of providing each project 
 <meta name="theme-color" content="#252627">
 <meta itemprop="name" content="Php Version Switcher: PowerShell Module">
 <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
-Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&rsquo;s still not the choice environment for a typical PHP web application.
-Last year a co-worker and I discussed the possibility of providing each project with a Vagrant box for development purposes that runs a comparable setup as the production environment.">
+This is part one of a series of articles about the PHP Version Switcher.
+ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function  Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&rsquo;s still not the choice environment for a typical PHP web application.">
 
 
 <meta itemprop="datePublished" content="2019-05-28T20:36:42&#43;02:00" />
-<meta itemprop="dateModified" content="2019-05-30T23:22:00&#43;02:00" />
-<meta itemprop="wordCount" content="1022">
+<meta itemprop="dateModified" content="2019-05-31T23:41:32&#43;02:00" />
+<meta itemprop="wordCount" content="1058">
 
 
 
@@ -57,8 +57,8 @@ Last year a co-worker and I discussed the possibility of providing each project 
 
 <meta name="twitter:title" content="Php Version Switcher: PowerShell Module"/>
 <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
-Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&rsquo;s still not the choice environment for a typical PHP web application.
-Last year a co-worker and I discussed the possibility of providing each project with a Vagrant box for development purposes that runs a comparable setup as the production environment."/>
+This is part one of a series of articles about the PHP Version Switcher.
+ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function  Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&rsquo;s still not the choice environment for a typical PHP web application."/>
 
 
 
@@ -135,6 +135,14 @@ Last year a co-worker and I discussed the possibility of providing each project 
                 
 
 <p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D8</em></p>
+
+<p>This is part one of a series of articles about the <a href="https://github.com/arueckauer/pvs" target="_blank">PHP Version Switcher</a>.</p>
+
+<ul>
+<li>Part Two: <a href="https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-naming-convention/">Php Version Switcher: PowerShell Naming Convention</a></li>
+<li>Part Three: <a href="https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-structure/">Php Version Switcher: The Structure</a></li>
+<li>Part Four: <a href="https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/">Php Version Switcher: The Function</a></li>
+</ul>
 
 <hr />
 
@@ -294,10 +302,10 @@ Last year a co-worker and I discussed the possibility of providing each project 
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://arueckauer.github.io/tags/100-days-of-code">100-days-of-code</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/php">php</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/powershell">powershell</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>1022 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>1058 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-05-28 20:36 &#43;0200</p>
-                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/3e303ed7b24233cbedaa146b789ed30a3b86798b" target="_blank" rel="noopener">3e303ed</a> @ 2019-05-30</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/56e271ff3357e759c8b96bea933d6476fb439cdf" target="_blank" rel="noopener">56e271f</a> @ 2019-05-31</p>
         </div>
 
         

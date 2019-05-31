@@ -9,7 +9,7 @@
 <meta name="description"
     content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D10
 This is part three of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention  Today I will talk about the structural concept of the PHP Version Switcher.
+ Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function  Today I will talk about the structural concept of the PHP Version Switcher.
 On Windows you need to add the path of your PHP location to the system environment variable PATH." />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
 <meta name="robots" content="noodp" />
@@ -43,13 +43,13 @@ On Windows you need to add the path of your PHP location to the system environme
 <meta itemprop="name" content="Php Version Switcher: The Structure">
 <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D10
 This is part three of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention  Today I will talk about the structural concept of the PHP Version Switcher.
+ Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function  Today I will talk about the structural concept of the PHP Version Switcher.
 On Windows you need to add the path of your PHP location to the system environment variable PATH.">
 
 
 <meta itemprop="datePublished" content="2019-05-30T22:47:03&#43;02:00" />
-<meta itemprop="dateModified" content="2019-05-30T23:22:29&#43;02:00" />
-<meta itemprop="wordCount" content="270">
+<meta itemprop="dateModified" content="2019-05-31T23:41:32&#43;02:00" />
+<meta itemprop="wordCount" content="277">
 
 
 
@@ -60,7 +60,7 @@ On Windows you need to add the path of your PHP location to the system environme
 <meta name="twitter:title" content="Php Version Switcher: The Structure"/>
 <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D10
 This is part three of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention  Today I will talk about the structural concept of the PHP Version Switcher.
+ Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function  Today I will talk about the structural concept of the PHP Version Switcher.
 On Windows you need to add the path of your PHP location to the system environment variable PATH."/>
 
 
@@ -144,6 +144,7 @@ On Windows you need to add the path of your PHP location to the system environme
 <ul>
 <li>Part One: <a href="https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/">Php Version Switcher: PowerShell Module</a></li>
 <li>Part Two: <a href="https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-naming-convention/">Php Version Switcher: PowerShell Naming Convention</a></li>
+<li>Part Four: <a href="https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/">Php Version Switcher: The Function</a></li>
 </ul>
 
 <hr />
@@ -188,10 +189,10 @@ On Windows you need to add the path of your PHP location to the system environme
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://arueckauer.github.io/tags/100-days-of-code">100-days-of-code</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/powershell">powershell</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>270 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>277 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-05-30 22:47 &#43;0200</p>
-                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/2cec5302b10866586c90700a2db7863a43be52a9" target="_blank" rel="noopener">2cec530</a> @ 2019-05-30</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/56e271ff3357e759c8b96bea933d6476fb439cdf" target="_blank" rel="noopener">56e271f</a> @ 2019-05-31</p>
         </div>
 
         
@@ -202,6 +203,13 @@ On Windows you need to add the path of your PHP location to the system environme
                 </div>
 
                 <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">Php Version Switcher: The Function</span>
+                            </a>
+                        </span>
                     
 
                     

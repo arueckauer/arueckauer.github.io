@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 30 May 2019 22:47:03 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 31 May 2019 22:56:25 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Php Version Switcher: The Function</title>
+      <link>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/</link>
+      <pubDate>Fri, 31 May 2019 22:56:25 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D11
+This is part four of a series of articles about the PHP Version Switcher.
+ Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure  Today I finally breathe life into the module function. 🕺🏼
+Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges.</description>
+    </item>
     
     <item>
       <title>Php Version Switcher: The Structure</title>
@@ -20,7 +32,7 @@
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-structure/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D10
 This is part three of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention  Today I will talk about the structural concept of the PHP Version Switcher.
+ Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function  Today I will talk about the structural concept of the PHP Version Switcher.
 On Windows you need to add the path of your PHP location to the system environment variable PATH.</description>
     </item>
     
@@ -31,8 +43,8 @@ On Windows you need to add the path of your PHP location to the system environme
       
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-naming-convention/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D9
-This is part three of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module  Yesterday I started off, moving for my PHP version switcher to a new home by creating a PowerShell module.
+This is part two of a series of articles about the PHP Version Switcher.
+ Part One: Php Version Switcher: PowerShell Module Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function  Yesterday I started off, moving for my PHP version switcher to a new home by creating a PowerShell module.
 Whilst the import of the module and invocation of the function worked, the Import-Module throw a warning:</description>
     </item>
     
@@ -43,8 +55,8 @@ Whilst the import of the module and invocation of the function worked, the Impor
       
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
-Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.
-Last year a co-worker and I discussed the possibility of providing each project with a Vagrant box for development purposes that runs a comparable setup as the production environment.</description>
+This is part one of a series of articles about the PHP Version Switcher.
+ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function  Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.</description>
     </item>
     
     <item>
