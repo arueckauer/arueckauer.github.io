@@ -15,8 +15,13 @@
             <pubDate>Sat, 01 Jun 2019 21:27:11 +0200</pubDate>
             
             <guid>https://arueckauer.github.io/posts/2019/06/php-version-manager-first-idea/</guid>
-            <description>With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the nvm. I am aware of the phpvm package. This package provided by Anthony Ferrara is far from stable and currently supports only Ubuntu. My focus will be the Windows platform.</description>
+            <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D12
+With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the nvm. I am aware of the phpvm package. This package provided by Anthony Ferrara is far from stable and currently supports only Ubuntu.</description>
             <content type="html"><![CDATA[
+
+<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D12</em></p>
+
+<hr />
 
 <p>With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the <a href="https://github.com/nvm-sh/nvm" target="_blank">nvm</a>. I am aware of the <a href="https://github.com/ircmaxell/phpvm" target="_blank">phpvm</a> package. This package provided by <a href="https://twitter.com/ircmaxell" target="_blank">Anthony Ferrara</a> is far from stable and currently supports only Ubuntu. My focus will be the Windows platform.</p>
 
