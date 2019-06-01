@@ -6,8 +6,43 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 31 May 2019 22:56:25 +0200</lastBuildDate>
+        <lastBuildDate>Sat, 01 Jun 2019 21:27:11 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Php Version Manager: First Idea</title>
+            <link>https://arueckauer.github.io/posts/2019/06/php-version-manager-first-idea/</link>
+            <pubDate>Sat, 01 Jun 2019 21:27:11 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/06/php-version-manager-first-idea/</guid>
+            <description>With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the nvm. I am aware of the phpvm package. This package provided by Anthony Ferrara is far from stable and currently supports only Ubuntu. My focus will be the Windows platform.</description>
+            <content type="html"><![CDATA[
+
+<p>With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the <a href="https://github.com/nvm-sh/nvm" target="_blank">nvm</a>. I am aware of the <a href="https://github.com/ircmaxell/phpvm" target="_blank">phpvm</a> package. This package provided by <a href="https://twitter.com/ircmaxell" target="_blank">Anthony Ferrara</a> is far from stable and currently supports only Ubuntu. My focus will be the Windows platform.</p>
+
+<h2 id="functionality">Functionality</h2>
+
+<p>Some commands that come in handy.</p>
+
+<ul>
+<li><code>list</code> to list (by <code>pvm</code>) locally installed PHP versions</li>
+<li><code>list-remote</code> to list all available PHP versions</li>
+<li><code>install &lt;version&gt;</code> to install given PHP version</li>
+<li><code>use &lt;version&gt;</code> to switch to given PHP version</li>
+<li><code>uninstall &lt;version&gt;</code> to uninstall given PHP version</li>
+</ul>
+
+<h2 id="retrieve-available-php-versions">Retrieve available PHP versions</h2>
+
+<p>In order for this project to even work, I need to be able to fetch a list of available PHP versions. On <a href="https://windows.php.net/download" target="_blank">windows.php.net/download</a> the current releases are listed. Parsing that HTML is not too sexy. So, I am looking for anything else like a RSS feed or so. At first glance I cannot find anything. As I have a closer look on the download links, I notice there is a directory listing available for <a href="https://windows.php.net/downloads/releases/" target="_blank">releases</a>, <a href="https://windows.php.net/downloads/releases/archives/" target="_blank">archives</a> and <a href="https://windows.php.net/downloads/releases/latest/" target="_blank">&ldquo;latest&rdquo;</a>. The HTML does not look very strict. The capital tags remind me on how HTML used to be written ages ago. But that would work.</p>
+
+<p>Just to make sure I don&rsquo;t miss any other options, I&rsquo;m <a href="https://twitter.com/arueckauer/status/1134907160092168193" target="_blank">pinging</a> Pierre Joye - Development Team Leader.</p>
+
+<h2 id="next">Next</h2>
+
+<p>Each PHP version is currently offered for x86 and x64 system versions with each a thread safe and non-thread safe version. For now, I would only offer the x64 thread safe option, to go with Apache and PHP running as module. x86 versions should work similar and probably could be added pretty easily. However, I am not sure why one would want to use them anymore.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Php Version Switcher: The Function</title>

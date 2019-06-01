@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 31 May 2019 22:56:25 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 01 Jun 2019 21:27:11 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/100-days-of-code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Php Version Manager: First Idea</title>
+      <link>https://arueckauer.github.io/posts/2019/06/php-version-manager-first-idea/</link>
+      <pubDate>Sat, 01 Jun 2019 21:27:11 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/06/php-version-manager-first-idea/</guid>
+      <description>With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the nvm. I am aware of the phpvm package. This package provided by Anthony Ferrara is far from stable and currently supports only Ubuntu. My focus will be the Windows platform.</description>
+    </item>
     
     <item>
       <title>Php Version Switcher: The Function</title>
