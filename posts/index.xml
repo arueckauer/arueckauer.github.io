@@ -6,8 +6,60 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Sat, 01 Jun 2019 21:27:11 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 03 Jun 2019 19:25:05 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Difference of Squares -Part II</title>
+            <link>https://arueckauer.github.io/posts/2019/06/difference-of-squares-part-ii/</link>
+            <pubDate>Mon, 03 Jun 2019 19:25:05 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/06/difference-of-squares-part-ii/</guid>
+            <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D13
+In the meanwhile, dstockto reviewed and approved my solution. 🤘🏼 Funny story: He found my blog and saw my submission here before seeing it on Exercism.
+He gave me an interesting additional challenge, to use &amp;ldquo;closed&amp;rdquo; form math-based solutions. This would also allow performance improvement, since the current implementation will take longer the larger $number is.
+Square Of Sum For this function dstockto mentioned the Gauss formula.</description>
+            <content type="html"><![CDATA[
+
+<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D13</em></p>
+
+<hr />
+
+<p>In the meanwhile, <a href="https://twitter.com/dstockto" target="_blank">dstockto</a> reviewed and approved my solution. 🤘🏼 Funny story: He found my blog and saw my submission here before seeing it on Exercism.</p>
+
+<p>He gave me an interesting additional challenge, to use &ldquo;closed&rdquo; form math-based solutions. This would also allow performance improvement, since the current implementation will take longer the larger <code>$number</code> is.</p>
+
+<h2 id="square-of-sum">Square Of Sum</h2>
+
+<p>For this function dstockto mentioned the <a href="https://de.wikipedia.org/wiki/Gau%C3%9Fsche_Summenformel" target="_blank">Gauss formula</a>. This is a form to sum the first n positive integers.</p>
+
+<pre><code class="language-php">
+function squareOfSum(int $number) : int
+{
+    $sum = ($number * $number + $number) / 2;
+    return $sum \* \$sum;
+}
+
+</code></pre>
+
+<h3 id="sum-of-squares">Sum Of Squares</h3>
+
+<p>Now researching for a form to sum squares, I come across a wiki page on <a href="https://brilliant.org/wiki/sum-of-n-n2-or-n3/" target="_blank">Brillant</a>. Under the paragraph <em>Sum of the Squares of the First n Positive Integers</em> I find what I am looking for. Read the linked article, if you&rsquo;re interested in more.</p>
+
+<p>This is the refactored function:</p>
+
+<pre><code class="language-php">function sumOfSquares(int $number) : int
+{
+    return ($number * ($number + 1) * (2 * $number + 1)) / 6;
+}
+
+</code></pre>
+
+<h3 id="completed">Completed</h3>
+
+<p>The tests are all green and I am very happy to have taken the additional challenge. In my first solution, I made usage of PHP standard functions only. Now with a mathematical approach, the code became much more readable.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Php Version Manager: First Idea</title>

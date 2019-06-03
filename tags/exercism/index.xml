@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 27 May 2019 20:28:26 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 03 Jun 2019 19:25:05 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/exercism/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Difference of Squares -Part II</title>
+      <link>https://arueckauer.github.io/posts/2019/06/difference-of-squares-part-ii/</link>
+      <pubDate>Mon, 03 Jun 2019 19:25:05 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/06/difference-of-squares-part-ii/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D13
+In the meanwhile, dstockto reviewed and approved my solution. 🤘🏼 Funny story: He found my blog and saw my submission here before seeing it on Exercism.
+He gave me an interesting additional challenge, to use &amp;ldquo;closed&amp;rdquo; form math-based solutions. This would also allow performance improvement, since the current implementation will take longer the larger $number is.
+Square Of Sum For this function dstockto mentioned the Gauss formula.</description>
+    </item>
     
     <item>
       <title>Difference of Squares</title>
