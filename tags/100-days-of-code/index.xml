@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 03 Jun 2019 19:25:05 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 04 Jun 2019 22:53:29 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/100-days-of-code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>IPC 2019: Day One</title>
+      <link>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-one/</link>
+      <pubDate>Tue, 04 Jun 2019 22:53:29 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-one/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D14
+This was a great first day
+How to make Loveliness: an HTML Treasure Hunt Keynote by Bruce Lawson, one of the editors of the W3C’s HTML5.3 specification
+To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&amp;rsquo;s (well at least my) full attention.</description>
+    </item>
     
     <item>
       <title>Difference of Squares -Part II</title>
