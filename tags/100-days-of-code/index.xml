@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 04 Jun 2019 22:53:29 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 05 Jun 2019 09:32:35 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/100-days-of-code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>IPC 2019: Day Two</title>
+      <link>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-two/</link>
+      <pubDate>Wed, 05 Jun 2019 09:32:35 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-two/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D15
+Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;QSL renaissance ambassador&amp;rdquo;, independent author, trainer, and consultant on all things SQL
+An expert on SQL, very informative, a bliss to listen.
+Still using Windows 3.11? So why still use SQL-92?
+SQL:1999 SQL 1999 recursive (e.g. in child-parent-relations) GROUPING SETS
+SQL:2003 Windows Function: The over clause
+Do you have SQL on you CV and you don&amp;rsquo;t know Window Function?</description>
+    </item>
     
     <item>
       <title>IPC 2019: Day One</title>
