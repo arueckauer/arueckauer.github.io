@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="Andi Rückauer ">
+<meta name="description"
+    content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D16
+Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de
+Arne and Sebastian deliver messages from real world problems they tackled together. It&amp;rsquo;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience." />
+<meta name="keywords" content="andi, rückauer, blog, software, development" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://arueckauer.github.io/posts/2019/06/ipc-2019-day-three/" />
+
+
+<title>
+    
+    IPC 2019: Day Three :: Andi Rückauer  — Thoughts container
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://arueckauer.github.io/main.min.91687bbfc139d7ff1a244bb6d7324425f9c4f424eaaad242b478e3b3cf56396a.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://arueckauer.github.io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://arueckauer.github.io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://arueckauer.github.io/favicon-16x16.png">
+<link rel="manifest" href="https://arueckauer.github.io/site.webmanifest">
+<link rel="mask-icon" href="https://arueckauer.github.io/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
+<meta name="theme-color" content="#252627">
+<meta itemprop="name" content="IPC 2019: Day Three">
+<meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D16
+Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de
+Arne and Sebastian deliver messages from real world problems they tackled together. It&rsquo;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience.">
+
+
+<meta itemprop="datePublished" content="2019-06-06T20:49:38&#43;02:00" />
+<meta itemprop="dateModified" content="2019-06-06T20:50:19&#43;02:00" />
+<meta itemprop="wordCount" content="1253">
+
+
+
+<meta itemprop="keywords" content="100-days-of-code,ipc19,php," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://arueckauer.github.io/"/>
+
+<meta name="twitter:title" content="IPC 2019: Day Three"/>
+<meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D16
+Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de
+Arne and Sebastian deliver messages from real world problems they tackled together. It&rsquo;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience."/>
+
+
+
+
+<meta property="article:published_time" content="2019-06-06 20:49:38 &#43;0200 CEST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://arueckauer.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">Thoughts Container</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://arueckauer.github.io/about">About</a></li><li><a href="https://arueckauer.github.io/posts">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>6 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://arueckauer.github.io/posts/2019/06/ipc-2019-day-three/">IPC 2019: Day Three</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D16</em></p>
+
+<hr />
+
+<h2 id="pragmatic-queue-processing-at-scale">Pragmatic Queue Processing at Scale</h2>
+
+<p><em>By <a href="https://twitter.com/arneblankerts" target="_blank">Arne Blankerts</a>, Principal Consultant at thePHP.cc and <a href="https://twitter.com/belanur" target="_blank">Sebastian Heuer</a>, Developer Advocate at kartenmacherei.de</em></p>
+
+<p>Arne and Sebastian deliver messages from real world problems they tackled together. It&rsquo;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience. It&rsquo;s always worthwhile to attend.</p>
+
+<p>They showed how queue processing can improve performance on legacy applications without the need to refactor or rewrite the whole code base.</p>
+
+<blockquote>
+<p>Start with the simplest thing that could possibly work</p>
+</blockquote>
+
+<p>Instead of implementing the latest hype of technology, look at the stack you already have. If MySQL is part of your stack, that is okay for events. Though it will not scale infinitely. Take/chose a pragmatic path.</p>
+
+<p>Scaling &amp; Concurrency</p>
+
+<ul>
+<li><a href="https://reactphp.org/" target="_blank">ReactPHP</a> for async I/O usage,</li>
+<li><a href="https://www.php.net/manual/en/book.pthreads.php" target="_blank">PThreads</a> - do not use it [in production|at all],</li>
+<li><a href="https://www.php.net/manual/en/book.parallel.php" target="_blank">Parallel</a></li>
+</ul>
+
+<p>Threading</p>
+
+<ul>
+<li>PHP with ZTS (Zend thread safety)</li>
+<li>FPM</li>
+</ul>
+
+<p>Can PHP talk FastCGI?</p>
+
+<p>The Event Listener starts a handler in its own FPM process. By using <a href="https://github.com/hollodotme/fast-cgi-client" target="_blank">FastCGI client</a>. You can even scale to multiple FPM servers.</p>
+
+<p>FPM Pool configuration. Sequential processing of events. Controlled shutdown by <a href="https://www.php.net/manual/en/ref.pcntl.php" target="_blank">signal handling</a> (better than manually killing processes and ending up in an unknown state if handler has not finished).</p>
+
+<h2 id="do-php-frameworks-still-make-sense-let-s-go-frameworkless-to-focus-on-the-domain">Do PHP Frameworks still make Sense? Let’s go Frameworkless to focus on the Domain!</h2>
+
+<p>By <a href="https://twitter.com/damiano_dev" target="_blank">Damiano Petrungaro</a></p>
+
+<p>Damiano proved in this talk his expertise on the topic of framworkless and DDD.</p>
+
+<p>In the beginning he described the importance of frameworks, like:</p>
+
+<ul>
+<li>Pushing for innovation</li>
+<li>Not reinventing the wheel</li>
+<li>Defining new standards</li>
+<li>Eases start for newcomers</li>
+</ul>
+
+<blockquote>
+<p>It&rsquo;s all about dependency
+Framework = Dependency</p>
+</blockquote>
+
+<p>He gave a short introduction to frameworkless and the <a href="http://frameworklessmovement.org/" target="_blank">Frameworkless Movement</a>, also explained that Dependencies are bad and how to avoid them.</p>
+
+<p>The last part of his talk covered DDD, strategic and tactical design.</p>
+
+<blockquote>
+<p>The domain is not a dependency! It enforces us to model the domain first and then adapts the framework to it.</p>
+</blockquote>
+
+<p>As a conclusion, I take from this talk: <em>Adapt the framework to your domain and not your domain to the framework.</em></p>
+
+<h2 id="migrating-with-a-metal-background">Migrating, with a Metal Background</h2>
+
+<p><em>By <a href="https://twitter.com/johannhartmann" target="_blank">Johann-Peter Hartmann</a>, found and CTO of Mayflower GmbH</em></p>
+
+<p>With <em>metal</em> Johann-Peter is referring to the on-premise server back in the days, when our monolith applications were running on them. We were taken care of everything by ourselves.</p>
+
+<p>In his talk he showed possible options when moving to the cloud - rehosting aka &ldquo;lift and shift&rdquo;. His presentation proved him as a competent speaker on the matter with a broad knowledge. In the following, just some very few notes from his talk.</p>
+
+<ul>
+<li>Scaling, reliability up. Operational costs down.</li>
+</ul>
+
+<blockquote>
+<p>It&rsquo;s 10 % cheaper than on premise</p>
+</blockquote>
+
+<p><em>Amazon</em></p>
+
+<blockquote>
+<p>85 % of the time it&rsquo;s more expensive than on premise.</p>
+</blockquote>
+
+<p><em>Dell</em></p>
+
+<p>Downside of serverless: Application lock-in. Platform-specific function is not as easy to move to another platform as running plain PHP on various environments.</p>
+
+<p>Razor &amp; Blades Model (cheap razor, expensive blades. cheap printer, expensive ink)
+Lambda is chap, but the APIGateway is expensive.</p>
+
+<blockquote>
+<p>Average lifetime of a container in orchestrated environments: 12 hours</p>
+</blockquote>
+
+<p>Ephemeral containers. Everything is temporary. Start it, stop it, destroy it, replicate it, replace it, scale it.</p>
+
+<blockquote>
+<p>If you have a container that is active when it is not handling data, it is a server.</p>
+</blockquote>
+
+<p>Great definition of what microservices really are.</p>
+
+<blockquote>
+<p>Move complexity to places where you can automate it.</p>
+
+<p>External services are the new silo
+Kubernetes is the new OS</p>
+</blockquote>
+
+<h2 id="web-with-sense-how-to-build-a-start-up-that-is-not-only-profitable-but-also-improves-the-world">Web with Sense: How to build a Start-up that is not only profitable, but also improves the World</h2>
+
+<p><em>By Christian Kroll, founder of Ecosia</em></p>
+
+<p>Christian is a self-less person, who started an initiative that might play a major role in stopping the climate change. With the revenue of his search engine <a href="https://www.ecosia.org/" target="_blank">Ecosia</a> he plants trees. The company has already planted nearly 60 million trees.</p>
+
+<blockquote>
+<p>You cannot solve the climate change without planting trees. But you can solve it by planting 1 trillion trees.</p>
+</blockquote>
+
+<p>A tree &ldquo;recycles&rdquo; ~50 kg of CO2 during its lifetime. The earth has currently a capacity for ~1.2 trillion trees. It would take 1 % of military budget for the next 20 years to plant 1 trillion trees.</p>
+
+<p>4 years after launch, Ecosia planted their one millionth tree. Until then 80 % of revenue went into tree planting. Then they changed the business model and are now giving away 100 % of their revenue.</p>
+
+<blockquote>
+<p>For the sake of profit, we are destroying our planet.</p>
+</blockquote>
+
+<p>Christian is passionate about the climate change and sharing this compassion. He challenged the audience to (1) contemplate what personal changes can be made to contribute to a positive change and (2) share those ideas with the person you sit next to. What a great exercise! I want to purchase vegetables and fruits from local producers where possible.</p>
+
+<p>A fun fact: Ecosia has a TPO - Tree plant officer! 😃</p>
+
+<blockquote>
+<p>Sometimes I do use Google, but don&rsquo;t tell anyone</p>
+</blockquote>
+
+<p><a href="https://twitter.com/Christian_KrolI" target="_blank">Twitter</a>,</p>
+
+<h2 id="opening-doors-with-json-web-tokens">Opening Doors with JSON Web Tokens</h2>
+
+<p><em>By <a href="https://twitter.com/bendechrai" target="_blank">Ben Dechrai</a>, Technologist, Presenter, <a href="https://auth0.com" target="_blank">Auth0</a> Developer Evangelist, Community Advocate</em></p>
+
+<p>Ben gave an interesting presentation on a rather unusual way to use JSON Web Tokens: Opening doors. He elaborated on the Amazon Key Vulnerability. He then demoed the usage of JSON Web Tokens as a safer way which also prevents such attacks. I did not take much notes, but really enjoyed the demo. Thank you for even bringing a door all the way from Australia.</p>
+
+<h2 id="branching-strategies-choose-wisely-to-minimize-costs">Branching Strategies: choose wisely to minimize Costs</h2>
+
+<p><em>By <a href="https://twitter.com/gbtekkie" target="_blank">Georgiana Gligor</a>, Large-Scale Application Architect. Public Speaker. PhD Student.</em></p>
+
+<p>Georgiana made extensive research on Branching Strategies. In this talk she presents her learnings with the audience, so they can</p>
+
+<blockquote>
+<p>Choose wisely to minimize costs.</p>
+</blockquote>
+
+<p>She gave a reading recommendation and an analogy on the book from HBR&rsquo;s 10 must read: On Change Management. Because our code basis is about change management.</p>
+
+<p>In this presentation she did not provide a ready-to-use recipe for any situation, rather aimed for:</p>
+
+<ul>
+<li>a framework to make informed decisions,</li>
+<li>highlight costs and</li>
+<li>where to look when one needs help.</li>
+</ul>
+
+<p>She continued on talking about various VCS, their current approximate usage. And gave a recommendation to use git, because &ldquo;it is the best&rdquo;.</p>
+
+<blockquote>
+<p>It’s not like git got everything right, but it got all the really basic issues right in a way that no other SCM had ever done before.</p>
+</blockquote>
+
+<p><em>Linus Torvalds</em></p>
+
+<p>She is referring to feature branches as topic branches, as it is more suitable in her opinion.</p>
+
+<p>The Merge Workflow generates more noise in the history than the Rebase Workflow.</p>
+
+<p>She compared stable trunk aka trunk-based development with unstable trunk. The latter making usage of release branches.</p>
+
+<p>Strategies</p>
+
+<ul>
+<li>Lone wolf (one person working for a long period)</li>
+<li>Git flow (high noise due to many branches) perfect in environments where clear rules are required</li>
+<li>GitHub flow (stable trunk, pull requests with signoffs/approvals) great when deploying often (like daily)</li>
+<li>simple git flow</li>
+<li>workflow for agile teams (master as next release, qa branch for releasing)</li>
+<li>Gitlab flow (master as next release, staging, production, 2-3 stable, cherry picking) agile approach</li>
+<li>Gitworkflows (last stable release, next release, integration testbed, proposed updates, topic branches)</li>
+</ul>
+
+<blockquote>
+<p>Men have become the tools of their tools</p>
+</blockquote>
+
+<p>Henry David Thoreau</p>
+
+<blockquote>
+<p>Don&rsquo;t become dependent on your tools.</p>
+</blockquote>
+
+<p>Because tools are there to help, not to block from being productive. They are just tools.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://arueckauer.github.io/tags/100-days-of-code">100-days-of-code</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/ipc19">ipc19</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/php">php</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>1253 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-06 20:49 &#43;0200</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/534ec5825426626acf5089727b25f76f568fc163" target="_blank" rel="noopener">534ec58</a> @ 2019-06-06</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://arueckauer.github.io/posts/2019/06/ipc-2019-day-two/">
+                                <span class="button__text">IPC 2019: Day Two</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2019</span>
+            
+                <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="https://arueckauer.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.cf7871ed49474a80ed457154d24e61f7881adbe0f9384951a74ac46b688a39a4dbfa68bc6d37baeb058186de354ead3487d4ee7f083ea4cba860c48600b694f3.js" integrity="sha512-z3hx7UlHSoDtRXFU0k5h94ga2&#43;D5OElRp0rEa2iKOaTb&#43;mi8bTe66wWBht41Tq00h9Tufwg&#43;pMuoYMSGALaU8w=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-35992501-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+	
+		<script src="https://unpkg.com/feather-icons"></script>
+	
+
+
+<script>
+    feather.replace()
+</script>
+
+    </body>
+</html>

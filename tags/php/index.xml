@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 05 Jun 2019 21:32:35 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 06 Jun 2019 20:49:38 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>IPC 2019: Day Three</title>
+      <link>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-three/</link>
+      <pubDate>Thu, 06 Jun 2019 20:49:38 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-three/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D16
+Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de
+Arne and Sebastian deliver messages from real world problems they tackled together. It&amp;rsquo;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience.</description>
+    </item>
     
     <item>
       <title>IPC 2019: Day Two</title>
