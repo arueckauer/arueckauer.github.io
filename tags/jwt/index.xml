@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jwt on Andi Rückauer</title>
+    <link>https://arueckauer.github.io/tags/jwt/</link>
+    <description>Recent content in jwt on Andi Rückauer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 07 Jun 2019 19:34:43 +0200</lastBuildDate>
+    
+	<atom:link href="https://arueckauer.github.io/tags/jwt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>To JWT or not to JWT</title>
+      <link>https://arueckauer.github.io/posts/2019/06/to-jwt-or-not-to-jwt/</link>
+      <pubDate>Fri, 07 Jun 2019 19:34:43 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/06/to-jwt-or-not-to-jwt/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D17
+At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors.</description>
+    </item>
+    
+  </channel>
+</rss>
