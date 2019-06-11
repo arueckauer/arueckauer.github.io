@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 10 Jun 2019 21:31:48 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jun 2019 21:29:52 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Meetup (Side Exercise)</title>
+      <link>https://arueckauer.github.io/posts/2019/06/meetup-side-exercise/</link>
+      <pubDate>Tue, 11 Jun 2019 21:29:52 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/06/meetup-side-exercise/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D20
+Next up in the PHP sidetrack is the Meetup exercise.
+A function is provided with the arguments
+ (int) year, (int) month, (string) descriptor and (string) weekday  and expected to process the input and return an instance of DateTime with the corresponding date.
+While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated.</description>
+    </item>
     
     <item>
       <title>Sieve of Eratosthenes (Side Exercise)</title>

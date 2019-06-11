@@ -6,8 +6,171 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 10 Jun 2019 21:31:48 +0200</lastBuildDate>
+        <lastBuildDate>Tue, 11 Jun 2019 21:29:52 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Meetup (Side Exercise)</title>
+            <link>https://arueckauer.github.io/posts/2019/06/meetup-side-exercise/</link>
+            <pubDate>Tue, 11 Jun 2019 21:29:52 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/06/meetup-side-exercise/</guid>
+            <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D20
+Next up in the PHP sidetrack is the Meetup exercise.
+A function is provided with the arguments
+ (int) year, (int) month, (string) descriptor and (string) weekday  and expected to process the input and return an instance of DateTime with the corresponding date.
+While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated.</description>
+            <content type="html"><![CDATA[
+
+<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D20</em></p>
+
+<hr />
+
+<p>Next up in the PHP sidetrack is the <em>Meetup</em> exercise.</p>
+
+<p>A function is provided with the arguments</p>
+
+<ul>
+<li>(int) year,</li>
+<li>(int) month,</li>
+<li>(string) descriptor and</li>
+<li>(string) weekday</li>
+</ul>
+
+<p>and expected to process the input and return an instance of <code>DateTime</code> with the corresponding date.</p>
+
+<p>While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated. It can hold one of the following values:</p>
+
+<ul>
+<li>teenth,</li>
+<li>first,</li>
+<li>second,</li>
+<li>third,</li>
+<li>fourth or</li>
+<li>last</li>
+</ul>
+
+<p>Thus, making the actual date variable.</p>
+
+<h2 id="function-signature">Function signature</h2>
+
+<p>First, I create the required file <code>meetup.php</code> and declare the function <code>meetup_day()</code> with the known arguments.</p>
+
+<pre><code class="language-php">function meetup_day(int $year, int $month, string $descriptor, string $weekday) : DateTime
+{
+    return new DateTime();
+}
+</code></pre>
+
+<p>All tests are failing, but there are no syntax errors - perfect.</p>
+
+<h2 id="year-month-time">Year, month, time</h2>
+
+<p>Breaking this exercise up into pieces, I first comment out all but the first test method. That lets me focus on one feature/requirement at a time.</p>
+
+<p>Since there is only a description of a date and the tests assert always against a time of 0, I can start by initializing a <code>DateTime</code> object and setting the time.</p>
+
+<pre><code class="language-php">$date = new DateTime();
+$date-&gt;setTime(0, 0);
+</code></pre>
+
+<p>Next, I add the year and month. Since <code>DateTime::setDate</code> is expecting also the day as third parameter and do not yet know it, I simply declare it as 1.</p>
+
+<pre><code class="language-php">$date-&gt;setDate($year, $month, 1);
+</code></pre>
+
+<h2 id="modifier">Modifier</h2>
+
+<p>Now I can use <code>DateTime::modify</code> to set the actual date. I start off by just simply using first as modifier.</p>
+
+<pre><code class="language-php">$date-&gt;modify(&quot;first $weekday of this month&quot;);
+</code></pre>
+
+<p>With this implementation, all tests against the first weekday are passing. To handle the other possible values of the descriptor, I first check whether it is equal to <code>'teenth'</code> since I will need to know that later on again. Then I will use <code>'first'</code> as modifier for the <code>'teenth'</code> descriptor. And finally, pass it to the <code>modify()</code> method.</p>
+
+<pre><code class="language-php">$isTeenth = 'teenth' === $descriptor;
+$modifier = $isTeenth ? 'first' : $descriptor;
+
+$date-&gt;modify(&quot;$modifier $weekday of this month&quot;);
+</code></pre>
+
+<p>Now all tests are passing except for the descriptors with a value of <code>'teenth'</code>.</p>
+
+<h2 id="teenth">Teenth</h2>
+
+<blockquote>
+<p>Note that &ldquo;monteenth&rdquo;, &ldquo;tuesteenth&rdquo;, etc are all made up words. There was a meetup whose members realized that there are exactly 7 numbered days in a month that end in &lsquo;-teenth&rsquo;. Therefore, one is guaranteed that each day of the week (Monday, Tuesday, &hellip;) will have exactly one date that is named with &lsquo;-teenth&rsquo; in every month.</p>
+</blockquote>
+
+<p>From the exercise description I learn that the day of month for the <code>'teenth'</code> descriptor has to be between 13 and 19 inclusive. However, it is not possible to know without doing some math, whether it is the second or third <em>weekday</em> in the month.</p>
+
+<p>The simplest solution that comes to my mind, is to add 1 week to the current date, while the day of the month in not in-between 12 and 20.</p>
+
+<pre><code class="language-php">function modify_teenth_date(DateTime $date) : DateTime
+{
+    $teenthDays = [
+        '13',
+        '14',
+        '15',
+        '16',
+        '17',
+        '18',
+        '19',
+    ];
+    while (! in_array($date-&gt;format('d'), $teenthDays, true)) {
+        $date-&gt;modify('+1 week');
+    }
+
+    return $date;
+}
+</code></pre>
+
+<p>Et voilà, all tests are passing.</p>
+
+<h2 id="my-solution">My solution</h2>
+
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types = 1);
+
+function meetup_day(int $year, int $month, string $descriptor, string $weekday) : DateTime
+{
+    $isTeenth = 'teenth' === $descriptor;
+    $modifier = $isTeenth ? 'first' : $descriptor;
+
+    $date = new DateTime();
+    $date-&gt;setDate($year, $month, 1);
+    $date-&gt;modify(&quot;$modifier $weekday of this month&quot;);
+    $date-&gt;setTime(0, 0);
+
+    if ($isTeenth) {
+        modify_teenth_date($date);
+    }
+
+    return $date;
+}
+
+function modify_teenth_date(DateTime $date) : DateTime
+{
+    $teenthDays = [
+        '13',
+        '14',
+        '15',
+        '16',
+        '17',
+        '18',
+        '19',
+    ];
+    while (! in_array($date-&gt;format('d'), $teenthDays, true)) {
+        $date-&gt;modify('+1 week');
+    }
+
+    return $date;
+}
+
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Sieve of Eratosthenes (Side Exercise)</title>
