@@ -4,31 +4,48 @@
   
   <url>
     <loc>https://arueckauer.github.io/tags/100-days-of-code/</loc>
-    <lastmod>2019-06-11T08:34:02+02:00</lastmod>
+    <lastmod>2019-06-11T21:40:06+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/</loc>
+    <lastmod>2019-06-11T21:40:06+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/posts/</loc>
+    <lastmod>2019-06-11T21:40:06+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/posts/2019/06/sieve-of-eratosthenes-side-exercise/</loc>
+    <lastmod>2019-06-11T21:40:06+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/</loc>
+    <lastmod>2019-06-11T21:40:06+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/exercism/</loc>
+    <lastmod>2019-06-11T21:40:06+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/php/</loc>
+    <lastmod>2019-06-11T21:40:06+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/posts/2019/06/120ish-html-elements/</loc>
     <lastmod>2019-06-10T21:00:59+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/</loc>
-    <lastmod>2019-06-11T08:34:02+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/posts/</loc>
-    <lastmod>2019-06-11T08:34:02+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/</loc>
-    <lastmod>2019-06-11T08:34:02+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -51,12 +68,6 @@
   <url>
     <loc>https://arueckauer.github.io/tags/jwt/</loc>
     <lastmod>2019-06-10T20:24:35+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/php/</loc>
-    <lastmod>2019-06-11T08:34:02+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -84,12 +95,6 @@
   <url>
     <loc>https://arueckauer.github.io/posts/2019/06/difference-of-squares-part-ii/</loc>
     <lastmod>2019-06-03T20:05:09+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/exercism/</loc>
-    <lastmod>2019-06-03T20:05:09+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

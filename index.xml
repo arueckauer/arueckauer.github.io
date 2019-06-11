@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 08 Jun 2019 20:32:34 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 10 Jun 2019 21:31:48 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sieve of Eratosthenes (Side Exercise)</title>
+      <link>https://arueckauer.github.io/posts/2019/06/sieve-of-eratosthenes-side-exercise/</link>
+      <pubDate>Mon, 10 Jun 2019 21:31:48 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/06/sieve-of-eratosthenes-side-exercise/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D19
+Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
+ In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2.</description>
+    </item>
     
     <item>
       <title>120(ish) HTML Elements</title>

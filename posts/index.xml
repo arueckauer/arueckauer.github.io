@@ -6,8 +6,78 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Sat, 08 Jun 2019 20:32:34 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 10 Jun 2019 21:31:48 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Sieve of Eratosthenes (Side Exercise)</title>
+            <link>https://arueckauer.github.io/posts/2019/06/sieve-of-eratosthenes-side-exercise/</link>
+            <pubDate>Mon, 10 Jun 2019 21:31:48 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/06/sieve-of-eratosthenes-side-exercise/</guid>
+            <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D19
+Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
+ In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2.</description>
+            <content type="html"><![CDATA[
+
+<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D19</em></p>
+
+<hr />
+
+<p>Today I am solving the Sieve of Eratosthenes side exercise of the <a href="https://exercism.io" target="_blank">Exercism</a> PHP track.</p>
+
+<blockquote>
+<p>In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit.
+It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime. This is the sieve&rsquo;s key distinction from using trial division to sequentially test each candidate number for divisibility by each prime.</p>
+</blockquote>
+
+<p>See <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes" target="_blank">https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes</a>.</p>
+
+<h2 id="my-solution">My solution</h2>
+
+<p>The algorithm is straight forward. There are two exceptions to a default behavior.</p>
+
+<ol>
+<li>If the limit is less than 2, an empty array can be returned.</li>
+<li>When removing multiples of a prime from an array, make sure to not remove the prime itself.</li>
+</ol>
+
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types = 1);
+
+function sieve(int $limit) : array
+{
+    if ($limit &lt; 2) {
+        return [];
+    }
+
+    $prime = 2;
+    $range = range($prime, $limit);
+
+    for (; $prime &lt;= $limit; $prime++) {
+        removeMultiplesFromRange($prime, $range);
+    }
+
+    return array_values($range);
+}
+
+function removeMultiplesFromRange(int $prime, array &amp;$range) : void
+{
+    foreach ($range as $key =&gt; $value) {
+        if ($prime === $value) {
+            continue;
+        }
+
+        if (0 === $value % $prime) {
+            unset($range[$key]);
+        }
+    }
+}
+
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>120(ish) HTML Elements</title>

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 08 Jun 2019 20:32:34 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 10 Jun 2019 21:31:48 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,27 @@
     <item>
       <title>100-days-of-code</title>
       <link>https://arueckauer.github.io/tags/100-days-of-code/</link>
-      <pubDate>Sat, 08 Jun 2019 20:32:34 +0200</pubDate>
+      <pubDate>Mon, 10 Jun 2019 21:31:48 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/tags/100-days-of-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>exercism</title>
+      <link>https://arueckauer.github.io/tags/exercism/</link>
+      <pubDate>Mon, 10 Jun 2019 21:31:48 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/exercism/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>https://arueckauer.github.io/tags/php/</link>
+      <pubDate>Mon, 10 Jun 2019 21:31:48 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/php/</guid>
       <description></description>
     </item>
     
@@ -49,29 +67,11 @@
     </item>
     
     <item>
-      <title>php</title>
-      <link>https://arueckauer.github.io/tags/php/</link>
-      <pubDate>Fri, 07 Jun 2019 19:34:43 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/tags/php/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ipc19</title>
       <link>https://arueckauer.github.io/tags/ipc19/</link>
       <pubDate>Thu, 06 Jun 2019 20:49:38 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/tags/ipc19/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>exercism</title>
-      <link>https://arueckauer.github.io/tags/exercism/</link>
-      <pubDate>Mon, 03 Jun 2019 19:25:05 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/tags/exercism/</guid>
       <description></description>
     </item>
     
