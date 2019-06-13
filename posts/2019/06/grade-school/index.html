@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="Andi Rückauer ">
+<meta name="description"
+    content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
+This Exercism exercise is straight forward.
+An extract from the instructions:
+ Given students&amp;rsquo; names along with the grade that they are in, create a roster for the school.
+In the end, you should be able to:
+ Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades." />
+<meta name="keywords" content="andi, rückauer, blog, software, development" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://arueckauer.github.io/posts/2019/06/grade-school/" />
+
+
+<title>
+    
+    Grade School :: Andi Rückauer  — Thoughts container
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://arueckauer.github.io/main.min.91687bbfc139d7ff1a244bb6d7324425f9c4f424eaaad242b478e3b3cf56396a.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://arueckauer.github.io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://arueckauer.github.io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://arueckauer.github.io/favicon-16x16.png">
+<link rel="manifest" href="https://arueckauer.github.io/site.webmanifest">
+<link rel="mask-icon" href="https://arueckauer.github.io/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
+<meta name="theme-color" content="#252627">
+<meta itemprop="name" content="Grade School">
+<meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
+This Exercism exercise is straight forward.
+An extract from the instructions:
+ Given students&rsquo; names along with the grade that they are in, create a roster for the school.
+In the end, you should be able to:
+ Add a student&rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.">
+
+
+<meta itemprop="datePublished" content="2019-06-12T23:32:10&#43;02:00" />
+<meta itemprop="dateModified" content="2019-06-13T23:41:02&#43;02:00" />
+<meta itemprop="wordCount" content="229">
+
+
+
+<meta itemprop="keywords" content="100-days-of-code,exercism,php," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://arueckauer.github.io/"/>
+
+<meta name="twitter:title" content="Grade School"/>
+<meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
+This Exercism exercise is straight forward.
+An extract from the instructions:
+ Given students&rsquo; names along with the grade that they are in, create a roster for the school.
+In the end, you should be able to:
+ Add a student&rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades."/>
+
+
+
+
+<meta property="article:published_time" content="2019-06-12 23:32:10 &#43;0200 CEST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://arueckauer.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">Thoughts Container</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://arueckauer.github.io/about">About</a></li><li><a href="https://arueckauer.github.io/posts">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://arueckauer.github.io/posts/2019/06/grade-school/">Grade School</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D21</em></p>
+
+<hr />
+
+<p>This <a href="https://exercism.io" target="_blank">Exercism</a> exercise is straight forward.</p>
+
+<p>An extract from the instructions:</p>
+
+<blockquote>
+<p>Given students&rsquo; names along with the grade that they are in, create a roster for the school.</p>
+
+<p>In the end, you should be able to:</p>
+
+<ul>
+<li>Add a student&rsquo;s name to the roster for a grade</li>
+<li>Get a list of all students enrolled in a grade</li>
+<li>Get a sorted list of all students in all grades. Grades should sort as 1, 2, 3, etc., and students within a grade should be sorted alphabetically by name.</li>
+</ul>
+
+<p>Note that all our students only have one name. (It&rsquo;s a small town, what do you want?)</p>
+</blockquote>
+
+<h2 id="my-solution">My solution</h2>
+
+<p>Although I am not happy with the usage of plain array in PHP, I used them here because of a closed setup where nothing will be added. In a regular project I would implement some custom collection class which checks allows type checking, since <a href="https://wiki.php.net/rfc/generics" target="_blank">Generic Types</a> are not (yet) available in PHP.</p>
+
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types = 1);
+
+class School
+{
+    private $students;
+
+    public function add(string $name, int $grade) : void
+    {
+        $this-&gt;initGradeIfItDoesNotExist($grade);
+
+        $this-&gt;students[$grade][] = $name;
+        sort($this-&gt;students[$grade]);
+    }
+
+    public function grade(int $grade) : array
+    {
+        $this-&gt;initGradeIfItDoesNotExist($grade);
+        return $this-&gt;students[$grade];
+    }
+
+    public function studentsByGradeAlphabetical() : array
+    {
+        asort($this-&gt;students);
+        return $this-&gt;students;
+    }
+
+    private function initGradeIfItDoesNotExist(int $grade) : void
+    {
+        if (! isset($this-&gt;students[$grade])) {
+            $this-&gt;students[$grade] = [];
+        }
+    }
+}
+
+</code></pre>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://arueckauer.github.io/tags/100-days-of-code">100-days-of-code</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/exercism">exercism</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/php">php</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>229 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-12 23:32 &#43;0200</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/b7ea7d523c4150e9748c1a877e4961571d3507d9" target="_blank" rel="noopener">b7ea7d5</a> @ 2019-06-13</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://arueckauer.github.io/posts/2019/06/meetup-side-exercise/">
+                                <span class="button__text">Meetup (Side Exercise)</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2019</span>
+            
+                <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="https://arueckauer.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.cf7871ed49474a80ed457154d24e61f7881adbe0f9384951a74ac46b688a39a4dbfa68bc6d37baeb058186de354ead3487d4ee7f083ea4cba860c48600b694f3.js" integrity="sha512-z3hx7UlHSoDtRXFU0k5h94ga2&#43;D5OElRp0rEa2iKOaTb&#43;mi8bTe66wWBht41Tq00h9Tufwg&#43;pMuoYMSGALaU8w=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-35992501-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+	
+		<script src="https://unpkg.com/feather-icons"></script>
+	
+
+
+<script>
+    feather.replace()
+</script>
+
+    </body>
+</html>

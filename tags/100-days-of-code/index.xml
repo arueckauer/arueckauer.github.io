@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 11 Jun 2019 21:29:52 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 12 Jun 2019 23:32:10 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/100-days-of-code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Grade School</title>
+      <link>https://arueckauer.github.io/posts/2019/06/grade-school/</link>
+      <pubDate>Wed, 12 Jun 2019 23:32:10 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/06/grade-school/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
+This Exercism exercise is straight forward.
+An extract from the instructions:
+ Given students&amp;rsquo; names along with the grade that they are in, create a roster for the school.
+In the end, you should be able to:
+ Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
+    </item>
     
     <item>
       <title>Meetup (Side Exercise)</title>

@@ -6,8 +6,88 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 11 Jun 2019 21:29:52 +0200</lastBuildDate>
+        <lastBuildDate>Wed, 12 Jun 2019 23:32:10 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Grade School</title>
+            <link>https://arueckauer.github.io/posts/2019/06/grade-school/</link>
+            <pubDate>Wed, 12 Jun 2019 23:32:10 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/06/grade-school/</guid>
+            <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
+This Exercism exercise is straight forward.
+An extract from the instructions:
+ Given students&amp;rsquo; names along with the grade that they are in, create a roster for the school.
+In the end, you should be able to:
+ Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
+            <content type="html"><![CDATA[
+
+<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D21</em></p>
+
+<hr />
+
+<p>This <a href="https://exercism.io" target="_blank">Exercism</a> exercise is straight forward.</p>
+
+<p>An extract from the instructions:</p>
+
+<blockquote>
+<p>Given students&rsquo; names along with the grade that they are in, create a roster for the school.</p>
+
+<p>In the end, you should be able to:</p>
+
+<ul>
+<li>Add a student&rsquo;s name to the roster for a grade</li>
+<li>Get a list of all students enrolled in a grade</li>
+<li>Get a sorted list of all students in all grades. Grades should sort as 1, 2, 3, etc., and students within a grade should be sorted alphabetically by name.</li>
+</ul>
+
+<p>Note that all our students only have one name. (It&rsquo;s a small town, what do you want?)</p>
+</blockquote>
+
+<h2 id="my-solution">My solution</h2>
+
+<p>Although I am not happy with the usage of plain array in PHP, I used them here because of a closed setup where nothing will be added. In a regular project I would implement some custom collection class which checks allows type checking, since <a href="https://wiki.php.net/rfc/generics" target="_blank">Generic Types</a> are not (yet) available in PHP.</p>
+
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types = 1);
+
+class School
+{
+    private $students;
+
+    public function add(string $name, int $grade) : void
+    {
+        $this-&gt;initGradeIfItDoesNotExist($grade);
+
+        $this-&gt;students[$grade][] = $name;
+        sort($this-&gt;students[$grade]);
+    }
+
+    public function grade(int $grade) : array
+    {
+        $this-&gt;initGradeIfItDoesNotExist($grade);
+        return $this-&gt;students[$grade];
+    }
+
+    public function studentsByGradeAlphabetical() : array
+    {
+        asort($this-&gt;students);
+        return $this-&gt;students;
+    }
+
+    private function initGradeIfItDoesNotExist(int $grade) : void
+    {
+        if (! isset($this-&gt;students[$grade])) {
+            $this-&gt;students[$grade] = [];
+        }
+    }
+}
+
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Meetup (Side Exercise)</title>
