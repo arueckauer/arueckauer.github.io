@@ -7,20 +7,20 @@
 <meta name="author"
     content="Andi Rückauer ">
 <meta name="description"
-    content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
-This Exercism exercise is straight forward.
-An extract from the instructions:
- Given students&amp;rsquo; names along with the grade that they are in, create a roster for the school.
-In the end, you should be able to:
- Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades." />
+    content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D22
+A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
+ Good solution
+Awesome! using strict_types
+It&amp;rsquo;s approved for me but try to use return types as much as possible, I&amp;rsquo;m missing initGradeIfItDoesNotExist
+ This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor." />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://arueckauer.github.io/posts/2019/06/grade-school/" />
+<link rel="canonical" href="https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/" />
 
 
 <title>
     
-    Grade School :: Andi Rückauer  — Thoughts container
+    Use return types as much as possible? :: Andi Rückauer  — Thoughts container
     
 </title>
 
@@ -42,18 +42,18 @@ In the end, you should be able to:
 <link rel="mask-icon" href="https://arueckauer.github.io/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
 <meta name="theme-color" content="#252627">
-<meta itemprop="name" content="Grade School">
-<meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
-This Exercism exercise is straight forward.
-An extract from the instructions:
- Given students&rsquo; names along with the grade that they are in, create a roster for the school.
-In the end, you should be able to:
- Add a student&rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.">
+<meta itemprop="name" content="Use return types as much as possible?">
+<meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D22
+A mentor commented on my yesterday&rsquo;s solution to the Grade School exercise.
+ Good solution
+Awesome! using strict_types
+It&rsquo;s approved for me but try to use return types as much as possible, I&rsquo;m missing initGradeIfItDoesNotExist
+ This post will reflect some of my personal thoughts. Since the mentor&rsquo;s suggestion could be just some personal preference, I will not name the mentor.">
 
 
-<meta itemprop="datePublished" content="2019-06-12T23:32:10&#43;02:00" />
-<meta itemprop="dateModified" content="2019-06-13T23:41:02&#43;02:00" />
-<meta itemprop="wordCount" content="229">
+<meta itemprop="datePublished" content="2019-06-13T23:42:55&#43;02:00" />
+<meta itemprop="dateModified" content="2019-06-14T00:13:30&#43;02:00" />
+<meta itemprop="wordCount" content="321">
 
 
 
@@ -61,18 +61,18 @@ In the end, you should be able to:
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
-<meta name="twitter:title" content="Grade School"/>
-<meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
-This Exercism exercise is straight forward.
-An extract from the instructions:
- Given students&rsquo; names along with the grade that they are in, create a roster for the school.
-In the end, you should be able to:
- Add a student&rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades."/>
+<meta name="twitter:title" content="Use return types as much as possible?"/>
+<meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D22
+A mentor commented on my yesterday&rsquo;s solution to the Grade School exercise.
+ Good solution
+Awesome! using strict_types
+It&rsquo;s approved for me but try to use return types as much as possible, I&rsquo;m missing initGradeIfItDoesNotExist
+ This post will reflect some of my personal thoughts. Since the mentor&rsquo;s suggestion could be just some personal preference, I will not name the mentor."/>
 
 
 
 
-<meta property="article:published_time" content="2019-06-12 23:32:10 &#43;0200 CEST" />
+<meta property="article:published_time" content="2019-06-13 23:42:55 &#43;0200 CEST" />
 
 
 
@@ -136,76 +136,64 @@ In the end, you should be able to:
         </div>
 
         <article>
-            <h1 class="post-title"><a href="https://arueckauer.github.io/posts/2019/06/grade-school/">Grade School</a></h1>
+            <h1 class="post-title"><a href="https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/">Use return types as much as possible?</a></h1>
 
             
 
             <div class="post-content">
                 
 
-<p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D21</em></p>
+<p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D22</em></p>
 
 <hr />
 
-<p>This <a href="https://exercism.io" target="_blank">Exercism</a> exercise is straight forward.</p>
-
-<p>An extract from the instructions:</p>
+<p>A mentor commented on my <a href="https://arueckauer.github.io/posts/2019/06/grade-school/">yesterday&rsquo;s solution</a> to the Grade School exercise.</p>
 
 <blockquote>
-<p>Given students&rsquo; names along with the grade that they are in, create a roster for the school.</p>
+<p>Good solution</p>
 
-<p>In the end, you should be able to:</p>
+<p>Awesome! using strict_types</p>
 
-<ul>
-<li>Add a student&rsquo;s name to the roster for a grade</li>
-<li>Get a list of all students enrolled in a grade</li>
-<li>Get a sorted list of all students in all grades. Grades should sort as 1, 2, 3, etc., and students within a grade should be sorted alphabetically by name.</li>
-</ul>
-
-<p>Note that all our students only have one name. (It&rsquo;s a small town, what do you want?)</p>
+<p>It&rsquo;s approved for me but try to use return types as much as possible, I&rsquo;m missing <strong>initGradeIfItDoesNotExist</strong></p>
 </blockquote>
 
-<h2 id="my-solution">My solution</h2>
+<p><em>This post will reflect some of my personal thoughts. Since the mentor&rsquo;s suggestion could be just some personal preference, I will not name the mentor.</em></p>
 
-<p>Although I am not happy with the usage of plain array in PHP, I used them here because of a closed setup where nothing will be added. In a regular project I would implement some custom collection class which checks allows type checking, since <a href="https://wiki.php.net/rfc/generics" target="_blank">Generic Types</a> are not (yet) available in PHP.</p>
+<p><em>I am very grateful for each one of them taking time and providing valuable feedback. This has been an awesome experience. And since I am doing these exercises to learn, the caused reflection is what I am looking for. Thank you!</em></p>
 
-<pre><code class="language-php">&lt;?php
+<h2 id="reflection">Reflection</h2>
 
-declare(strict_types = 1);
+<p>The suggestion to &ldquo;use return types as much as possible&rdquo; made me review my code.</p>
 
-class School
+<pre><code class="language-php">private function initGradeIfItDoesNotExist(int $grade) : void
 {
-    private $students;
-
-    public function add(string $name, int $grade) : void
-    {
-        $this-&gt;initGradeIfItDoesNotExist($grade);
-
-        $this-&gt;students[$grade][] = $name;
-        sort($this-&gt;students[$grade]);
-    }
-
-    public function grade(int $grade) : array
-    {
-        $this-&gt;initGradeIfItDoesNotExist($grade);
-        return $this-&gt;students[$grade];
-    }
-
-    public function studentsByGradeAlphabetical() : array
-    {
-        asort($this-&gt;students);
-        return $this-&gt;students;
-    }
-
-    private function initGradeIfItDoesNotExist(int $grade) : void
-    {
-        if (! isset($this-&gt;students[$grade])) {
-            $this-&gt;students[$grade] = [];
-        }
+    if (! isset($this-&gt;students[$grade])) {
+        $this-&gt;students[$grade] = [];
     }
 }
-
 </code></pre>
+
+<p>So first off, <code>initGradeIfItDoesNotExist()</code> has a declared return type. Okay, it is <code>void</code>. And secondly, how could an actual return value improve the method and what should be returned?</p>
+
+<p>A value should only be returned, if it is required. A returned value adds complexity. It is a dependency, to the code invoking the method. And it probably needs some validation, if the returned variable is what is expected.</p>
+
+<p>Since <code>initGradeIfItDoesNotExist()</code> can mutate <code>$this-&gt;students</code>, it could return either that or <code>$this-&gt;students[$grade]</code>. Both variables are an array. The return type could be changed to <code>array</code>. And the caller could possibly check if the returned value is an array of at least <code>0</code> elements. Additionally the <code>if</code> condition could check, if <code>$this-&gt;students[$grade]</code> is set that is is an array. Ending up with:</p>
+
+<pre><code class="language-php">private function initGradeIfItDoesNotExist(int $grade) : array
+{
+    if (! isset($this-&gt;students[$grade])
+        || ! is_array($this-&gt;students[$grade])
+    ) {
+        $this-&gt;students[$grade] = [];
+    }
+
+    return $this-&gt;students[$grade];
+}
+</code></pre>
+
+<p>Maybe I am missing something here, but that does not make any sense to me.</p>
+
+<p>You have thoughts on that? Happy to hear about it on <a href="https://twitter.com/arueckauer" target="_blank">Twitter</a>.</p>
 
             </div>
         </article>
@@ -217,10 +205,10 @@ class School
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://arueckauer.github.io/tags/100-days-of-code">100-days-of-code</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/exercism">exercism</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/php">php</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>229 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>321 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-12 23:32 &#43;0200</p>
-                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/b7ea7d523c4150e9748c1a877e4961571d3507d9" target="_blank" rel="noopener">b7ea7d5</a> @ 2019-06-13</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-13 23:42 &#43;0200</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/5b1f599cd582f65117456c041220fec7b193d679" target="_blank" rel="noopener">5b1f599</a> @ 2019-06-14</p>
         </div>
 
         
@@ -232,18 +220,11 @@ class School
 
                 <div class="pagination__buttons">
                     
-                        <span class="button previous">
-                            <a href="https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/">
-                                <span class="button__icon">←</span>
-                                <span class="button__text">Use return types as much as possible?</span>
-                            </a>
-                        </span>
-                    
 
                     
                         <span class="button next">
-                            <a href="https://arueckauer.github.io/posts/2019/06/meetup-side-exercise/">
-                                <span class="button__text">Meetup (Side Exercise)</span>
+                            <a href="https://arueckauer.github.io/posts/2019/06/grade-school/">
+                                <span class="button__text">Grade School</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

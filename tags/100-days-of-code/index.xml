@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 12 Jun 2019 23:32:10 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 13 Jun 2019 23:42:55 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/100-days-of-code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Use return types as much as possible?</title>
+      <link>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</link>
+      <pubDate>Thu, 13 Jun 2019 23:42:55 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D22
+A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
+ Good solution
+Awesome! using strict_types
+It&amp;rsquo;s approved for me but try to use return types as much as possible, I&amp;rsquo;m missing initGradeIfItDoesNotExist
+ This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
+    </item>
     
     <item>
       <title>Grade School</title>

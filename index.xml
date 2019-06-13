@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 12 Jun 2019 23:32:10 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 13 Jun 2019 23:42:55 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Use return types as much as possible?</title>
+      <link>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</link>
+      <pubDate>Thu, 13 Jun 2019 23:42:55 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D22
+A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
+ Good solution
+Awesome! using strict_types
+It&amp;rsquo;s approved for me but try to use return types as much as possible, I&amp;rsquo;m missing initGradeIfItDoesNotExist
+ This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
+    </item>
     
     <item>
       <title>Grade School</title>
@@ -288,17 +302,6 @@ In this post I am writing about my own commitment to the challenge. If you want 
       <guid>https://arueckauer.github.io/posts/2019/05/from-flat-to-modular/</guid>
       <description>Transforming of a flat application structure to a modular one in a Zend Expressive project
 In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure.</description>
-    </item>
-    
-    <item>
-      <title>Just do it</title>
-      <link>https://arueckauer.github.io/posts/2019/05/just-do-it/</link>
-      <pubDate>Thu, 16 May 2019 13:00:00 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/05/just-do-it/</guid>
-      <description>The idea of starting my own blog has accompanied me for years. Since I was afraid, it would not see regular updates and quickly become a lonesome tumbleweed, I&amp;rsquo;ve never put it to action.
-However I could never set aside having a tool to record and contain my thought. So here goes nothing.
-Reasons to start and (not) to end My main motivation of starting this blog is to have a</description>
     </item>
     
   </channel>

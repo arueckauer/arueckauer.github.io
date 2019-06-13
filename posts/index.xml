@@ -6,8 +6,76 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Wed, 12 Jun 2019 23:32:10 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 13 Jun 2019 23:42:55 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Use return types as much as possible?</title>
+            <link>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</link>
+            <pubDate>Thu, 13 Jun 2019 23:42:55 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</guid>
+            <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D22
+A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
+ Good solution
+Awesome! using strict_types
+It&amp;rsquo;s approved for me but try to use return types as much as possible, I&amp;rsquo;m missing initGradeIfItDoesNotExist
+ This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
+            <content type="html"><![CDATA[
+
+<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D22</em></p>
+
+<hr />
+
+<p>A mentor commented on my <a href="/posts/2019/06/grade-school/">yesterday&rsquo;s solution</a> to the Grade School exercise.</p>
+
+<blockquote>
+<p>Good solution</p>
+
+<p>Awesome! using strict_types</p>
+
+<p>It&rsquo;s approved for me but try to use return types as much as possible, I&rsquo;m missing <strong>initGradeIfItDoesNotExist</strong></p>
+</blockquote>
+
+<p><em>This post will reflect some of my personal thoughts. Since the mentor&rsquo;s suggestion could be just some personal preference, I will not name the mentor.</em></p>
+
+<p><em>I am very grateful for each one of them taking time and providing valuable feedback. This has been an awesome experience. And since I am doing these exercises to learn, the caused reflection is what I am looking for. Thank you!</em></p>
+
+<h2 id="reflection">Reflection</h2>
+
+<p>The suggestion to &ldquo;use return types as much as possible&rdquo; made me review my code.</p>
+
+<pre><code class="language-php">private function initGradeIfItDoesNotExist(int $grade) : void
+{
+    if (! isset($this-&gt;students[$grade])) {
+        $this-&gt;students[$grade] = [];
+    }
+}
+</code></pre>
+
+<p>So first off, <code>initGradeIfItDoesNotExist()</code> has a declared return type. Okay, it is <code>void</code>. And secondly, how could an actual return value improve the method and what should be returned?</p>
+
+<p>A value should only be returned, if it is required. A returned value adds complexity. It is a dependency, to the code invoking the method. And it probably needs some validation, if the returned variable is what is expected.</p>
+
+<p>Since <code>initGradeIfItDoesNotExist()</code> can mutate <code>$this-&gt;students</code>, it could return either that or <code>$this-&gt;students[$grade]</code>. Both variables are an array. The return type could be changed to <code>array</code>. And the caller could possibly check if the returned value is an array of at least <code>0</code> elements. Additionally the <code>if</code> condition could check, if <code>$this-&gt;students[$grade]</code> is set that is is an array. Ending up with:</p>
+
+<pre><code class="language-php">private function initGradeIfItDoesNotExist(int $grade) : array
+{
+    if (! isset($this-&gt;students[$grade])
+        || ! is_array($this-&gt;students[$grade])
+    ) {
+        $this-&gt;students[$grade] = [];
+    }
+
+    return $this-&gt;students[$grade];
+}
+</code></pre>
+
+<p>Maybe I am missing something here, but that does not make any sense to me.</p>
+
+<p>You have thoughts on that? Happy to hear about it on <a href="https://twitter.com/arueckauer" target="_blank">Twitter</a>.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Grade School</title>
