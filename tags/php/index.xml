@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 13 Jun 2019 23:42:55 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 14 Jun 2019 21:30:50 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Robot Simulator</title>
+      <link>https://arueckauer.github.io/posts/2019/06/robot-simulator/</link>
+      <pubDate>Fri, 14 Jun 2019 21:30:50 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
+Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
+ turn right, turn left and advance.  A robot can also follow instructions on how to proceed.
+  The letter-string &amp;ldquo;RAALAL&amp;rdquo; means:  Turn right Advance twice Turn left Advance once Turn left yet again  Say a robot starts at {7, 3} facing north.</description>
+    </item>
     
     <item>
       <title>Use return types as much as possible?</title>

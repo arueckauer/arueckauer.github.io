@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 13 Jun 2019 23:42:55 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 14 Jun 2019 21:30:50 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Robot Simulator</title>
+      <link>https://arueckauer.github.io/posts/2019/06/robot-simulator/</link>
+      <pubDate>Fri, 14 Jun 2019 21:30:50 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
+Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
+ turn right, turn left and advance.  A robot can also follow instructions on how to proceed.
+  The letter-string &amp;ldquo;RAALAL&amp;rdquo; means:  Turn right Advance twice Turn left Advance once Turn left yet again  Say a robot starts at {7, 3} facing north.</description>
+    </item>
     
     <item>
       <title>Use return types as much as possible?</title>
@@ -292,16 +304,6 @@ Besides my interest in software development and technology in general, I greatly
       <guid>https://arueckauer.github.io/posts/2019/05/100-days-of-code/</guid>
       <description>Lately quite a few posts on the #100DaysOfCode challenge have come up on my Twitter timeline. I was curious what it is all about. So, I started to do some research and I really liked what I was reading.
 In this post I am writing about my own commitment to the challenge. If you want to know more about it yourself, start reading the initial article on medium or go straight to the official website.</description>
-    </item>
-    
-    <item>
-      <title>From Flat to Modular</title>
-      <link>https://arueckauer.github.io/posts/2019/05/from-flat-to-modular/</link>
-      <pubDate>Fri, 17 May 2019 06:30:00 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/05/from-flat-to-modular/</guid>
-      <description>Transforming of a flat application structure to a modular one in a Zend Expressive project
-In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure.</description>
     </item>
     
   </channel>
