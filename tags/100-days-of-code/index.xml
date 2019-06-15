@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 14 Jun 2019 21:30:50 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 15 Jun 2019 20:57:36 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/100-days-of-code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Robot Simulator Chapter 2</title>
+      <link>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</link>
+      <pubDate>Sat, 15 Jun 2019 20:57:36 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D24
+After a mentor left some feedback:
+ I like that you&amp;rsquo;ve split out the direction and position. I think you can go a bit further though.
+ I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure.</description>
+    </item>
     
     <item>
       <title>Robot Simulator</title>

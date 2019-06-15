@@ -6,8 +6,52 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 14 Jun 2019 21:30:50 +0200</lastBuildDate>
+        <lastBuildDate>Sat, 15 Jun 2019 20:57:36 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Robot Simulator Chapter 2</title>
+            <link>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</link>
+            <pubDate>Sat, 15 Jun 2019 20:57:36 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</guid>
+            <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D24
+After a mentor left some feedback:
+ I like that you&amp;rsquo;ve split out the direction and position. I think you can go a bit further though.
+ I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure.</description>
+            <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D24</em></p>
+
+<hr />
+
+<p>After a mentor left some feedback:</p>
+
+<blockquote>
+<p>I like that you&rsquo;ve split out the direction and position. I think you can go a bit further though.</p>
+</blockquote>
+
+<p>I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure. The result can be found on <a href="https://github.com/arueckauer/exercism-php/tree/master/robot-simulator" target="_blank">GitHub</a>. Where I might upload all my solutions.</p>
+
+<blockquote>
+<p>Thanks for the feedback.</p>
+
+<p>I gave it some more thought and came up with the now submitted solution.</p>
+
+<ul>
+<li><code>Direction</code> knows current direction and is able to turn either left or right</li>
+<li><code>Position</code> is now solely responsible for the movement (depending on given <code>Direction</code>)</li>
+<li><code>Robot</code> has a <code>Direction</code> and <code>Position</code> and is able to follow instructions.</li>
+</ul>
+
+<p>I thought about implementing a separate <code>Move</code> class. Which would turn the direction and advance the position. That approach would tighten the coupling between classes and add complexity.</p>
+
+<p>Also a <code>Map</code> would IMO only make sense to place n Robots on it.</p>
+
+<p>I&rsquo;m pretty happy with the outcome. One improvement I would add is either making <code>Robot</code> properties private and adding getters and setters or declare type properties. Now it would be possible to mutate them to whatever.</p>
+
+<p>Looking forward to hearing from you.</p>
+</blockquote>
+]]></content>
+        </item>
         
         <item>
             <title>Robot Simulator</title>
