@@ -6,8 +6,45 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Sat, 15 Jun 2019 20:57:36 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 17 Jun 2019 16:45:52 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Intermediate Status</title>
+            <link>https://arueckauer.github.io/posts/2019/06/intermediate-status/</link>
+            <pubDate>Mon, 17 Jun 2019 16:45:52 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/06/intermediate-status/</guid>
+            <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D25
+25 % of my #100DaysOfCode and #100DaysOfBlogging challenges are completed. Time for an intermediate status review.
+Just do it As mentioned in my starting post, I wanted this to be a fun and learning experience. I am very happy to see that I&amp;rsquo;ve reached all of my goals so far. My greatest concern was that I would get tired of writing (almost) every day.</description>
+            <content type="html"><![CDATA[
+
+<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D25</em></p>
+
+<hr />
+
+<p>25 % of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenges are completed. Time for an intermediate status review.</p>
+
+<h2 id="just-do-it">Just do it</h2>
+
+<p>As mentioned in my <a href="/posts/2019/05/just-do-it/">starting post</a>, I wanted this to be a fun and learning experience. I am very happy to see that I&rsquo;ve reached all of my goals so far. My greatest concern was that I would get tired of writing (almost) every day. But this has been good practice and writing becomes easier every day.</p>
+
+<h2 id="learnings">Learnings</h2>
+
+<p>Making time for reading an interesting article or trying something out from my to-do list, has been a wonderful achievement experience. Usually those items tend to linger around in lists forever. Now I actually engage in things of personal interest (well, for the most part).</p>
+
+<h2 id="improvements">Improvements</h2>
+
+<p>The thing that bothers me the most is, when I lose focus and just try to accomplish my daily goal to create a new post. The content has little value and writing it lacks fun. Also writing a blog post is a huge time consumer. From the little time I have each night after kids are in bed, I would like to focus more on the actual learnings rather than writing about it.</p>
+
+<p>This is why I want to adjust my <a href="/posts/2019/05/100-days-of-code/">rules</a> in the #100DaysOfBlogging challenge starting today.</p>
+
+<p>Instead of forcing me to blog every day, I want to focus and make time to study, code and learn. My new goal for blogging is to write a blog post once a week. If time and content permits than more often.</p>
+
+<p>To another 75 days!</p>
+]]></content>
+        </item>
         
         <item>
             <title>Robot Simulator Chapter 2</title>
