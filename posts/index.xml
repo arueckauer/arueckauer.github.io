@@ -6,8 +6,92 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 28 Jun 2019 09:04:39 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 04 Jul 2019 16:09:13 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Console Commands in an Expressive Applicaton</title>
+            <link>https://arueckauer.github.io/posts/2019/07/console-commands-in-an-expressive-applicaton/</link>
+            <pubDate>Thu, 04 Jul 2019 16:09:13 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/07/console-commands-in-an-expressive-applicaton/</guid>
+            <description>In a current customer project, I needed the ability to run commands from the CLI.
+Symfony provides a console component which is, among others, used by zendframework/zend-expressive-tooling. The documentation got me off to a quick start and I got my first Hello command running within minutes.
+I wanted to provide a re-usable package, where the implementation can provide the definition of a command list.
+Since I am not using the package within a Symfony application, I needed somehow access to the Service Container of the Expressive application.</description>
+            <content type="html"><![CDATA[<p>In a current customer project, I needed the ability to run commands from the CLI.</p>
+
+<p>Symfony provides a console component which is, among others, used by <a href="zendframework/zend-expressive-tooling" target="_blank"><code>zendframework/zend-expressive-tooling</code></a>. The <a href="https://symfony.com/doc/current/console.html" target="_blank">documentation</a> got me off to a quick start and I got my first <code>Hello</code> command running within minutes.</p>
+
+<p>I wanted to provide a re-usable package, where the implementation can provide the definition of a command list.</p>
+
+<p>Since I am not using the package within a Symfony application, I needed somehow access to the Service Container of the Expressive application. I quick search on the internet did not show up any useful results and I was left to use my own brain.</p>
+
+<p>My starting point was the <a href="https://github.com/zendframework/zend-expressive-skeleton/blob/master/public/index.php" target="_blank"><code>public/index.php</code></a> provided by Expressive. From there it was just a small step of adjustments and I could access the configuration by simply loading the service container via <code>$container = require 'config/container.php';</code>.</p>
+
+<p>The next task was to use a factory service for commands that have dependencies. Since I already have the service container, I can simply get the command from it.</p>
+
+<p>The end-result looks like so:</p>
+
+<pre><code class="language-php">#!/usr/bin/env php
+&lt;?php
+
+declare(strict_types = 1);
+
+namespace Arueckauer\Console;
+
+use PackageVersions\Versions;
+use Psr\Container\ContainerInterface;
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Command\Command;
+
+require 'vendor/autoload.php';
+
+/** @var ContainerInterface $container */
+$container = require 'config/container.php';
+
+$commandsConfig = require 'config/autoload/commands.global.php';
+$commandList = [];
+foreach ($commandsConfig[CommandList::class] as $command) {
+    if ($command instanceof Command) {
+        $commandList[] = $command;
+    } else {
+        $commandList[] = $container-&gt;get($command);
+    }
+}
+
+$application = new Application('Console');
+$application-&gt;addCommands($commandList);
+$application-&gt;run();
+
+</code></pre>
+
+<p>The configuration of commands is placed in a configuration file like <code>config/autoload/commands.global.php</code>.</p>
+
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types = 1);
+
+use Command\Hello;
+use Command\NeedSomeDependencies;
+use Elstr\Console\CommandList;
+
+return [
+    CommandList::class =&gt; [
+        new Hello(),
+        NeedSomeDependencies::class,
+    ],
+];
+
+</code></pre>
+
+<p>A day after I completed my implementation, two users mentioned an interesting post by Geert Eltink (aka <a href="https://twitter.com/xtreamwayz" target="_blank">@xtreamwayz</a>) from 2016 <a href="https://www.xtreamwayz.com/blog/2016-02-07-zend-expressive-console-cli-commands" target="_blank">zend-expressive console cli commands</a> and the <a href="https://github.com/zfcampus/zf-console" target="_blank">zfcampus/zf-console</a> library.</p>
+
+<p><img src="/img/console-commands-in-an-expressive-applicaton/slack-thread.jpg" alt="Conversation on Slack" /></p>
+
+<p><em>(I blacked out the usernames, since I do not have their permission to use them.)</em></p>
+]]></content>
+        </item>
         
         <item>
             <title>Format Seconds as Time in PHP</title>

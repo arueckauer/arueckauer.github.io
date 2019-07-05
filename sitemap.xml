@@ -4,31 +4,42 @@
   
   <url>
     <loc>https://arueckauer.github.io/</loc>
-    <lastmod>2019-07-05T10:43:14+02:00</lastmod>
+    <lastmod>2019-07-05T11:20:55+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/posts/2019/07/console-commands-in-an-expressive-applicaton/</loc>
+    <lastmod>2019-07-05T11:20:55+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/posts/</loc>
+    <lastmod>2019-07-05T11:20:55+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/</loc>
+    <lastmod>2019-07-05T11:20:55+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/php/</loc>
+    <lastmod>2019-07-05T11:20:55+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/zend-expressive/</loc>
+    <lastmod>2019-07-05T11:20:55+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/posts/2019/06/format-seconds-as-time-in-php/</loc>
     <lastmod>2019-07-05T10:43:14+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/posts/</loc>
-    <lastmod>2019-07-05T10:43:14+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/</loc>
-    <lastmod>2019-07-05T10:43:14+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/php/</loc>
-    <lastmod>2019-07-05T10:43:14+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -181,12 +192,6 @@
   
   <url>
     <loc>https://arueckauer.github.io/tags/dotenv/</loc>
-    <lastmod>2019-05-30T23:22:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/zend-expressive/</loc>
     <lastmod>2019-05-30T23:22:00+02:00</lastmod>
     <priority>0</priority>
   </url>
