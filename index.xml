@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 17 Jun 2019 16:45:52 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 28 Jun 2019 09:04:39 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Format Seconds as Time in PHP</title>
+      <link>https://arueckauer.github.io/posts/2019/06/format-seconds-as-time-in-php/</link>
+      <pubDate>Fri, 28 Jun 2019 09:04:39 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/06/format-seconds-as-time-in-php/</guid>
+      <description>Somewhat over ten years ago I was working on a project, where we measured execution time and memory consumption of PHP scripts. To display the execution time in a human-readable way, we used a function to format the timestamp provided by microtime().
+&amp;lt;?php class Application__Helper_Timer { /** * Calculates the execution time of a script * @param float $executionTime * @return string */ public static function formatExecutionTime($executionTime) { $seconds = $this-&amp;gt;executionTime; $hours = 0; $minutes = 0; while (($seconds - 3600) &amp;gt; 0) { $hours++; $seconds -= 3600; } while (($seconds - 60) &amp;gt; 0) { $minutes++; $seconds -= 60; } if (1 === strlen((string) $hours)) { $hours = &#39;0&#39; .</description>
+    </item>
     
     <item>
       <title>Intermediate Status</title>
@@ -295,17 +305,6 @@ composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already,
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D2
 Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
  code structure, DI container, router, template engine and error handler.  It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.</description>
-    </item>
-    
-    <item>
-      <title>Day 1: Getting started with Terraform</title>
-      <link>https://arueckauer.github.io/posts/2019/05/day-1-getting-started-with-terraform/</link>
-      <pubDate>Mon, 20 May 2019 22:00:00 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/05/day-1-getting-started-with-terraform/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D1
-This year I attended the Global Azure Bootcamp in Zürich. It was a very well organized conference with lots of interesting sessions. I definitely will go again next year!
-One of my favorites was Terraform and Azure - How to GitOps by Sandro Koechli and Jörn Stenkamp. They introduced the idea of managing infrastructure as code with Git. This concept was new to me and very exciting.</description>
     </item>
     
   </channel>

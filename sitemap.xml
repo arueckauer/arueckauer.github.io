@@ -3,13 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://arueckauer.github.io/tags/100-days-of-code/</loc>
-    <lastmod>2019-06-18T17:12:40+02:00</lastmod>
+    <loc>https://arueckauer.github.io/</loc>
+    <lastmod>2019-07-05T10:43:14+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://arueckauer.github.io/</loc>
+    <loc>https://arueckauer.github.io/posts/2019/06/format-seconds-as-time-in-php/</loc>
+    <lastmod>2019-07-05T10:43:14+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/posts/</loc>
+    <lastmod>2019-07-05T10:43:14+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/</loc>
+    <lastmod>2019-07-05T10:43:14+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/php/</loc>
+    <lastmod>2019-07-05T10:43:14+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/100-days-of-code/</loc>
     <lastmod>2019-06-18T17:12:40+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -17,18 +40,6 @@
   <url>
     <loc>https://arueckauer.github.io/posts/2019/06/intermediate-status/</loc>
     <lastmod>2019-06-18T17:12:40+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/posts/</loc>
-    <lastmod>2019-06-18T17:12:40+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/</loc>
-    <lastmod>2019-06-18T17:12:40+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -44,12 +55,6 @@
   
   <url>
     <loc>https://arueckauer.github.io/tags/exercism/</loc>
-    <lastmod>2019-06-15T21:02:09+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/php/</loc>
     <lastmod>2019-06-15T21:02:09+02:00</lastmod>
     <priority>0</priority>
   </url>

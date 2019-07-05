@@ -6,8 +6,190 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 17 Jun 2019 16:45:52 +0200</lastBuildDate>
+        <lastBuildDate>Fri, 28 Jun 2019 09:04:39 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Format Seconds as Time in PHP</title>
+            <link>https://arueckauer.github.io/posts/2019/06/format-seconds-as-time-in-php/</link>
+            <pubDate>Fri, 28 Jun 2019 09:04:39 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/06/format-seconds-as-time-in-php/</guid>
+            <description>Somewhat over ten years ago I was working on a project, where we measured execution time and memory consumption of PHP scripts. To display the execution time in a human-readable way, we used a function to format the timestamp provided by microtime().
+&amp;lt;?php class Application__Helper_Timer { /** * Calculates the execution time of a script * @param float $executionTime * @return string */ public static function formatExecutionTime($executionTime) { $seconds = $this-&amp;gt;executionTime; $hours = 0; $minutes = 0; while (($seconds - 3600) &amp;gt; 0) { $hours++; $seconds -= 3600; } while (($seconds - 60) &amp;gt; 0) { $minutes++; $seconds -= 60; } if (1 === strlen((string) $hours)) { $hours = &#39;0&#39; .</description>
+            <content type="html"><![CDATA[<p>Somewhat over ten years ago I was working on a project, where we measured execution time and memory consumption of PHP scripts. To display the execution time in a human-readable way, we used a function to format the timestamp provided by <a href="https://php.net/microtime" target="_blank">microtime()</a>.</p>
+
+<pre><code class="language-php">&lt;?php
+
+class Application__Helper_Timer
+{
+    /**
+     * Calculates the execution time of a script
+     * @param float $executionTime
+     * @return string
+     */
+    public static function formatExecutionTime($executionTime)
+    {
+        $seconds = $this-&gt;executionTime;
+        $hours   = 0;
+        $minutes = 0;
+        while (($seconds - 3600) &gt; 0) {
+            $hours++;
+            $seconds -= 3600;
+        }
+        while (($seconds - 60) &gt; 0) {
+            $minutes++;
+            $seconds -= 60;
+        }
+        if (1 === strlen((string) $hours)) {
+            $hours = '0' . $hours;
+        }
+        if (1 === strlen((string) $minutes)) {
+            $minutes = '0' . $minutes;
+        }
+        $seconds = round($seconds, 4);
+        if (false !== strpos($seconds, '.')) {
+            list($seconds, $milliseconds) = explode('.', $seconds);
+            if (1 === strlen((string) $seconds)) {
+                $seconds = '0' . $seconds;
+            }
+        } else {
+            $milliseconds = 0;
+        }
+
+        if ('00' !== $hours) {
+            return sprintf('%s:%s:%s,%s', $hours, $minutes, $seconds, $milliseconds);
+        }
+
+        return sprintf('%s:%s,%s', $minutes, $seconds, $milliseconds);
+    }
+}
+
+</code></pre>
+
+<p>It served the purpose well and I used it in other projects as well.</p>
+
+<p>Today, I needed again a way to format seconds in a way that was easily readable. Remembering that I used that many times before, I pulled it out of the archives, looked at it and started thinking how complicated it was written. There must be an easier way.</p>
+
+<p>So, after pulling up my sleeves and getting to work, I came up with this solution:</p>
+
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types = 1);
+
+namespace Formatter;
+
+class SecondsAsTime
+{
+    public function __invoke(float $seconds) : string
+    {
+        $hours   = (int) ($seconds / 3600);
+        $minutes = (int) (($seconds - $hours * 3600) / 60);
+        $seconds -= ($hours * 3600 + $minutes * 60);
+
+        return sprintf('%02d:%02d:%07.4F', $hours, $minutes, $seconds);
+    }
+}
+
+</code></pre>
+
+<p>Very simple and readable.</p>
+
+<p>Also, I tested test, which greatly helped in the development process.</p>
+
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types = 1);
+
+namespace FormatterTest;
+
+use Formatter\SecondsAsTime;
+use PHPUnit\Framework\TestCase;
+
+class SecondsAsTimeTest extends TestCase
+{
+    public function test1PicoSecond() : void
+    {
+        $formatter = new SecondsAsTime();
+        $this-&gt;assertEquals('00:00:00.0000', $formatter(10 ** -12));
+    }
+
+    public function test1NanoSecond() : void
+    {
+        $formatter = new SecondsAsTime();
+        $this-&gt;assertEquals('00:00:00.0000', $formatter(10 ** -9));
+    }
+
+    public function test1MicroSecond() : void
+    {
+        $formatter = new SecondsAsTime();
+        $this-&gt;assertEquals('00:00:00.0000', $formatter(10 ** -6));
+    }
+
+    public function test1MilliSecond() : void
+    {
+        $formatter = new SecondsAsTime();
+        $this-&gt;assertEquals('00:00:00.0010', $formatter(10 ** -3));
+    }
+
+    public function test1CentiSecond() : void
+    {
+        $formatter = new SecondsAsTime();
+        $this-&gt;assertEquals('00:00:00.0100', $formatter(10 ** -2));
+    }
+
+    public function test1DeciSecond() : void
+    {
+        $formatter = new SecondsAsTime();
+        $this-&gt;assertEquals('00:00:00.1000', $formatter(10 ** -1));
+    }
+
+    public function test1Second() : void
+    {
+        $formatter = new SecondsAsTime();
+        $this-&gt;assertEquals('00:00:01.0000', $formatter(1));
+    }
+
+    public function test1DecaSecond() : void
+    {
+        $formatter = new SecondsAsTime();
+        $this-&gt;assertEquals('00:00:10.0000', $formatter(10 ** 1));
+    }
+
+    public function test1HectoSecond() : void
+    {
+        $formatter = new SecondsAsTime();
+        $this-&gt;assertEquals('00:01:40.0000', $formatter(10 ** 2));
+    }
+
+    public function test1KiloSecond() : void
+    {
+        $formatter = new SecondsAsTime();
+        $this-&gt;assertEquals('00:16:40.0000', $formatter(10 ** 3));
+    }
+
+    public function test1MegaSecond() : void
+    {
+        $formatter = new SecondsAsTime();
+        $this-&gt;assertEquals('277:46:40.0000', $formatter(10 ** 6));
+    }
+
+    public function test1GigaSecond() : void
+    {
+        $formatter = new SecondsAsTime();
+        $this-&gt;assertEquals('277777:46:40.0000', $formatter(10 ** 9));
+    }
+
+    public function test1TeraSecond() : void
+    {
+        $formatter = new SecondsAsTime();
+        $this-&gt;assertEquals('277777777:46:40.0000', $formatter(10 ** 12));
+    }
+}
+
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Intermediate Status</title>
