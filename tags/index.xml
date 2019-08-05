@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 04 Jul 2019 16:09:13 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 05 Aug 2019 16:56:17 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>json-rpc</title>
+      <link>https://arueckauer.github.io/tags/json-rpc/</link>
+      <pubDate>Mon, 05 Aug 2019 16:56:17 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/json-rpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>powershell</title>
+      <link>https://arueckauer.github.io/tags/powershell/</link>
+      <pubDate>Mon, 05 Aug 2019 16:56:17 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/powershell/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>php</title>
@@ -90,15 +108,6 @@
       <pubDate>Thu, 06 Jun 2019 20:49:38 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/tags/ipc19/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>powershell</title>
-      <link>https://arueckauer.github.io/tags/powershell/</link>
-      <pubDate>Fri, 31 May 2019 22:56:25 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/tags/powershell/</guid>
       <description></description>
     </item>
     

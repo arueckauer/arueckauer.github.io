@@ -4,25 +4,42 @@
   
   <url>
     <loc>https://arueckauer.github.io/</loc>
-    <lastmod>2019-07-05T11:20:55+02:00</lastmod>
+    <lastmod>2019-08-05T17:06:08+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/posts/2019/08/json-rpc-call-as-invoke-webrequest/</loc>
+    <lastmod>2019-08-05T17:06:08+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/posts/</loc>
+    <lastmod>2019-08-05T17:06:08+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/</loc>
+    <lastmod>2019-08-05T17:06:08+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/json-rpc/</loc>
+    <lastmod>2019-08-05T17:06:08+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/powershell/</loc>
+    <lastmod>2019-08-05T17:06:08+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/posts/2019/07/console-commands-in-an-expressive-applicaton/</loc>
     <lastmod>2019-07-05T11:20:55+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/posts/</loc>
-    <lastmod>2019-07-05T11:20:55+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/</loc>
-    <lastmod>2019-07-05T11:20:55+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -157,12 +174,6 @@
   <url>
     <loc>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/</loc>
     <lastmod>2019-05-31T23:40:13+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/powershell/</loc>
-    <lastmod>2019-05-31T23:41:32+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
