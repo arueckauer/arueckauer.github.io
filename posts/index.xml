@@ -6,8 +6,141 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 05 Aug 2019 16:56:17 +0200</lastBuildDate>
+        <lastBuildDate>Tue, 06 Aug 2019 16:15:08 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>MySQL utf8mb4 Unicode</title>
+            <link>https://arueckauer.github.io/posts/2019/08/mysql-utf8mb4-unicode/</link>
+            <pubDate>Tue, 06 Aug 2019 16:15:08 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/08/mysql-utf8mb4-unicode/</guid>
+            <description>In MySQL UTF-8 does not actually mean UTF-8. If you&amp;rsquo;re curious to see why, there is an excellent post by Mathias explaining in detail why you should choose utf8mb4 over utf8.
+While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3+ on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&amp;rsquo;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.</description>
+            <content type="html"><![CDATA[
+
+<p>In MySQL UTF-8 does not actually mean UTF-8. If you&rsquo;re curious to see why, there is an excellent <a href="https://mathiasbynens.be/notes/mysql-utf8mb4" target="_blank">post</a> by <a href="https://twitter.com/mathias" target="_blank">Mathias</a> explaining in detail why you should choose utf8mb4 over utf8.</p>
+
+<p>While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3+ on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&rsquo;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.</p>
+
+<pre><code class="language-ini">[client]
+default-character-set=utf8mb4
+
+[mysql]
+default-character-set=utf8mb4
+character-set-server=utf8mb4
+collation-server=utf8mb4_unicode_ci
+
+</code></pre>
+
+<p>To check the server settings after changes are applied and the MySQL service restarted, I executed&hellip;</p>
+
+<pre><code class="language-sql">SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_name LIKE 'collation%';
+</code></pre>
+
+<p>&hellip;with the result being&hellip;</p>
+
+<table>
+<thead>
+<tr>
+<th>Variable_name</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>character_set_client</td>
+<td>utf8mb4</td>
+</tr>
+
+<tr>
+<td>character_set_connection</td>
+<td>utf8mb4</td>
+</tr>
+
+<tr>
+<td>character_set_database</td>
+<td>utf8mb4</td>
+</tr>
+
+<tr>
+<td>character_set_filesystem</td>
+<td>binary</td>
+</tr>
+
+<tr>
+<td>character_set_results</td>
+<td>utf8mb4</td>
+</tr>
+
+<tr>
+<td>character_set_server</td>
+<td>utf8mb4</td>
+</tr>
+
+<tr>
+<td>character_set_system</td>
+<td>utf8</td>
+</tr>
+
+<tr>
+<td>collation_connection</td>
+<td>utf8mb4_0900_ai_ci</td>
+</tr>
+
+<tr>
+<td>collation_database</td>
+<td>utf8mb4_unicode_ci</td>
+</tr>
+
+<tr>
+<td>collation_server</td>
+<td>utf8mb4_unicode_ci</td>
+</tr>
+</tbody>
+</table>
+
+<p>&hellip;alright except for the <code>collation_connection</code> parameter. Now, I am stil unsure, whether that can be set as server variable or not. Trying to set in in <code>my.ini</code>.</p>
+
+<pre><code class="language-ini">[mysqld]
+collation-connection=utf8mb4_unicode_ci
+
+</code></pre>
+
+<p>The service no longer started. ☹</p>
+
+<pre><code class="language-log">2019-08-06T15:02:14.009170Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.15)  MySQL Community Server - GPL.
+2019-08-06T15:02:40.403776Z 0 [Warning] [MY-010915] [Server] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2019-08-06T15:02:40.406958Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.15) starting as process 26140
+2019-08-06T15:02:47.154232Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-08-06T15:02:47.165349Z 0 [ERROR] [MY-000067] [Server] unknown variable 'collation-connection=utf8mb4_unicode_ci'.
+2019-08-06T15:02:47.165375Z 0 [Warning] [MY-010952] [Server] The privilege system failed to initialize correctly. If you have upgraded your server, make sure you're executing mysql_upgrade to correct the issue.
+2019-08-06T15:02:47.181314Z 0 [ERROR] [MY-010119] [Server] Aborting
+</code></pre>
+
+<p>For right now, I am happy with the setup and will leave it there. If you have any clue about the <code>collation-connection</code>, I am more than happy to hear about it.</p>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+<li><a href="https://mathiasbynens.be/notes/mysql-utf8mb4" target="_blank">How to support full Unicode in MySQL databases</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/charset-server.html" target="_blank">MySQL Documentation: 10.3.2 Server Character Set and Collation</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/charset-database.html" target="_blank">MySQL Documentation: 10.3.3 Database Character Set and Collation</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/charset-connection.html" target="_blank">MySQL Documentation: 10.4 Connection Character Sets and Collations</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/charset-configuration.html" target="_blank">MySQL Documentation: 10.14 Character Set Configuration</a></li>
+</ul>
+
+<h3 id="options">Options</h3>
+
+<ul>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/mysql-command-options.html#option_mysql_default-character-set" target="_blank">MySQL Documentation: default-character-set</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_system" target="_blank">MySQL Documentation: character_set_system [utf8]</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server" target="_blank">MySQL Documentation: character_set_server [utf8mb4]</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_client" target="_blank">MySQL Documentation: character_set_client [utf8mb4]</a></li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>JSON-RPC call as Invoke-WebRequest</title>

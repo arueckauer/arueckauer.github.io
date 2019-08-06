@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 05 Aug 2019 16:56:17 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 06 Aug 2019 16:15:08 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MySQL utf8mb4 Unicode</title>
+      <link>https://arueckauer.github.io/posts/2019/08/mysql-utf8mb4-unicode/</link>
+      <pubDate>Tue, 06 Aug 2019 16:15:08 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/08/mysql-utf8mb4-unicode/</guid>
+      <description>In MySQL UTF-8 does not actually mean UTF-8. If you&amp;rsquo;re curious to see why, there is an excellent post by Mathias explaining in detail why you should choose utf8mb4 over utf8.
+While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3+ on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&amp;rsquo;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.</description>
+    </item>
     
     <item>
       <title>JSON-RPC call as Invoke-WebRequest</title>
@@ -294,18 +304,6 @@ I will not go into details on and advantages of this concept. A leave that up to
 Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
 I see some issues with that.
  Build has a dependency on configuration. The build process for an application should stay the same.</description>
-    </item>
-    
-    <item>
-      <title>Day 4: Autoloading Optimization in Composer</title>
-      <link>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</link>
-      <pubDate>Thu, 23 May 2019 23:00:00 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
-Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
-Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
-Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.</description>
     </item>
     
   </channel>
