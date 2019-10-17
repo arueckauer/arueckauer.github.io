@@ -6,8 +6,132 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 06 Aug 2019 16:15:08 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 17 Oct 2019 09:20:19 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Logical Operator and Operator Precedence</title>
+            <link>https://arueckauer.github.io/posts/2019/10/logical-operator-and-operator-precedence/</link>
+            <pubDate>Thu, 17 Oct 2019 09:20:19 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/10/logical-operator-and-operator-precedence/</guid>
+            <description>@MichalBundyra tweeted yesterday:
+ TIL &amp;amp;&amp;amp; and AND are not the same&amp;hellip; https://3v4l.org/dVVYc Thanks @geerteltink
+ Honestly, I never use(d) and. But it is interesting to learn that there is an actual difference and not just a flavor.
+Michal compares the output of and and &amp;amp;&amp;amp;.
+&amp;lt;?php $a = 2 and 3; $b = 2 &amp;amp;&amp;amp; 3; var_dump($a, $b);  Result int(2) bool(true)  Wait what?
+Logical Operator &amp;ldquo;and&amp;rdquo; and &amp;ldquo;&amp;amp;&amp;amp;&amp;rdquo; are not identical Logical Operators The documentation for the Logical Operators states:</description>
+            <content type="html"><![CDATA[
+
+<p><a href="https://twitter.com/MichalBundyra" target="_blank">@MichalBundyra</a> <a href="https://twitter.com/MichalBundyra/status/1184533617600544770" target="_blank">tweeted</a> yesterday:</p>
+
+<blockquote>
+<p>TIL &amp;&amp; and AND are not the same&hellip; <a href="https://3v4l.org/dVVYc" target="_blank">https://3v4l.org/dVVYc</a> Thanks <a href="https://twitter.com/geerteltink" target="_blank">@geerteltink</a></p>
+</blockquote>
+
+<p>Honestly, I never use(d) <code>and</code>. But it is interesting to learn that there is an actual difference and not just a flavor.</p>
+
+<p>Michal compares the output of <code>and</code> and <code>&amp;&amp;</code>.</p>
+
+<pre><code class="language-php">&lt;?php
+
+$a = 2 and 3;
+$b = 2 &amp;&amp; 3;
+
+var_dump($a, $b);
+</code></pre>
+
+<h4 id="result">Result</h4>
+
+<pre><code>int(2)
+bool(true)
+</code></pre>
+
+<p>Wait what?</p>
+
+<h2 id="logical-operator-and-and-are-not-identical">Logical Operator &ldquo;and&rdquo; and &ldquo;&amp;&amp;&rdquo; are not identical</h2>
+
+<h3 id="logical-operators">Logical Operators</h3>
+
+<p>The documentation for the <a href="https://www.php.net/manual/en/language.operators.logical.php" target="_blank">Logical Operators</a> states:</p>
+
+<blockquote>
+<p>The reason for the two different variations of &ldquo;and&rdquo; and &ldquo;or&rdquo; operators is that they operate at different precedences. (See Operator Precedence.)</p>
+</blockquote>
+
+<h3 id="short-circuiting-operators">Short-circuiting operators</h3>
+
+<pre><code class="language-php">&lt;?php
+
+// foo() will never get called as those operators are short-circuited
+
+$a = (false &amp;&amp; foo());
+$b = (false and foo());
+
+var_dump($a, $b);
+
+</code></pre>
+
+<h4 id="result-1">Result</h4>
+
+<pre><code>bool(false)
+bool(false)
+</code></pre>
+
+<h3 id="has-a-greater-precedence-than-and">&ldquo;&amp;&amp;&rdquo; has a greater precedence than &ldquo;and&rdquo;</h3>
+
+<pre><code class="language-php">&lt;?php
+
+// The result of the expression (true &amp;&amp; false) is assigned to $c
+// Acts like: ($c = (true &amp;&amp; false))
+$c = true &amp;&amp; false;
+
+// The constant true is assigned to $d before the &quot;and&quot; operation occurs
+// Acts like: (($d = true) and false)
+$d = true and false;
+
+var_dump($c, $d);
+</code></pre>
+
+<h4 id="result-2">Result</h4>
+
+<pre><code>bool(false)
+bool(true)
+</code></pre>
+
+<h3 id="operator-precedence">Operator Precedence</h3>
+
+<p>Furthermore, the documentation for <a href="https://www.php.net/manual/en/language.operators.precedence.php" target="_blank">Operator Precedence</a> suggests the usage of parentheses to improve readability.</p>
+
+<blockquote>
+<p>The precedence of an operator specifies how &ldquo;tightly&rdquo; it binds two expressions together.</p>
+
+<p>[..]</p>
+
+<p>Use of parentheses, even when not strictly necessary, can often increase readability of the code by making grouping explicit rather than relying on the implicit operator precedence and associativity.</p>
+</blockquote>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>So, <code>and</code> can lead to unexpected results (unless you really know how it works). On the top of my head, I cannot think of a scenario, where <code>and</code> would be required.</p>
+
+<p>To prevent unwanted surprises, one can either put <code>and</code> comparison in parentheses or even better use the <code>&amp;&amp;</code> operator.</p>
+
+<pre><code class="language-php">&lt;?php
+
+$a = (2 and 3);
+$b = 2 &amp;&amp; 3;
+
+var_dump($a, $b);
+</code></pre>
+
+<h4 id="result-3">Result</h4>
+
+<pre><code>bool(true)
+bool(true)
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>MySQL utf8mb4 Unicode</title>

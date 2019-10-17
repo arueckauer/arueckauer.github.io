@@ -4,25 +4,36 @@
   
   <url>
     <loc>https://arueckauer.github.io/</loc>
-    <lastmod>2019-08-06T17:14:59+02:00</lastmod>
+    <lastmod>2019-10-17T09:51:57+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/posts/2019/10/logical-operator-and-operator-precedence/</loc>
+    <lastmod>2019-10-17T09:51:57+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/posts/</loc>
+    <lastmod>2019-10-17T09:51:57+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/</loc>
+    <lastmod>2019-10-17T09:51:57+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/php/</loc>
+    <lastmod>2019-10-17T09:51:57+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://arueckauer.github.io/posts/2019/08/mysql-utf8mb4-unicode/</loc>
     <lastmod>2019-08-06T17:14:59+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/posts/</loc>
-    <lastmod>2019-08-06T17:14:59+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/</loc>
-    <lastmod>2019-08-06T17:14:59+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -57,12 +68,6 @@
   <url>
     <loc>https://arueckauer.github.io/posts/2019/07/console-commands-in-an-expressive-applicaton/</loc>
     <lastmod>2019-07-05T11:20:55+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/php/</loc>
-    <lastmod>2019-07-05T11:20:55+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 04 Jul 2019 16:09:13 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 17 Oct 2019 09:20:19 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Logical Operator and Operator Precedence</title>
+      <link>https://arueckauer.github.io/posts/2019/10/logical-operator-and-operator-precedence/</link>
+      <pubDate>Thu, 17 Oct 2019 09:20:19 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/10/logical-operator-and-operator-precedence/</guid>
+      <description>@MichalBundyra tweeted yesterday:
+ TIL &amp;amp;&amp;amp; and AND are not the same&amp;hellip; https://3v4l.org/dVVYc Thanks @geerteltink
+ Honestly, I never use(d) and. But it is interesting to learn that there is an actual difference and not just a flavor.
+Michal compares the output of and and &amp;amp;&amp;amp;.
+&amp;lt;?php $a = 2 and 3; $b = 2 &amp;amp;&amp;amp; 3; var_dump($a, $b);  Result int(2) bool(true)  Wait what?
+Logical Operator &amp;ldquo;and&amp;rdquo; and &amp;ldquo;&amp;amp;&amp;amp;&amp;rdquo; are not identical Logical Operators The documentation for the Logical Operators states:</description>
+    </item>
     
     <item>
       <title>Console Commands in an Expressive Applicaton</title>
