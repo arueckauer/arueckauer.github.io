@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 17 Oct 2019 09:20:19 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 18 Oct 2019 07:23:59 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,18 @@
     <item>
       <title>php</title>
       <link>https://arueckauer.github.io/tags/php/</link>
-      <pubDate>Thu, 17 Oct 2019 09:20:19 +0200</pubDate>
+      <pubDate>Fri, 18 Oct 2019 07:23:59 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zend-expressive</title>
+      <link>https://arueckauer.github.io/tags/zend-expressive/</link>
+      <pubDate>Fri, 18 Oct 2019 07:23:59 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/zend-expressive/</guid>
       <description></description>
     </item>
     
@@ -54,15 +63,6 @@
       <pubDate>Mon, 05 Aug 2019 16:56:17 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/tags/powershell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>zend-expressive</title>
-      <link>https://arueckauer.github.io/tags/zend-expressive/</link>
-      <pubDate>Thu, 04 Jul 2019 16:09:13 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/tags/zend-expressive/</guid>
       <description></description>
     </item>
     

@@ -6,8 +6,94 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Thu, 17 Oct 2019 09:20:19 +0200</lastBuildDate>
+        <lastBuildDate>Fri, 18 Oct 2019 07:23:59 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Console Commands in an Expressive Applicaton II</title>
+            <link>https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/</link>
+            <pubDate>Fri, 18 Oct 2019 07:23:59 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/</guid>
+            <description>This is an addition to my previous post Console Commands in an Expressive Applicaton. It provides two more real-world examples for Console Commands in Expressive applications.
+mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run();  Source</description>
+            <content type="html"><![CDATA[
+
+<p>This is an addition to my previous post <a href="https://arueckauer.github.io/posts/2019/07/console-commands-in-an-expressive-applicaton/" target="_blank">Console Commands in an Expressive Applicaton</a>. It provides two more real-world examples for Console Commands in Expressive applications.</p>
+
+<h2 id="mwop-s-blog">mwop&rsquo;s blog</h2>
+
+<pre><code class="language-php">#!/usr/bin/env php
+&lt;?php
+/**
+ * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause
+ * @copyright Copyright (c) Matthew Weier O'Phinney
+ */
+
+namespace Mwop;
+
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\CommandLoader\ContainerCommandLoader;
+
+chdir(__DIR__ . '/../');
+require_once 'vendor/autoload.php';
+
+$container = require 'config/container.php';
+
+$application = new Application('mwop.net');
+$application-&gt;setCommandLoader(new ContainerCommandLoader($container, [
+    'asset:copy-symlinks'       =&gt; Console\CopyAssetSymlinks::class,
+    'asset:create-symlinks'     =&gt; Console\CreateAssetSymlinks::class,
+    'asset:use-dist-templates'  =&gt; Console\UseDistTemplates::class,
+    'blog:clear-cache'          =&gt; Blog\Console\ClearCache::class,
+    'blog:feed-generator'       =&gt; Blog\Console\FeedGenerator::class,
+    'blog:generate-search-data' =&gt; Blog\Console\GenerateSearchData::class,
+    'blog:seed-db'              =&gt; Blog\Console\SeedBlogDatabase::class,
+    'blog:tag-cloud'            =&gt; Blog\Console\TagCloud::class,
+    'clear-cache'               =&gt; Console\ClearCache::class,
+    'github:fetch-activity'     =&gt; Github\Console\Fetch::class,
+    'homepage-feeds'            =&gt; Console\FeedAggregator::class,
+]));
+$application-&gt;setDefaultCommand('list');
+$application-&gt;run();
+
+</code></pre>
+
+<p><a href="https://github.com/weierophinney/mwop.net/blob/master/bin/mwop.net.php" target="_blank">Source</a></p>
+
+<h2 id="zend-framework-3-website">Zend Framework 3 website</h2>
+
+<pre><code class="language-php">#!/usr/bin/env php
+&lt;?php
+declare(strict_types=1);
+
+use LongTermSupport\Command\FetchRepoVersionDataCommand;
+use LongTermSupport\Command\PackageListBuilderCommand;
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\CommandLoader\FactoryCommandLoader;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$container = require __DIR__ . '/../config/container.php';
+
+$loader = new FactoryCommandLoader([
+    'lts:build' =&gt; function () use ($container) {
+        return $container-&gt;get(PackageListBuilderCommand::class);
+    },
+    'lts:fetch-tag-data' =&gt; function () use ($container) {
+        return $container-&gt;get(FetchRepoVersionDataCommand::class);
+    },
+]);
+
+$application = new Application();
+$application-&gt;setCommandLoader($loader);
+$application-&gt;run();
+
+</code></pre>
+
+<p><a href="https://github.com/zendframework/zf3-web/blob/master/bin/zfweb.php" target="_blank">Source</a></p>
+]]></content>
+        </item>
         
         <item>
             <title>Logical Operator and Operator Precedence</title>
@@ -384,6 +470,8 @@ return [
 <p><img src="/img/console-commands-in-an-expressive-applicaton/slack-thread.jpg" alt="Conversation on Slack" /></p>
 
 <p><em>(I blacked out the usernames, since I do not have their permission to use them.)</em></p>
+
+<p>Update 2019-10-18: In an <a href="https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/" target="_blank">additional post</a>, I show two more real-world examples.</p>
 ]]></content>
         </item>
         
