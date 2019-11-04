@@ -6,8 +6,75 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 18 Oct 2019 07:23:59 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 04 Nov 2019 06:41:23 +0100</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>self vs. static</title>
+            <link>https://arueckauer.github.io/posts/2019/11/self-vs.-static/</link>
+            <pubDate>Mon, 04 Nov 2019 06:41:23 +0100</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2019/11/self-vs.-static/</guid>
+            <description>I get confused with self and static. Then I research and learn it. Then I forget it again. And so on.
+TLDR  self refers to the same class in which the new keyword is actually written.
+static, in PHP 5.3&amp;rsquo;s late static bindings, refers to whatever class in the hierarchy you called the method on.
+ By BoltClock on Stack Overflow
+An example &amp;lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; .</description>
+            <content type="html"><![CDATA[
+
+<p>I get confused with <code>self</code> and <code>static</code>. Then I research and learn it. Then I forget it again. And so on.</p>
+
+<h2 id="tldr">TLDR</h2>
+
+<blockquote>
+<p><code>self</code> refers to the same class in which the new keyword is actually written.</p>
+
+<p><code>static</code>, in PHP 5.3&rsquo;s late static bindings, refers to whatever class in the hierarchy you called the method on.</p>
+</blockquote>
+
+<p><a href="https://stackoverflow.com/a/5197655/9364246" target="_blank">By BoltClock on Stack Overflow</a></p>
+
+<h2 id="an-example">An example</h2>
+
+<pre><code class="language-php">&lt;?php
+
+class Foo
+{
+    public function __invoke()
+    {
+        echo 'self: ' . self::class . PHP_EOL;
+        echo 'static: ' . static::class . PHP_EOL;
+        echo 'get_class(): ' . get_class() . PHP_EOL;
+        echo 'get_class($this): ' . get_class($this) . PHP_EOL;
+        echo 'get_called_class(): ' . get_called_class() . PHP_EOL;
+    }
+}
+
+class Bar extends Foo
+{
+}
+
+(new Bar())();
+</code></pre>
+
+<p>Output</p>
+
+<pre><code>self: Foo
+static: Bar
+get_class(): Foo
+get_class($this): Bar
+get_called_class(): Bar
+</code></pre>
+
+<p>Test it on <a href="https://3v4l.org/PpZA6" target="_blank">3v4l.org</a>.</p>
+
+<h2 id="see-also">See also</h2>
+
+<ul>
+<li><a href="https://www.leaseweb.com/labs/2014/04/static-versus-self-php/" target="_blank">Using static:: versus self:: in object oriented PHP</a></li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>Console Commands in an Expressive Applicaton II</title>
@@ -1777,8 +1844,8 @@ It does so by iteratively marking as composite (i.e., not prime) the multiples o
 
 <ol>
 <li>If the limit is less than 2, an empty array can be returned.</li>
-<li>When removing multiples of a prime from an array, make sure to not remove the prime itself.</li>
-</ol>
+
+<li><p>When removing multiples of a prime from an array, make sure to not remove the prime itself.</p>
 
 <pre><code class="language-php">&lt;?php
 
@@ -1786,34 +1853,35 @@ declare(strict_types = 1);
 
 function sieve(int $limit) : array
 {
-    if ($limit &lt; 2) {
-        return [];
-    }
+if ($limit &lt; 2) {
+    return [];
+}
 
-    $prime = 2;
-    $range = range($prime, $limit);
+$prime = 2;
+$range = range($prime, $limit);
 
-    for (; $prime &lt;= $limit; $prime++) {
-        removeMultiplesFromRange($prime, $range);
-    }
+for (; $prime &lt;= $limit; $prime++) {
+    removeMultiplesFromRange($prime, $range);
+}
 
-    return array_values($range);
+return array_values($range);
 }
 
 function removeMultiplesFromRange(int $prime, array &amp;$range) : void
 {
-    foreach ($range as $key =&gt; $value) {
-        if ($prime === $value) {
-            continue;
-        }
+foreach ($range as $key =&gt; $value) {
+    if ($prime === $value) {
+        continue;
+    }
 
-        if (0 === $value % $prime) {
-            unset($range[$key]);
-        }
+    if (0 === $value % $prime) {
+        unset($range[$key]);
     }
 }
+}
 
-</code></pre>
+</code></pre></li>
+</ol>
 ]]></content>
         </item>
         

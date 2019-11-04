@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Andi Rückauer</title>
@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 18 Oct 2019 07:23:59 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 04 Nov 2019 06:41:23 +0100</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>self vs. static</title>
+      <link>https://arueckauer.github.io/posts/2019/11/self-vs.-static/</link>
+      <pubDate>Mon, 04 Nov 2019 06:41:23 +0100</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/11/self-vs.-static/</guid>
+      <description>I get confused with self and static. Then I research and learn it. Then I forget it again. And so on.
+TLDR  self refers to the same class in which the new keyword is actually written.
+static, in PHP 5.3&amp;rsquo;s late static bindings, refers to whatever class in the hierarchy you called the method on.
+ By BoltClock on Stack Overflow
+An example &amp;lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; .</description>
+    </item>
     
     <item>
       <title>Console Commands in an Expressive Applicaton II</title>
@@ -291,18 +304,6 @@ Whilst the import of the module and invocation of the function worked, the Impor
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
 This is part one of a series of articles about the PHP Version Switcher.
  Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function  Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.</description>
-    </item>
-    
-    <item>
-      <title>Difference of Squares</title>
-      <link>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</link>
-      <pubDate>Mon, 27 May 2019 20:28:26 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D7
-Today I am solving the Difference of Squares of the PHP track on Exercism.
-Exercism offers its users learning new programming languages through exercises with the valuable feedback of mentors. It currently has 50 different language tracks like C#, Go, Kotlin, TypeScript and many others. Head over to Exercism to join.
-Introduction The source of this exercise is Problem 6 of the Euler project.</description>
     </item>
     
   </channel>

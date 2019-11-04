@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>php on Andi Rückauer</title>
@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 18 Oct 2019 07:23:59 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 04 Nov 2019 06:41:23 +0100</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>self vs. static</title>
+      <link>https://arueckauer.github.io/posts/2019/11/self-vs.-static/</link>
+      <pubDate>Mon, 04 Nov 2019 06:41:23 +0100</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/11/self-vs.-static/</guid>
+      <description>I get confused with self and static. Then I research and learn it. Then I forget it again. And so on.
+TLDR  self refers to the same class in which the new keyword is actually written.
+static, in PHP 5.3&amp;rsquo;s late static bindings, refers to whatever class in the hierarchy you called the method on.
+ By BoltClock on Stack Overflow
+An example &amp;lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; .</description>
+    </item>
     
     <item>
       <title>Console Commands in an Expressive Applicaton II</title>
@@ -293,16 +306,6 @@ composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already,
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D2
 Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
  code structure, DI container, router, template engine and error handler.  It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.</description>
-    </item>
-    
-    <item>
-      <title>From Flat to Modular</title>
-      <link>https://arueckauer.github.io/posts/2019/05/from-flat-to-modular/</link>
-      <pubDate>Fri, 17 May 2019 06:30:00 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/05/from-flat-to-modular/</guid>
-      <description>Transforming of a flat application structure to a modular one in a Zend Expressive project
-In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure.</description>
     </item>
     
   </channel>
