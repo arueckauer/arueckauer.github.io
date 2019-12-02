@@ -3870,7 +3870,7 @@ Whenever starting a new Zend Expressive project, I use the handy zendframework/z
 
 <h3 id="further-changes">Further changes</h3>
 
-<p>If you&rsquo;re using some other code style tool like [PHP-CS-Fixer]<a href="https://cs.symfony.com/)" target="_blank">https://cs.symfony.com/)</a>, you may want to update the <code>require-dev</code> and in the <code>scripts</code> section the <code>cs-check</code> and <code>cs-fix</code> commands accordingly. Since I sticked to the defaults, I left them as they were.</p>
+<p>If you&rsquo;re using some other code style tool like <a href="https://cs.symfony.com/" target="_blank">PHP-CS-Fixer</a>, you may want to update the <code>require-dev</code> and in the <code>scripts</code> section the <code>cs-check</code> and <code>cs-fix</code> commands accordingly. Since I sticked to the defaults, I left them as they were.</p>
 
 <p>In the end, my <code>composer.json</code> looked like the following.</p>
 
