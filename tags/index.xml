@@ -31,6 +31,15 @@
     </item>
     
     <item>
+      <title>windows</title>
+      <link>https://arueckauer.github.io/tags/windows/</link>
+      <pubDate>Tue, 21 Apr 2020 10:27:32 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>signal</title>
       <link>https://arueckauer.github.io/tags/signal/</link>
       <pubDate>Mon, 20 Jan 2020 10:45:25 +0100</pubDate>
@@ -225,15 +234,6 @@
       <pubDate>Mon, 20 May 2019 22:00:00 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/tags/devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Terraform</title>
-      <link>https://arueckauer.github.io/tags/terraform/</link>
-      <pubDate>Mon, 20 May 2019 22:00:00 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/tags/terraform/</guid>
       <description></description>
     </item>
     

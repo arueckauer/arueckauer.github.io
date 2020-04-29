@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows on Andi Rückauer</title>
+    <link>https://arueckauer.github.io/tags/windows/</link>
+    <description>Recent content in windows on Andi Rückauer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 21 Apr 2020 10:27:32 +0200</lastBuildDate>
+    
+	<atom:link href="https://arueckauer.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Generate SSH Keys for Windows System account</title>
+      <link>https://arueckauer.github.io/posts/2020/04/generate-ssh-keys-for-windows-system-account/</link>
+      <pubDate>Tue, 21 Apr 2020 10:27:32 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2020/04/generate-ssh-keys-for-windows-system-account/</guid>
+      <description>Windows services usually run under the System account. In cases where a service needs SSH access like cloning a Git repository, a SSH key pair might be required. But how do you generate these keys for the System account?
+The Sysinternals Process Utilities provide PowerShell tools. Among these is PsExec, which can be used to invoke a process on a remote machine. But it also allows executing a process on the same machine under a different user.</description>
+    </item>
+    
+  </channel>
+</rss>

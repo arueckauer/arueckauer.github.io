@@ -23,5 +23,15 @@ Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFil
 alias arueckauer01=&#39;ssh arueckauer01&#39;  </description>
     </item>
     
+    <item>
+      <title>Generate SSH Keys for Windows System account</title>
+      <link>https://arueckauer.github.io/posts/2020/04/generate-ssh-keys-for-windows-system-account/</link>
+      <pubDate>Tue, 21 Apr 2020 10:27:32 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2020/04/generate-ssh-keys-for-windows-system-account/</guid>
+      <description>Windows services usually run under the System account. In cases where a service needs SSH access like cloning a Git repository, a SSH key pair might be required. But how do you generate these keys for the System account?
+The Sysinternals Process Utilities provide PowerShell tools. Among these is PsExec, which can be used to invoke a process on a remote machine. But it also allows executing a process on the same machine under a different user.</description>
+    </item>
+    
   </channel>
 </rss>

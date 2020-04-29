@@ -24,6 +24,16 @@ alias arueckauer01=&#39;ssh arueckauer01&#39;  </description>
     </item>
     
     <item>
+      <title>Generate SSH Keys for Windows System account</title>
+      <link>https://arueckauer.github.io/posts/2020/04/generate-ssh-keys-for-windows-system-account/</link>
+      <pubDate>Tue, 21 Apr 2020 10:27:32 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2020/04/generate-ssh-keys-for-windows-system-account/</guid>
+      <description>Windows services usually run under the System account. In cases where a service needs SSH access like cloning a Git repository, a SSH key pair might be required. But how do you generate these keys for the System account?
+The Sysinternals Process Utilities provide PowerShell tools. Among these is PsExec, which can be used to invoke a process on a remote machine. But it also allows executing a process on the same machine under a different user.</description>
+    </item>
+    
+    <item>
       <title>How to minimize Signal desktop app to system try</title>
       <link>https://arueckauer.github.io/posts/2020/01/how-to-minimize-signal-desktop-app-to-system-try/</link>
       <pubDate>Mon, 20 Jan 2020 10:45:25 +0100</pubDate>
@@ -287,18 +297,6 @@ Square Of Sum For this function dstockto mentioned the Gauss formula.</descripti
       <guid>https://arueckauer.github.io/posts/2019/06/php-version-manager-first-idea/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D12
  With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the nvm. I am aware of the phpvm package. This package provided by Anthony Ferrara is far from stable and currently supports only Ubuntu.</description>
-    </item>
-    
-    <item>
-      <title>Php Version Switcher: The Function</title>
-      <link>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/</link>
-      <pubDate>Fri, 31 May 2019 22:56:25 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D11
-This is part four of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure   Today I finally breathe life into the module function. 🕺🏼
-Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges.</description>
     </item>
     
   </channel>
