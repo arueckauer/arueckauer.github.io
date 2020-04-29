@@ -44,16 +44,14 @@ $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{
 Requesting the SMD is as simple as:
 Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39;  Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.
 $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;C8P&gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body  With the help of [guid]::NewGuid() a new UUIDv4 is created for each request.">
-
-
 <meta itemprop="datePublished" content="2019-08-05T16:56:17&#43;02:00" />
 <meta itemprop="dateModified" content="2019-08-05T17:06:08&#43;02:00" />
 <meta itemprop="wordCount" content="119">
+<meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="powershell,json-rpc," />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="powershell,json-rpc," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="JSON-RPC call as Invoke-WebRequest"/>
@@ -134,15 +132,11 @@ $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{
             
 
             <div class="post-content">
-                <p>Lately I needed to execute a JSON-RPC call, but had neither <a href="https://www.getpostman.com/" target="_blank">Postman</a> nor <a href="https://insomnia.rest/" target="_blank">Insomnia</a> available. I wondered, if <code>Invoke-WebRequest</code> could do the job.</p>
-
+                <p>Lately I needed to execute a JSON-RPC call, but had neither <a href="https://www.getpostman.com/">Postman</a> nor <a href="https://insomnia.rest/">Insomnia</a> available. I wondered, if <code>Invoke-WebRequest</code> could do the job.</p>
 <p>Requesting the SMD is as simple as:</p>
-
 <pre><code class="language-powershell">Invoke-WebRequest -Uri 'https://localhost/api/json-rpc/authentication'
 </code></pre>
-
 <p>Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.</p>
-
 <pre><code class="language-powershell">$Body = @{
     jsonrpc = '2.0';
     method  = 'authenticate';
@@ -154,9 +148,7 @@ $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{
 } | ConvertTo-Json
 Invoke-WebRequest -Uri 'https://localhost/api/json-rpc/authentication' -Method 'POST' -Body $Body
 </code></pre>
-
 <p>With the help of <code>[guid]::NewGuid()</code> a new UUIDv4 is created for each request. And piping the body object to <code>ConvertTo-Json</code> returns the necessary JSON representation.</p>
-
 <p>Et voilà!</p>
 
             </div>
@@ -213,7 +205,7 @@ Invoke-WebRequest -Uri 'https://localhost/api/json-rpc/authentication' -Method '
                 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2019</span>
+            <span>&copy; 2020</span>
             
                 <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
             

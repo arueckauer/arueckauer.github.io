@@ -19,9 +19,9 @@
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-3-keep-a-changelog/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D3
-Today I was working with keep a changelog, especially with Matthew Weier O&amp;rsquo;Phinney&amp;rsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
+ Today I was working with keep a changelog, especially with Matthew Weier O&#39;Phinney&amp;lsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
 Installation Setup is thanks to composer straight-forward. You can either install it locally or globally. I went with the latter.
-composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already, remember to add the global composer bin path to your PATH environment variable.</description>
+composer global require phly/keep-a-changelog  If you haven&#39;t already, remember to add the global composer bin path to your PATH environment variable.</description>
     </item>
     
   </channel>

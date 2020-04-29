@@ -8,7 +8,7 @@
     content="Andi Rückauer ">
 <meta name="description"
     content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D6
- [The Twelve-Factor App] requires strict separation of config from code.
+  [The Twelve-Factor App] requires strict separation of config from code.
  Taken from factor three of The Twelve-Factor App.
 Today I am studying about how to achieve this requirement making usage of phpdotenv in a Zend Expressive context.
 I will not go into details on and advantages of this concept. A leave that up to other resources." />
@@ -42,25 +42,23 @@ I will not go into details on and advantages of this concept. A leave that up to
 <link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Use dotenv to configure a Zend Expressive application">
 <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D6
- [The Twelve-Factor App] requires strict separation of config from code.
+  [The Twelve-Factor App] requires strict separation of config from code.
  Taken from factor three of The Twelve-Factor App.
 Today I am studying about how to achieve this requirement making usage of phpdotenv in a Zend Expressive context.
 I will not go into details on and advantages of this concept. A leave that up to other resources.">
-
-
 <meta itemprop="datePublished" content="2019-05-25T20:43:15&#43;02:00" />
 <meta itemprop="dateModified" content="2019-05-30T23:22:00&#43;02:00" />
 <meta itemprop="wordCount" content="284">
+<meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="100-days-of-code,dotenv,zend-expressive,php," />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="100-days-of-code,dotenv,zend-expressive,php," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="Use dotenv to configure a Zend Expressive application"/>
 <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D6
- [The Twelve-Factor App] requires strict separation of config from code.
+  [The Twelve-Factor App] requires strict separation of config from code.
  Taken from factor three of The Twelve-Factor App.
 Today I am studying about how to achieve this requirement making usage of phpdotenv in a Zend Expressive context.
 I will not go into details on and advantages of this concept. A leave that up to other resources."/>
@@ -137,56 +135,35 @@ I will not go into details on and advantages of this concept. A leave that up to
             
 
             <div class="post-content">
-                
-
-<p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D6</em></p>
-
-<hr />
-
+                <p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D6</em></p>
+<hr>
 <blockquote>
 <p>[The Twelve-Factor App] requires strict separation of config from code.</p>
 </blockquote>
-
-<p><em>Taken from <a href="https://12factor.net/config" target="_blank">factor three</a> of The Twelve-Factor App.</em></p>
-
-<p>Today I am studying about how to achieve this requirement making usage of <a href="https://github.com/vlucas/phpdotenv" target="_blank">phpdotenv</a> in a Zend Expressive context.</p>
-
+<p><em>Taken from <a href="https://12factor.net/config">factor three</a> of The Twelve-Factor App.</em></p>
+<p>Today I am studying about how to achieve this requirement making usage of <a href="https://github.com/vlucas/phpdotenv">phpdotenv</a> in a Zend Expressive context.</p>
 <p>I will not go into details on and advantages of this concept. A leave that up to other resources.</p>
-
 <h2 id="phpdotenv">phpdotenv</h2>
-
 <p>This package</p>
-
 <blockquote>
 <p>Loads environment variables from <code>.env</code> to <code>getenv()</code>, <code>$_ENV</code> and <code>$_SERVER</code> automagically.</p>
 </blockquote>
-
 <p>It has a clean setup and interface. To load an <code>.env</code> file use</p>
-
 <pre><code class="language-php">$dotenv = Dotenv\Dotenv::create(__DIR__);
 $dotenv-&gt;load();
 </code></pre>
-
 <p>Then you can access it via</p>
-
 <pre><code class="language-php">$s3Bucket = getenv('S3_BUCKET');
 $s3Bucket = $_ENV['S3_BUCKET'];
 $s3Bucket = $_SERVER['S3_BUCKET'];
 </code></pre>
-
 <p>The documentation mentions also the possibility to access variable through the request class. This is out-of-scope of this blog entry, since I want to access env vars only in configuration files.</p>
-
 <h2 id="install-phpdotenv">Install phpdotenv</h2>
-
-<p>I install the package via <a href="https://getcomposer.org" target="_blank">Composer</a>.</p>
-
+<p>I install the package via <a href="https://getcomposer.org">Composer</a>.</p>
 <pre><code class="language-powershell">composer require vlucas/phpdotenv
 </code></pre>
-
 <h2 id="create-a-dotenv-file">Create a dotenv file</h2>
-
 <p>Next, I create a <code>.env</code> file.</p>
-
 <pre><code>DOCTRINE_CONNECTION_HOST=&quot;localhost&quot;
 DOCTRINE_CONNECTION_PORT=&quot;3306&quot;
 DOCTRINE_CONNECTION_USER=&quot;db_user&quot;
@@ -194,19 +171,13 @@ DOCTRINE_CONNECTION_PASSWORD=&quot;my-53cr37&quot;
 DOCTRINE_CONNECTION_DBNAME=&quot;database&quot;
 DOCTRINE_CONNECTION_charset=&quot;utf8mb4&quot;
 </code></pre>
-
 <h2 id="load-dotenv">Load dotenv</h2>
-
 <p>Now <code>phpdotenv</code> needs to be put to work and do its magic. In my <code>index.php</code> I add the following two lines right after requiring the composer autoload file.</p>
-
 <pre><code class="language-php">$dotenv = Dotenv\Dotenv::create(__DIR__);
 $dotenv-&gt;load();
 </code></pre>
-
 <h2 id="load-configuration-from-dotenv">Load configuration from dotenv</h2>
-
 <p>My configuration file with the database is updated, to use the env vars now available through <code>getenv()</code>.</p>
-
 <pre><code class="language-php">&lt;?php
 
 declare(strict_types = 1);
@@ -229,9 +200,7 @@ return [
 ];
 
 </code></pre>
-
 <h2 id="goal-accomplished">Goal accomplished</h2>
-
 <p>A quick check on my API confirms that the env vars are utilized correctly. 👍</p>
 
             </div>
@@ -288,7 +257,7 @@ return [
                 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2019</span>
+            <span>&copy; 2020</span>
             
                 <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
             

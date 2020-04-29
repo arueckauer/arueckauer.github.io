@@ -8,7 +8,7 @@
     content="Andi Rückauer ">
 <meta name="description"
     content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D15
-I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
+ I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
 Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;SQL renaissance ambassador&amp;rdquo;, independent author, trainer, and consultant on all things SQL" />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
 <meta name="robots" content="noodp" />
@@ -40,23 +40,21 @@ Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;SQL renaissance
 <link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="IPC 2019: Day Two">
 <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D15
-I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
+ I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
 Modern SQL: Evolution of a Dinosaur By Markus Winand, &ldquo;SQL renaissance ambassador&rdquo;, independent author, trainer, and consultant on all things SQL">
-
-
 <meta itemprop="datePublished" content="2019-06-05T21:32:35&#43;02:00" />
 <meta itemprop="dateModified" content="2019-06-10T20:05:10&#43;02:00" />
 <meta itemprop="wordCount" content="1674">
+<meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="100-days-of-code,ipc19,php," />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="100-days-of-code,ipc19,php," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="IPC 2019: Day Two"/>
 <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D15
-I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
+ I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
 Modern SQL: Evolution of a Dinosaur By Markus Winand, &ldquo;SQL renaissance ambassador&rdquo;, independent author, trainer, and consultant on all things SQL"/>
 
 
@@ -131,17 +129,14 @@ Modern SQL: Evolution of a Dinosaur By Markus Winand, &ldquo;SQL renaissance amb
                 <aside id="toc">
                 <div class="toc-title">Table of Contents</div>
                     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#modern-sql-evolution-of-a-dinosaur">Modern SQL: Evolution of a Dinosaur</a></li>
-<li><a href="#introduction-to-architectural-katas">Introduction to Architectural Katas</a></li>
-<li><a href="#why-you-shouldn-t-care-about-security">Why you shouldn’t care about Security</a></li>
-<li><a href="#php-to-hack-an-incrementally-typed-adventure-at-slack">PHP to Hack, an incrementally typed Adventure at Slack</a></li>
-<li><a href="#getting-started-with-php-on-aws-lambda">Getting started with PHP on AWS Lambda</a></li>
-<li><a href="#in-fünf-jahren-wird-es-keine-tester-mehr-geben">In fünf Jahren wird es keine Tester mehr geben</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#modern-sql-evolution-of-a-dinosaur">Modern SQL: Evolution of a Dinosaur</a></li>
+    <li><a href="#introduction-to-architectural-katas">Introduction to Architectural Katas</a></li>
+    <li><a href="#why-you-shouldnt-care-about-security">Why you shouldn’t care about Security</a></li>
+    <li><a href="#php-to-hack-an-incrementally-typed-adventure-at-slack">PHP to Hack, an incrementally typed Adventure at Slack</a></li>
+    <li><a href="#getting-started-with-php-on-aws-lambda">Getting started with PHP on AWS Lambda</a></li>
+    <li><a href="#in-fünf-jahren-wird-es-keine-tester-mehr-geben">In fünf Jahren wird es keine Tester mehr geben</a></li>
+  </ul>
 </nav>
                 </aside>
                 <hr />
@@ -149,197 +144,121 @@ Modern SQL: Evolution of a Dinosaur By Markus Winand, &ldquo;SQL renaissance amb
             
 
             <div class="post-content">
-                
-
-<p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D15</em></p>
-
-<hr />
-
+                <p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D15</em></p>
+<hr>
 <p>I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!</p>
-
 <h2 id="modern-sql-evolution-of-a-dinosaur">Modern SQL: Evolution of a Dinosaur</h2>
-
-<p><em>By <a href="https://twitter.com/MarkusWinand" target="_blank">Markus Winand</a>, &ldquo;SQL renaissance ambassador&rdquo;, independent author, trainer, and consultant on all things SQL</em></p>
-
+<p><em>By <a href="https://twitter.com/MarkusWinand">Markus Winand</a>, &ldquo;SQL renaissance ambassador&rdquo;, independent author, trainer, and consultant on all things SQL</em></p>
 <p>It was a bliss listening to Markus share his expertise on SQL. The session was absolutely interesting and informative.</p>
-
 <p>He started off by asking the rhetorical question</p>
-
 <blockquote>
 <p>Still Using Windows 3.1? So why stick to SQL-92?</p>
 </blockquote>
-
 <p>During the next 45 minutes he spoke about the various standards, which features were introduced, and the current state of which databases are supporting said features. He made it more than clear, that if one is still using MySQL 5, it is time to update to MySQL 8.</p>
-
-<p>I was able to take notes of only a fraction of the session. If you get a chance to attend one of his talks, make sure you don&rsquo;t miss it!</p>
-
+<p>I was able to take notes of only a fraction of the session. If you get a chance to attend one of his talks, make sure you don't miss it!</p>
 <p><strong>SQL:1999</strong></p>
-
 <p>In 1999 recursive queries were added, which allows transitive closures like in child-parent-relations.
 GROUPING SETS</p>
-
 <p><strong>SQL:2003</strong></p>
-
 <p>An important function was added: Windows Function aka the over clause.</p>
-
 <blockquote>
-<p>If you have SQL on you CV, but don&rsquo;t know Window Function, you need to cross it out. But you can add it again in 10 min, because I will teach it now!</p>
+<p>If you have SQL on you CV, but don't know Window Function, you need to cross it out. But you can add it again in 10 min, because I will teach it now!</p>
 </blockquote>
-
 <p>What a great guy. 😂</p>
-
 <p><strong>SQL:2011</strong></p>
-
 <blockquote>
-<p>If you&rsquo;re using OFFSET for pagination, you&rsquo;re doing it wrong. It gives you the wrong result and is slow.</p>
+<p>If you're using OFFSET for pagination, you're doing it wrong. It gives you the wrong result and is slow.</p>
 </blockquote>
-
-<p>Read more about it <a href="https://use-the-index-luke.com/no-offset" target="_blank">here</a>.</p>
-
+<p>Read more about it <a href="https://use-the-index-luke.com/no-offset">here</a>.</p>
 <p>SQL:2011 introduces System Versioning, basically time traveling for data storage. <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code> are <code>DESTRUCTIVE</code>. Tables can be system versioned, application versioned or both.</p>
-
 <p>System versioning</p>
-
 <ul>
 <li>Keeps track of changes as these are learned (sets timestamp for when change is known).</li>
 <li>Validation columns updated by system.</li>
 </ul>
-
 <p>Application versioning</p>
-
 <ul>
 <li>Keeps track of changes when they actually happened (actual timestamp of when the change occurred).</li>
 <li>Validation columns updated by application.</li>
 </ul>
-
 <p><strong>SQL:2016</strong></p>
-
 <p><code>JSON_TABLE</code> allows consumption of JSON strings in SQL and can serve as a bridge between NoSQL and relational databases.</p>
-
 <p><strong>Conclusion</strong></p>
-
 <p>SQL has evolved beyond the relational idea; SQL has broken out of the relational cage.</p>
-
 <blockquote>
 <p>If you use SQL for CRUD operations only, you are doing it wrong.</p>
 </blockquote>
-
 <p>SQL was not designed to be a simple data store (row-by-row processing). You should collect all the data on the database, transform it into a form which is more useful and return it.</p>
-
 <p>Further reading</p>
-
 <ul>
-<li><a href="https://modern-sql.com/" target="_blank">https://modern-sql.com/</a></li>
-<li><a href="https://use-the-index-luke.com/" target="_blank">https://use-the-index-luke.com/</a></li>
+<li><a href="https://modern-sql.com/">https://modern-sql.com/</a></li>
+<li><a href="https://use-the-index-luke.com/">https://use-the-index-luke.com/</a></li>
 </ul>
-
 <h2 id="introduction-to-architectural-katas">Introduction to Architectural Katas</h2>
-
-<p><em>By <a href="https://twitter.com/FrankS" target="_blank">Frank Sons</a>, a freelancing developer and consultant for agile software and code quality</em></p>
-
+<p><em>By <a href="https://twitter.com/FrankS">Frank Sons</a>, a freelancing developer and consultant for agile software and code quality</em></p>
 <p>Architectural Katas can bridge the gap between requirements and technical implementation.</p>
-
 <blockquote>
 <p>The software architecture are those decisions, that are hard to change.</p>
 </blockquote>
-
 <p><em>Martin Fowler</em></p>
-
 <blockquote>
 <p>The greatest teacher, failure is</p>
 </blockquote>
-
 <p>Since we can learn so much from failure, how could we fail more often.</p>
-
 <blockquote>
 <p>A kata is an exercise in karate where you repeat a form many, many times, making little improvements in each.</p>
 </blockquote>
-
-<p><em><a href="http://codekata.com/" target="_blank">Codekata.com</a></em></p>
-
+<p><em><a href="http://codekata.com/">Codekata.com</a></em></p>
 <p>Code kata are very simple problems, which can be solved in 20 minutes to 1 hour. It helps training to look at solutions from other perspective on each iteration.</p>
-
 <p>Basic idea</p>
-
 <ul>
 <li>Manageable in size and duration</li>
 <li>Make mistakes, fail and gain experience</li>
 <li>Get feedback in a group</li>
 </ul>
-
 <p>You put yourself in a situation, where you need to be prepared to fail. And take failing as a learning experience.</p>
-
 <p>Two scenarios</p>
-
 <ul>
 <li>3 to 5 people in group (optimal being 3, since all are involved and challenged, allowing a lot of discussion)</li>
 <li>4 to 10 groups vs max 3 groups (depending on available mentors)</li>
 <li>Different Projects / Kata vs Same Project / Kata for each group (the latter allowing collaboration and discussion afterwards)</li>
 </ul>
-
 <p>How does it work?</p>
-
 <p>Introduction &gt; Planning &gt; Presentation &gt; Feedback</p>
-
 <p>Rules</p>
-
 <p>The goal is not to come up with a concrete solution. The goal is to come up with a rough architectural vision of the project and defend questions about it. So, it is crucial to gain a common understanding of defined requirements. Assumptions about technologies have to be clearly defined and spelled out. You may not assume you have hiring/firing authority over the development team (sizing up the team to meet deadline) (what a bummer 😂). Any technology is fair game (but you must justify its use). Any other rules you may ask about.</p>
-
-<p>If you ask a customer whether they want to a feature, the answer usually will be &ldquo;Yes&rdquo;. Your duty is to communicate the impact on the timeline and costs. The business decision is the customer&rsquo;s responsible.</p>
-
+<p>If you ask a customer whether they want to a feature, the answer usually will be &ldquo;Yes&rdquo;. Your duty is to communicate the impact on the timeline and costs. The business decision is the customer's responsible.</p>
 <p>How do I get from unclear requirements to an architectural structure?</p>
-
 <p>Instead of rewriting specs in own words, use a structured language. As a communication tool, UML is fantastic.</p>
-
 <ul>
 <li>define user roles</li>
 <li>define use cases</li>
 <li>&hellip;</li>
 </ul>
-
-<p>The first version won&rsquo;t be good.</p>
-
+<p>The first version won't be good.</p>
 <blockquote>
 <p>Plan to throw one away</p>
 </blockquote>
-
 <p>Frederick P. Brooks - Mythical Man Month</p>
-
 <p>Rapid Prototyping</p>
-
-<p>What about iterating throwing away versions - throwing away the first three or four versions. Or iterate parts of the draft that don&rsquo;t work.</p>
-
+<p>What about iterating throwing away versions - throwing away the first three or four versions. Or iterate parts of the draft that don't work.</p>
 <p>Work on a whiteboard. It makes easy to wipe things away. Flipcharts is the perfect example of what happens when you implement code. Once implemented it is very hard to erase or change.</p>
-
-<p>Container diagram or <a href="https://c4model.com/" target="_blank">C4 Model</a>.</p>
-
+<p>Container diagram or <a href="https://c4model.com/">C4 Model</a>.</p>
 <p>UML can be very confusing, C4 only uses the most four important. Makes usage easy and lets you focus on designing.</p>
-
-<h2 id="why-you-shouldn-t-care-about-security">Why you shouldn’t care about Security</h2>
-
-<p><em>By <a href="https://twitter.com/bendechrai" target="_blank">Ben Dechrai</a>, Technologist, Presenter, <a href="https://auth0.com" target="_blank">Auth0</a> Developer Evangelist, Community Advocate</em></p>
-
-<p>Ben&rsquo;s sessions are always fun to attend. He is an experienced speaker who quickly informs about all necessary details and also shows a great live demo bridging the gap between theory and practical use (at least the sessions I attended so far).</p>
-
+<h2 id="why-you-shouldnt-care-about-security">Why you shouldn’t care about Security</h2>
+<p><em>By <a href="https://twitter.com/bendechrai">Ben Dechrai</a>, Technologist, Presenter, <a href="https://auth0.com">Auth0</a> Developer Evangelist, Community Advocate</em></p>
+<p>Ben's sessions are always fun to attend. He is an experienced speaker who quickly informs about all necessary details and also shows a great live demo bridging the gap between theory and practical use (at least the sessions I attended so far).</p>
 <p>Traditional authentication and authorization can become complex quickly, especially when scaling.</p>
-
-<p>As we don&rsquo;t implement our own payment service, but use a provider, we should not implement our own authentication mechanism, but use an identity provider for login process as user storage.</p>
-
+<p>As we don't implement our own payment service, but use a provider, we should not implement our own authentication mechanism, but use an identity provider for login process as user storage.</p>
 <p>Live demo application of creating a PHP web application adding Auth0 as identity provider.</p>
-
 <p>First impression: Very well documented, simple to implement, ready-to-go.</p>
-
 <ul>
-<li><a href="https://auth0.com/" target="_blank">Auth0</a></li>
-<li><a href="https://github.com/auth0/auth0-PHP" target="_blank">auth0/auth0-PHP</a></li>
+<li><a href="https://auth0.com/">Auth0</a></li>
+<li><a href="https://github.com/auth0/auth0-PHP">auth0/auth0-PHP</a></li>
 </ul>
-
 <h2 id="php-to-hack-an-incrementally-typed-adventure-at-slack">PHP to Hack, an incrementally typed Adventure at Slack</h2>
-
-<p><em>By Scott Sandler, a Senior Staff Engineer at <a href="https://slack.com" target="_blank">Slack</a></em></p>
-
-<p>Awesome talk with Slack&rsquo;s journey on migrating from PHP to Hack. There was so much information, I could only take notes on a few thoughts. I definitely recommend viewing the slides.</p>
-
+<p><em>By Scott Sandler, a Senior Staff Engineer at <a href="https://slack.com">Slack</a></em></p>
+<p>Awesome talk with Slack's journey on migrating from PHP to Hack. There was so much information, I could only take notes on a few thoughts. I definitely recommend viewing the slides.</p>
 <ul>
 <li>We came to Hack for performance but stayed for type safety.</li>
 <li>hh_client Type Checker</li>
@@ -356,38 +275,25 @@ GROUPING SETS</p>
 <li>You lose vendor libraries (incompatible to composer (PHP) packages)!!</li>
 <li>Instead of performance measures etc. internal survey on how developers feel about the code base. Large majority confirmed it improves, because type checks help understand what the code is doing.</li>
 </ul>
-
-<p><a href="https://www.slideshare.net/ScottSandler1/php-to-hack-at-slack" target="_blank">Slides</a>
-<a href="https://twitter.com/scott_sandler" target="_blank">Twitter</a></p>
-
+<p><a href="https://www.slideshare.net/ScottSandler1/php-to-hack-at-slack">Slides</a>
+<a href="https://twitter.com/scott_sandler">Twitter</a></p>
 <h2 id="getting-started-with-php-on-aws-lambda">Getting started with PHP on AWS Lambda</h2>
-
-<p><em>By Thomas Bley, Senior PHP Developer at <a href="https://www.bringmeister.de/" target="_blank">Bringmeister</a></em></p>
-
-<p>I&rsquo;m new to AWS, so I tried following as much as I could. Thomas made a great and thorough job explaining each step to setup lambda functions on AWS. It looks very promising and interesting for the following use cases.</p>
-
+<p><em>By Thomas Bley, Senior PHP Developer at <a href="https://www.bringmeister.de/">Bringmeister</a></em></p>
+<p>I'm new to AWS, so I tried following as much as I could. Thomas made a great and thorough job explaining each step to setup lambda functions on AWS. It looks very promising and interesting for the following use cases.</p>
 <ul>
-<li>cronjobs (don&rsquo;t pay for idle time)</li>
+<li>cronjobs (don't pay for idle time)</li>
 <li>websites with unknown traffic spikes (tv advertising)</li>
 <li>event based workers (Kinesis, SQS, S3, etc.)</li>
 <li>event based backend tasks (images resizing, creating PDFs, sending e-mails, etc.)</li>
 <li>integration with database event, e.g. RDS Aurora</li>
 </ul>
-
-<p><a href="https://github.com/thomasbley/php-lambda" target="_blank">Slides</a></p>
-
+<p><a href="https://github.com/thomasbley/php-lambda">Slides</a></p>
 <h2 id="in-fünf-jahren-wird-es-keine-tester-mehr-geben">In fünf Jahren wird es keine Tester mehr geben</h2>
-
-<p><em>By <a href="https://twitter.com/phphatesme" target="_blank">Nils Langner</a>, Founder and CTO of <a href="https://www.leankoala.com" target="_blank">Leankoala</a> // Rethink Web Testing</em></p>
-
+<p><em>By <a href="https://twitter.com/phphatesme">Nils Langner</a>, Founder and CTO of <a href="https://www.leankoala.com">Leankoala</a> // Rethink Web Testing</em></p>
 <p>In five years, there will be no more testers.</p>
-
-<p>I remember Nils from his successful blog phphatesme, which later became <a href="https://www.thewebhatesme.com" target="_blank">the web hates me</a>. It used to be the most successful PHP blog in Germany. I liked it for the thought-provoking articles and excellent exchange among visitors.</p>
-
+<p>I remember Nils from his successful blog phphatesme, which later became <a href="https://www.thewebhatesme.com">the web hates me</a>. It used to be the most successful PHP blog in Germany. I liked it for the thought-provoking articles and excellent exchange among visitors.</p>
 <p>Although the title is not meant (absolutely) seriously, again Nils delivers a message that encourages to reflect on common opinions and to exchange views on testing.</p>
-
 <p>During his presentation he touched upon 10 reasons that could make testers (almost) obsolete. The following are just my notes and not necessarily a true representation of what Nils delivered.</p>
-
 <ul>
 <li>It is a boring job. Fewer and fewer developers decide to become a tester.</li>
 <li>There is a risk-based approach in which tests cover only the most important components. Not everything is equally important.</li>
@@ -399,7 +305,6 @@ GROUPING SETS</p>
 <li>Your project will not succeed. 9 out of 10 start-ups fail during the first year of operation. According to experience this could be applied to features. So instead of doing things right, try doing the right thing.</li>
 <li>Fully automated tests. Click-path testing tools like Selenium are time consuming and complicated. Property-based testing where it checks for the presence of business-relevant elements could provide the same quality for much less cost.</li>
 </ul>
-
 <blockquote>
 <p>If all business-relevant elements of a website are present, it is statistically likely, that there are no critical errors.</p>
 </blockquote>
@@ -458,7 +363,7 @@ GROUPING SETS</p>
                 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2019</span>
+            <span>&copy; 2020</span>
             
                 <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
             

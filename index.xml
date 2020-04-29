@@ -7,10 +7,40 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 04 Nov 2019 06:41:23 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2020 09:30:00 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Setup passwordless SSH Login to Nine Server</title>
+      <link>https://arueckauer.github.io/posts/2020/04/how-to-setup-passwordless-ssh-login-to-nine-server/</link>
+      <pubDate>Wed, 29 Apr 2020 09:30:00 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2020/04/how-to-setup-passwordless-ssh-login-to-nine-server/</guid>
+      <description>Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &amp;gt;&amp;gt; ~/.ssh/known_hosts  Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &#39;cat &amp;gt;&amp;gt; ~/.ssh/authorized_keys&#39; www-data@arueckauer01.nine.ch&#39;s password:  SSH Configuration ~/.ssh/config
+Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306  Alias ~/.bashrc
+alias arueckauer01=&#39;ssh arueckauer01&#39;  </description>
+    </item>
+    
+    <item>
+      <title>How to minimize Signal desktop app to system try</title>
+      <link>https://arueckauer.github.io/posts/2020/01/how-to-minimize-signal-desktop-app-to-system-try/</link>
+      <pubDate>Mon, 20 Jan 2020 10:45:25 +0100</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2020/01/how-to-minimize-signal-desktop-app-to-system-try/</guid>
+      <description>please modify your shortcut to include the following &amp;ndash;use-tray-icon &amp;ndash;start-in-tray
+ Source</description>
+    </item>
+    
+    <item>
+      <title>Stream Zip in Zend Expressive</title>
+      <link>https://arueckauer.github.io/posts/2019/12/stream-zip-in-zend-expressive/</link>
+      <pubDate>Wed, 11 Dec 2019 14:16:25 +0100</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/12/stream-zip-in-zend-expressive/</guid>
+      <description>A feature request in a customer project was to zip multiple files</description>
+    </item>
     
     <item>
       <title>self vs. static</title>
@@ -20,7 +50,7 @@
       <guid>https://arueckauer.github.io/posts/2019/11/self-vs.-static/</guid>
       <description>I get confused with self and static. Then I research and learn it. Then I forget it again. And so on.
 TLDR  self refers to the same class in which the new keyword is actually written.
-static, in PHP 5.3&amp;rsquo;s late static bindings, refers to whatever class in the hierarchy you called the method on.
+static, in PHP 5.3&#39;s late static bindings, refers to whatever class in the hierarchy you called the method on.
  By BoltClock on Stack Overflow
 An example &amp;lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; .</description>
     </item>
@@ -32,7 +62,7 @@ An example &amp;lt;?php class Foo { public function __invoke() { echo &#39;self:
       
       <guid>https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/</guid>
       <description>This is an addition to my previous post Console Commands in an Expressive Applicaton. It provides two more real-world examples for Console Commands in Expressive applications.
-mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run();  Source</description>
+mwop&#39;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run();  Source</description>
     </item>
     
     <item>
@@ -55,8 +85,8 @@ Logical Operator &amp;ldquo;and&amp;rdquo; and &amp;ldquo;&amp;amp;&amp;amp;&amp
       <pubDate>Tue, 06 Aug 2019 16:15:08 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/posts/2019/08/mysql-utf8mb4-unicode/</guid>
-      <description>In MySQL UTF-8 does not actually mean UTF-8. If you&amp;rsquo;re curious to see why, there is an excellent post by Mathias explaining in detail why you should choose utf8mb4 over utf8.
-While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3+ on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&amp;rsquo;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.</description>
+      <description>In MySQL UTF-8 does not actually mean UTF-8. If you&#39;re curious to see why, there is an excellent post by Mathias explaining in detail why you should choose utf8mb4 over utf8.
+While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3+ on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&#39;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.</description>
     </item>
     
     <item>
@@ -100,8 +130,8 @@ Since I am not using the package within a Symfony application, I needed somehow 
       
       <guid>https://arueckauer.github.io/posts/2019/06/intermediate-status/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D25
-25 % of my #100DaysOfCode and #100DaysOfBlogging challenges are completed. Time for an intermediate status review.
-Just do it As mentioned in my starting post, I wanted this to be a fun and learning experience. I am very happy to see that I&amp;rsquo;ve reached all of my goals so far. My greatest concern was that I would get tired of writing (almost) every day.</description>
+ 25 % of my #100DaysOfCode and #100DaysOfBlogging challenges are completed. Time for an intermediate status review.
+Just do it As mentioned in my starting post, I wanted this to be a fun and learning experience. I am very happy to see that I&#39;ve reached all of my goals so far. My greatest concern was that I would get tired of writing (almost) every day.</description>
     </item>
     
     <item>
@@ -111,8 +141,8 @@ Just do it As mentioned in my starting post, I wanted this to be a fun and learn
       
       <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D24
-After a mentor left some feedback:
- I like that you&amp;rsquo;ve split out the direction and position. I think you can go a bit further though.
+ After a mentor left some feedback:
+ I like that you&#39;ve split out the direction and position. I think you can go a bit further though.
  I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure.</description>
     </item>
     
@@ -123,9 +153,9 @@ After a mentor left some feedback:
       
       <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
-Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
+ Instructions Today&#39;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
  turn right, turn left and advance.  A robot can also follow instructions on how to proceed.
-  The letter-string &amp;ldquo;RAALAL&amp;rdquo; means:  Turn right Advance twice Turn left Advance once Turn left yet again  Say a robot starts at {7, 3} facing north.</description>
+  The letter-string &amp;ldquo;RAALAL&amp;rdquo; means:  Turn right Advance twice Turn left Advance once Turn left yet again   Say a robot starts at {7, 3} facing north.</description>
     </item>
     
     <item>
@@ -135,11 +165,11 @@ Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot 
       
       <guid>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D22
-A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
+ A mentor commented on my yesterday&#39;s solution to the Grade School exercise.
  Good solution
 Awesome! using strict_types
-It&amp;rsquo;s approved for me but try to use return types as much as possible, I&amp;rsquo;m missing initGradeIfItDoesNotExist
- This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
+It&#39;s approved for me but try to use return types as much as possible, I&#39;m missing initGradeIfItDoesNotExist
+ This post will reflect some of my personal thoughts. Since the mentor&#39;s suggestion could be just some personal preference, I will not name the mentor.</description>
     </item>
     
     <item>
@@ -149,11 +179,11 @@ It&amp;rsquo;s approved for me but try to use return types as much as possible, 
       
       <guid>https://arueckauer.github.io/posts/2019/06/grade-school/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
-This Exercism exercise is straight forward.
+ This Exercism exercise is straight forward.
 An extract from the instructions:
  Given students&amp;rsquo; names along with the grade that they are in, create a roster for the school.
 In the end, you should be able to:
- Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
+ Add a student&#39;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
     </item>
     
     <item>
@@ -163,7 +193,7 @@ In the end, you should be able to:
       
       <guid>https://arueckauer.github.io/posts/2019/06/meetup-side-exercise/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D20
-Next up in the PHP sidetrack is the Meetup exercise.
+ Next up in the PHP sidetrack is the Meetup exercise.
 A function is provided with the arguments
  (int) year, (int) month, (string) descriptor and (string) weekday  and expected to process the input and return an instance of DateTime with the corresponding date.
 While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated.</description>
@@ -176,7 +206,7 @@ While year, month and weekday are an exact representation of their values, the d
       
       <guid>https://arueckauer.github.io/posts/2019/06/sieve-of-eratosthenes-side-exercise/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D19
-Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
+ Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
  In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2.</description>
     </item>
     
@@ -187,10 +217,10 @@ Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP t
       
       <guid>https://arueckauer.github.io/posts/2019/06/120ish-html-elements/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D18
-Bruce Lawson gave an outstanding keynote called How to make Loveliness: an HTML Treasure Hunt at the IPC 2019.
+ Bruce Lawson gave an outstanding keynote called How to make Loveliness: an HTML Treasure Hunt at the IPC 2019.
 He shared that most 2-year-olds can say about 100 words and with 2 ½ years they know close to 300 words.
 One of his challenges was to
- Learn the semantics of HTML. There are 120(ish) elements, that&amp;rsquo;s all!</description>
+ Learn the semantics of HTML. There are 120(ish) elements, that&#39;s all!</description>
     </item>
     
     <item>
@@ -200,7 +230,7 @@ One of his challenges was to
       
       <guid>https://arueckauer.github.io/posts/2019/06/to-jwt-or-not-to-jwt/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D17
-At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors.</description>
+ At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors.</description>
     </item>
     
     <item>
@@ -210,8 +240,8 @@ At the IPC 2019 Authentication and Authorization was one of the two most interes
       
       <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-three/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D16
-Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de
-Arne and Sebastian deliver messages from real world problems they tackled together. It&amp;rsquo;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience.</description>
+ Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de
+Arne and Sebastian deliver messages from real world problems they tackled together. It&#39;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience.</description>
     </item>
     
     <item>
@@ -221,7 +251,7 @@ Arne and Sebastian deliver messages from real world problems they tackled togeth
       
       <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-two/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D15
-I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
+ I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
 Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;SQL renaissance ambassador&amp;rdquo;, independent author, trainer, and consultant on all things SQL</description>
     </item>
     
@@ -232,9 +262,9 @@ Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;SQL renaissance
       
       <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-one/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D14
-This was a great first day
+ This was a great first day
 How to make Loveliness: an HTML Treasure Hunt Keynote by Bruce Lawson, one of the editors of the W3C’s HTML5.3 specification
-To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&amp;rsquo;s (well at least my) full attention.</description>
+To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&#39;s (well at least my) full attention.</description>
     </item>
     
     <item>
@@ -244,7 +274,7 @@ To me, this was the best keynote I have ever attended. He presented a topic that
       
       <guid>https://arueckauer.github.io/posts/2019/06/difference-of-squares-part-ii/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D13
-In the meanwhile, dstockto reviewed and approved my solution. 🤘🏼 Funny story: He found my blog and saw my submission here before seeing it on Exercism.
+ In the meanwhile, dstockto reviewed and approved my solution. 🤘🏼 Funny story: He found my blog and saw my submission here before seeing it on Exercism.
 He gave me an interesting additional challenge, to use &amp;ldquo;closed&amp;rdquo; form math-based solutions. This would also allow performance improvement, since the current implementation will take longer the larger $number is.
 Square Of Sum For this function dstockto mentioned the Gauss formula.</description>
     </item>
@@ -256,7 +286,7 @@ Square Of Sum For this function dstockto mentioned the Gauss formula.</descripti
       
       <guid>https://arueckauer.github.io/posts/2019/06/php-version-manager-first-idea/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D12
-With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the nvm. I am aware of the phpvm package. This package provided by Anthony Ferrara is far from stable and currently supports only Ubuntu.</description>
+ With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the nvm. I am aware of the phpvm package. This package provided by Anthony Ferrara is far from stable and currently supports only Ubuntu.</description>
     </item>
     
     <item>
@@ -267,43 +297,8 @@ With a working CLI PHP version switcher, it would be very neat to also have a CL
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D11
 This is part four of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure  Today I finally breathe life into the module function. 🕺🏼
+ Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure   Today I finally breathe life into the module function. 🕺🏼
 Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges.</description>
-    </item>
-    
-    <item>
-      <title>Php Version Switcher: The Structure</title>
-      <link>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-structure/</link>
-      <pubDate>Thu, 30 May 2019 22:47:03 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-structure/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D10
-This is part three of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function  Today I will talk about the structural concept of the PHP Version Switcher.
-On Windows you need to add the path of your PHP location to the system environment variable PATH.</description>
-    </item>
-    
-    <item>
-      <title>Php Version Switcher: PowerShell Naming Convention</title>
-      <link>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-naming-convention/</link>
-      <pubDate>Wed, 29 May 2019 20:03:47 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-naming-convention/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D9
-This is part two of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function  Yesterday I started off, moving for my PHP version switcher to a new home by creating a PowerShell module.
-Whilst the import of the module and invocation of the function worked, the Import-Module throw a warning:</description>
-    </item>
-    
-    <item>
-      <title>Php Version Switcher: PowerShell Module</title>
-      <link>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</link>
-      <pubDate>Tue, 28 May 2019 20:36:42 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
-This is part one of a series of articles about the PHP Version Switcher.
- Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function  Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.</description>
     </item>
     
   </channel>

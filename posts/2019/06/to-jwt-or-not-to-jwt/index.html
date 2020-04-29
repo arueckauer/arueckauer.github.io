@@ -8,7 +8,7 @@
     content="Andi Rückauer ">
 <meta name="description"
     content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D17
-At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors." />
+ At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors." />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://arueckauer.github.io/posts/2019/06/to-jwt-or-not-to-jwt/" />
@@ -39,22 +39,20 @@ At the IPC 2019 Authentication and Authorization was one of the two most interes
 <link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="To JWT or not to JWT">
 <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D17
-At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors.">
-
-
+ At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors.">
 <meta itemprop="datePublished" content="2019-06-07T19:34:43&#43;02:00" />
 <meta itemprop="dateModified" content="2019-06-10T20:24:35&#43;02:00" />
-<meta itemprop="wordCount" content="394">
+<meta itemprop="wordCount" content="393">
+<meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="100-days-of-code,jwt,auth,php," />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="100-days-of-code,jwt,auth,php," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="To JWT or not to JWT"/>
 <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D17
-At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors."/>
+ At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors."/>
 
 
 
@@ -128,50 +126,37 @@ At the IPC 2019 Authentication and Authorization was one of the two most interes
             
 
             <div class="post-content">
-                
-
-<p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D17</em></p>
-
-<hr />
-
+                <p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D17</em></p>
+<hr>
 <p>At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors.</p>
-
 <ul>
-<li><a href="https://phpconference.com/performance-security/knock-knock-whos-there-authenticating-your-single-page-apps-using-json-web-tokens/" target="_blank">Knock knock, who’s there? Authenticating your Single Page Apps using JSON Web Tokens</a> by <a href="https://twitter.com/sambego" target="_blank">Sam Bellen</a></li>
-<li><a href="https://phpconference.com/php-development/the-future-of-authentication-webauthn-with-php/" target="_blank">The Future of Authentication – WebAuthn with PHP</a> by <a href="https://twitter.com/arneblankerts" target="_blank">Arne Blankerts</a></li>
-<li><a href="https://phpconference.com/performance-security/why-you-shouldnt-care-about-security/" target="_blank">Why you shouldn’t care about Security</a> by <a href="https://twitter.com/bendechrai" target="_blank">Ben Dechrai</a></li>
-<li><a href="https://phpconference.com/performance-security/opening-doors-with-json-web-tokens/" target="_blank">Opening Doors with JSON Web Tokens</a> by <a href="https://twitter.com/bendechrai" target="_blank">Ben Dechrai</a></li>
+<li><a href="https://phpconference.com/performance-security/knock-knock-whos-there-authenticating-your-single-page-apps-using-json-web-tokens/">Knock knock, who’s there? Authenticating your Single Page Apps using JSON Web Tokens</a> by <a href="https://twitter.com/sambego">Sam Bellen</a></li>
+<li><a href="https://phpconference.com/php-development/the-future-of-authentication-webauthn-with-php/">The Future of Authentication – WebAuthn with PHP</a> by <a href="https://twitter.com/arneblankerts">Arne Blankerts</a></li>
+<li><a href="https://phpconference.com/performance-security/why-you-shouldnt-care-about-security/">Why you shouldn’t care about Security</a> by <a href="https://twitter.com/bendechrai">Ben Dechrai</a></li>
+<li><a href="https://phpconference.com/performance-security/opening-doors-with-json-web-tokens/">Opening Doors with JSON Web Tokens</a> by <a href="https://twitter.com/bendechrai">Ben Dechrai</a></li>
 </ul>
-
-<h2 id="jwt-just-a-hype">JWT - just a hype?</h2>
-
-<p>Today <a href="https://twitter.com/lyrixx" target="_blank">Gregoire Pineau</a> published an article <em><a href="https://jolicode.com/blog/why-you-dont-need-jwt" target="_blank">Why you don’t need JWT</a></em>, in which he basically declares JWT as hype and says Basic Auth provides a simpler solution to the same problem (in most scenarios).</p>
-
+<h2 id="jwt---just-a-hype">JWT - just a hype?</h2>
+<p>Today <a href="https://twitter.com/lyrixx">Gregoire Pineau</a> published an article <em><a href="https://jolicode.com/blog/why-you-dont-need-jwt">Why you don’t need JWT</a></em>, in which he basically declares JWT as hype and says Basic Auth provides a simpler solution to the same problem (in most scenarios).</p>
 <blockquote>
 <p>But most of the time, you don’t need JWT, and your project will be simpler if you can resist to hype by refusing to use it.</p>
 </blockquote>
-
 <h2 id="jwt-adds-complexity">JWT adds complexity</h2>
-
 <p>Now, JWT is not something trivial. The process, purpose and usage of JWT, JWS, JWE as well as access tokens and refresh tokens take some time to grasp. Probably this complexity is why JWT is so often misused - one of the reasons which is used against the usage of JWT.</p>
-
 <p>Gregoire lists in his post the following complexity points:</p>
-
 <ul>
 <li>Usage of private and public key.
-&gt; Like all other secrets, it’s always hard to keep them really secret.</li>
+<blockquote>
+<p>Like all other secrets, it’s always hard to keep them really secret.</p>
+</blockquote>
+</li>
 <li>No revocation of valid tokens, adding the need of e.g. white-/blacklisting.</li>
 <li>Short validity requires reconnect via refresh tokens.</li>
 <li>No native JWT implementation in Symfony.</li>
 </ul>
-
 <h2 id="alternatives">Alternatives</h2>
-
-<p>In his post, Gregoire demoes an alternative solution by putting HTTP basic auth to work. In Symfony this can be done without any external dependencies. Another solution could be <a href="https://paseto.io/" target="_blank">PASETO (Platform-Agnostic Security Tokens)</a>.</p>
-
+<p>In his post, Gregoire demoes an alternative solution by putting HTTP basic auth to work. In Symfony this can be done without any external dependencies. Another solution could be <a href="https://paseto.io/">PASETO (Platform-Agnostic Security Tokens)</a>.</p>
 <h2 id="conclusion">Conclusion</h2>
-
-<p>The article and <a href="https://paragonie.com/blog/2017/03/jwt-json-web-tokens-is-bad-standard-that-everyone-should-avoid" target="_blank">security issues</a> make valid points on why to avoid JWT. I have to do some further reading, to fully understand whether the flaw is really in the design or implementation of JWT. What impresses me about JWT is a self-validating token and user storage which could make accessing the user database unnecessary in many scenarios.</p>
+<p>The article and <a href="https://paragonie.com/blog/2017/03/jwt-json-web-tokens-is-bad-standard-that-everyone-should-avoid">security issues</a> make valid points on why to avoid JWT. I have to do some further reading, to fully understand whether the flaw is really in the design or implementation of JWT. What impresses me about JWT is a self-validating token and user storage which could make accessing the user database unnecessary in many scenarios.</p>
 
             </div>
         </article>
@@ -183,7 +168,7 @@ At the IPC 2019 Authentication and Authorization was one of the two most interes
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://arueckauer.github.io/tags/100-days-of-code">100-days-of-code</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/jwt">jwt</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/auth">auth</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/php">php</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>394 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>393 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-07 19:34 &#43;0200</p>
                 <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/77ddfff66b94c30e8a7cdc64b559f55320f3707a" target="_blank" rel="noopener">77ddfff</a> @ 2019-06-10</p>
@@ -227,7 +212,7 @@ At the IPC 2019 Authentication and Authorization was one of the two most interes
                 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2019</span>
+            <span>&copy; 2020</span>
             
                 <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
             

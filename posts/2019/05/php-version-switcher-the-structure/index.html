@@ -9,7 +9,7 @@
 <meta name="description"
     content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D10
 This is part three of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function  Today I will talk about the structural concept of the PHP Version Switcher.
+ Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function   Today I will talk about the structural concept of the PHP Version Switcher.
 On Windows you need to add the path of your PHP location to the system environment variable PATH." />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
 <meta name="robots" content="noodp" />
@@ -42,24 +42,22 @@ On Windows you need to add the path of your PHP location to the system environme
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Php Version Switcher: The Structure">
 <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D10
 This is part three of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function  Today I will talk about the structural concept of the PHP Version Switcher.
+ Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function   Today I will talk about the structural concept of the PHP Version Switcher.
 On Windows you need to add the path of your PHP location to the system environment variable PATH.">
-
-
 <meta itemprop="datePublished" content="2019-05-30T22:47:03&#43;02:00" />
 <meta itemprop="dateModified" content="2019-05-31T23:41:32&#43;02:00" />
 <meta itemprop="wordCount" content="277">
+<meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="100-days-of-code,powershell," />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="100-days-of-code,powershell," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="Php Version Switcher: The Structure"/>
 <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D10
 This is part three of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function  Today I will talk about the structural concept of the PHP Version Switcher.
+ Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function   Today I will talk about the structural concept of the PHP Version Switcher.
 On Windows you need to add the path of your PHP location to the system environment variable PATH."/>
 
 
@@ -134,48 +132,30 @@ On Windows you need to add the path of your PHP location to the system environme
             
 
             <div class="post-content">
-                
-
-<p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D10</em></p>
-
-<p>This is part three of a series of articles about the <a href="https://github.com/arueckauer/pvs" target="_blank">PHP Version Switcher</a>.</p>
-
+                <p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D10</em></p>
+<p>This is part three of a series of articles about the <a href="https://github.com/arueckauer/pvs">PHP Version Switcher</a>.</p>
 <ul>
 <li>Part One: <a href="https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/">Php Version Switcher: PowerShell Module</a></li>
 <li>Part Two: <a href="https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-naming-convention/">Php Version Switcher: PowerShell Naming Convention</a></li>
 <li>Part Four: <a href="https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/">Php Version Switcher: The Function</a></li>
 </ul>
-
-<hr />
-
+<hr>
 <p>Today I will talk about the structural concept of the PHP Version Switcher.</p>
-
-<p>On Windows you need to add the path of your PHP location to the system environment variable <code>PATH</code>. Switching in-between different PHP versions would mean to also to update the <code>PATH</code> each time. Furthermore, if Apache is supposed to be running the same PHP version, the <code>LoadModule</code> must be updated to the &ldquo;new&rdquo; PHP location. That&rsquo;s just laborious and not fun at all. But PHP Version Switcher to the rescue! 🤹🏼‍♂️</p>
-
+<p>On Windows you need to add the path of your PHP location to the system environment variable <code>PATH</code>. Switching in-between different PHP versions would mean to also to update the <code>PATH</code> each time. Furthermore, if Apache is supposed to be running the same PHP version, the <code>LoadModule</code> must be updated to the &ldquo;new&rdquo; PHP location. That's just laborious and not fun at all. But PHP Version Switcher to the rescue! 🤹🏼‍♂️</p>
 <h2 id="directory-structure">Directory structure</h2>
-
-<p>Everything related to my webserver goes into the directory <code>C:\webserv</code>. There&rsquo;s Apache, CouchDB, Elasticsearch, Ruby, sendmail etc. and the latest versions of PHP 5.6 through 7.4 (the latter being a non-stable snapshot).</p>
-
-<p><img src="https://arueckauer.github.io/img/php-version-switcher-structure/directory-listing-of-c-webserv.png" alt="Directory listing of C:\webserv" /></p>
-
+<p>Everything related to my webserver goes into the directory <code>C:\webserv</code>. There's Apache, CouchDB, Elasticsearch, Ruby, sendmail etc. and the latest versions of PHP 5.6 through 7.4 (the latter being a non-stable snapshot).</p>
+<p><img src="https://arueckauer.github.io/img/php-version-switcher-structure/directory-listing-of-c-webserv.png" alt="Directory listing of C:\webserv"></p>
 <h2 id="symlink">Symlink</h2>
-
 <p>As you might have noticed, among the many PHP directories, there is on just plain called <code>php</code>. This is a symbolic link to the currently set PHP version. This directory is also what I put into my <code>PATH</code> and <code>httpd.conf</code>.</p>
-
 <p>The <code>php_shared</code> folder contains files common among PHP installations. Currently it only houses the <code>cacert.pem</code>.</p>
-
 <h2 id="tasks-of-the-php-version-switcher">Tasks of the PHP Version Switcher</h2>
-
 <p>The <code>pvs</code> now does three things:</p>
-
 <ol>
 <li>Remove the current symlink <code>C:\webserv\php</code>.</li>
 <li>Create a new symlink referring to the provided PHP version.</li>
 <li>Restart the Apache service.</li>
 </ol>
-
 <p>Et voilà, the machine is running a different PHP version.</p>
-
 <p>How this script looks in detail, I will discuss in one of the following posts.</p>
 
             </div>
@@ -232,7 +212,7 @@ On Windows you need to add the path of your PHP location to the system environme
                 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2019</span>
+            <span>&copy; 2020</span>
             
                 <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
             

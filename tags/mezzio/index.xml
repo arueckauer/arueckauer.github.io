@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mezzio on Andi Rückauer</title>
+    <link>https://arueckauer.github.io/tags/mezzio/</link>
+    <description>Recent content in mezzio on Andi Rückauer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 11 Dec 2019 14:16:25 +0100</lastBuildDate>
+    
+	<atom:link href="https://arueckauer.github.io/tags/mezzio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Stream Zip in Zend Expressive</title>
+      <link>https://arueckauer.github.io/posts/2019/12/stream-zip-in-zend-expressive/</link>
+      <pubDate>Wed, 11 Dec 2019 14:16:25 +0100</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/12/stream-zip-in-zend-expressive/</guid>
+      <description>A feature request in a customer project was to zip multiple files</description>
+    </item>
+    
+  </channel>
+</rss>

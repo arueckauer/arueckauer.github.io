@@ -40,16 +40,14 @@ In an Expressive project I ran into the issue, where the application grew much l
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="From Flat to Modular">
 <meta itemprop="description" content="Transforming of a flat application structure to a modular one in a Zend Expressive project
 In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure.">
-
-
 <meta itemprop="datePublished" content="2019-05-17T06:30:00&#43;02:00" />
 <meta itemprop="dateModified" content="2019-05-27T21:59:14&#43;02:00" />
 <meta itemprop="wordCount" content="488">
+<meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="zend-expressive,laminas,php," />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="zend-expressive,laminas,php," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="From Flat to Modular"/>
@@ -128,34 +126,20 @@ In an Expressive project I ran into the issue, where the application grew much l
             
 
             <div class="post-content">
-                
-
-<p><em>Transforming of a flat application structure to a modular one in a Zend Expressive project</em></p>
-
-<p>In an <a href="https://docs.zendframework.com/zend-expressive/" target="_blank">Expressive</a> project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the <a href="https://github.com/zendframework/zend-expressive-skeleton" target="_blank">Expressive Skeleton</a>. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure. It also means not only having separate modules but also separate namespaces. This makes handling class names much easier.</p>
-
+                <p><em>Transforming of a flat application structure to a modular one in a Zend Expressive project</em></p>
+<p>In an <a href="https://docs.zendframework.com/zend-expressive/">Expressive</a> project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the <a href="https://github.com/zendframework/zend-expressive-skeleton">Expressive Skeleton</a>. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure. It also means not only having separate modules but also separate namespaces. This makes handling class names much easier.</p>
 <p>Looking back on it now I tend to always choose a modular structure. The only use case for a flat structure would be a micro application with very little backend code. Even then it is questionable as to why not using a modular structure, since the difference between the two are not that big and converting the structure later on is much more effort. But I am getting ahead of myself.</p>
-
 <p>So the single module horded a ton of classes with their factories. This got quite heavy and sometimes confusing. To clear up all the confusion I decided to convert the code structure from flat to modular.</p>
-
 <h2 id="flat-vs-modular-the-comparison">Flat vs. modular: the comparison</h2>
-
 <p>I could not find any documentation or user contributions on how to convert the structure. To find out what the differences are, I decided to create two new projects: one with a flat and one with a modular structure and then compare the two.</p>
-
 <p>I create a new project with flat code structure. All default selections were chosen.</p>
-
 <pre><code class="language-bash">$ composer create-project zendframework/zend-expressive-skeleton expressive-flat
 </code></pre>
-
 <p>For modular structure first question <em>What type of installation would you like?</em> was answered with 3 - Modular. For all other options the default selections where chosen.</p>
-
 <pre><code class="language-bash">$ composer create-project zendframework/zend-expressive-skeleton expressive-modular
 </code></pre>
-
-<p><img src="https://arueckauer.github.io/img/from-flat-to-modular/create-project-with-modular-code-structure.png" alt="Create project with modular code structure" /></p>
-
+<p><img src="https://arueckauer.github.io/img/from-flat-to-modular/create-project-with-modular-code-structure.png" alt="Create project with modular code structure"></p>
 <p>The structural differences of the two projects are (1) the location of the source file within the <code>App</code> module, (2) a template folder and (3) the autoloading configuration.</p>
-
 <table>
 <thead>
 <tr>
@@ -164,20 +148,17 @@ In an Expressive project I ran into the issue, where the application grew much l
 <th>Modular</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Source App Module</td>
 <td><code>src/App</code></td>
 <td><code>src/App/src</code></td>
 </tr>
-
 <tr>
 <td>Template Ordner</td>
 <td><em>n/a</em></td>
 <td><code>src/App/templates</code></td>
 </tr>
-
 <tr>
 <td>Autoload configuration</td>
 <td><code>&quot;App\\&quot;: &quot;src/App/&quot;</code></td>
@@ -185,31 +166,23 @@ In an Expressive project I ran into the issue, where the application grew much l
 </tr>
 </tbody>
 </table>
-
 <h2 id="making-the-transition">Making the transition</h2>
-
 <p>Consequently, I needed to make the following changes to convert the project structure:</p>
-
 <ol>
 <li>Move contents of <code>src/App</code> to <code>src/App/src</code></li>
 <li><em>Optional:</em> Move the templates from within the <code>App</code> folder to <code>src /App/templates</code> and adjust the configured templates path (in my case in <code>config/autoload/application.global.php</code>)</li>
 <li>Update the autoload configuration in <code>composer.json</code> to <code>&quot;App\\&quot;: &quot;src/App/src/&quot;</code></li>
 <li>Execute <code>composer dump-autoload</code> to update the autoloading classes</li>
 </ol>
-
-<p>That&rsquo;s it, the transition is made.</p>
-
+<p>That's it, the transition is made.</p>
 <p>But my initial issue was not solved. I went ahead and re-organized the <code>App</code> module, moving various folders into their own module. For each folder I repeated the following steps.</p>
-
 <ol>
 <li>Create a new module <code>$ composer expressive module:create {ModuleName}</code></li>
 <li>Moved classes from <code>src/App/src/{ModuleName}/</code> to <code>src/{ModuleName}/src/</code></li>
 <li>Updated namespace of classes and imports from <code>App\{ModuleName}</code> to <code>{ModuleName}</code></li>
 <li>Moved dependencies definitions from <code>backend/App/src/ConfigProvider.php</code> to <code>backend/{ModuleName}/src/ConfigProvider.php</code></li>
 </ol>
-
 <p>Tadaa! Now the setup is much cleaner and simpler. Mission accomplished.</p>
-
 <p>Gude Laune!</p>
 
             </div>
@@ -266,7 +239,7 @@ In an Expressive project I ran into the issue, where the application grew much l
                 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2019</span>
+            <span>&copy; 2020</span>
             
                 <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
             

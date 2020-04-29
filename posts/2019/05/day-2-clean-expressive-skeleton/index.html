@@ -8,7 +8,7 @@
     content="Andi Rückauer ">
 <meta name="description"
     content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D2
-Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
+ Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
  code structure, DI container, router, template engine and error handler.  It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed." />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
 <meta name="robots" content="noodp" />
@@ -40,23 +40,21 @@ Whenever starting a new Zend Expressive project, I use the handy zendframework/z
 <link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Day 2: Clean Expressive Skeleton">
 <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D2
-Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
+ Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
  code structure, DI container, router, template engine and error handler.  It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.">
-
-
 <meta itemprop="datePublished" content="2019-05-21T20:45:00&#43;02:00" />
 <meta itemprop="dateModified" content="2019-12-02T15:22:08&#43;01:00" />
 <meta itemprop="wordCount" content="591">
+<meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="100-days-of-code,zend-expressive,laminas,php," />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="100-days-of-code,zend-expressive,laminas,php," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="Day 2: Clean Expressive Skeleton"/>
 <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D2
-Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
+ Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
  code structure, DI container, router, template engine and error handler.  It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed."/>
 
 
@@ -131,14 +129,9 @@ Whenever starting a new Zend Expressive project, I use the handy zendframework/z
             
 
             <div class="post-content">
-                
-
-<p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D2</em></p>
-
-<hr />
-
-<p>Whenever starting a new <a href="https://getexpressive.org" target="_blank">Zend Expressive</a> project, I use the handy <code>zendframework/zend-expressive-skeleton</code>. It creates an almost empty Expressive application structure with your choice of</p>
-
+                <p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D2</em></p>
+<hr>
+<p>Whenever starting a new <a href="https://getexpressive.org">Zend Expressive</a> project, I use the handy <code>zendframework/zend-expressive-skeleton</code>. It creates an almost empty Expressive application structure with your choice of</p>
 <ul>
 <li>code structure,</li>
 <li>DI container,</li>
@@ -146,43 +139,29 @@ Whenever starting a new Zend Expressive project, I use the handy zendframework/z
 <li>template engine and</li>
 <li>error handler.</li>
 </ul>
-
 <p>It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.</p>
-
 <h2 id="create-a-new-project">Create a new project</h2>
-
 <p>To create a new skeleton application, I used <code>composer create-project</code>.</p>
-
 <pre><code class="language-powershell">composer create-project zendframework/zend-expressive-skeleton clean-skeleton
 </code></pre>
-
-<h2 id="composer-json">composer.json</h2>
-
+<h2 id="composerjson">composer.json</h2>
 <p>First stop is the <code>composer.json</code>. I update the following section to my needs.</p>
-
 <ul>
 <li><code>name</code></li>
 <li><code>description</code></li>
 <li><code>homepage</code></li>
 <li><code>license</code></li>
 </ul>
-
-<p>Then I removed the following sections - you may want to update these to your needs, especially if you plan to publish your project/library on <a href="https://packagist.org" target="_blank">Packagist</a>.</p>
-
+<p>Then I removed the following sections - you may want to update these to your needs, especially if you plan to publish your project/library on <a href="https://packagist.org">Packagist</a>.</p>
 <ul>
 <li><code>keywords</code></li>
 <li><code>extra</code></li>
 <li><code>support</code></li>
 </ul>
-
 <p>Then I removed the <code>post-create-project-cmd</code> from the <code>scripts</code> section.</p>
-
 <h3 id="further-changes">Further changes</h3>
-
-<p>If you&rsquo;re using some other code style tool like <a href="https://cs.symfony.com/" target="_blank">PHP-CS-Fixer</a>, you may want to update the <code>require-dev</code> and in the <code>scripts</code> section the <code>cs-check</code> and <code>cs-fix</code> commands accordingly. Since I sticked to the defaults, I left them as they were.</p>
-
+<p>If you're using some other code style tool like <a href="https://cs.symfony.com/">PHP-CS-Fixer</a>, you may want to update the <code>require-dev</code> and in the <code>scripts</code> section the <code>cs-check</code> and <code>cs-fix</code> commands accordingly. Since I sticked to the defaults, I left them as they were.</p>
 <p>In the end, my <code>composer.json</code> looked like the following.</p>
-
 <pre><code class="language-json">{
   &quot;name&quot;: &quot;arueckauer/clean-skeleton&quot;,
   &quot;description&quot;: &quot;A zend expressive skeleton purged of all unnecessary items&quot;,
@@ -236,52 +215,32 @@ Whenever starting a new Zend Expressive project, I use the handy zendframework/z
   }
 }
 </code></pre>
-
 <p>A <code>composer update</code> confirmed that no updates were required after making the adjustments.</p>
-
 <h2 id="license">License</h2>
-
-<p>I replaced the LICENSE file with the <a href="https://choosealicense.com" target="_blank">license of my choice</a>.</p>
-
+<p>I replaced the LICENSE file with the <a href="https://choosealicense.com">license of my choice</a>.</p>
 <h2 id="coding-standard">Coding Standard</h2>
-
 <p>If desired, you can update name and rules in <code>phpcs.xml.dist</code>. For the purpose of this test, they remained unchanged in my case.</p>
-
 <h2 id="readme">Readme</h2>
-
 <p>I emptied the readme file, leaving only an h1 with the project name. Usually I fill the readme up with information about the package, setup etc. as the project grows.</p>
-
 <h2 id="shipped-handlers">Shipped Handlers</h2>
-
 <p>Next, I removed the Handler classes with its containing folder, tests and configuration references.</p>
-
 <p>Deleted directories:</p>
-
 <ul>
 <li><code>src/App/src/Handler</code></li>
 <li><code>test/AppTest/Handler</code></li>
 </ul>
-
 <p>Also, I removed the defined routes in <code>config/routes.php</code> and the dependency definitions in <code>src/App/src/ConfigProvider.php</code>.</p>
-
 <h2 id="configuration">Configuration</h2>
-
-<p>In <code>config/config.php</code> I removed Swoole config. If you&rsquo;re using Swoole, you can replace it by an explicit inclusion of the ConfigProvider.</p>
-
+<p>In <code>config/config.php</code> I removed Swoole config. If you're using Swoole, you can replace it by an explicit inclusion of the ConfigProvider.</p>
 <h2 id="done">Done</h2>
-
 <p>To be honest, my first impression of what can be purged of the skeleton was much more. But there is no clutter whatsoever, just some examples. This challenge has helped me better understand the setup of the skeleton package and showed me just how neat it is organized. I love it.</p>
-
 <h2 id="other-skeleton-resources">Other Skeleton resources</h2>
-
-<p>There are two other skeletons for PHP applications which I want to mention at this point. They both are a closer look worth it, if you&rsquo;re starting new PHP projects on a fairly regular basis or want some reference from time to time.</p>
-
+<p>There are two other skeletons for PHP applications which I want to mention at this point. They both are a closer look worth it, if you're starting new PHP projects on a fairly regular basis or want some reference from time to time.</p>
 <ol>
-<li><a href="https://github.com/thephpleague/skeleton" target="_blank">thephpleague/skeleton</a> and</li>
-<li><a href="https://github.com/php-pds/skeleton" target="_blank">php-pds/skeleton</a></li>
+<li><a href="https://github.com/thephpleague/skeleton">thephpleague/skeleton</a> and</li>
+<li><a href="https://github.com/php-pds/skeleton">php-pds/skeleton</a></li>
 </ol>
-
-<p>The thephpleague/skeleton comes with templates for GitHub issues and pull-requests. And also, a <a href="https://github.com/thephpleague/skeleton/blob/master/prefill.php" target="_blank">prefill</a> command which replaces variables like vendor and package names and urls throughout the cloned repo.</p>
+<p>The thephpleague/skeleton comes with templates for GitHub issues and pull-requests. And also, a <a href="https://github.com/thephpleague/skeleton/blob/master/prefill.php">prefill</a> command which replaces variables like vendor and package names and urls throughout the cloned repo.</p>
 
             </div>
         </article>
@@ -337,7 +296,7 @@ Whenever starting a new Zend Expressive project, I use the handy zendframework/z
                 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2019</span>
+            <span>&copy; 2020</span>
             
                 <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
             

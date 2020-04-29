@@ -44,16 +44,14 @@ Since I am not using the package within a Symfony application, I needed somehow 
 Symfony provides a console component which is, among others, used by zendframework/zend-expressive-tooling. The documentation got me off to a quick start and I got my first Hello command running within minutes.
 I wanted to provide a re-usable package, where the implementation can provide the definition of a command list.
 Since I am not using the package within a Symfony application, I needed somehow access to the Service Container of the Expressive application.">
-
-
 <meta itemprop="datePublished" content="2019-07-04T16:09:13&#43;02:00" />
 <meta itemprop="dateModified" content="2019-10-17T10:04:36&#43;02:00" />
 <meta itemprop="wordCount" content="327">
+<meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="php,zend-expressive," />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="php,zend-expressive," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="Console Commands in an Expressive Applicaton"/>
@@ -135,19 +133,12 @@ Since I am not using the package within a Symfony application, I needed somehow 
 
             <div class="post-content">
                 <p>In a current customer project, I needed the ability to run commands from the CLI.</p>
-
-<p>Symfony provides a console component which is, among others, used by <a href="zendframework/zend-expressive-tooling" target="_blank"><code>zendframework/zend-expressive-tooling</code></a>. The <a href="https://symfony.com/doc/current/console.html" target="_blank">documentation</a> got me off to a quick start and I got my first <code>Hello</code> command running within minutes.</p>
-
+<p>Symfony provides a console component which is, among others, used by <a href="zendframework/zend-expressive-tooling"><code>zendframework/zend-expressive-tooling</code></a>. The <a href="https://symfony.com/doc/current/console.html">documentation</a> got me off to a quick start and I got my first <code>Hello</code> command running within minutes.</p>
 <p>I wanted to provide a re-usable package, where the implementation can provide the definition of a command list.</p>
-
 <p>Since I am not using the package within a Symfony application, I needed somehow access to the Service Container of the Expressive application. I quick search on the internet did not show up any useful results and I was left to use my own brain.</p>
-
-<p>My starting point was the <a href="https://github.com/zendframework/zend-expressive-skeleton/blob/master/public/index.php" target="_blank"><code>public/index.php</code></a> provided by Expressive. From there it was just a small step of adjustments and I could access the configuration by simply loading the service container via <code>$container = require 'config/container.php';</code>.</p>
-
+<p>My starting point was the <a href="https://github.com/zendframework/zend-expressive-skeleton/blob/master/public/index.php"><code>public/index.php</code></a> provided by Expressive. From there it was just a small step of adjustments and I could access the configuration by simply loading the service container via <code>$container = require 'config/container.php';</code>.</p>
 <p>The next task was to use a factory service for commands that have dependencies. Since I already have the service container, I can simply get the command from it.</p>
-
 <p>The end-result looks like so:</p>
-
 <pre><code class="language-php">#!/usr/bin/env php
 &lt;?php
 
@@ -180,9 +171,7 @@ $application-&gt;addCommands($commandList);
 $application-&gt;run();
 
 </code></pre>
-
 <p>The configuration of commands is placed in a configuration file like <code>config/autoload/commands.global.php</code>.</p>
-
 <pre><code class="language-php">&lt;?php
 
 declare(strict_types = 1);
@@ -199,14 +188,10 @@ return [
 ];
 
 </code></pre>
-
-<p>A day after I completed my implementation, two users mentioned an interesting post by Geert Eltink (aka <a href="https://twitter.com/xtreamwayz" target="_blank">@xtreamwayz</a>) from 2016 <a href="https://www.xtreamwayz.com/blog/2016-02-07-zend-expressive-console-cli-commands" target="_blank">zend-expressive console cli commands</a> and the <a href="https://github.com/zfcampus/zf-console" target="_blank">zfcampus/zf-console</a> library.</p>
-
-<p><img src="https://arueckauer.github.io/img/console-commands-in-an-expressive-applicaton/slack-thread.jpg" alt="Conversation on Slack" /></p>
-
+<p>A day after I completed my implementation, two users mentioned an interesting post by Geert Eltink (aka <a href="https://twitter.com/xtreamwayz">@xtreamwayz</a>) from 2016 <a href="https://www.xtreamwayz.com/blog/2016-02-07-zend-expressive-console-cli-commands">zend-expressive console cli commands</a> and the <a href="https://github.com/zfcampus/zf-console">zfcampus/zf-console</a> library.</p>
+<p><img src="https://arueckauer.github.io/img/console-commands-in-an-expressive-applicaton/slack-thread.jpg" alt="Conversation on Slack"></p>
 <p><em>(I blacked out the usernames, since I do not have their permission to use them.)</em></p>
-
-<p>Update 2019-10-18: In an <a href="https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/" target="_blank">additional post</a>, I show two more real-world examples.</p>
+<p>Update 2019-10-18: In an <a href="https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/">additional post</a>, I show two more real-world examples.</p>
 
             </div>
         </article>
@@ -262,7 +247,7 @@ return [
                 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2019</span>
+            <span>&copy; 2020</span>
             
                 <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
             

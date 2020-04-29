@@ -32,7 +32,7 @@ $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D11
 This is part four of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure  Today I finally breathe life into the module function. 🕺🏼
+ Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure   Today I finally breathe life into the module function. 🕺🏼
 Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges.</description>
     </item>
     
@@ -44,7 +44,7 @@ Administrator privileges Since the Apache services will be restarted, the module
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-structure/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D10
 This is part three of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function  Today I will talk about the structural concept of the PHP Version Switcher.
+ Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function   Today I will talk about the structural concept of the PHP Version Switcher.
 On Windows you need to add the path of your PHP location to the system environment variable PATH.</description>
     </item>
     
@@ -56,7 +56,7 @@ On Windows you need to add the path of your PHP location to the system environme
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-naming-convention/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D9
 This is part two of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function  Yesterday I started off, moving for my PHP version switcher to a new home by creating a PowerShell module.
+ Part One: Php Version Switcher: PowerShell Module Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Yesterday I started off, moving for my PHP version switcher to a new home by creating a PowerShell module.
 Whilst the import of the module and invocation of the function worked, the Import-Module throw a warning:</description>
     </item>
     
@@ -68,7 +68,7 @@ Whilst the import of the module and invocation of the function worked, the Impor
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
 This is part one of a series of articles about the PHP Version Switcher.
- Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function  Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.</description>
+ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&#39;s still not the choice environment for a typical PHP web application.</description>
     </item>
     
   </channel>

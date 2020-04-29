@@ -40,16 +40,14 @@
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Format Seconds as Time in PHP">
 <meta itemprop="description" content="Somewhat over ten years ago I was working on a project, where we measured execution time and memory consumption of PHP scripts. To display the execution time in a human-readable way, we used a function to format the timestamp provided by microtime().
 &lt;?php class Application__Helper_Timer { /** * Calculates the execution time of a script * @param float $executionTime * @return string */ public static function formatExecutionTime($executionTime) { $seconds = $this-&gt;executionTime; $hours = 0; $minutes = 0; while (($seconds - 3600) &gt; 0) { $hours&#43;&#43;; $seconds -= 3600; } while (($seconds - 60) &gt; 0) { $minutes&#43;&#43;; $seconds -= 60; } if (1 === strlen((string) $hours)) { $hours = &#39;0&#39; .">
-
-
 <meta itemprop="datePublished" content="2019-06-28T09:04:39&#43;02:00" />
 <meta itemprop="dateModified" content="2019-07-05T10:43:14&#43;02:00" />
 <meta itemprop="wordCount" content="528">
+<meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="php," />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="php," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="Format Seconds as Time in PHP"/>
@@ -128,8 +126,7 @@
             
 
             <div class="post-content">
-                <p>Somewhat over ten years ago I was working on a project, where we measured execution time and memory consumption of PHP scripts. To display the execution time in a human-readable way, we used a function to format the timestamp provided by <a href="https://php.net/microtime" target="_blank">microtime()</a>.</p>
-
+                <p>Somewhat over ten years ago I was working on a project, where we measured execution time and memory consumption of PHP scripts. To display the execution time in a human-readable way, we used a function to format the timestamp provided by <a href="https://php.net/microtime">microtime()</a>.</p>
 <pre><code class="language-php">&lt;?php
 
 class Application__Helper_Timer
@@ -177,13 +174,9 @@ class Application__Helper_Timer
 }
 
 </code></pre>
-
 <p>It served the purpose well and I used it in other projects as well.</p>
-
 <p>Today, I needed again a way to format seconds in a way that was easily readable. Remembering that I used that many times before, I pulled it out of the archives, looked at it and started thinking how complicated it was written. There must be an easier way.</p>
-
 <p>So, after pulling up my sleeves and getting to work, I came up with this solution:</p>
-
 <pre><code class="language-php">&lt;?php
 
 declare(strict_types = 1);
@@ -203,11 +196,8 @@ class SecondsAsTime
 }
 
 </code></pre>
-
 <p>Very simple and readable.</p>
-
 <p>Also, I tested test, which greatly helped in the development process.</p>
-
 <pre><code class="language-php">&lt;?php
 
 declare(strict_types = 1);
@@ -354,7 +344,7 @@ class SecondsAsTimeTest extends TestCase
                 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2019</span>
+            <span>&copy; 2020</span>
             
                 <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
             
