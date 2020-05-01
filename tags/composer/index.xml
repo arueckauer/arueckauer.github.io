@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 24 May 2019 23:37:51 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2020 08:06:13 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/composer/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Install Composer on Linux</title>
+      <link>https://arueckauer.github.io/posts/2020/04/install-composer-on-linux/</link>
+      <pubDate>Thu, 30 Apr 2020 08:06:13 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2020/04/install-composer-on-linux/</guid>
+      <description>A self-reminde ron how to install on Linux. Instruction taken from here.
+curl -sS https://getcomposer.org/installer | php mv composer.phar /usr/local/bin/composer   Note: If the above fails due to permissions, run the mv line again with sudo.
+ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer  </description>
+    </item>
     
     <item>
       <title>Day 5: A change for the better</title>

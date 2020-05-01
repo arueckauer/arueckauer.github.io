@@ -7,17 +7,17 @@
 <meta name="author"
     content="Andi Rückauer ">
 <meta name="description"
-    content="Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &amp;gt;&amp;gt; ~/.ssh/known_hosts  Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &#39;cat &amp;gt;&amp;gt; ~/.ssh/authorized_keys&#39; www-data@arueckauer01.nine.ch&#39;s password:  SSH Configuration ~/.ssh/config
-Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306  Alias ~/.bashrc
-alias arueckauer01=&#39;ssh arueckauer01&#39;  " />
+    content="While installing a new crontab from a file, an error occured.
+Error in cron: bad minute errors in crontab file, can&#39;t install  Since the file was previously edited on Windows, line breaks consisted of a CRLF, which breaks the crontab impoort. To convert thes to LF, I used a command taken from here.
+cat input.file | sed &#39;s/\r$//&#39; &amp;gt; output.file  " />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://arueckauer.github.io/posts/2020/04/how-to-setup-passwordless-ssh-login-to-nine-server/" />
+<link rel="canonical" href="https://arueckauer.github.io/posts/2020/05/replace-crlf-with-lf-in-bash/" />
 
 
 <title>
     
-    How to Setup passwordless SSH Login to Nine Server :: Andi Rückauer  — Thoughts container
+    Replace Crlf With Lf in Bash :: Andi Rückauer  — Thoughts container
     
 </title>
 
@@ -38,29 +38,29 @@ alias arueckauer01=&#39;ssh arueckauer01&#39;  " />
 <link rel="manifest" href="https://arueckauer.github.io/site.webmanifest">
 <link rel="mask-icon" href="https://arueckauer.github.io/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
-<meta name="theme-color" content="#252627"><meta itemprop="name" content="How to Setup passwordless SSH Login to Nine Server">
-<meta itemprop="description" content="Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &gt;&gt; ~/.ssh/known_hosts  Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &#39;cat &gt;&gt; ~/.ssh/authorized_keys&#39; www-data@arueckauer01.nine.ch&#39;s password:  SSH Configuration ~/.ssh/config
-Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306  Alias ~/.bashrc
-alias arueckauer01=&#39;ssh arueckauer01&#39;  ">
-<meta itemprop="datePublished" content="2020-04-29T09:30:00&#43;02:00" />
-<meta itemprop="dateModified" content="2020-04-29T09:39:26&#43;02:00" />
-<meta itemprop="wordCount" content="45">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="Replace Crlf With Lf in Bash">
+<meta itemprop="description" content="While installing a new crontab from a file, an error occured.
+Error in cron: bad minute errors in crontab file, can&#39;t install  Since the file was previously edited on Windows, line breaks consisted of a CRLF, which breaks the crontab impoort. To convert thes to LF, I used a command taken from here.
+cat input.file | sed &#39;s/\r$//&#39; &gt; output.file  ">
+<meta itemprop="datePublished" content="2020-05-01T07:09:07&#43;02:00" />
+<meta itemprop="dateModified" content="2020-05-01T11:19:37&#43;02:00" />
+<meta itemprop="wordCount" content="60">
 <meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="ssh,linux," /><meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="linux,bash," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
-<meta name="twitter:title" content="How to Setup passwordless SSH Login to Nine Server"/>
-<meta name="twitter:description" content="Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &gt;&gt; ~/.ssh/known_hosts  Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &#39;cat &gt;&gt; ~/.ssh/authorized_keys&#39; www-data@arueckauer01.nine.ch&#39;s password:  SSH Configuration ~/.ssh/config
-Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306  Alias ~/.bashrc
-alias arueckauer01=&#39;ssh arueckauer01&#39;  "/>
+<meta name="twitter:title" content="Replace Crlf With Lf in Bash"/>
+<meta name="twitter:description" content="While installing a new crontab from a file, an error occured.
+Error in cron: bad minute errors in crontab file, can&#39;t install  Since the file was previously edited on Windows, line breaks consisted of a CRLF, which breaks the crontab impoort. To convert thes to LF, I used a command taken from here.
+cat input.file | sed &#39;s/\r$//&#39; &gt; output.file  "/>
 
 
 
 
-<meta property="article:published_time" content="2020-04-29 09:30:00 &#43;0200 CEST" />
+<meta property="article:published_time" content="2020-05-01 07:09:07 &#43;0200 CEST" />
 
 
 
@@ -124,29 +124,17 @@ alias arueckauer01=&#39;ssh arueckauer01&#39;  "/>
         </div>
 
         <article>
-            <h1 class="post-title"><a href="https://arueckauer.github.io/posts/2020/04/how-to-setup-passwordless-ssh-login-to-nine-server/">How to Setup passwordless SSH Login to Nine Server</a></h1>
+            <h1 class="post-title"><a href="https://arueckauer.github.io/posts/2020/05/replace-crlf-with-lf-in-bash/">Replace Crlf With Lf in Bash</a></h1>
 
             
 
             <div class="post-content">
-                <h2 id="add-fingerprint-to-known_hosts">Add fingerprint to <code>known_hosts</code></h2>
-<pre><code class="language-bash">andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &gt;&gt; ~/.ssh/known_hosts
+                <p>While installing a new crontab from a file, an error occured.</p>
+<pre><code class="language-bash">Error in cron: bad minute
+errors in crontab file, can't install
 </code></pre>
-<h2 id="add-key-to-server">Add key to server</h2>
-<pre><code class="language-bash">andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch 'cat &gt;&gt; ~/.ssh/authorized_keys'
-www-data@arueckauer01.nine.ch's password:
-</code></pre>
-<h2 id="ssh-configuration">SSH Configuration</h2>
-<p><code>~/.ssh/config</code></p>
-<pre><code class="language-bash">Host arueckauer01 arueckauer01.nine.ch
-    HostName arueckauer01.nine.ch
-    IdentityFile ~/.ssh/id_rsa
-    User www-data
-    LocalForward 3310 localhost:3306
-</code></pre>
-<h2 id="alias">Alias</h2>
-<p><code>~/.bashrc</code></p>
-<pre><code class="language-bash">alias arueckauer01='ssh arueckauer01'
+<p>Since the file was previously edited on Windows, line breaks consisted of a CRLF, which breaks the crontab impoort. To convert thes to LF, I used a command taken from <a href="https://stackoverflow.com/a/800644/9364246">here</a>.</p>
+<pre><code class="language-bash">cat input.file | sed 's/\r$//' &gt; output.file
 </code></pre>
 
             </div>
@@ -156,13 +144,13 @@ www-data@arueckauer01.nine.ch's password:
 
         <div class="post-info">
                 <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://arueckauer.github.io/tags/ssh">ssh</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/linux">linux</a></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://arueckauer.github.io/tags/linux">linux</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/bash">bash</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>45 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>60 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-04-29 09:30 &#43;0200</p>
-                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/dfb98c7c82b5e62db30e2b790b1c039a2faac89d" target="_blank" rel="noopener">dfb98c7</a> @ 2020-04-29</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-05-01 07:09 &#43;0200</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/e54f548ac6f340961997d757e53ff118e58c7ab6" target="_blank" rel="noopener">e54f548</a> @ 2020-05-01</p>
         </div>
 
         
@@ -174,18 +162,11 @@ www-data@arueckauer01.nine.ch's password:
 
                 <div class="pagination__buttons">
                     
-                        <span class="button previous">
-                            <a href="https://arueckauer.github.io/posts/2020/04/install-composer-on-linux/">
-                                <span class="button__icon">←</span>
-                                <span class="button__text">Install Composer on Linux</span>
-                            </a>
-                        </span>
-                    
 
                     
                         <span class="button next">
-                            <a href="https://arueckauer.github.io/posts/2020/04/generate-ssh-keys-for-windows-system-account/">
-                                <span class="button__text">Generate SSH Keys for Windows System account</span>
+                            <a href="https://arueckauer.github.io/posts/2020/04/how-to-install-buildkite-agent-on-linux/">
+                                <span class="button__text">How to Install Buildkite Agent on Linux</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>
