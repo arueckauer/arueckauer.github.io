@@ -24,18 +24,6 @@ cat input.file | sed &#39;s/\r$//&#39; &amp;gt; output.file  </description>
     </item>
     
     <item>
-      <title>How to Install Buildkite Agent on Linux</title>
-      <link>https://arueckauer.github.io/posts/2020/04/how-to-install-buildkite-agent-on-linux/</link>
-      <pubDate>Thu, 30 Apr 2020 13:20:58 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2020/04/how-to-install-buildkite-agent-on-linux/</guid>
-      <description>Buildkite Agent auf Nine Server installieren  Falls systemctl --user einen Fehler wirft (Failed to connect to bus: No such file or directory): Nine Support kontaktieren, um Dienst zu starten. Nähere Informationen siehe Abschnitt Erster obligatorischer Schritt im Support-Artikel.
- Agent installieren Agent herunterladen Aktuelles Release herunterladen (zum Zeit des Schreibens v3.20.0).
-wget https://github.com/buildkite/agent/releases/download/v3.20.0/buildkite-agent-linux-amd64-3.20.0.tar.gz  Release nach~/buildkite-agent entpacken
-mkdir buildkite-agent tar -xf buildkite-agent-linux-amd64-3.20.0.tar.gz -C ~/buildkite-agent/  Agent konfigurieren Nicht Teil dieser Anleitung.</description>
-    </item>
-    
-    <item>
       <title>Install Composer on Linux</title>
       <link>https://arueckauer.github.io/posts/2020/04/install-composer-on-linux/</link>
       <pubDate>Thu, 30 Apr 2020 08:06:13 +0200</pubDate>
@@ -297,6 +285,18 @@ Arne and Sebastian deliver messages from real world problems they tackled togeth
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D15
  I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
 Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;SQL renaissance ambassador&amp;rdquo;, independent author, trainer, and consultant on all things SQL</description>
+    </item>
+    
+    <item>
+      <title>IPC 2019: Day One</title>
+      <link>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-one/</link>
+      <pubDate>Tue, 04 Jun 2019 22:53:29 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-one/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D14
+ This was a great first day
+How to make Loveliness: an HTML Treasure Hunt Keynote by Bruce Lawson, one of the editors of the W3C’s HTML5.3 specification
+To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&#39;s (well at least my) full attention.</description>
     </item>
     
   </channel>

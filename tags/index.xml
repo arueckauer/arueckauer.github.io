@@ -31,15 +31,6 @@
     </item>
     
     <item>
-      <title>buildkite</title>
-      <link>https://arueckauer.github.io/tags/buildkite/</link>
-      <pubDate>Thu, 30 Apr 2020 13:20:58 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/tags/buildkite/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>composer</title>
       <link>https://arueckauer.github.io/tags/composer/</link>
       <pubDate>Thu, 30 Apr 2020 08:06:13 +0200</pubDate>
@@ -234,6 +225,15 @@
       <pubDate>Thu, 23 May 2019 23:00:00 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/tags/autoloading/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>keep-a-changelog</title>
+      <link>https://arueckauer.github.io/tags/keep-a-changelog/</link>
+      <pubDate>Wed, 22 May 2019 20:39:27 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/keep-a-changelog/</guid>
       <description></description>
     </item>
     
