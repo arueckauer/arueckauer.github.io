@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 01 May 2020 07:09:07 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2020 06:34:25 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Signing Git Commits with GPG on Windows</title>
+      <link>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</link>
+      <pubDate>Tue, 05 May 2020 06:34:25 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</guid>
+      <description>Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.
+ Disclaimer: This article does not describe setting up / creating GPG keys.
+ Check your GPG keys gpg --list-secret-keys --keyid-format LONG  Which gives you a list like the following.
+C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx ---------------------------------------------------- sec rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC] 2B30F6F709EF48E6AF669C3FD7EB1106B4940744 uid [ ultimativ ] Andi Rückauer &amp;lt;arueckauer@example.</description>
+    </item>
     
     <item>
       <title>Replace Crlf With Lf in Bash</title>
@@ -285,18 +297,6 @@ Arne and Sebastian deliver messages from real world problems they tackled togeth
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D15
  I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
 Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;SQL renaissance ambassador&amp;rdquo;, independent author, trainer, and consultant on all things SQL</description>
-    </item>
-    
-    <item>
-      <title>IPC 2019: Day One</title>
-      <link>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-one/</link>
-      <pubDate>Tue, 04 Jun 2019 22:53:29 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-one/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D14
- This was a great first day
-How to make Loveliness: an HTML Treasure Hunt Keynote by Bruce Lawson, one of the editors of the W3C’s HTML5.3 specification
-To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&#39;s (well at least my) full attention.</description>
     </item>
     
   </channel>

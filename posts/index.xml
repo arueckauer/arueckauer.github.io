@@ -6,8 +6,52 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 01 May 2020 07:09:07 +0200</lastBuildDate>
+        <lastBuildDate>Tue, 05 May 2020 06:34:25 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Signing Git Commits with GPG on Windows</title>
+            <link>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</link>
+            <pubDate>Tue, 05 May 2020 06:34:25 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</guid>
+            <description>Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.
+ Disclaimer: This article does not describe setting up / creating GPG keys.
+ Check your GPG keys gpg --list-secret-keys --keyid-format LONG  Which gives you a list like the following.
+C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx ---------------------------------------------------- sec rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC] 2B30F6F709EF48E6AF669C3FD7EB1106B4940744 uid [ ultimativ ] Andi Rückauer &amp;lt;arueckauer@example.</description>
+            <content type="html"><![CDATA[<p>Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.</p>
+<blockquote>
+<p>Disclaimer: This article does not describe setting up / creating GPG keys.</p>
+</blockquote>
+<h2 id="check-your-gpg-keys">Check your GPG keys</h2>
+<pre><code class="language-powershell">gpg --list-secret-keys --keyid-format LONG
+</code></pre>
+<p>Which gives you a list like the following.</p>
+<pre><code>C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx
+----------------------------------------------------
+sec   rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC]
+      2B30F6F709EF48E6AF669C3FD7EB1106B4940744
+
+uid              [ ultimativ ] Andi Rückauer &lt;arueckauer@example.com&gt;
+</code></pre>
+<h2 id="setting-gpg-signing-key-as-configuration-setting">Setting GPG signing key as configuration setting</h2>
+<pre><code class="language-powershell">git config --global user.signingkey E1C0E2DB517C8FBC
+</code></pre>
+<h2 id="configure-gpg-program">Configure GPG program</h2>
+<pre><code class="language-powershell">git config --global gpg.program &quot;C:\Program Files (x86)\GnuPG\bin\gpg.exe&quot;
+</code></pre>
+<h2 id="et-voilà">Et voilà</h2>
+<p>Now signing commits should work by passing the <code>-S</code> option with a commit.</p>
+<pre><code class="language-powershell">git commit -S -m &quot;This is a signed commit&quot;
+</code></pre>
+<h2 id="further-reading">Further reading</h2>
+<ul>
+<li>Official Git documentation: <a href="https://www.git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work#_signing">7.4 Git Tools - Signing Your Work</a></li>
+<li>GitHub Help: <a href="https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key">Telling Git about your signing key</a></li>
+<li>GitHub Help: <a href="https://help.github.com/en/github/authenticating-to-github/signing-commits">Signing commits</a></li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>Replace Crlf With Lf in Bash</title>

@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 01 May 2020 07:09:07 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2020 06:34:25 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>git</title>
+      <link>https://arueckauer.github.io/tags/git/</link>
+      <pubDate>Tue, 05 May 2020 06:34:25 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gpg</title>
+      <link>https://arueckauer.github.io/tags/gpg/</link>
+      <pubDate>Tue, 05 May 2020 06:34:25 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/gpg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>https://arueckauer.github.io/tags/windows/</link>
+      <pubDate>Tue, 05 May 2020 06:34:25 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>bash</title>
@@ -45,15 +72,6 @@
       <pubDate>Wed, 29 Apr 2020 09:30:00 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/tags/ssh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>windows</title>
-      <link>https://arueckauer.github.io/tags/windows/</link>
-      <pubDate>Tue, 21 Apr 2020 10:27:32 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/tags/windows/</guid>
       <description></description>
     </item>
     
@@ -216,24 +234,6 @@
       <pubDate>Fri, 24 May 2019 23:37:51 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/tags/automation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>autoloading</title>
-      <link>https://arueckauer.github.io/tags/autoloading/</link>
-      <pubDate>Thu, 23 May 2019 23:00:00 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/tags/autoloading/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>keep-a-changelog</title>
-      <link>https://arueckauer.github.io/tags/keep-a-changelog/</link>
-      <pubDate>Wed, 22 May 2019 20:39:27 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/tags/keep-a-changelog/</guid>
       <description></description>
     </item>
     
