@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 09 Jun 2020 21:16:59 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2020 13:50:26 +0200</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>validation</title>
+      <link>https://arueckauer.github.io/tags/validation/</link>
+      <pubDate>Fri, 12 Jun 2020 13:50:26 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/validation/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>doctrine</title>
@@ -225,15 +234,6 @@
       <pubDate>Thu, 06 Jun 2019 20:49:38 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/tags/ipc19/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dotenv</title>
-      <link>https://arueckauer.github.io/tags/dotenv/</link>
-      <pubDate>Sat, 25 May 2019 20:43:15 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/tags/dotenv/</guid>
       <description></description>
     </item>
     

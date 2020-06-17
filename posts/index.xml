@@ -6,8 +6,78 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 09 Jun 2020 21:16:59 +0200</lastBuildDate>
+        <lastBuildDate>Fri, 12 Jun 2020 13:50:26 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Determine missing required parameters</title>
+            <link>https://arueckauer.github.io/posts/2020/06/determine-missing-required-parameters/</link>
+            <pubDate>Fri, 12 Jun 2020 13:50:26 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2020/06/determine-missing-required-parameters/</guid>
+            <description>Frequently checking for required parameters is needed. Locating the missing parameters helps in creating a helpful message for the client.
+Test &amp;lt;?php declare(strict_types=1); namespace AppTest\Validator; use PHPUnit\Framework\TestCase; use function array_diff_key; use function array_flip; use function array_keys; class RequiredParameterTest extends TestCase { public function testGetMissingParameters(): void { $required = [ &#39;requiredParameterA&#39;, &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, &#39;requiredParameterD&#39;, ]; $data = [ &#39;requiredParameterA&#39; =&amp;gt; &#39;foo&#39;, &#39;requiredParameterD&#39; =&amp;gt; null, ]; $missing = [ &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, ]; $result = array_keys(array_diff_key(array_flip($required), $data)); $this-&amp;gt;assertEquals($missing, $result); } }  &amp;ldquo;Validator&amp;rdquo; &amp;lt;?</description>
+            <content type="html"><![CDATA[<p>Frequently checking for required parameters is needed. Locating the missing parameters helps in creating a helpful message for the client.</p>
+<h2 id="test">Test</h2>
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types=1);
+
+namespace AppTest\Validator;
+
+use PHPUnit\Framework\TestCase;
+
+use function array_diff_key;
+use function array_flip;
+use function array_keys;
+
+class RequiredParameterTest extends TestCase
+{
+    public function testGetMissingParameters(): void
+    {
+        $required = [
+            'requiredParameterA',
+            'requiredParameterB',
+            'requiredParameterC',
+            'requiredParameterD',
+        ];
+        $data           = [
+            'requiredParameterA' =&gt; 'foo',
+            'requiredParameterD' =&gt; null,
+        ];
+        $missing  = [
+            'requiredParameterB',
+            'requiredParameterC',
+        ];
+
+        $result = array_keys(array_diff_key(array_flip($required), $data));
+        $this-&gt;assertEquals($missing, $result);
+    }
+}
+
+</code></pre>
+<h2 id="validator">&ldquo;Validator&rdquo;</h2>
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types=1);
+
+namespace App\Validator;
+
+use function array_diff_key;
+use function array_flip;
+use function array_keys;
+
+class RequiredParameter
+{
+    public function getMissingParameters(array $required, array $data): array
+    {
+        return array_keys(array_diff_key(array_flip($required), $data));
+    }
+}
+
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>How to write unit tests with PHPUnit involving Doctrine entities</title>
