@@ -4,7 +4,37 @@
   
   <url>
     <loc>https://arueckauer.github.io/</loc>
-    <lastmod>2020-05-06T09:04:23+02:00</lastmod>
+    <lastmod>2020-06-17T10:47:27+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/doctrine/</loc>
+    <lastmod>2020-06-17T10:47:27+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/posts/2020/06/how-to-write-unit-tests-with-phpunit-involving-doctrine-entities/</loc>
+    <lastmod>2020-06-17T10:47:27+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/phpunit/</loc>
+    <lastmod>2020-06-17T10:47:27+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/posts/</loc>
+    <lastmod>2020-06-17T10:47:27+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/</loc>
+    <lastmod>2020-06-17T10:47:27+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/testing/</loc>
+    <lastmod>2020-06-17T10:47:27+02:00</lastmod>
   </url>
   
   <url>
@@ -18,17 +48,7 @@
   </url>
   
   <url>
-    <loc>https://arueckauer.github.io/posts/</loc>
-    <lastmod>2020-05-06T09:04:23+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</loc>
-    <lastmod>2020-05-06T09:04:23+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/</loc>
     <lastmod>2020-05-06T09:04:23+02:00</lastmod>
   </url>
   
@@ -88,28 +108,8 @@
   </url>
   
   <url>
-    <loc>https://arueckauer.github.io/tags/laminas/</loc>
-    <lastmod>2019-12-11T14:16:25+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/mezzio/</loc>
-    <lastmod>2019-12-11T14:16:25+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://arueckauer.github.io/tags/php/</loc>
-    <lastmod>2019-12-11T14:16:25+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/posts/2019/12/stream-zip-in-zend-expressive/</loc>
-    <lastmod>2019-12-11T14:16:25+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/zend-expressive/</loc>
-    <lastmod>2019-12-11T14:16:25+01:00</lastmod>
+    <lastmod>2019-12-02T15:22:08+01:00</lastmod>
   </url>
   
   <url>
@@ -120,6 +120,11 @@
   <url>
     <loc>https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/</loc>
     <lastmod>2019-10-17T10:04:36+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/zend-expressive/</loc>
+    <lastmod>2019-12-02T15:22:08+01:00</lastmod>
   </url>
   
   <url>
@@ -339,6 +344,11 @@
   
   <url>
     <loc>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</loc>
+    <lastmod>2019-12-02T15:22:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://arueckauer.github.io/tags/laminas/</loc>
     <lastmod>2019-12-02T15:22:08+01:00</lastmod>
   </url>
   

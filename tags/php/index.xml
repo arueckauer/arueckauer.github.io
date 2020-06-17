@@ -7,19 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 11 Dec 2019 14:16:25 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 04 Nov 2019 06:41:23 +0100</lastBuildDate>
     
 	<atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Stream Zip in Zend Expressive</title>
-      <link>https://arueckauer.github.io/posts/2019/12/stream-zip-in-zend-expressive/</link>
-      <pubDate>Wed, 11 Dec 2019 14:16:25 +0100</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/12/stream-zip-in-zend-expressive/</guid>
-      <description>A feature request in a customer project was to zip multiple files</description>
-    </item>
     
     <item>
       <title>self vs. static</title>
@@ -304,6 +295,17 @@ Optimization levels There are two levels of optimization and the second level co
  Today I was working with keep a changelog, especially with Matthew Weier O&#39;Phinney&amp;lsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
 Installation Setup is thanks to composer straight-forward. You can either install it locally or globally. I went with the latter.
 composer global require phly/keep-a-changelog  If you haven&#39;t already, remember to add the global composer bin path to your PATH environment variable.</description>
+    </item>
+    
+    <item>
+      <title>Day 2: Clean Expressive Skeleton</title>
+      <link>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</link>
+      <pubDate>Tue, 21 May 2019 20:45:00 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</guid>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D2
+ Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
+ code structure, DI container, router, template engine and error handler.  It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.</description>
     </item>
     
   </channel>

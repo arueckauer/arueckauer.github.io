@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>doctrine on Andi Rückauer</title>
+    <link>https://arueckauer.github.io/tags/doctrine/</link>
+    <description>Recent content in doctrine on Andi Rückauer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 09 Jun 2020 21:16:59 +0200</lastBuildDate>
+    
+	<atom:link href="https://arueckauer.github.io/tags/doctrine/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to write unit tests with PHPUnit involving Doctrine entities</title>
+      <link>https://arueckauer.github.io/posts/2020/06/how-to-write-unit-tests-with-phpunit-involving-doctrine-entities/</link>
+      <pubDate>Tue, 09 Jun 2020 21:16:59 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2020/06/how-to-write-unit-tests-with-phpunit-involving-doctrine-entities/</guid>
+      <description>One of the main reasons for me why tight coupling is a less ideal design choice is the accompanied difficulty in testing these tight coupled components.
+Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code?</description>
+    </item>
+    
+  </channel>
+</rss>

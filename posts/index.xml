@@ -6,8 +6,116 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 05 May 2020 06:34:25 +0200</lastBuildDate>
+        <lastBuildDate>Tue, 09 Jun 2020 21:16:59 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>How to write unit tests with PHPUnit involving Doctrine entities</title>
+            <link>https://arueckauer.github.io/posts/2020/06/how-to-write-unit-tests-with-phpunit-involving-doctrine-entities/</link>
+            <pubDate>Tue, 09 Jun 2020 21:16:59 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2020/06/how-to-write-unit-tests-with-phpunit-involving-doctrine-entities/</guid>
+            <description>One of the main reasons for me why tight coupling is a less ideal design choice is the accompanied difficulty in testing these tight coupled components.
+Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code?</description>
+            <content type="html"><![CDATA[<p><em>One of the main reasons for me why tight coupling is a less ideal design choice is the accompanied difficulty in testing these tight coupled components.</em></p>
+<p>Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code? In a perfect world scenario, each unit would be so small and decoupled that writing a test would be simple, not having to deal with the variance of a changing dataset. After some contemplation, I decided to start by writing tests with a defined dataset for the tests, making it possible to rely on test data.</p>
+<blockquote>
+<p>Disclaimer: The solution presented in this article is to be considered as working solution for the described issue and nothing more. It is neither a general right fit for testing units relying on database interactions nor best practice.</p>
+</blockquote>
+<h2 id="test-data">Test data</h2>
+<p>For the tests, that rely on database interactions - in this article read-only - I provide a defined dataset as a MySQL dump. For generating a dump, please refer to the <a href="https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html">documentation</a>. Ensure that either the database or tables are dropped before creation, so that each time the dump is imported, a fresh clean database schema and data is provided. I zipped the dump and stored it in a place for test assets, in my case <code>test\TestAsset\Database\testing.sql.7z</code>.</p>
+<h2 id="installing-test-data-before-each-test">Installing test data before each test</h2>
+<p>With the help of the <code>setUp()</code> method, the dump is imported before each test. To safe on disk space, the dump is archived. On Windows my favorite choice is <a href="https://www.7-zip.org/">7-Zip</a> because of better compression rates and sometime speed compared to other formats. Extraction requires the 7-Zip binary. To import the dump, the <code>mysql.exe</code>, a database username and password as well as a database is required. The latter might be irrelevant if you set it up in the dump.</p>
+<blockquote>
+<p>This setup works on a Windows environment only and would need further changes to make automated testing including other environments possible.</p>
+</blockquote>
+<p>To configure the options, the PHPUnit configuration file put to work.</p>
+<h3 id="phpunitxmldist">phpunit.xml.dist</h3>
+<pre><code class="language-xml">    &lt;php&gt;
+        &lt;env name=&quot;SEVEN_ZIP_EXE&quot; value=&quot;C:/Program Files/7-Zip/7z.exe&quot; force=&quot;true&quot; /&gt;
+        &lt;env name=&quot;MYSQL_EXE&quot; value=&quot;C:/Program Files/MySQL/MySQL Server 8.0/bin/mysql.exe&quot; force=&quot;true&quot; /&gt;
+        &lt;env name=&quot;DATABASE_USERNAME&quot; value=&quot;acme_unit_test&quot; force=&quot;true&quot; /&gt;
+        &lt;env name=&quot;DATABASE_PASSWORD&quot; value=&quot;abcdefgh01234567&quot; force=&quot;true&quot; /&gt;
+        &lt;env name=&quot;DATABASE&quot; value=&quot;acme_unit_test&quot; force=&quot;true&quot; /&gt;
+    &lt;/php&gt;
+</code></pre>
+<h3 id="setup">setUp()</h3>
+<p>Now to extract and import the dump, the <code>setUp()</code> method is put to work.</p>
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types = 1);
+
+namespace AcmeTest;
+
+use PHPUnit\Framework\TestCase;
+use Acme\RoadRunner;
+
+class RoadRunnerTest extends TestCase
+{
+    protected function setUp() : void
+    {
+        $zippedFile  = __DIR__ . '/../../TestAsset/Database/testing.sql.7z';
+        $dumpFile    = __DIR__ . '/../../TestAsset/Database/testing.sql';
+        $extractPath = __DIR__ . '/../../TestAsset/Database';
+
+        $extractCommand = sprintf(
+            '&quot;%s&quot; x %s -o%s -y',
+            getenv('SEVEN_ZIP_EXE'),
+            $zippedFile,
+            $extractPath
+        );
+        exec($extractCommand);
+
+        $importCommand = sprintf(
+            'cmd /c &quot;%s&quot; -u %s -p%s %s &lt; %s',
+            getenv('MYSQL_EXE'),
+            getenv('DATABASE_USERNAME'),
+            getenv('DATABASE_PASSWORD'),
+            getenv('DATABASE'),
+            $dumpFile
+        );
+        exec($importCommand);
+    }
+
+    // Some tests
+}
+
+</code></pre>
+<h2 id="write-tests">Write tests</h2>
+<p>Finally, we can start writing tests.</p>
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types = 1);
+
+namespace AcmeTest;
+
+use PHPUnit\Framework\TestCase;
+use Acme\RoadRunner;
+
+class RoadRunnerTest extends TestCase
+{
+    // setUp()...
+
+    public function testGetMessagesInitialValue() : void
+    {
+        // RoadRunner relying on data provided in setUp()
+        $roadRunner = new RoadRunner();
+
+        $this-&gt;assertSame($expected, $roadRunner-&gt;meepMeep());
+    }
+}
+
+</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>The component in question can now be tested and refactored. Results before and after refactoring can be validated. The goal is achieved.</p>
+<p>However, it comes with a price. This setup conflicts two of the FIRST (Fast, Isolated, Repeatable, Self-Validating, Timely) properties of unit tests.</p>
+<p>The tests are not</p>
+<ul>
+<li>fast: Database import is costly, execution time is slowed down noticeably,</li>
+<li>isolated: They rely on external data (database access).</li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>Signing Git Commits with GPG on Windows</title>
@@ -167,17 +275,6 @@ The Sysinternals Process Utilities provide PowerShell tools. Among these is PsEx
 </ul>
 <p>To use a features, adding the wanted parameters to the shortcut.</p>
 <p><a href="https://github.com/signalapp/Signal-Desktop/issues/1480#issuecomment-369331290">Source</a></p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Stream Zip in Zend Expressive</title>
-            <link>https://arueckauer.github.io/posts/2019/12/stream-zip-in-zend-expressive/</link>
-            <pubDate>Wed, 11 Dec 2019 14:16:25 +0100</pubDate>
-            
-            <guid>https://arueckauer.github.io/posts/2019/12/stream-zip-in-zend-expressive/</guid>
-            <description>A feature request in a customer project was to zip multiple files</description>
-            <content type="html"><![CDATA[<p>A feature request in a customer project was to zip multiple files</p>
 ]]></content>
         </item>
         
