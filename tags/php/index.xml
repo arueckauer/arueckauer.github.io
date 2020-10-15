@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 04 Nov 2019 06:41:23 +0100</lastBuildDate>
-    
-	<atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 04 Nov 2019 06:41:23 +0100</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>self vs. static</title>
       <link>https://arueckauer.github.io/posts/2019/11/self-vs.-static/</link>
@@ -20,7 +16,7 @@
       <guid>https://arueckauer.github.io/posts/2019/11/self-vs.-static/</guid>
       <description>I get confused with self and static. Then I research and learn it. Then I forget it again. And so on.
 TLDR  self refers to the same class in which the new keyword is actually written.
-static, in PHP 5.3&#39;s late static bindings, refers to whatever class in the hierarchy you called the method on.
+static, in PHP 5.3&amp;rsquo;s late static bindings, refers to whatever class in the hierarchy you called the method on.
  By BoltClock on Stack Overflow
 An example &amp;lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; .</description>
     </item>
@@ -32,7 +28,7 @@ An example &amp;lt;?php class Foo { public function __invoke() { echo &#39;self:
       
       <guid>https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/</guid>
       <description>This is an addition to my previous post Console Commands in an Expressive Applicaton. It provides two more real-world examples for Console Commands in Expressive applications.
-mwop&#39;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run();  Source</description>
+mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run();  Source</description>
     </item>
     
     <item>
@@ -79,7 +75,7 @@ Since I am not using the package within a Symfony application, I needed somehow 
       <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D24
  After a mentor left some feedback:
- I like that you&#39;ve split out the direction and position. I think you can go a bit further though.
+ I like that you&amp;rsquo;ve split out the direction and position. I think you can go a bit further though.
  I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure.</description>
     </item>
     
@@ -90,7 +86,7 @@ Since I am not using the package within a Symfony application, I needed somehow 
       
       <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
- Instructions Today&#39;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
+ Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
  turn right, turn left and advance.  A robot can also follow instructions on how to proceed.
   The letter-string &amp;ldquo;RAALAL&amp;rdquo; means:  Turn right Advance twice Turn left Advance once Turn left yet again   Say a robot starts at {7, 3} facing north.</description>
     </item>
@@ -102,11 +98,11 @@ Since I am not using the package within a Symfony application, I needed somehow 
       
       <guid>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D22
- A mentor commented on my yesterday&#39;s solution to the Grade School exercise.
+ A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
  Good solution
 Awesome! using strict_types
-It&#39;s approved for me but try to use return types as much as possible, I&#39;m missing initGradeIfItDoesNotExist
- This post will reflect some of my personal thoughts. Since the mentor&#39;s suggestion could be just some personal preference, I will not name the mentor.</description>
+It&amp;rsquo;s approved for me but try to use return types as much as possible, I&amp;rsquo;m missing initGradeIfItDoesNotExist
+ This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
     </item>
     
     <item>
@@ -118,9 +114,9 @@ It&#39;s approved for me but try to use return types as much as possible, I&#39;
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
  This Exercism exercise is straight forward.
 An extract from the instructions:
- Given students&amp;rsquo; names along with the grade that they are in, create a roster for the school.
+ Given students&#39; names along with the grade that they are in, create a roster for the school.
 In the end, you should be able to:
- Add a student&#39;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
+ Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
     </item>
     
     <item>
@@ -165,7 +161,7 @@ While year, month and weekday are an exact representation of their values, the d
       <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-three/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D16
  Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de
-Arne and Sebastian deliver messages from real world problems they tackled together. It&#39;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience.</description>
+Arne and Sebastian deliver messages from real world problems they tackled together. It&amp;rsquo;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience.</description>
     </item>
     
     <item>
@@ -188,7 +184,7 @@ Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;SQL renaissance
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D14
  This was a great first day
 How to make Loveliness: an HTML Treasure Hunt Keynote by Bruce Lawson, one of the editors of the W3C’s HTML5.3 specification
-To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&#39;s (well at least my) full attention.</description>
+To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&amp;rsquo;s (well at least my) full attention.</description>
     </item>
     
     <item>
@@ -233,7 +229,7 @@ Administrator privileges Since the Apache services will be restarted, the module
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
 This is part one of a series of articles about the PHP Version Switcher.
- Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&#39;s still not the choice environment for a typical PHP web application.</description>
+ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.</description>
     </item>
     
     <item>
@@ -280,7 +276,7 @@ I see some issues with that.
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
- Today I&#39;m studying the Autoloader Optimization article of the Composer documentation.
+ Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
 Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.</description>
     </item>
@@ -292,9 +288,9 @@ Optimization levels There are two levels of optimization and the second level co
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-3-keep-a-changelog/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D3
- Today I was working with keep a changelog, especially with Matthew Weier O&#39;Phinney&amp;lsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
+ Today I was working with keep a changelog, especially with Matthew Weier O&amp;rsquo;Phinney&amp;rsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
 Installation Setup is thanks to composer straight-forward. You can either install it locally or globally. I went with the latter.
-composer global require phly/keep-a-changelog  If you haven&#39;t already, remember to add the global composer bin path to your PATH environment variable.</description>
+composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already, remember to add the global composer bin path to your PATH environment variable.</description>
     </item>
     
     <item>

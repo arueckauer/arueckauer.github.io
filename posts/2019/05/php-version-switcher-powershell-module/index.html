@@ -9,7 +9,7 @@
 <meta name="description"
     content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
 This is part one of a series of articles about the PHP Version Switcher.
- Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&#39;s still not the choice environment for a typical PHP web application." />
+ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application." />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/" />
@@ -41,21 +41,22 @@ This is part one of a series of articles about the PHP Version Switcher.
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Php Version Switcher: PowerShell Module">
 <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
 This is part one of a series of articles about the PHP Version Switcher.
- Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&#39;s still not the choice environment for a typical PHP web application.">
-<meta itemprop="datePublished" content="2019-05-28T20:36:42&#43;02:00" />
-<meta itemprop="dateModified" content="2019-05-31T23:41:32&#43;02:00" />
+ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&rsquo;s still not the choice environment for a typical PHP web application.">
+<meta itemprop="datePublished" content="2019-05-28T20:36:42+02:00" />
+<meta itemprop="dateModified" content="2019-05-31T23:41:32+02:00" />
 <meta itemprop="wordCount" content="1058">
 <meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="100-days-of-code,php,powershell," /><meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="100-days-of-code,php,powershell," />
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="Php Version Switcher: PowerShell Module"/>
 <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
 This is part one of a series of articles about the PHP Version Switcher.
- Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&#39;s still not the choice environment for a typical PHP web application."/>
+ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&rsquo;s still not the choice environment for a typical PHP web application."/>
 
 
 
@@ -137,15 +138,15 @@ This is part one of a series of articles about the PHP Version Switcher.
 <li>Part Four: <a href="https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/">Php Version Switcher: The Function</a></li>
 </ul>
 <hr>
-<p>Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it's still not the choice environment for a typical PHP web application.</p>
+<p>Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&rsquo;s still not the choice environment for a typical PHP web application.</p>
 <p>Last year a co-worker and I discussed the possibility of providing each project with a <a href="https://www.vagrantup.com/">Vagrant</a> box for development purposes that runs a comparable setup as the production environment. Until then each developer had his own WAMP setup and most likely non looked like any other development or production environment. I had a Linux machine in mind. Making the transition from Windows to Linux and providing the necessary infrastructure is not done in just one day.</p>
 <p>In the discussion I addressed the laborious manual process of switching in-between PHP versions. Then it dawned on me that by using symlinks, it might be possible to easily switch to another PHP version. Later on, I started working on the setup and wrote a batch file - and surely it worked! 🙌😊</p>
-<p>Lately I have become fond of PowerShell. Today I want to start rewriting that batch file of the PHP version switcher into a PowerShell module. For now, I am starting with a PowerShell Module. Tomorrow I continue with the rewrite. An additional feature is a PHP version manager, which would allow the installing and removing PHP versions. I'll see how far that can be automated on another day.</p>
+<p>Lately I have become fond of PowerShell. Today I want to start rewriting that batch file of the PHP version switcher into a PowerShell module. For now, I am starting with a PowerShell Module. Tomorrow I continue with the rewrite. An additional feature is a PHP version manager, which would allow the installing and removing PHP versions. I&rsquo;ll see how far that can be automated on another day.</p>
 <h2 id="creating-a-powershell-module">Creating a PowerShell Module</h2>
 <p>The functionality of the PHP version switcher will be placed in a Cmdlet. The plan is to make the Cmdlet available through a Module and possibly publish it on <a href="https://www.powershellgallery.com/packages/">PowerShell Gallery</a> and/or <a href="https://chocolatey.org/packages">chocolatey</a>.</p>
 <p>To create my first PowerShell module, I follow the article <a href="https://docs.microsoft.com/en-us/powershell/developer/module/how-to-write-a-powershell-script-module">How to Write a PowerShell Script Module</a>. Right now I only need steps 1 and 2. If you want to know more about the steps or further steps not mentioned here, head over to the referenced article.</p>
 <h3 id="1-save-powershell-script-with-a-psm1-extension">1. Save PowerShell script with a .psm1 extension</h3>
-<p>Since I don't have an existing PowerShell script and can't just dump in the batch file, I am starting with a fresh function. For now, I just want to declare my function and parameters. Then give the user some output. The real functionality will be added later.</p>
+<p>Since I don&rsquo;t have an existing PowerShell script and can&rsquo;t just dump in the batch file, I am starting with a fresh function. For now, I just want to declare my function and parameters. Then give the user some output. The real functionality will be added later.</p>
 <pre><code class="language-powershell">function Php-VersionSwitcher
 {
     Param (
@@ -164,7 +165,7 @@ This is part one of a series of articles about the PHP Version Switcher.
 <pre><code class="language-powershell">Export-ModuleMember -Function Php-VersionSwitcher
 </code></pre>
 <h3 id="create-powershell-module-manifest">Create PowerShell Module Manifest</h3>
-<p>Next, I follow the instructions found in <a href="https://docs.microsoft.com/en-us/powershell/developer/module/how-to-write-a-powershell-module-manifest">How to Write a PowerShell Module Manifest</a>. I'll go with option 1.b. and create the Manifest with the <a href="https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest">New-ModuleManifest</a> cmdlet.</p>
+<p>Next, I follow the instructions found in <a href="https://docs.microsoft.com/en-us/powershell/developer/module/how-to-write-a-powershell-module-manifest">How to Write a PowerShell Module Manifest</a>. I&rsquo;ll go with option 1.b. and create the Manifest with the <a href="https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest">New-ModuleManifest</a> cmdlet.</p>
 <pre><code class="language-powershell">New-ModuleManifest .\Php-VersionSwitcher.psd1 -ModuleVersion 1.0 -Author &quot;Andi Rückauer&quot;
 </code></pre>
 <p>I open the <code>Php-VersionSwitcher.psd1</code> and update necessary and removing unnecessary information. This is what it looks like now.</p>
@@ -234,7 +235,7 @@ This is part one of a series of articles about the PHP Version Switcher.
 
 </code></pre>
 <h2 id="giving-the-module-a-new-home">Giving the module a new home</h2>
-<p>Since I am using a custom PowerShell profile and <a href="https://github.com/dahlbyk/posh-git">posh-git</a>, I do already have a <code>WindowsPowerShell</code> folder in my user's documents path (<code>C:\Users\&lt;Username&gt;\Documents\WindowsPowerShell</code>). If you're using a machine, where you don't have that folder, have a look at the <a href="https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Import-Module?view=powershell-6">Import-Module</a> might help you getting there.</p>
+<p>Since I am using a custom PowerShell profile and <a href="https://github.com/dahlbyk/posh-git">posh-git</a>, I do already have a <code>WindowsPowerShell</code> folder in my user&rsquo;s documents path (<code>C:\Users\&lt;Username&gt;\Documents\WindowsPowerShell</code>). If you&rsquo;re using a machine, where you don&rsquo;t have that folder, have a look at the <a href="https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Import-Module?view=powershell-6">Import-Module</a> might help you getting there.</p>
 <p>I am moving the two created files <code>Php-VersionSwitcher.psm1</code> and <code>Php-VersionSwitcher.psd1</code> to a new home for my custom module: <code>C:\Users\Rueckauer\Documents\WindowsPowerShell\Modules\Php-VersionSwitcher\1.0.0</code>.</p>
 <h2 id="import-module">Import-Module</h2>
 <p>In my PowerShell profile (<code>C:\Users\Rueckauer\Documents\WindowsPowerShell\profile.ps1</code>) I add a line to import my new module.</p>
@@ -246,10 +247,10 @@ This is part one of a series of articles about the PHP Version Switcher.
 <blockquote>
 <p>WARNUNG: Die Namen einiger importierter Befehle auf Modul &ldquo;Php-VersionSwitcher&rdquo; enthalten nicht genehmigte Verben, sodass deren Auffindbarkeit erschwert werden kann. Wenn Sie die Befehle mit nicht genehmigten Verben finden möchten, führen Sie den Import-Module-Befehl erneut mit dem Verbose-Parameter aus. Sie können durch Eingeben von &ldquo;Get-Verb&rdquo; eine Liste der genehmigten Verben anzeigen.</p>
 </blockquote>
-<p>Something is not right with the module name. I need to figure that out later. Let's see, if it works despite the warning.</p>
+<p>Something is not right with the module name. I need to figure that out later. Let&rsquo;s see, if it works despite the warning.</p>
 <p><img src="https://arueckauer.github.io/img/php-version-switcher-powershell-module/php-versionswitcher.png" alt="Execution of Php-VersionSwitcher"></p>
 <p>Yes, neat! 💪🏻</p>
-<p>Okay, that's it for today. Next time I will breath some life into that function.</p>
+<p>Okay, that&rsquo;s it for today. Next time I will breath some life into that function.</p>
 
             </div>
         </article>

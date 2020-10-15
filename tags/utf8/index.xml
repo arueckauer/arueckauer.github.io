@@ -7,19 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 06 Aug 2019 16:15:08 +0200</lastBuildDate>
-    
-	<atom:link href="https://arueckauer.github.io/tags/utf8/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 06 Aug 2019 16:15:08 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/utf8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MySQL utf8mb4 Unicode</title>
       <link>https://arueckauer.github.io/posts/2019/08/mysql-utf8mb4-unicode/</link>
       <pubDate>Tue, 06 Aug 2019 16:15:08 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/posts/2019/08/mysql-utf8mb4-unicode/</guid>
-      <description>In MySQL UTF-8 does not actually mean UTF-8. If you&#39;re curious to see why, there is an excellent post by Mathias explaining in detail why you should choose utf8mb4 over utf8.
-While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3+ on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&#39;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.</description>
+      <description>In MySQL UTF-8 does not actually mean UTF-8. If you&amp;rsquo;re curious to see why, there is an excellent post by Mathias explaining in detail why you should choose utf8mb4 over utf8.
+While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3+ on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&amp;rsquo;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.</description>
     </item>
     
   </channel>

@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 30 Apr 2020 08:06:13 +0200</lastBuildDate>
-    
-	<atom:link href="https://arueckauer.github.io/tags/composer/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 30 Apr 2020 08:06:13 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/composer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Composer on Linux</title>
       <link>https://arueckauer.github.io/posts/2020/04/install-composer-on-linux/</link>
@@ -42,7 +38,7 @@ I see some issues with that.
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
- Today I&#39;m studying the Autoloader Optimization article of the Composer documentation.
+ Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
 Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.</description>
     </item>

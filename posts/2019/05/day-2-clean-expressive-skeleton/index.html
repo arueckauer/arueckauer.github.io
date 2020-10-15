@@ -42,14 +42,15 @@
 <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D2
  Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
  code structure, DI container, router, template engine and error handler.  It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.">
-<meta itemprop="datePublished" content="2019-05-21T20:45:00&#43;02:00" />
-<meta itemprop="dateModified" content="2019-12-02T15:22:08&#43;01:00" />
+<meta itemprop="datePublished" content="2019-05-21T20:45:00+02:00" />
+<meta itemprop="dateModified" content="2019-12-02T15:22:08+01:00" />
 <meta itemprop="wordCount" content="591">
 <meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="100-days-of-code,zend-expressive,laminas,php," /><meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="100-days-of-code,zend-expressive,laminas,php," />
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="Day 2: Clean Expressive Skeleton"/>
@@ -160,7 +161,7 @@
 </ul>
 <p>Then I removed the <code>post-create-project-cmd</code> from the <code>scripts</code> section.</p>
 <h3 id="further-changes">Further changes</h3>
-<p>If you're using some other code style tool like <a href="https://cs.symfony.com/">PHP-CS-Fixer</a>, you may want to update the <code>require-dev</code> and in the <code>scripts</code> section the <code>cs-check</code> and <code>cs-fix</code> commands accordingly. Since I sticked to the defaults, I left them as they were.</p>
+<p>If you&rsquo;re using some other code style tool like <a href="https://cs.symfony.com/">PHP-CS-Fixer</a>, you may want to update the <code>require-dev</code> and in the <code>scripts</code> section the <code>cs-check</code> and <code>cs-fix</code> commands accordingly. Since I sticked to the defaults, I left them as they were.</p>
 <p>In the end, my <code>composer.json</code> looked like the following.</p>
 <pre><code class="language-json">{
   &quot;name&quot;: &quot;arueckauer/clean-skeleton&quot;,
@@ -231,11 +232,11 @@
 </ul>
 <p>Also, I removed the defined routes in <code>config/routes.php</code> and the dependency definitions in <code>src/App/src/ConfigProvider.php</code>.</p>
 <h2 id="configuration">Configuration</h2>
-<p>In <code>config/config.php</code> I removed Swoole config. If you're using Swoole, you can replace it by an explicit inclusion of the ConfigProvider.</p>
+<p>In <code>config/config.php</code> I removed Swoole config. If you&rsquo;re using Swoole, you can replace it by an explicit inclusion of the ConfigProvider.</p>
 <h2 id="done">Done</h2>
 <p>To be honest, my first impression of what can be purged of the skeleton was much more. But there is no clutter whatsoever, just some examples. This challenge has helped me better understand the setup of the skeleton package and showed me just how neat it is organized. I love it.</p>
 <h2 id="other-skeleton-resources">Other Skeleton resources</h2>
-<p>There are two other skeletons for PHP applications which I want to mention at this point. They both are a closer look worth it, if you're starting new PHP projects on a fairly regular basis or want some reference from time to time.</p>
+<p>There are two other skeletons for PHP applications which I want to mention at this point. They both are a closer look worth it, if you&rsquo;re starting new PHP projects on a fairly regular basis or want some reference from time to time.</p>
 <ol>
 <li><a href="https://github.com/thephpleague/skeleton">thephpleague/skeleton</a> and</li>
 <li><a href="https://github.com/php-pds/skeleton">php-pds/skeleton</a></li>

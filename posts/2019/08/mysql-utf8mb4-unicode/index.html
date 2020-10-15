@@ -7,8 +7,8 @@
 <meta name="author"
     content="Andi Rückauer ">
 <meta name="description"
-    content="In MySQL UTF-8 does not actually mean UTF-8. If you&#39;re curious to see why, there is an excellent post by Mathias explaining in detail why you should choose utf8mb4 over utf8.
-While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3&#43; on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&#39;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self." />
+    content="In MySQL UTF-8 does not actually mean UTF-8. If you&amp;rsquo;re curious to see why, there is an excellent post by Mathias explaining in detail why you should choose utf8mb4 over utf8.
+While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3&#43; on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&amp;rsquo;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self." />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://arueckauer.github.io/posts/2019/08/mysql-utf8mb4-unicode/" />
@@ -38,21 +38,22 @@ While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3&#43; o
 <link rel="mask-icon" href="https://arueckauer.github.io/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="MySQL utf8mb4 Unicode">
-<meta itemprop="description" content="In MySQL UTF-8 does not actually mean UTF-8. If you&#39;re curious to see why, there is an excellent post by Mathias explaining in detail why you should choose utf8mb4 over utf8.
-While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3&#43; on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&#39;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.">
-<meta itemprop="datePublished" content="2019-08-06T16:15:08&#43;02:00" />
-<meta itemprop="dateModified" content="2019-08-06T17:14:59&#43;02:00" />
+<meta itemprop="description" content="In MySQL UTF-8 does not actually mean UTF-8. If you&rsquo;re curious to see why, there is an excellent post by Mathias explaining in detail why you should choose utf8mb4 over utf8.
+While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3&#43; on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&rsquo;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.">
+<meta itemprop="datePublished" content="2019-08-06T16:15:08+02:00" />
+<meta itemprop="dateModified" content="2019-08-06T17:14:59+02:00" />
 <meta itemprop="wordCount" content="370">
 <meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="mysql,utf8," /><meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="mysql,utf8," />
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="MySQL utf8mb4 Unicode"/>
-<meta name="twitter:description" content="In MySQL UTF-8 does not actually mean UTF-8. If you&#39;re curious to see why, there is an excellent post by Mathias explaining in detail why you should choose utf8mb4 over utf8.
-While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3&#43; on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&#39;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self."/>
+<meta name="twitter:description" content="In MySQL UTF-8 does not actually mean UTF-8. If you&rsquo;re curious to see why, there is an excellent post by Mathias explaining in detail why you should choose utf8mb4 over utf8.
+While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3&#43; on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&rsquo;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self."/>
 
 
 
@@ -126,8 +127,8 @@ While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3&#43; o
             
 
             <div class="post-content">
-                <p>In MySQL UTF-8 does not actually mean UTF-8. If you're curious to see why, there is an excellent <a href="https://mathiasbynens.be/notes/mysql-utf8mb4">post</a> by <a href="https://twitter.com/mathias">Mathias</a> explaining in detail why you should choose utf8mb4 over utf8.</p>
-<p>While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3+ on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won't tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.</p>
+                <p>In MySQL UTF-8 does not actually mean UTF-8. If you&rsquo;re curious to see why, there is an excellent <a href="https://mathiasbynens.be/notes/mysql-utf8mb4">post</a> by <a href="https://twitter.com/mathias">Mathias</a> explaining in detail why you should choose utf8mb4 over utf8.</p>
+<p>While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3+ on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&rsquo;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.</p>
 <pre><code class="language-ini">[client]
 default-character-set=utf8mb4
 

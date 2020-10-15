@@ -44,14 +44,15 @@ Whilst the import of the module and invocation of the function worked, the Impor
 This is part two of a series of articles about the PHP Version Switcher.
  Part One: Php Version Switcher: PowerShell Module Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Yesterday I started off, moving for my PHP version switcher to a new home by creating a PowerShell module.
 Whilst the import of the module and invocation of the function worked, the Import-Module throw a warning:">
-<meta itemprop="datePublished" content="2019-05-29T20:03:47&#43;02:00" />
-<meta itemprop="dateModified" content="2019-05-31T23:41:32&#43;02:00" />
+<meta itemprop="datePublished" content="2019-05-29T20:03:47+02:00" />
+<meta itemprop="dateModified" content="2019-05-31T23:41:32+02:00" />
 <meta itemprop="wordCount" content="416">
 <meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="100-days-of-code,powershell," /><meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="100-days-of-code,powershell," />
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="Php Version Switcher: PowerShell Naming Convention"/>
@@ -215,12 +216,12 @@ Unblock     Security
 Unprotect   Security
 Use         Other
 </code></pre>
-<p>Doing some more research I learned that it's a convention by starting off with one of the verbs above and appending whatever noun. Also, that <code>PS</code> is a (not so strictly) reserved prefix.</p>
+<p>Doing some more research I learned that it&rsquo;s a convention by starting off with one of the verbs above and appending whatever noun. Also, that <code>PS</code> is a (not so strictly) reserved prefix.</p>
 <p>Okay, so I could rename my module to <code>Switch-PhpVersion</code>. As a matter of fact, I changed it and the warning went away. However, these long names bother me a bit. I want to quickly type and execute a command. Now there are currently only 4 <code>Switch-*</code> commands on my machine. But still, I would prefer something shorter.</p>
 <p><img src="https://arueckauer.github.io/img/php-version-switcher-ps-naming-convention/switch-commands.png" alt="Commands starting with Switch-"></p>
 <p>So, I decided to rename module and function etc. to <code>pvs</code>. Which btw is also the current name of the PHP version switcher batch file.</p>
 <h2 id="repository">Repository</h2>
-<p>I've created a new repository for this project. To follow along and view the current state, head over to <a href="https://github.com/arueckauer/pvs">https://github.com/arueckauer/pvs</a>.</p>
+<p>I&rsquo;ve created a new repository for this project. To follow along and view the current state, head over to <a href="https://github.com/arueckauer/pvs">https://github.com/arueckauer/pvs</a>.</p>
 
             </div>
         </article>

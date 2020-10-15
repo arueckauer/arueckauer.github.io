@@ -40,14 +40,15 @@ The Sysinternals Process Utilities provide PowerShell tools. Among these is PsEx
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Generate SSH Keys for Windows System account">
 <meta itemprop="description" content="Windows services usually run under the System account. In cases where a service needs SSH access like cloning a Git repository, a SSH key pair might be required. But how do you generate these keys for the System account?
 The Sysinternals Process Utilities provide PowerShell tools. Among these is PsExec, which can be used to invoke a process on a remote machine. But it also allows executing a process on the same machine under a different user.">
-<meta itemprop="datePublished" content="2020-04-21T10:27:32&#43;02:00" />
-<meta itemprop="dateModified" content="2020-04-29T10:05:02&#43;02:00" />
+<meta itemprop="datePublished" content="2020-04-21T10:27:32+02:00" />
+<meta itemprop="dateModified" content="2020-04-29T10:05:02+02:00" />
 <meta itemprop="wordCount" content="226">
 <meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="windows,ssh," /><meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="windows,ssh," />
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="Generate SSH Keys for Windows System account"/>
@@ -141,8 +142,8 @@ The Sysinternals Process Utilities provide PowerShell tools. Among these is PsEx
 <p>In the new PowerShell keys can be generated as usual, e.g.</p>
 <pre><code class="language-powershell">ssh-keygen.exe -t rsa
 </code></pre>
-<h2 id="location-of-systems-account-ssh-keys">Location of System's account SSH keys</h2>
-<p>Other than human user accounts, the user's home path is not located in <code>C:\Users</code>. The SSH keys of the System account are in <code>C:\WINDOWS\system32\config\systemprofile\.ssh</code>. Since other users cannot access this path, it is a good idea to copy the public key now to a path which is accessible.</p>
+<h2 id="location-of-systems-account-ssh-keys">Location of System&rsquo;s account SSH keys</h2>
+<p>Other than human user accounts, the user&rsquo;s home path is not located in <code>C:\Users</code>. The SSH keys of the System account are in <code>C:\WINDOWS\system32\config\systemprofile\.ssh</code>. Since other users cannot access this path, it is a good idea to copy the public key now to a path which is accessible.</p>
 
             </div>
         </article>

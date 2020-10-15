@@ -44,14 +44,15 @@ On Windows you need to add the path of your PHP location to the system environme
 This is part three of a series of articles about the PHP Version Switcher.
  Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function   Today I will talk about the structural concept of the PHP Version Switcher.
 On Windows you need to add the path of your PHP location to the system environment variable PATH.">
-<meta itemprop="datePublished" content="2019-05-30T22:47:03&#43;02:00" />
-<meta itemprop="dateModified" content="2019-05-31T23:41:32&#43;02:00" />
+<meta itemprop="datePublished" content="2019-05-30T22:47:03+02:00" />
+<meta itemprop="dateModified" content="2019-05-31T23:41:32+02:00" />
 <meta itemprop="wordCount" content="277">
 <meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="100-days-of-code,powershell," /><meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="100-days-of-code,powershell," />
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="Php Version Switcher: The Structure"/>
@@ -141,9 +142,9 @@ On Windows you need to add the path of your PHP location to the system environme
 </ul>
 <hr>
 <p>Today I will talk about the structural concept of the PHP Version Switcher.</p>
-<p>On Windows you need to add the path of your PHP location to the system environment variable <code>PATH</code>. Switching in-between different PHP versions would mean to also to update the <code>PATH</code> each time. Furthermore, if Apache is supposed to be running the same PHP version, the <code>LoadModule</code> must be updated to the &ldquo;new&rdquo; PHP location. That's just laborious and not fun at all. But PHP Version Switcher to the rescue! 🤹🏼‍♂️</p>
+<p>On Windows you need to add the path of your PHP location to the system environment variable <code>PATH</code>. Switching in-between different PHP versions would mean to also to update the <code>PATH</code> each time. Furthermore, if Apache is supposed to be running the same PHP version, the <code>LoadModule</code> must be updated to the &ldquo;new&rdquo; PHP location. That&rsquo;s just laborious and not fun at all. But PHP Version Switcher to the rescue! 🤹🏼‍♂️</p>
 <h2 id="directory-structure">Directory structure</h2>
-<p>Everything related to my webserver goes into the directory <code>C:\webserv</code>. There's Apache, CouchDB, Elasticsearch, Ruby, sendmail etc. and the latest versions of PHP 5.6 through 7.4 (the latter being a non-stable snapshot).</p>
+<p>Everything related to my webserver goes into the directory <code>C:\webserv</code>. There&rsquo;s Apache, CouchDB, Elasticsearch, Ruby, sendmail etc. and the latest versions of PHP 5.6 through 7.4 (the latter being a non-stable snapshot).</p>
 <p><img src="https://arueckauer.github.io/img/php-version-switcher-structure/directory-listing-of-c-webserv.png" alt="Directory listing of C:\webserv"></p>
 <h2 id="symlink">Symlink</h2>
 <p>As you might have noticed, among the many PHP directories, there is on just plain called <code>php</code>. This is a symbolic link to the currently set PHP version. This directory is also what I put into my <code>PATH</code> and <code>httpd.conf</code>.</p>

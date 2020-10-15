@@ -7,10 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 12 Jun 2020 13:50:26 +0200</lastBuildDate>
-    
-	<atom:link href="https://arueckauer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 15 Oct 2020 06:46:34 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git</title>
+      <link>https://arueckauer.github.io/tags/git/</link>
+      <pubDate>Thu, 15 Oct 2020 06:46:34 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/git/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>validation</title>
@@ -45,15 +50,6 @@
       <pubDate>Tue, 09 Jun 2020 21:16:59 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/tags/testing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>https://arueckauer.github.io/tags/git/</link>
-      <pubDate>Tue, 05 May 2020 06:34:25 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/tags/git/</guid>
       <description></description>
     </item>
     

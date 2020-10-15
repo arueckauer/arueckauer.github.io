@@ -8,7 +8,7 @@
     content="Andi Rückauer ">
 <meta name="description"
     content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
- Instructions Today&#39;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
+ Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
  turn right, turn left and advance.  A robot can also follow instructions on how to proceed.
   The letter-string &amp;ldquo;RAALAL&amp;rdquo; means:  Turn right Advance twice Turn left Advance once Turn left yet again   Say a robot starts at {7, 3} facing north." />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
@@ -41,22 +41,23 @@
 <link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Robot Simulator">
 <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
- Instructions Today&#39;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
+ Instructions Today&rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
  turn right, turn left and advance.  A robot can also follow instructions on how to proceed.
   The letter-string &ldquo;RAALAL&rdquo; means:  Turn right Advance twice Turn left Advance once Turn left yet again   Say a robot starts at {7, 3} facing north.">
-<meta itemprop="datePublished" content="2019-06-14T21:30:50&#43;02:00" />
-<meta itemprop="dateModified" content="2019-06-14T21:51:07&#43;02:00" />
+<meta itemprop="datePublished" content="2019-06-14T21:30:50+02:00" />
+<meta itemprop="dateModified" content="2019-06-14T21:51:07+02:00" />
 <meta itemprop="wordCount" content="1471">
 <meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="100-days-of-code,exercism,php," /><meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="100-days-of-code,exercism,php," />
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="Robot Simulator"/>
 <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
- Instructions Today&#39;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
+ Instructions Today&rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
  turn right, turn left and advance.  A robot can also follow instructions on how to proceed.
   The letter-string &ldquo;RAALAL&rdquo; means:  Turn right Advance twice Turn left Advance once Turn left yet again   Say a robot starts at {7, 3} facing north."/>
 
@@ -135,7 +136,7 @@
                 <p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D23</em></p>
 <hr>
 <h2 id="instructions">Instructions</h2>
-<p>Today's challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:</p>
+<p>Today&rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:</p>
 <ul>
 <li>turn right,</li>
 <li>turn left and</li>
@@ -203,7 +204,7 @@ class Robot
 }
 
 </code></pre>
-<p>Next, I implement the <code>instructions</code> method. It's a command chain where each character is providing a movement instruction. Only three valid commands are available. Everything else will throw an <code>InvalidArgumentException</code>.</p>
+<p>Next, I implement the <code>instructions</code> method. It&rsquo;s a command chain where each character is providing a movement instruction. Only three valid commands are available. Everything else will throw an <code>InvalidArgumentException</code>.</p>
 <pre><code class="language-php">public function instructions(string $path) : void
 {
     foreach (str_split($path) as $direction) {
@@ -276,7 +277,7 @@ public function turnRight() : Robot
 }
 </code></pre>
 <h2 id="improve-turning-methods-and-direction-constants">Improve turning methods and direction constants</h2>
-<p>I'm not happy with the look of it. Since the instructions and tests are not specifying the value of the geographic direction, I simplify them as follows.</p>
+<p>I&rsquo;m not happy with the look of it. Since the instructions and tests are not specifying the value of the geographic direction, I simplify them as follows.</p>
 <pre><code class="language-php">&lt;?php
 
 declare(strict_types = 1);
@@ -782,7 +783,7 @@ class Robot
 
 </code></pre>
 <h2 id="conclusion">Conclusion</h2>
-<p>Tests are passing and the exercise is complete. This looks much cleaner now. There might still be some more improvements to make, but I am ready for a break for now. Looking forward to the mentor's feedback.</p>
+<p>Tests are passing and the exercise is complete. This looks much cleaner now. There might still be some more improvements to make, but I am ready for a break for now. Looking forward to the mentor&rsquo;s feedback.</p>
 
             </div>
         </article>

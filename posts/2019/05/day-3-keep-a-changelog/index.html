@@ -8,9 +8,9 @@
     content="Andi Rückauer ">
 <meta name="description"
     content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D3
- Today I was working with keep a changelog, especially with Matthew Weier O&#39;Phinney&amp;lsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
+ Today I was working with keep a changelog, especially with Matthew Weier O&amp;rsquo;Phinney&amp;rsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
 Installation Setup is thanks to composer straight-forward. You can either install it locally or globally. I went with the latter.
-composer global require phly/keep-a-changelog  If you haven&#39;t already, remember to add the global composer bin path to your PATH environment variable." />
+composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already, remember to add the global composer bin path to your PATH environment variable." />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://arueckauer.github.io/posts/2019/05/day-3-keep-a-changelog/" />
@@ -41,24 +41,25 @@ composer global require phly/keep-a-changelog  If you haven&#39;t already, remem
 <link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Day 3: Keep a Changelog">
 <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D3
- Today I was working with keep a changelog, especially with Matthew Weier O&#39;Phinney&lsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
+ Today I was working with keep a changelog, especially with Matthew Weier O&rsquo;Phinney&rsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
 Installation Setup is thanks to composer straight-forward. You can either install it locally or globally. I went with the latter.
-composer global require phly/keep-a-changelog  If you haven&#39;t already, remember to add the global composer bin path to your PATH environment variable.">
-<meta itemprop="datePublished" content="2019-05-22T20:39:27&#43;02:00" />
-<meta itemprop="dateModified" content="2019-05-30T23:22:00&#43;02:00" />
+composer global require phly/keep-a-changelog  If you haven&rsquo;t already, remember to add the global composer bin path to your PATH environment variable.">
+<meta itemprop="datePublished" content="2019-05-22T20:39:27+02:00" />
+<meta itemprop="dateModified" content="2019-05-30T23:22:00+02:00" />
 <meta itemprop="wordCount" content="428">
 <meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="100-days-of-code,keep-a-changelog,php," /><meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="100-days-of-code,keep-a-changelog,php," />
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="Day 3: Keep a Changelog"/>
 <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D3
- Today I was working with keep a changelog, especially with Matthew Weier O&#39;Phinney&lsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
+ Today I was working with keep a changelog, especially with Matthew Weier O&rsquo;Phinney&rsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
 Installation Setup is thanks to composer straight-forward. You can either install it locally or globally. I went with the latter.
-composer global require phly/keep-a-changelog  If you haven&#39;t already, remember to add the global composer bin path to your PATH environment variable."/>
+composer global require phly/keep-a-changelog  If you haven&rsquo;t already, remember to add the global composer bin path to your PATH environment variable."/>
 
 
 
@@ -134,14 +135,14 @@ composer global require phly/keep-a-changelog  If you haven&#39;t already, remem
             <div class="post-content">
                 <p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D3</em></p>
 <hr>
-<p>Today I was working with <a href="https://keepachangelog.com/">keep a changelog</a>, especially with <a href="https://mwop.net/">Matthew Weier O'Phinney</a>&lsquo;s <a href="https://github.com/phly/keep-a-changelog">implementation</a> of it. I am fascinated by the idea of managing the CHANGELOG from the command line.</p>
+<p>Today I was working with <a href="https://keepachangelog.com/">keep a changelog</a>, especially with <a href="https://mwop.net/">Matthew Weier O&rsquo;Phinney</a>&rsquo;s <a href="https://github.com/phly/keep-a-changelog">implementation</a> of it. I am fascinated by the idea of managing the CHANGELOG from the command line.</p>
 <h2 id="installation">Installation</h2>
 <p>Setup is thanks to composer straight-forward. You can either install it locally or globally. I went with the latter.</p>
 <pre><code class="language-powershell">composer global require phly/keep-a-changelog
 </code></pre>
-<p>If you haven't already, remember to add the global composer bin path to your PATH environment variable.</p>
+<p>If you haven&rsquo;t already, remember to add the global composer bin path to your PATH environment variable.</p>
 <h2 id="commands">Commands</h2>
-<p>Now let's have a look at it.</p>
+<p>Now let&rsquo;s have a look at it.</p>
 <p><img src="https://arueckauer.github.io/img/day-3-keep-a-changelog/keep-a-changelog-commands.png" alt="keep-a-changelog commands"></p>
 <h2 id="setup">Setup</h2>
 <p>Getting started is as simple as</p>
@@ -161,12 +162,12 @@ composer global require phly/keep-a-changelog  If you haven&#39;t already, remem
 </ol>
 <p>Since my employer is using <a href="https://beanstalkapp.com/">Beanstalk</a>, I got curious, if it was possible to implement a provider it.</p>
 <h2 id="curiosity">Curiosity</h2>
-<p>I cloned the repository and digged into the code. Quickly I came across a piece of code which could be a party-pooper. The <code>EntryCommand::preparePatchLink()</code> method <a href="https://github.com/phly/keep-a-changelog/blob/2610134afb6104bda7b4c198903f382cec4b8d50/src/EntryCommand.php#L146">throws an exception</a> if no valid PR link is generated by the provider. Now <a href="https://blog.beanstalkapp.com/post/101864285674/introducing-code-review">Beanstalk don't do no PRs</a>. A <a href="https://twitter.com/arueckauer/status/1131251308114186240">quick check</a> with mwop restored hope, saying <code>--pr</code> is never a required option.</p>
+<p>I cloned the repository and digged into the code. Quickly I came across a piece of code which could be a party-pooper. The <code>EntryCommand::preparePatchLink()</code> method <a href="https://github.com/phly/keep-a-changelog/blob/2610134afb6104bda7b4c198903f382cec4b8d50/src/EntryCommand.php#L146">throws an exception</a> if no valid PR link is generated by the provider. Now <a href="https://blog.beanstalkapp.com/post/101864285674/introducing-code-review">Beanstalk don&rsquo;t do no PRs</a>. A <a href="https://twitter.com/arueckauer/status/1131251308114186240">quick check</a> with mwop restored hope, saying <code>--pr</code> is never a required option.</p>
 <h2 id="to-infinity-and-beyond">To infinity and beyond</h2>
 <p>Awesome. I rolled up my sleeves and started implementing a Beanstalk provider. Thanks to the neat code the internal features were done in couple of minutes. Now only adding a Beanstalk API client and that would be it. At least that is what I thought.</p>
 <h2 id="disillusionment">Disillusionment</h2>
 <p>Looking for candidates on <a href="https://github.com/search?l=PHP&amp;q=beanstalk+api&amp;type=Repositories">GitHub</a> and <a href="https://packagist.org/?query=beanstalk%20api">Packagist</a> did not look good at all. There might be a package or two that might work, but neither received any updates in years and the code has great improvement potential.</p>
-<p>Implementing a PHP client library for the <a href="http://api.beanstalkapp.com/">Beanstalk API</a> goes beyond the scope of today's challenge.</p>
+<p>Implementing a PHP client library for the <a href="http://api.beanstalkapp.com/">Beanstalk API</a> goes beyond the scope of today&rsquo;s challenge.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>Although there is currently no working provider for Beanstalk, I still want to see the keep-a-changelog in action in a project. On another day I will evaluate the tool in a GitHub or GitLab project and see how it fits into our workflow. So long.</p>
 

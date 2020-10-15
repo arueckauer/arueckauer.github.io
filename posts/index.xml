@@ -6,8 +6,56 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 12 Jun 2020 13:50:26 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 15 Oct 2020 06:46:34 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Configure Winmerge as Git Mergetool on Windows</title>
+            <link>https://arueckauer.github.io/posts/2020/10/configure-winmerge-as-git-mergetool-on-windows/</link>
+            <pubDate>Thu, 15 Oct 2020 06:46:34 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2020/10/configure-winmerge-as-git-mergetool-on-windows/</guid>
+            <description>Today I wanted to set up WinMerge as default mergetool for Git. In my research I came across this helpful Gist by Shawn Dumas.
+[mergetool] prompt = false keepBackup = false keepTemporaries = false [merge] tool = winmerge [mergetool &amp;quot;winmerge&amp;quot;] name = WinMerge trustExitCode = true cmd = &amp;quot;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&amp;quot; -u -e -dl \&amp;quot;Local\&amp;quot; -dr \&amp;quot;Remote\&amp;quot; $LOCAL $REMOTE $MERGED [diff] tool = winmerge [difftool &amp;quot;winmerge&amp;quot;] name = WinMerge trustExitCode = true cmd = &amp;quot;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.</description>
+            <content type="html"><![CDATA[<p>Today I wanted to set up <a href="https://winmerge.org/">WinMerge</a> as default mergetool for Git. In my research I came across this helpful <a href="https://gist.github.com/shawndumas/6158524">Gist</a> by <a href="https://twitter.com/shawndumas">Shawn Dumas</a>.</p>
+<pre><code class="language-ini">[mergetool]
+    prompt = false
+    keepBackup = false
+    keepTemporaries = false
+
+[merge]
+    tool = winmerge
+
+[mergetool &quot;winmerge&quot;]
+    name = WinMerge
+    trustExitCode = true
+    cmd = &quot;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&quot; -u -e -dl \&quot;Local\&quot; -dr \&quot;Remote\&quot; $LOCAL $REMOTE $MERGED
+
+[diff]
+    tool = winmerge
+
+[difftool &quot;winmerge&quot;]
+    name = WinMerge
+    trustExitCode = true
+    cmd = &quot;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&quot; -u -e $LOCAL $REMOTE
+
+</code></pre>
+<p>As was pointed out in the comments, this will work for diff but can potentially provide some trouble for merge.</p>
+<p>To apply this for my machine and scenario, I made some adjustments. Since I am happy with the Git internal diff tool, I will leave out that configuration. The path to the <code>WinMergeU.exe</code> is adjusted. And lastly, the options for mergetool are improved. This is the result:</p>
+<pre><code class="language-ini">[mergetool]
+    prompt = false
+    keepBackup = false
+    keepTemporaries = false
+[merge]
+    tool = winmerge
+[mergetool &quot;winmerge&quot;]
+    name = WinMerge
+    trustExitCode = true
+    cmd = &quot;/c/Program\\ Files/WinMerge/WinMergeU.exe&quot; -u -e -fm -wl -dl &quot;Local&quot; -wr -dr &quot;Remote&quot; $LOCAL $MERGED $REMOTE
+
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Determine missing required parameters</title>
@@ -325,8 +373,8 @@ The Sysinternals Process Utilities provide PowerShell tools. Among these is PsEx
 <p>In the new PowerShell keys can be generated as usual, e.g.</p>
 <pre><code class="language-powershell">ssh-keygen.exe -t rsa
 </code></pre>
-<h2 id="location-of-systems-account-ssh-keys">Location of System's account SSH keys</h2>
-<p>Other than human user accounts, the user's home path is not located in <code>C:\Users</code>. The SSH keys of the System account are in <code>C:\WINDOWS\system32\config\systemprofile\.ssh</code>. Since other users cannot access this path, it is a good idea to copy the public key now to a path which is accessible.</p>
+<h2 id="location-of-systems-account-ssh-keys">Location of System&rsquo;s account SSH keys</h2>
+<p>Other than human user accounts, the user&rsquo;s home path is not located in <code>C:\Users</code>. The SSH keys of the System account are in <code>C:\WINDOWS\system32\config\systemprofile\.ssh</code>. Since other users cannot access this path, it is a good idea to copy the public key now to a path which is accessible.</p>
 ]]></content>
         </item>
         
@@ -356,14 +404,14 @@ The Sysinternals Process Utilities provide PowerShell tools. Among these is PsEx
             <guid>https://arueckauer.github.io/posts/2019/11/self-vs.-static/</guid>
             <description>I get confused with self and static. Then I research and learn it. Then I forget it again. And so on.
 TLDR  self refers to the same class in which the new keyword is actually written.
-static, in PHP 5.3&#39;s late static bindings, refers to whatever class in the hierarchy you called the method on.
+static, in PHP 5.3&amp;rsquo;s late static bindings, refers to whatever class in the hierarchy you called the method on.
  By BoltClock on Stack Overflow
 An example &amp;lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; .</description>
             <content type="html"><![CDATA[<p>I get confused with <code>self</code> and <code>static</code>. Then I research and learn it. Then I forget it again. And so on.</p>
 <h2 id="tldr">TLDR</h2>
 <blockquote>
 <p><code>self</code> refers to the same class in which the new keyword is actually written.</p>
-<p><code>static</code>, in PHP 5.3's late static bindings, refers to whatever class in the hierarchy you called the method on.</p>
+<p><code>static</code>, in PHP 5.3&rsquo;s late static bindings, refers to whatever class in the hierarchy you called the method on.</p>
 </blockquote>
 <p><a href="https://stackoverflow.com/a/5197655/9364246">By BoltClock on Stack Overflow</a></p>
 <h2 id="an-example">An example</h2>
@@ -409,9 +457,9 @@ get_called_class(): Bar
             
             <guid>https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/</guid>
             <description>This is an addition to my previous post Console Commands in an Expressive Applicaton. It provides two more real-world examples for Console Commands in Expressive applications.
-mwop&#39;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run();  Source</description>
+mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run();  Source</description>
             <content type="html"><![CDATA[<p>This is an addition to my previous post <a href="https://arueckauer.github.io/posts/2019/07/console-commands-in-an-expressive-applicaton/">Console Commands in an Expressive Applicaton</a>. It provides two more real-world examples for Console Commands in Expressive applications.</p>
-<h2 id="mwops-blog">mwop's blog</h2>
+<h2 id="mwops-blog">mwop&rsquo;s blog</h2>
 <pre><code class="language-php">#!/usr/bin/env php
 &lt;?php
 /**
@@ -578,10 +626,10 @@ bool(true)
             <pubDate>Tue, 06 Aug 2019 16:15:08 +0200</pubDate>
             
             <guid>https://arueckauer.github.io/posts/2019/08/mysql-utf8mb4-unicode/</guid>
-            <description>In MySQL UTF-8 does not actually mean UTF-8. If you&#39;re curious to see why, there is an excellent post by Mathias explaining in detail why you should choose utf8mb4 over utf8.
-While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3+ on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&#39;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.</description>
-            <content type="html"><![CDATA[<p>In MySQL UTF-8 does not actually mean UTF-8. If you're curious to see why, there is an excellent <a href="https://mathiasbynens.be/notes/mysql-utf8mb4">post</a> by <a href="https://twitter.com/mathias">Mathias</a> explaining in detail why you should choose utf8mb4 over utf8.</p>
-<p>While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3+ on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won't tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.</p>
+            <description>In MySQL UTF-8 does not actually mean UTF-8. If you&amp;rsquo;re curious to see why, there is an excellent post by Mathias explaining in detail why you should choose utf8mb4 over utf8.
+While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3+ on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&amp;rsquo;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.</description>
+            <content type="html"><![CDATA[<p>In MySQL UTF-8 does not actually mean UTF-8. If you&rsquo;re curious to see why, there is an excellent <a href="https://mathiasbynens.be/notes/mysql-utf8mb4">post</a> by <a href="https://twitter.com/mathias">Mathias</a> explaining in detail why you should choose utf8mb4 over utf8.</p>
+<p>While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3+ on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&rsquo;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.</p>
 <pre><code class="language-ini">[client]
 default-character-set=utf8mb4
 
@@ -964,12 +1012,12 @@ class SecondsAsTimeTest extends TestCase
             <guid>https://arueckauer.github.io/posts/2019/06/intermediate-status/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D25
  25 % of my #100DaysOfCode and #100DaysOfBlogging challenges are completed. Time for an intermediate status review.
-Just do it As mentioned in my starting post, I wanted this to be a fun and learning experience. I am very happy to see that I&#39;ve reached all of my goals so far. My greatest concern was that I would get tired of writing (almost) every day.</description>
+Just do it As mentioned in my starting post, I wanted this to be a fun and learning experience. I am very happy to see that I&amp;rsquo;ve reached all of my goals so far. My greatest concern was that I would get tired of writing (almost) every day.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D25</em></p>
 <hr>
 <p>25 % of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenges are completed. Time for an intermediate status review.</p>
 <h2 id="just-do-it">Just do it</h2>
-<p>As mentioned in my <a href="/posts/2019/05/just-do-it/">starting post</a>, I wanted this to be a fun and learning experience. I am very happy to see that I've reached all of my goals so far. My greatest concern was that I would get tired of writing (almost) every day. But this has been good practice and writing becomes easier every day.</p>
+<p>As mentioned in my <a href="/posts/2019/05/just-do-it/">starting post</a>, I wanted this to be a fun and learning experience. I am very happy to see that I&rsquo;ve reached all of my goals so far. My greatest concern was that I would get tired of writing (almost) every day. But this has been good practice and writing becomes easier every day.</p>
 <h2 id="learnings">Learnings</h2>
 <p>Making time for reading an interesting article or trying something out from my to-do list, has been a wonderful achievement experience. Usually those items tend to linger around in lists forever. Now I actually engage in things of personal interest (well, for the most part).</p>
 <h2 id="improvements">Improvements</h2>
@@ -988,13 +1036,13 @@ Just do it As mentioned in my starting post, I wanted this to be a fun and learn
             <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D24
  After a mentor left some feedback:
- I like that you&#39;ve split out the direction and position. I think you can go a bit further though.
+ I like that you&amp;rsquo;ve split out the direction and position. I think you can go a bit further though.
  I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D24</em></p>
 <hr>
 <p>After a mentor left some feedback:</p>
 <blockquote>
-<p>I like that you've split out the direction and position. I think you can go a bit further though.</p>
+<p>I like that you&rsquo;ve split out the direction and position. I think you can go a bit further though.</p>
 </blockquote>
 <p>I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure. The result can be found on <a href="https://github.com/arueckauer/exercism-php/tree/master/robot-simulator">GitHub</a>. Where I might upload all my solutions.</p>
 <blockquote>
@@ -1007,7 +1055,7 @@ Just do it As mentioned in my starting post, I wanted this to be a fun and learn
 </ul>
 <p>I thought about implementing a separate <code>Move</code> class. Which would turn the direction and advance the position. That approach would tighten the coupling between classes and add complexity.</p>
 <p>Also a <code>Map</code> would IMO only make sense to place n Robots on it.</p>
-<p>I'm pretty happy with the outcome. One improvement I would add is either making <code>Robot</code> properties private and adding getters and setters or declare type properties. Now it would be possible to mutate them to whatever.</p>
+<p>I&rsquo;m pretty happy with the outcome. One improvement I would add is either making <code>Robot</code> properties private and adding getters and setters or declare type properties. Now it would be possible to mutate them to whatever.</p>
 <p>Looking forward to hearing from you.</p>
 </blockquote>
 ]]></content>
@@ -1020,13 +1068,13 @@ Just do it As mentioned in my starting post, I wanted this to be a fun and learn
             
             <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
- Instructions Today&#39;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
+ Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
  turn right, turn left and advance.  A robot can also follow instructions on how to proceed.
   The letter-string &amp;ldquo;RAALAL&amp;rdquo; means:  Turn right Advance twice Turn left Advance once Turn left yet again   Say a robot starts at {7, 3} facing north.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D23</em></p>
 <hr>
 <h2 id="instructions">Instructions</h2>
-<p>Today's challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:</p>
+<p>Today&rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:</p>
 <ul>
 <li>turn right,</li>
 <li>turn left and</li>
@@ -1094,7 +1142,7 @@ class Robot
 }
 
 </code></pre>
-<p>Next, I implement the <code>instructions</code> method. It's a command chain where each character is providing a movement instruction. Only three valid commands are available. Everything else will throw an <code>InvalidArgumentException</code>.</p>
+<p>Next, I implement the <code>instructions</code> method. It&rsquo;s a command chain where each character is providing a movement instruction. Only three valid commands are available. Everything else will throw an <code>InvalidArgumentException</code>.</p>
 <pre><code class="language-php">public function instructions(string $path) : void
 {
     foreach (str_split($path) as $direction) {
@@ -1167,7 +1215,7 @@ public function turnRight() : Robot
 }
 </code></pre>
 <h2 id="improve-turning-methods-and-direction-constants">Improve turning methods and direction constants</h2>
-<p>I'm not happy with the look of it. Since the instructions and tests are not specifying the value of the geographic direction, I simplify them as follows.</p>
+<p>I&rsquo;m not happy with the look of it. Since the instructions and tests are not specifying the value of the geographic direction, I simplify them as follows.</p>
 <pre><code class="language-php">&lt;?php
 
 declare(strict_types = 1);
@@ -1673,7 +1721,7 @@ class Robot
 
 </code></pre>
 <h2 id="conclusion">Conclusion</h2>
-<p>Tests are passing and the exercise is complete. This looks much cleaner now. There might still be some more improvements to make, but I am ready for a break for now. Looking forward to the mentor's feedback.</p>
+<p>Tests are passing and the exercise is complete. This looks much cleaner now. There might still be some more improvements to make, but I am ready for a break for now. Looking forward to the mentor&rsquo;s feedback.</p>
 ]]></content>
         </item>
         
@@ -1684,20 +1732,20 @@ class Robot
             
             <guid>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D22
- A mentor commented on my yesterday&#39;s solution to the Grade School exercise.
+ A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
  Good solution
 Awesome! using strict_types
-It&#39;s approved for me but try to use return types as much as possible, I&#39;m missing initGradeIfItDoesNotExist
- This post will reflect some of my personal thoughts. Since the mentor&#39;s suggestion could be just some personal preference, I will not name the mentor.</description>
+It&amp;rsquo;s approved for me but try to use return types as much as possible, I&amp;rsquo;m missing initGradeIfItDoesNotExist
+ This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D22</em></p>
 <hr>
-<p>A mentor commented on my <a href="/posts/2019/06/grade-school/">yesterday's solution</a> to the Grade School exercise.</p>
+<p>A mentor commented on my <a href="/posts/2019/06/grade-school/">yesterday&rsquo;s solution</a> to the Grade School exercise.</p>
 <blockquote>
 <p>Good solution</p>
 <p>Awesome! using strict_types</p>
-<p>It's approved for me but try to use return types as much as possible, I'm missing <strong>initGradeIfItDoesNotExist</strong></p>
+<p>It&rsquo;s approved for me but try to use return types as much as possible, I&rsquo;m missing <strong>initGradeIfItDoesNotExist</strong></p>
 </blockquote>
-<p><em>This post will reflect some of my personal thoughts. Since the mentor's suggestion could be just some personal preference, I will not name the mentor.</em></p>
+<p><em>This post will reflect some of my personal thoughts. Since the mentor&rsquo;s suggestion could be just some personal preference, I will not name the mentor.</em></p>
 <p><em>I am very grateful for each one of them taking time and providing valuable feedback. This has been an awesome experience. And since I am doing these exercises to learn, the caused reflection is what I am looking for. Thank you!</em></p>
 <h2 id="reflection">Reflection</h2>
 <p>The suggestion to &ldquo;use return types as much as possible&rdquo; made me review my code.</p>
@@ -1736,22 +1784,22 @@ It&#39;s approved for me but try to use return types as much as possible, I&#39;
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
  This Exercism exercise is straight forward.
 An extract from the instructions:
- Given students&amp;rsquo; names along with the grade that they are in, create a roster for the school.
+ Given students&#39; names along with the grade that they are in, create a roster for the school.
 In the end, you should be able to:
- Add a student&#39;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
+ Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D21</em></p>
 <hr>
 <p>This <a href="https://exercism.io">Exercism</a> exercise is straight forward.</p>
 <p>An extract from the instructions:</p>
 <blockquote>
-<p>Given students&rsquo; names along with the grade that they are in, create a roster for the school.</p>
+<p>Given students' names along with the grade that they are in, create a roster for the school.</p>
 <p>In the end, you should be able to:</p>
 <ul>
-<li>Add a student's name to the roster for a grade</li>
+<li>Add a student&rsquo;s name to the roster for a grade</li>
 <li>Get a list of all students enrolled in a grade</li>
 <li>Get a sorted list of all students in all grades. Grades should sort as 1, 2, 3, etc., and students within a grade should be sorted alphabetically by name.</li>
 </ul>
-<p>Note that all our students only have one name. (It's a small town, what do you want?)</p>
+<p>Note that all our students only have one name. (It&rsquo;s a small town, what do you want?)</p>
 </blockquote>
 <h2 id="my-solution">My solution</h2>
 <p>Although I am not happy with the usage of plain array in PHP, I used them here because of a closed setup where nothing will be added. In a regular project I would implement some custom collection class which checks allows type checking, since <a href="https://wiki.php.net/rfc/generics">Generic Types</a> are not (yet) available in PHP.</p>
@@ -1938,7 +1986,7 @@ function modify_teenth_date(DateTime $date) : DateTime
 <p>Today I am solving the Sieve of Eratosthenes side exercise of the <a href="https://exercism.io">Exercism</a> PHP track.</p>
 <blockquote>
 <p>In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit.
-It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime. This is the sieve's key distinction from using trial division to sequentially test each candidate number for divisibility by each prime.</p>
+It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime. This is the sieve&rsquo;s key distinction from using trial division to sequentially test each candidate number for divisibility by each prime.</p>
 </blockquote>
 <p>See <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes</a>.</p>
 <h2 id="my-solution">My solution</h2>
@@ -1994,14 +2042,14 @@ function removeMultiplesFromRange(int $prime, array &amp;$range) : void
  Bruce Lawson gave an outstanding keynote called How to make Loveliness: an HTML Treasure Hunt at the IPC 2019.
 He shared that most 2-year-olds can say about 100 words and with 2 ½ years they know close to 300 words.
 One of his challenges was to
- Learn the semantics of HTML. There are 120(ish) elements, that&#39;s all!</description>
+ Learn the semantics of HTML. There are 120(ish) elements, that&amp;rsquo;s all!</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D18</em></p>
 <hr>
 <p><a href="https://twitter.com/brucel">Bruce Lawson</a> gave an outstanding keynote called <a href="https://phpconference.com/web-development/how-to-make-loveliness-an-html-treasure-hunt/">How to make Loveliness: an HTML Treasure Hunt</a> at the IPC 2019.</p>
 <p>He shared that <a href="https://speakerdeck.com/brucel/webinale-berlin-4-june-2019?slide=75">most 2-year-olds can say about 100 words</a> and with 2 ½ years they know close to 300 words.</p>
 <p>One of his challenges was to</p>
 <blockquote>
-<p>Learn the semantics of HTML. There are 120(ish) elements, that's all!</p>
+<p>Learn the semantics of HTML. There are 120(ish) elements, that&rsquo;s all!</p>
 </blockquote>
 <p>Bruce let us know that using HTML (and CSS) wherever possible, will be</p>
 <blockquote>
@@ -2014,11 +2062,11 @@ One of his challenges was to
 <li>more time in the pub / playing CoD / seeing our kids</li>
 </ul>
 </blockquote>
-<p>Well, if that is not motivation enough, I don't know what is. 😄</p>
+<p>Well, if that is not motivation enough, I don&rsquo;t know what is. 😄</p>
 <h2 id="challenge-accepted">Challenge accepted</h2>
 <p>Today I am reading through the HTML elements, provided by the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer</a> site.</p>
-<p>While most elements seem familiar, there are some I've never heard of and would read what they could be useful for. For example, <code>&lt;hgroup&gt;</code> as well as many inline text semantics elements or image and multimedia and embedded content elements.</p>
-<p>It was surprising to me to see that there is a purpose for both <code>&lt;i&gt;</code> and <code>&lt;em&gt;</code> as well as <code>&lt;b&gt;</code> and <code>&lt;strong&gt;</code>. Back in the day I thought the new elements were deprecating the older ones. That's not true. Today I learned that</p>
+<p>While most elements seem familiar, there are some I&rsquo;ve never heard of and would read what they could be useful for. For example, <code>&lt;hgroup&gt;</code> as well as many inline text semantics elements or image and multimedia and embedded content elements.</p>
+<p>It was surprising to me to see that there is a purpose for both <code>&lt;i&gt;</code> and <code>&lt;em&gt;</code> as well as <code>&lt;b&gt;</code> and <code>&lt;strong&gt;</code>. Back in the day I thought the new elements were deprecating the older ones. That&rsquo;s not true. Today I learned that</p>
 <blockquote>
 <p>Their new use is to semantically represent styles (or intended presentation), whereas <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> represent structure.</p>
 </blockquote>
@@ -2084,12 +2132,12 @@ One of his challenges was to
             <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-three/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D16
  Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de
-Arne and Sebastian deliver messages from real world problems they tackled together. It&#39;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience.</description>
+Arne and Sebastian deliver messages from real world problems they tackled together. It&amp;rsquo;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D16</em></p>
 <hr>
 <h2 id="pragmatic-queue-processing-at-scale">Pragmatic Queue Processing at Scale</h2>
 <p><em>By <a href="https://twitter.com/arneblankerts">Arne Blankerts</a>, Principal Consultant at thePHP.cc and <a href="https://twitter.com/belanur">Sebastian Heuer</a>, Developer Advocate at kartenmacherei.de</em></p>
-<p>Arne and Sebastian deliver messages from real world problems they tackled together. It's not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience. It's always worthwhile to attend.</p>
+<p>Arne and Sebastian deliver messages from real world problems they tackled together. It&rsquo;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience. It&rsquo;s always worthwhile to attend.</p>
 <p>They showed how queue processing can improve performance on legacy applications without the need to refactor or rewrite the whole code base.</p>
 <blockquote>
 <p>Start with the simplest thing that could possibly work</p>
@@ -2120,7 +2168,7 @@ Arne and Sebastian deliver messages from real world problems they tackled togeth
 <li>Eases start for newcomers</li>
 </ul>
 <blockquote>
-<p>It's all about dependency
+<p>It&rsquo;s all about dependency
 Framework = Dependency</p>
 </blockquote>
 <p>He gave a short introduction to frameworkless and the <a href="http://frameworklessmovement.org/">Frameworkless Movement</a>, also explained that Dependencies are bad and how to avoid them.</p>
@@ -2137,11 +2185,11 @@ Framework = Dependency</p>
 <li>Scaling, reliability up. Operational costs down.</li>
 </ul>
 <blockquote>
-<p>It's 10 % cheaper than on premise</p>
+<p>It&rsquo;s 10 % cheaper than on premise</p>
 </blockquote>
 <p><em>Amazon</em></p>
 <blockquote>
-<p>85 % of the time it's more expensive than on premise.</p>
+<p>85 % of the time it&rsquo;s more expensive than on premise.</p>
 </blockquote>
 <p><em>Dell</em></p>
 <p>Downside of serverless: Application lock-in. Platform-specific function is not as easy to move to another platform as running plain PHP on various environments.</p>
@@ -2176,7 +2224,7 @@ Kubernetes is the new OS</p>
 <p>Christian is passionate about the climate change and sharing this compassion. He challenged the audience to (1) contemplate what personal changes can be made to contribute to a positive change and (2) share those ideas with the person you sit next to. What a great exercise! I want to purchase vegetables and fruits from local producers where possible.</p>
 <p>A fun fact: Ecosia has a TPO - Tree plant officer! 😃</p>
 <blockquote>
-<p>Sometimes I do use Google, but don't tell anyone</p>
+<p>Sometimes I do use Google, but don&rsquo;t tell anyone</p>
 </blockquote>
 <p><a href="https://twitter.com/Christian_KrolI">Twitter</a></p>
 <h2 id="opening-doors-with-json-web-tokens">Opening Doors with JSON Web Tokens</h2>
@@ -2188,7 +2236,7 @@ Kubernetes is the new OS</p>
 <blockquote>
 <p>Choose wisely to minimize costs.</p>
 </blockquote>
-<p>She gave a reading recommendation and an analogy on the book from HBR's 10 must read: On Change Management. Because our code basis is about change management.</p>
+<p>She gave a reading recommendation and an analogy on the book from HBR&rsquo;s 10 must read: On Change Management. Because our code basis is about change management.</p>
 <p>In this presentation she did not provide a ready-to-use recipe for any situation, rather aimed for:</p>
 <ul>
 <li>a framework to make informed decisions,</li>
@@ -2218,7 +2266,7 @@ Kubernetes is the new OS</p>
 </blockquote>
 <p>Henry David Thoreau</p>
 <blockquote>
-<p>Don't become dependent on your tools.</p>
+<p>Don&rsquo;t become dependent on your tools.</p>
 </blockquote>
 <p>Because tools are there to help, not to block from being productive. They are just tools.</p>
 ]]></content>
@@ -2244,19 +2292,19 @@ Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;SQL renaissance
 <p>Still Using Windows 3.1? So why stick to SQL-92?</p>
 </blockquote>
 <p>During the next 45 minutes he spoke about the various standards, which features were introduced, and the current state of which databases are supporting said features. He made it more than clear, that if one is still using MySQL 5, it is time to update to MySQL 8.</p>
-<p>I was able to take notes of only a fraction of the session. If you get a chance to attend one of his talks, make sure you don't miss it!</p>
+<p>I was able to take notes of only a fraction of the session. If you get a chance to attend one of his talks, make sure you don&rsquo;t miss it!</p>
 <p><strong>SQL:1999</strong></p>
 <p>In 1999 recursive queries were added, which allows transitive closures like in child-parent-relations.
 GROUPING SETS</p>
 <p><strong>SQL:2003</strong></p>
 <p>An important function was added: Windows Function aka the over clause.</p>
 <blockquote>
-<p>If you have SQL on you CV, but don't know Window Function, you need to cross it out. But you can add it again in 10 min, because I will teach it now!</p>
+<p>If you have SQL on you CV, but don&rsquo;t know Window Function, you need to cross it out. But you can add it again in 10 min, because I will teach it now!</p>
 </blockquote>
 <p>What a great guy. 😂</p>
 <p><strong>SQL:2011</strong></p>
 <blockquote>
-<p>If you're using OFFSET for pagination, you're doing it wrong. It gives you the wrong result and is slow.</p>
+<p>If you&rsquo;re using OFFSET for pagination, you&rsquo;re doing it wrong. It gives you the wrong result and is slow.</p>
 </blockquote>
 <p>Read more about it <a href="https://use-the-index-luke.com/no-offset">here</a>.</p>
 <p>SQL:2011 introduces System Versioning, basically time traveling for data storage. <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code> are <code>DESTRUCTIVE</code>. Tables can be system versioned, application versioned or both.</p>
@@ -2316,7 +2364,7 @@ GROUPING SETS</p>
 <p>Introduction &gt; Planning &gt; Presentation &gt; Feedback</p>
 <p>Rules</p>
 <p>The goal is not to come up with a concrete solution. The goal is to come up with a rough architectural vision of the project and defend questions about it. So, it is crucial to gain a common understanding of defined requirements. Assumptions about technologies have to be clearly defined and spelled out. You may not assume you have hiring/firing authority over the development team (sizing up the team to meet deadline) (what a bummer 😂). Any technology is fair game (but you must justify its use). Any other rules you may ask about.</p>
-<p>If you ask a customer whether they want to a feature, the answer usually will be &ldquo;Yes&rdquo;. Your duty is to communicate the impact on the timeline and costs. The business decision is the customer's responsible.</p>
+<p>If you ask a customer whether they want to a feature, the answer usually will be &ldquo;Yes&rdquo;. Your duty is to communicate the impact on the timeline and costs. The business decision is the customer&rsquo;s responsible.</p>
 <p>How do I get from unclear requirements to an architectural structure?</p>
 <p>Instead of rewriting specs in own words, use a structured language. As a communication tool, UML is fantastic.</p>
 <ul>
@@ -2324,21 +2372,21 @@ GROUPING SETS</p>
 <li>define use cases</li>
 <li>&hellip;</li>
 </ul>
-<p>The first version won't be good.</p>
+<p>The first version won&rsquo;t be good.</p>
 <blockquote>
 <p>Plan to throw one away</p>
 </blockquote>
 <p>Frederick P. Brooks - Mythical Man Month</p>
 <p>Rapid Prototyping</p>
-<p>What about iterating throwing away versions - throwing away the first three or four versions. Or iterate parts of the draft that don't work.</p>
+<p>What about iterating throwing away versions - throwing away the first three or four versions. Or iterate parts of the draft that don&rsquo;t work.</p>
 <p>Work on a whiteboard. It makes easy to wipe things away. Flipcharts is the perfect example of what happens when you implement code. Once implemented it is very hard to erase or change.</p>
 <p>Container diagram or <a href="https://c4model.com/">C4 Model</a>.</p>
 <p>UML can be very confusing, C4 only uses the most four important. Makes usage easy and lets you focus on designing.</p>
 <h2 id="why-you-shouldnt-care-about-security">Why you shouldn’t care about Security</h2>
 <p><em>By <a href="https://twitter.com/bendechrai">Ben Dechrai</a>, Technologist, Presenter, <a href="https://auth0.com">Auth0</a> Developer Evangelist, Community Advocate</em></p>
-<p>Ben's sessions are always fun to attend. He is an experienced speaker who quickly informs about all necessary details and also shows a great live demo bridging the gap between theory and practical use (at least the sessions I attended so far).</p>
+<p>Ben&rsquo;s sessions are always fun to attend. He is an experienced speaker who quickly informs about all necessary details and also shows a great live demo bridging the gap between theory and practical use (at least the sessions I attended so far).</p>
 <p>Traditional authentication and authorization can become complex quickly, especially when scaling.</p>
-<p>As we don't implement our own payment service, but use a provider, we should not implement our own authentication mechanism, but use an identity provider for login process as user storage.</p>
+<p>As we don&rsquo;t implement our own payment service, but use a provider, we should not implement our own authentication mechanism, but use an identity provider for login process as user storage.</p>
 <p>Live demo application of creating a PHP web application adding Auth0 as identity provider.</p>
 <p>First impression: Very well documented, simple to implement, ready-to-go.</p>
 <ul>
@@ -2347,7 +2395,7 @@ GROUPING SETS</p>
 </ul>
 <h2 id="php-to-hack-an-incrementally-typed-adventure-at-slack">PHP to Hack, an incrementally typed Adventure at Slack</h2>
 <p><em>By Scott Sandler, a Senior Staff Engineer at <a href="https://slack.com">Slack</a></em></p>
-<p>Awesome talk with Slack's journey on migrating from PHP to Hack. There was so much information, I could only take notes on a few thoughts. I definitely recommend viewing the slides.</p>
+<p>Awesome talk with Slack&rsquo;s journey on migrating from PHP to Hack. There was so much information, I could only take notes on a few thoughts. I definitely recommend viewing the slides.</p>
 <ul>
 <li>We came to Hack for performance but stayed for type safety.</li>
 <li>hh_client Type Checker</li>
@@ -2368,9 +2416,9 @@ GROUPING SETS</p>
 <a href="https://twitter.com/scott_sandler">Twitter</a></p>
 <h2 id="getting-started-with-php-on-aws-lambda">Getting started with PHP on AWS Lambda</h2>
 <p><em>By Thomas Bley, Senior PHP Developer at <a href="https://www.bringmeister.de/">Bringmeister</a></em></p>
-<p>I'm new to AWS, so I tried following as much as I could. Thomas made a great and thorough job explaining each step to setup lambda functions on AWS. It looks very promising and interesting for the following use cases.</p>
+<p>I&rsquo;m new to AWS, so I tried following as much as I could. Thomas made a great and thorough job explaining each step to setup lambda functions on AWS. It looks very promising and interesting for the following use cases.</p>
 <ul>
-<li>cronjobs (don't pay for idle time)</li>
+<li>cronjobs (don&rsquo;t pay for idle time)</li>
 <li>websites with unknown traffic spikes (tv advertising)</li>
 <li>event based workers (Kinesis, SQS, S3, etc.)</li>
 <li>event based backend tasks (images resizing, creating PDFs, sending e-mails, etc.)</li>
@@ -2409,13 +2457,13 @@ GROUPING SETS</p>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D14
  This was a great first day
 How to make Loveliness: an HTML Treasure Hunt Keynote by Bruce Lawson, one of the editors of the W3C’s HTML5.3 specification
-To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&#39;s (well at least my) full attention.</description>
+To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&amp;rsquo;s (well at least my) full attention.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D14</em></p>
 <hr>
 <p>This was a great first day</p>
 <h2 id="how-to-make-loveliness-an-html-treasure-hunt">How to make Loveliness: an HTML Treasure Hunt</h2>
 <p><em>Keynote by <a href="https://twitter.com/brucel">Bruce Lawson</a>, one of the editors of the W3C’s HTML5.3 specification</em></p>
-<p>To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience's (well at least my) full attention. Bruce managed to make this very informative and funny at the same time.</p>
+<p>To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&rsquo;s (well at least my) full attention. Bruce managed to make this very informative and funny at the same time.</p>
 <p>I left with a desire to get to know the 120-ish HTML elements better and use them for what they were designed. I learned that the <code>div</code> and <code>span</code> elements basically serve no special purpose. They are however misused, if there is a native HTML element covering that purpose but is not used. This will also break a11y.</p>
 <p>Using proper HTML tags means</p>
 <ul>
@@ -2452,11 +2500,11 @@ To me, this was the best keynote I have ever attended. He presented a topic that
 <h2 id="knock-knock-whos-there-authenticating-your-single-page-apps-using-json-web-tokens">Knock knock, who’s there? Authenticating your Single Page Apps using JSON Web Tokens</h2>
 <p><em>Talk by <a href="https://twitter.com/sambego">Sam Bellen</a>, Developer Evangelist at Auth0</em></p>
 <p>This was a fully loaded talk with tons of information about JWT to process. Excellent!</p>
-<p>The issue with Cookies is, that they don't like CORS, require state and are issued for a certain domain. A solution to that issue could be tokens. Sam explained the registration and login processes using backend authentication with session cookies and token-based authentication using JWT. He also talked about a possible solution of password-fee authentications with the W3C standard WebAuthn. He demoed it using an authenticator device.</p>
+<p>The issue with Cookies is, that they don&rsquo;t like CORS, require state and are issued for a certain domain. A solution to that issue could be tokens. Sam explained the registration and login processes using backend authentication with session cookies and token-based authentication using JWT. He also talked about a possible solution of password-fee authentications with the W3C standard WebAuthn. He demoed it using an authenticator device.</p>
 <p><a href="https://jwt.sambego.tech/">Slides</a></p>
 <h2 id="an-introduction-to-symfony-messenger">An Introduction to Symfony Messenger</h2>
 <p><em>By <a href="https://twitter.com/dbrumann">Denis Brumann</a>, Software Developer at Sensiolabs</em></p>
-<p>This talk gave an excellent introduction to the Symfony messenger component in the brand new 4.3 release from last Friday. It's straight forward and easy to get started with. It comes with transporters for AMQP, Redis and Doctrine. Custom implementations are also possible. Denis also showed the most important CLI commands to manage the messenger.</p>
+<p>This talk gave an excellent introduction to the Symfony messenger component in the brand new 4.3 release from last Friday. It&rsquo;s straight forward and easy to get started with. It comes with transporters for AMQP, Redis and Doctrine. Custom implementations are also possible. Denis also showed the most important CLI commands to manage the messenger.</p>
 <p>On first impression it looks like there is less configuration (and also options available) than <a href="https://github.com/php-enqueue">Enqueue</a>.</p>
 <h2 id="the-future-of-authentication--webauthn-with-php">The Future of Authentication – WebAuthn with PHP</h2>
 <p><em>By <a href="https://twitter.com/arneblankerts">Arne Blankerts</a>, Principal Consultant at thePHP.cc</em></p>
@@ -2497,7 +2545,7 @@ function squareOfSum(int $number) : int
 
 </code></pre>
 <h3 id="sum-of-squares">Sum Of Squares</h3>
-<p>Now researching for a form to sum squares, I come across a wiki page on <a href="https://brilliant.org/wiki/sum-of-n-n2-or-n3/">Brillant</a>. Under the paragraph <em>Sum of the Squares of the First n Positive Integers</em> I find what I am looking for. Read the linked article, if you're interested in more.</p>
+<p>Now researching for a form to sum squares, I come across a wiki page on <a href="https://brilliant.org/wiki/sum-of-n-n2-or-n3/">Brillant</a>. Under the paragraph <em>Sum of the Squares of the First n Positive Integers</em> I find what I am looking for. Read the linked article, if you&rsquo;re interested in more.</p>
 <p>This is the refactored function:</p>
 <pre><code class="language-php">function sumOfSquares(int $number) : int
 {
@@ -2532,7 +2580,7 @@ function squareOfSum(int $number) : int
 </ul>
 <h2 id="retrieve-available-php-versions">Retrieve available PHP versions</h2>
 <p>In order for this project to even work, I need to be able to fetch a list of available PHP versions. On <a href="https://windows.php.net/download">windows.php.net/download</a> the current releases are listed. Parsing that HTML is not too sexy. So, I am looking for anything else like a RSS feed or so. At first glance I cannot find anything. As I have a closer look on the download links, I notice there is a directory listing available for <a href="https://windows.php.net/downloads/releases/">releases</a>, <a href="https://windows.php.net/downloads/releases/archives/">archives</a> and <a href="https://windows.php.net/downloads/releases/latest/">&ldquo;latest&rdquo;</a>. The HTML does not look very strict. The capital tags remind me on how HTML used to be written ages ago. But that would work.</p>
-<p>Just to make sure I don't miss any other options, I'm <a href="https://twitter.com/arueckauer/status/1134907160092168193">pinging</a> Pierre Joye - Development Team Leader.</p>
+<p>Just to make sure I don&rsquo;t miss any other options, I&rsquo;m <a href="https://twitter.com/arueckauer/status/1134907160092168193">pinging</a> Pierre Joye - Development Team Leader.</p>
 <h2 id="next">Next</h2>
 <p>Each PHP version is currently offered for x86 and x64 system versions with each a thread safe and non-thread safe version. For now, I would only offer the x64 thread safe option, to go with Apache and PHP running as module. x86 versions should work similar and probably could be added pretty easily. However, I am not sure why one would want to use them anymore.</p>
 ]]></content>
@@ -2704,9 +2752,9 @@ On Windows you need to add the path of your PHP location to the system environme
 </ul>
 <hr>
 <p>Today I will talk about the structural concept of the PHP Version Switcher.</p>
-<p>On Windows you need to add the path of your PHP location to the system environment variable <code>PATH</code>. Switching in-between different PHP versions would mean to also to update the <code>PATH</code> each time. Furthermore, if Apache is supposed to be running the same PHP version, the <code>LoadModule</code> must be updated to the &ldquo;new&rdquo; PHP location. That's just laborious and not fun at all. But PHP Version Switcher to the rescue! 🤹🏼‍♂️</p>
+<p>On Windows you need to add the path of your PHP location to the system environment variable <code>PATH</code>. Switching in-between different PHP versions would mean to also to update the <code>PATH</code> each time. Furthermore, if Apache is supposed to be running the same PHP version, the <code>LoadModule</code> must be updated to the &ldquo;new&rdquo; PHP location. That&rsquo;s just laborious and not fun at all. But PHP Version Switcher to the rescue! 🤹🏼‍♂️</p>
 <h2 id="directory-structure">Directory structure</h2>
-<p>Everything related to my webserver goes into the directory <code>C:\webserv</code>. There's Apache, CouchDB, Elasticsearch, Ruby, sendmail etc. and the latest versions of PHP 5.6 through 7.4 (the latter being a non-stable snapshot).</p>
+<p>Everything related to my webserver goes into the directory <code>C:\webserv</code>. There&rsquo;s Apache, CouchDB, Elasticsearch, Ruby, sendmail etc. and the latest versions of PHP 5.6 through 7.4 (the latter being a non-stable snapshot).</p>
 <p><img src="/img/php-version-switcher-structure/directory-listing-of-c-webserv.png" alt="Directory listing of C:\webserv"></p>
 <h2 id="symlink">Symlink</h2>
 <p>As you might have noticed, among the many PHP directories, there is on just plain called <code>php</code>. This is a symbolic link to the currently set PHP version. This directory is also what I put into my <code>PATH</code> and <code>httpd.conf</code>.</p>
@@ -2816,12 +2864,12 @@ Unblock     Security
 Unprotect   Security
 Use         Other
 </code></pre>
-<p>Doing some more research I learned that it's a convention by starting off with one of the verbs above and appending whatever noun. Also, that <code>PS</code> is a (not so strictly) reserved prefix.</p>
+<p>Doing some more research I learned that it&rsquo;s a convention by starting off with one of the verbs above and appending whatever noun. Also, that <code>PS</code> is a (not so strictly) reserved prefix.</p>
 <p>Okay, so I could rename my module to <code>Switch-PhpVersion</code>. As a matter of fact, I changed it and the warning went away. However, these long names bother me a bit. I want to quickly type and execute a command. Now there are currently only 4 <code>Switch-*</code> commands on my machine. But still, I would prefer something shorter.</p>
 <p><img src="/img/php-version-switcher-ps-naming-convention/switch-commands.png" alt="Commands starting with Switch-"></p>
 <p>So, I decided to rename module and function etc. to <code>pvs</code>. Which btw is also the current name of the PHP version switcher batch file.</p>
 <h2 id="repository">Repository</h2>
-<p>I've created a new repository for this project. To follow along and view the current state, head over to <a href="https://github.com/arueckauer/pvs">https://github.com/arueckauer/pvs</a>.</p>
+<p>I&rsquo;ve created a new repository for this project. To follow along and view the current state, head over to <a href="https://github.com/arueckauer/pvs">https://github.com/arueckauer/pvs</a>.</p>
 ]]></content>
         </item>
         
@@ -2833,7 +2881,7 @@ Use         Other
             <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
 This is part one of a series of articles about the PHP Version Switcher.
- Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&#39;s still not the choice environment for a typical PHP web application.</description>
+ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D8</em></p>
 <p>This is part one of a series of articles about the <a href="https://github.com/arueckauer/pvs">PHP Version Switcher</a>.</p>
 <ul>
@@ -2842,15 +2890,15 @@ This is part one of a series of articles about the PHP Version Switcher.
 <li>Part Four: <a href="/posts/2019/05/php-version-switcher-the-function/">Php Version Switcher: The Function</a></li>
 </ul>
 <hr>
-<p>Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it's still not the choice environment for a typical PHP web application.</p>
+<p>Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&rsquo;s still not the choice environment for a typical PHP web application.</p>
 <p>Last year a co-worker and I discussed the possibility of providing each project with a <a href="https://www.vagrantup.com/">Vagrant</a> box for development purposes that runs a comparable setup as the production environment. Until then each developer had his own WAMP setup and most likely non looked like any other development or production environment. I had a Linux machine in mind. Making the transition from Windows to Linux and providing the necessary infrastructure is not done in just one day.</p>
 <p>In the discussion I addressed the laborious manual process of switching in-between PHP versions. Then it dawned on me that by using symlinks, it might be possible to easily switch to another PHP version. Later on, I started working on the setup and wrote a batch file - and surely it worked! 🙌😊</p>
-<p>Lately I have become fond of PowerShell. Today I want to start rewriting that batch file of the PHP version switcher into a PowerShell module. For now, I am starting with a PowerShell Module. Tomorrow I continue with the rewrite. An additional feature is a PHP version manager, which would allow the installing and removing PHP versions. I'll see how far that can be automated on another day.</p>
+<p>Lately I have become fond of PowerShell. Today I want to start rewriting that batch file of the PHP version switcher into a PowerShell module. For now, I am starting with a PowerShell Module. Tomorrow I continue with the rewrite. An additional feature is a PHP version manager, which would allow the installing and removing PHP versions. I&rsquo;ll see how far that can be automated on another day.</p>
 <h2 id="creating-a-powershell-module">Creating a PowerShell Module</h2>
 <p>The functionality of the PHP version switcher will be placed in a Cmdlet. The plan is to make the Cmdlet available through a Module and possibly publish it on <a href="https://www.powershellgallery.com/packages/">PowerShell Gallery</a> and/or <a href="https://chocolatey.org/packages">chocolatey</a>.</p>
 <p>To create my first PowerShell module, I follow the article <a href="https://docs.microsoft.com/en-us/powershell/developer/module/how-to-write-a-powershell-script-module">How to Write a PowerShell Script Module</a>. Right now I only need steps 1 and 2. If you want to know more about the steps or further steps not mentioned here, head over to the referenced article.</p>
 <h3 id="1-save-powershell-script-with-a-psm1-extension">1. Save PowerShell script with a .psm1 extension</h3>
-<p>Since I don't have an existing PowerShell script and can't just dump in the batch file, I am starting with a fresh function. For now, I just want to declare my function and parameters. Then give the user some output. The real functionality will be added later.</p>
+<p>Since I don&rsquo;t have an existing PowerShell script and can&rsquo;t just dump in the batch file, I am starting with a fresh function. For now, I just want to declare my function and parameters. Then give the user some output. The real functionality will be added later.</p>
 <pre><code class="language-powershell">function Php-VersionSwitcher
 {
     Param (
@@ -2869,7 +2917,7 @@ This is part one of a series of articles about the PHP Version Switcher.
 <pre><code class="language-powershell">Export-ModuleMember -Function Php-VersionSwitcher
 </code></pre>
 <h3 id="create-powershell-module-manifest">Create PowerShell Module Manifest</h3>
-<p>Next, I follow the instructions found in <a href="https://docs.microsoft.com/en-us/powershell/developer/module/how-to-write-a-powershell-module-manifest">How to Write a PowerShell Module Manifest</a>. I'll go with option 1.b. and create the Manifest with the <a href="https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest">New-ModuleManifest</a> cmdlet.</p>
+<p>Next, I follow the instructions found in <a href="https://docs.microsoft.com/en-us/powershell/developer/module/how-to-write-a-powershell-module-manifest">How to Write a PowerShell Module Manifest</a>. I&rsquo;ll go with option 1.b. and create the Manifest with the <a href="https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest">New-ModuleManifest</a> cmdlet.</p>
 <pre><code class="language-powershell">New-ModuleManifest .\Php-VersionSwitcher.psd1 -ModuleVersion 1.0 -Author &quot;Andi Rückauer&quot;
 </code></pre>
 <p>I open the <code>Php-VersionSwitcher.psd1</code> and update necessary and removing unnecessary information. This is what it looks like now.</p>
@@ -2939,7 +2987,7 @@ This is part one of a series of articles about the PHP Version Switcher.
 
 </code></pre>
 <h2 id="giving-the-module-a-new-home">Giving the module a new home</h2>
-<p>Since I am using a custom PowerShell profile and <a href="https://github.com/dahlbyk/posh-git">posh-git</a>, I do already have a <code>WindowsPowerShell</code> folder in my user's documents path (<code>C:\Users\&lt;Username&gt;\Documents\WindowsPowerShell</code>). If you're using a machine, where you don't have that folder, have a look at the <a href="https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Import-Module?view=powershell-6">Import-Module</a> might help you getting there.</p>
+<p>Since I am using a custom PowerShell profile and <a href="https://github.com/dahlbyk/posh-git">posh-git</a>, I do already have a <code>WindowsPowerShell</code> folder in my user&rsquo;s documents path (<code>C:\Users\&lt;Username&gt;\Documents\WindowsPowerShell</code>). If you&rsquo;re using a machine, where you don&rsquo;t have that folder, have a look at the <a href="https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Import-Module?view=powershell-6">Import-Module</a> might help you getting there.</p>
 <p>I am moving the two created files <code>Php-VersionSwitcher.psm1</code> and <code>Php-VersionSwitcher.psd1</code> to a new home for my custom module: <code>C:\Users\Rueckauer\Documents\WindowsPowerShell\Modules\Php-VersionSwitcher\1.0.0</code>.</p>
 <h2 id="import-module">Import-Module</h2>
 <p>In my PowerShell profile (<code>C:\Users\Rueckauer\Documents\WindowsPowerShell\profile.ps1</code>) I add a line to import my new module.</p>
@@ -2951,10 +2999,10 @@ This is part one of a series of articles about the PHP Version Switcher.
 <blockquote>
 <p>WARNUNG: Die Namen einiger importierter Befehle auf Modul &ldquo;Php-VersionSwitcher&rdquo; enthalten nicht genehmigte Verben, sodass deren Auffindbarkeit erschwert werden kann. Wenn Sie die Befehle mit nicht genehmigten Verben finden möchten, führen Sie den Import-Module-Befehl erneut mit dem Verbose-Parameter aus. Sie können durch Eingeben von &ldquo;Get-Verb&rdquo; eine Liste der genehmigten Verben anzeigen.</p>
 </blockquote>
-<p>Something is not right with the module name. I need to figure that out later. Let's see, if it works despite the warning.</p>
+<p>Something is not right with the module name. I need to figure that out later. Let&rsquo;s see, if it works despite the warning.</p>
 <p><img src="/img/php-version-switcher-powershell-module/php-versionswitcher.png" alt="Execution of Php-VersionSwitcher"></p>
 <p>Yes, neat! 💪🏻</p>
-<p>Okay, that's it for today. Next time I will breath some life into that function.</p>
+<p>Okay, that&rsquo;s it for today. Next time I will breath some life into that function.</p>
 ]]></content>
         </item>
         
@@ -2983,7 +3031,7 @@ Introduction The source of this exercise is Problem 6 of the Euler project.</des
 <p>Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.</p>
 </blockquote>
 <h2 id="first-step">First step</h2>
-<p>Usually I start by downloading the tests, creating the required file (in this case <code>difference-of-squares.php</code>) and if possible, provide the required function(s) with a correct signature. Since I already know from the introduction section, the <code>difference()</code> function returns the difference of <code>squareOfSum()</code> and <code>sumOfSquares()</code>. So, I go ahead and write that down. I'm starting off with the following lines.</p>
+<p>Usually I start by downloading the tests, creating the required file (in this case <code>difference-of-squares.php</code>) and if possible, provide the required function(s) with a correct signature. Since I already know from the introduction section, the <code>difference()</code> function returns the difference of <code>squareOfSum()</code> and <code>sumOfSquares()</code>. So, I go ahead and write that down. I&rsquo;m starting off with the following lines.</p>
 <pre><code class="language-php">&lt;?php
 
 declare(strict_types = 1);
@@ -3006,7 +3054,7 @@ function difference(int $number) : int
 <p>I run the tests. As expected, they are all failing. But it confirms to me, that there are no syntax error or errors of undefined functions. So far, so good.</p>
 <p>Next, I like to break down the exercise. I can see, that three functions are required. I start with the first one <code>squareOfSum()</code>. I focus on one test at a time. I comment out all tests except the first and implement its described feature.</p>
 <h2 id="square-of-sum">Square of Sum</h2>
-<p>The description of <code>squareOfSum()</code> is straight forward. I'm thinking of first creating an array of numbers starting from 1 to n. <a href="https://php.net/range">range()</a> seems to be perfect for that. Next, I need to calculate the sum. Since I already have an array, I use <a href="https://php.net/array_sum">array_sum()</a>. And finally, I square the sum and return it.</p>
+<p>The description of <code>squareOfSum()</code> is straight forward. I&rsquo;m thinking of first creating an array of numbers starting from 1 to n. <a href="https://php.net/range">range()</a> seems to be perfect for that. Next, I need to calculate the sum. Since I already have an array, I use <a href="https://php.net/array_sum">array_sum()</a>. And finally, I square the sum and return it.</p>
 <pre><code class="language-php">&lt;?php
 
 function squareOfSum(int $number) : int
@@ -3200,12 +3248,12 @@ I see some issues with that.
 <ol>
 <li><strong>Build has a dependency on configuration.</strong> The build process for an application should stay the same. It must not produce a different outcome depending on the local setup.</li>
 <li><strong>Build process will not run on CI/CD.</strong> In this setup the application will never be run in CI/CD.</li>
-<li><strong>Repetitive tasks</strong>. Why should every developer manage configuration, if it can be automated? Automation will lower risk of human error and speed up the process. On the topic of automating things, I can recommend following <a href="https://github.com/rdbartram">Ryan Bartram</a>, the author of <a href="https://www.dftai.ch/">Don't forget to automate it</a>. I got the chance to get to know him on the <a href="https://www.zurich.azurebootcamp.net/">Global Azure Bootcamp</a>, great and funny guy!</li>
+<li><strong>Repetitive tasks</strong>. Why should every developer manage configuration, if it can be automated? Automation will lower risk of human error and speed up the process. On the topic of automating things, I can recommend following <a href="https://github.com/rdbartram">Ryan Bartram</a>, the author of <a href="https://www.dftai.ch/">Don&rsquo;t forget to automate it</a>. I got the chance to get to know him on the <a href="https://www.zurich.azurebootcamp.net/">Global Azure Bootcamp</a>, great and funny guy!</li>
 </ol>
 <h2 id="proper-way">Proper way</h2>
 <p>The proper way to fix this, is to address the author of the <del>abomination</del> feature and improve the build process. This is what I will do.</p>
 <h2 id="a-connected-issue">A connected issue</h2>
-<p>While solving the issue of getting the build to work, I was thinking about the application setup. Most of our projects require local configuration before they are able to run. If you're not familiar with an application, it can be a tedious task to find out all requirements and dependencies. Oftentimes we end up sharing our local configuration files. ¯\_(ツ)\_/¯</p>
+<p>While solving the issue of getting the build to work, I was thinking about the application setup. Most of our projects require local configuration before they are able to run. If you&rsquo;re not familiar with an application, it can be a tedious task to find out all requirements and dependencies. Oftentimes we end up sharing our local configuration files. ¯\_(ツ)\_/¯</p>
 <p>But what if you could checkout a project which would run out-of-the-box? For development you typically would use virtualization with a configured machine/container laying in the repository, boot up the machine and voilà.</p>
 <h2 id="small-steps">Small steps</h2>
 <p>Before configuring virtualizations, I wanted to make a smaller step which I and others could use instantly. The idea was to automate the process of copying required configuration files. Some manual steps like database credentials would still be required, but at least the configuration files/templates exist.</p>
@@ -3216,9 +3264,9 @@ I see some issues with that.
 <li><strong>Local</strong> - Database credentials etc. The application depends on them. However, they are not committed to VCS, because they differ from environment to environment and/or they could be sensitive data.</li>
 <li><strong>Development</strong> - Settings that are only required in a development environment. That is displaying debugging information, a turned off cache etc.</li>
 </ol>
-<p>The first type is already in the VCS and does not require local adjustments. The local configuration is what really is interesting. The application depends on it, but the configuration may only exist as a distributed configuration file. The development configuration could potentially be automated as well, but this will not be in today's scope.</p>
+<p>The first type is already in the VCS and does not require local adjustments. The local configuration is what really is interesting. The application depends on it, but the configuration may only exist as a distributed configuration file. The development configuration could potentially be automated as well, but this will not be in today&rsquo;s scope.</p>
 <h2 id="composer-scripts-ftw">Composer scripts FTW</h2>
-<p>Very quickly I found a solution by putting <a href="https://getcomposer.org/doc/articles/scripts.md">Composer scripts</a> to work. At first I put a PHP command directly in the <code>scripts</code> section of the <code>composer.json</code>. However, that just didn't feel right. It was very hard to read and maintain. So, I defined a callback.</p>
+<p>Very quickly I found a solution by putting <a href="https://getcomposer.org/doc/articles/scripts.md">Composer scripts</a> to work. At first I put a PHP command directly in the <code>scripts</code> section of the <code>composer.json</code>. However, that just didn&rsquo;t feel right. It was very hard to read and maintain. So, I defined a callback.</p>
 <pre><code class="language-json">{
   // [..]
   &quot;scripts&quot;: {
@@ -3252,7 +3300,7 @@ class ComposerScripts
 }
 </code></pre>
 <p>Beautiful. It works like a charm.</p>
-<p>This for sure is a poor man's solution, quick and dirty. In the sense of Kaizen, it is a change for the better and will continue to improve.</p>
+<p>This for sure is a poor man&rsquo;s solution, quick and dirty. In the sense of Kaizen, it is a change for the better and will continue to improve.</p>
 ]]></content>
         </item>
         
@@ -3263,12 +3311,12 @@ class ComposerScripts
             
             <guid>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
- Today I&#39;m studying the Autoloader Optimization article of the Composer documentation.
+ Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
 Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D4</em></p>
 <hr>
-<p>Today I'm studying the <a href="https://getcomposer.org/doc/articles/autoloader-optimization.md">Autoloader Optimization</a> article of the Composer documentation.</p>
+<p>Today I&rsquo;m studying the <a href="https://getcomposer.org/doc/articles/autoloader-optimization.md">Autoloader Optimization</a> article of the Composer documentation.</p>
 <h2 id="purpose">Purpose</h2>
 <p>The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.</p>
 <h2 id="optimization-levels">Optimization levels</h2>
@@ -3292,7 +3340,7 @@ Optimization levels There are two levels of optimization and the second level co
 </code></pre>
 <h3 id="create-autoloading-with-optimization-levels-0-1-and-2a">Create autoloading with optimization levels 0, 1 and 2/A</h3>
 <p>The <code>create-project</code> command will already execute an <code>install</code>. The application has now no autoloading optimization and is ready for development. I copy the <code>.\vendor\composer</code> folder to a different location. I then execute <code>composer dump-autoload -o</code> and <code>composer dump-autoload -a</code> and copy the <code>.\vendor\composer</code> after each command execution.</p>
-<h3 id="whats-the-difference">What's the difference?</h3>
+<h3 id="whats-the-difference">What&rsquo;s the difference?</h3>
 <p>I then compare the three copies:</p>
 <h4 id="level-0">Level 0</h4>
 <p>If no optimization is done, the autoloading is missing the class map which is generated for the other two options in <code>autoload_classmap.php</code> and <code>autoload_static.php</code>.</p>
@@ -3322,7 +3370,7 @@ Optimization levels There are two levels of optimization and the second level co
 // [..]
 </code></pre>
 <h2 id="conclusion">Conclusion</h2>
-<p>This study has helped me gain a better understanding of what is happening behind the scene in composer's autoloading. Although everything is already very well documented in the article, I learn much better, if I take things apart.</p>
+<p>This study has helped me gain a better understanding of what is happening behind the scene in composer&rsquo;s autoloading. Although everything is already very well documented in the article, I learn much better, if I take things apart.</p>
 <p>So definitely in production.</p>
 <pre><code class="language-powershell">composer install --no-ansi --no-dev --no-interaction --no-progress --no-scripts --classmap-authoritative
 </code></pre>
@@ -3336,19 +3384,19 @@ Optimization levels There are two levels of optimization and the second level co
             
             <guid>https://arueckauer.github.io/posts/2019/05/day-3-keep-a-changelog/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D3
- Today I was working with keep a changelog, especially with Matthew Weier O&#39;Phinney&amp;lsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
+ Today I was working with keep a changelog, especially with Matthew Weier O&amp;rsquo;Phinney&amp;rsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
 Installation Setup is thanks to composer straight-forward. You can either install it locally or globally. I went with the latter.
-composer global require phly/keep-a-changelog  If you haven&#39;t already, remember to add the global composer bin path to your PATH environment variable.</description>
+composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already, remember to add the global composer bin path to your PATH environment variable.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D3</em></p>
 <hr>
-<p>Today I was working with <a href="https://keepachangelog.com/">keep a changelog</a>, especially with <a href="https://mwop.net/">Matthew Weier O'Phinney</a>&lsquo;s <a href="https://github.com/phly/keep-a-changelog">implementation</a> of it. I am fascinated by the idea of managing the CHANGELOG from the command line.</p>
+<p>Today I was working with <a href="https://keepachangelog.com/">keep a changelog</a>, especially with <a href="https://mwop.net/">Matthew Weier O&rsquo;Phinney</a>&rsquo;s <a href="https://github.com/phly/keep-a-changelog">implementation</a> of it. I am fascinated by the idea of managing the CHANGELOG from the command line.</p>
 <h2 id="installation">Installation</h2>
 <p>Setup is thanks to composer straight-forward. You can either install it locally or globally. I went with the latter.</p>
 <pre><code class="language-powershell">composer global require phly/keep-a-changelog
 </code></pre>
-<p>If you haven't already, remember to add the global composer bin path to your PATH environment variable.</p>
+<p>If you haven&rsquo;t already, remember to add the global composer bin path to your PATH environment variable.</p>
 <h2 id="commands">Commands</h2>
-<p>Now let's have a look at it.</p>
+<p>Now let&rsquo;s have a look at it.</p>
 <p><img src="/img/day-3-keep-a-changelog/keep-a-changelog-commands.png" alt="keep-a-changelog commands"></p>
 <h2 id="setup">Setup</h2>
 <p>Getting started is as simple as</p>
@@ -3368,12 +3416,12 @@ composer global require phly/keep-a-changelog  If you haven&#39;t already, remem
 </ol>
 <p>Since my employer is using <a href="https://beanstalkapp.com/">Beanstalk</a>, I got curious, if it was possible to implement a provider it.</p>
 <h2 id="curiosity">Curiosity</h2>
-<p>I cloned the repository and digged into the code. Quickly I came across a piece of code which could be a party-pooper. The <code>EntryCommand::preparePatchLink()</code> method <a href="https://github.com/phly/keep-a-changelog/blob/2610134afb6104bda7b4c198903f382cec4b8d50/src/EntryCommand.php#L146">throws an exception</a> if no valid PR link is generated by the provider. Now <a href="https://blog.beanstalkapp.com/post/101864285674/introducing-code-review">Beanstalk don't do no PRs</a>. A <a href="https://twitter.com/arueckauer/status/1131251308114186240">quick check</a> with mwop restored hope, saying <code>--pr</code> is never a required option.</p>
+<p>I cloned the repository and digged into the code. Quickly I came across a piece of code which could be a party-pooper. The <code>EntryCommand::preparePatchLink()</code> method <a href="https://github.com/phly/keep-a-changelog/blob/2610134afb6104bda7b4c198903f382cec4b8d50/src/EntryCommand.php#L146">throws an exception</a> if no valid PR link is generated by the provider. Now <a href="https://blog.beanstalkapp.com/post/101864285674/introducing-code-review">Beanstalk don&rsquo;t do no PRs</a>. A <a href="https://twitter.com/arueckauer/status/1131251308114186240">quick check</a> with mwop restored hope, saying <code>--pr</code> is never a required option.</p>
 <h2 id="to-infinity-and-beyond">To infinity and beyond</h2>
 <p>Awesome. I rolled up my sleeves and started implementing a Beanstalk provider. Thanks to the neat code the internal features were done in couple of minutes. Now only adding a Beanstalk API client and that would be it. At least that is what I thought.</p>
 <h2 id="disillusionment">Disillusionment</h2>
 <p>Looking for candidates on <a href="https://github.com/search?l=PHP&amp;q=beanstalk+api&amp;type=Repositories">GitHub</a> and <a href="https://packagist.org/?query=beanstalk%20api">Packagist</a> did not look good at all. There might be a package or two that might work, but neither received any updates in years and the code has great improvement potential.</p>
-<p>Implementing a PHP client library for the <a href="http://api.beanstalkapp.com/">Beanstalk API</a> goes beyond the scope of today's challenge.</p>
+<p>Implementing a PHP client library for the <a href="http://api.beanstalkapp.com/">Beanstalk API</a> goes beyond the scope of today&rsquo;s challenge.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>Although there is currently no working provider for Beanstalk, I still want to see the keep-a-changelog in action in a project. On another day I will evaluate the tool in a GitHub or GitLab project and see how it fits into our workflow. So long.</p>
 ]]></content>
@@ -3419,7 +3467,7 @@ composer global require phly/keep-a-changelog  If you haven&#39;t already, remem
 </ul>
 <p>Then I removed the <code>post-create-project-cmd</code> from the <code>scripts</code> section.</p>
 <h3 id="further-changes">Further changes</h3>
-<p>If you're using some other code style tool like <a href="https://cs.symfony.com/">PHP-CS-Fixer</a>, you may want to update the <code>require-dev</code> and in the <code>scripts</code> section the <code>cs-check</code> and <code>cs-fix</code> commands accordingly. Since I sticked to the defaults, I left them as they were.</p>
+<p>If you&rsquo;re using some other code style tool like <a href="https://cs.symfony.com/">PHP-CS-Fixer</a>, you may want to update the <code>require-dev</code> and in the <code>scripts</code> section the <code>cs-check</code> and <code>cs-fix</code> commands accordingly. Since I sticked to the defaults, I left them as they were.</p>
 <p>In the end, my <code>composer.json</code> looked like the following.</p>
 <pre><code class="language-json">{
   &quot;name&quot;: &quot;arueckauer/clean-skeleton&quot;,
@@ -3490,11 +3538,11 @@ composer global require phly/keep-a-changelog  If you haven&#39;t already, remem
 </ul>
 <p>Also, I removed the defined routes in <code>config/routes.php</code> and the dependency definitions in <code>src/App/src/ConfigProvider.php</code>.</p>
 <h2 id="configuration">Configuration</h2>
-<p>In <code>config/config.php</code> I removed Swoole config. If you're using Swoole, you can replace it by an explicit inclusion of the ConfigProvider.</p>
+<p>In <code>config/config.php</code> I removed Swoole config. If you&rsquo;re using Swoole, you can replace it by an explicit inclusion of the ConfigProvider.</p>
 <h2 id="done">Done</h2>
 <p>To be honest, my first impression of what can be purged of the skeleton was much more. But there is no clutter whatsoever, just some examples. This challenge has helped me better understand the setup of the skeleton package and showed me just how neat it is organized. I love it.</p>
 <h2 id="other-skeleton-resources">Other Skeleton resources</h2>
-<p>There are two other skeletons for PHP applications which I want to mention at this point. They both are a closer look worth it, if you're starting new PHP projects on a fairly regular basis or want some reference from time to time.</p>
+<p>There are two other skeletons for PHP applications which I want to mention at this point. They both are a closer look worth it, if you&rsquo;re starting new PHP projects on a fairly regular basis or want some reference from time to time.</p>
 <ol>
 <li><a href="https://github.com/thephpleague/skeleton">thephpleague/skeleton</a> and</li>
 <li><a href="https://github.com/php-pds/skeleton">php-pds/skeleton</a></li>
@@ -3561,7 +3609,7 @@ In this post I am writing about my own commitment to the challenge. If you want 
 <li>Automation in general.</li>
 </ul>
 <h2 id="commitment">Commitment</h2>
-<p>Starting today I'm publicly committing to the 100DaysOfCode Challenge with the here outlined rules! Learn more and join me!</p>
+<p>Starting today I&rsquo;m publicly committing to the 100DaysOfCode Challenge with the here outlined rules! Learn more and join me!</p>
 <p>Gude Laune</p>
 ]]></content>
         </item>
@@ -3622,7 +3670,7 @@ In an Expressive project I ran into the issue, where the application grew much l
 <li>Update the autoload configuration in <code>composer.json</code> to <code>&quot;App\\&quot;: &quot;src/App/src/&quot;</code></li>
 <li>Execute <code>composer dump-autoload</code> to update the autoloading classes</li>
 </ol>
-<p>That's it, the transition is made.</p>
+<p>That&rsquo;s it, the transition is made.</p>
 <p>But my initial issue was not solved. I went ahead and re-organized the <code>App</code> module, moving various folders into their own module. For each folder I repeated the following steps.</p>
 <ol>
 <li>Create a new module <code>$ composer expressive module:create {ModuleName}</code></li>
@@ -3641,10 +3689,10 @@ In an Expressive project I ran into the issue, where the application grew much l
             <pubDate>Thu, 16 May 2019 13:00:00 +0200</pubDate>
             
             <guid>https://arueckauer.github.io/posts/2019/05/just-do-it/</guid>
-            <description>The idea of starting my own blog has accompanied me for years. Since I was afraid, it would not see regular updates and quickly become a lonesome tumbleweed, I&#39;ve never put it to action.
+            <description>The idea of starting my own blog has accompanied me for years. Since I was afraid, it would not see regular updates and quickly become a lonesome tumbleweed, I&amp;rsquo;ve never put it to action.
 However I could never set aside having a tool to record and contain my thought. So here goes nothing.
 Reasons to start and (not) to end My main motivation of starting this blog is to have a</description>
-            <content type="html"><![CDATA[<p>The idea of starting my own blog has accompanied me for years. Since I was afraid, it would not see regular updates and quickly become a lonesome tumbleweed, I've never put it to action.</p>
+            <content type="html"><![CDATA[<p>The idea of starting my own blog has accompanied me for years. Since I was afraid, it would not see regular updates and quickly become a lonesome tumbleweed, I&rsquo;ve never put it to action.</p>
 <p>However I could never set aside having a tool to record and contain my thought. So here goes nothing.</p>
 <h2 id="reasons-to-start-and-not-to-end">Reasons to start and (not) to end</h2>
 <p>My main motivation of starting this blog is to have a</p>
@@ -3665,7 +3713,7 @@ Reasons to start and (not) to end My main motivation of starting this blog is to
 <p>Do it. Do it right. Do it right now.</p>
 </blockquote>
 <p>What I believe he meant with it is: The opportunity to get something accomplished will never be better or easier than right now. Putting something off will make it more difficult as time passes.</p>
-<p>I'm really looking forward to this adventure, Gude Laune!</p>
+<p>I&rsquo;m really looking forward to this adventure, Gude Laune!</p>
 ]]></content>
         </item>
         

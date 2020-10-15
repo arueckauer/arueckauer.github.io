@@ -40,14 +40,15 @@ In an Expressive project I ran into the issue, where the application grew much l
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="From Flat to Modular">
 <meta itemprop="description" content="Transforming of a flat application structure to a modular one in a Zend Expressive project
 In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure.">
-<meta itemprop="datePublished" content="2019-05-17T06:30:00&#43;02:00" />
-<meta itemprop="dateModified" content="2019-05-27T21:59:14&#43;02:00" />
+<meta itemprop="datePublished" content="2019-05-17T06:30:00+02:00" />
+<meta itemprop="dateModified" content="2019-05-27T21:59:14+02:00" />
 <meta itemprop="wordCount" content="488">
 <meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="zend-expressive,laminas,php," /><meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="zend-expressive,laminas,php," />
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="From Flat to Modular"/>
@@ -174,7 +175,7 @@ In an Expressive project I ran into the issue, where the application grew much l
 <li>Update the autoload configuration in <code>composer.json</code> to <code>&quot;App\\&quot;: &quot;src/App/src/&quot;</code></li>
 <li>Execute <code>composer dump-autoload</code> to update the autoloading classes</li>
 </ol>
-<p>That's it, the transition is made.</p>
+<p>That&rsquo;s it, the transition is made.</p>
 <p>But my initial issue was not solved. I went ahead and re-organized the <code>App</code> module, moving various folders into their own module. For each folder I repeated the following steps.</p>
 <ol>
 <li>Create a new module <code>$ composer expressive module:create {ModuleName}</code></li>

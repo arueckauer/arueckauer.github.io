@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 15 Jun 2019 20:57:36 +0200</lastBuildDate>
-    
-	<atom:link href="https://arueckauer.github.io/tags/exercism/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 15 Jun 2019 20:57:36 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/exercism/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Robot Simulator Chapter 2</title>
       <link>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</link>
@@ -20,7 +16,7 @@
       <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D24
  After a mentor left some feedback:
- I like that you&#39;ve split out the direction and position. I think you can go a bit further though.
+ I like that you&amp;rsquo;ve split out the direction and position. I think you can go a bit further though.
  I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure.</description>
     </item>
     
@@ -31,7 +27,7 @@
       
       <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
- Instructions Today&#39;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
+ Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
  turn right, turn left and advance.  A robot can also follow instructions on how to proceed.
   The letter-string &amp;ldquo;RAALAL&amp;rdquo; means:  Turn right Advance twice Turn left Advance once Turn left yet again   Say a robot starts at {7, 3} facing north.</description>
     </item>
@@ -43,11 +39,11 @@
       
       <guid>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D22
- A mentor commented on my yesterday&#39;s solution to the Grade School exercise.
+ A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
  Good solution
 Awesome! using strict_types
-It&#39;s approved for me but try to use return types as much as possible, I&#39;m missing initGradeIfItDoesNotExist
- This post will reflect some of my personal thoughts. Since the mentor&#39;s suggestion could be just some personal preference, I will not name the mentor.</description>
+It&amp;rsquo;s approved for me but try to use return types as much as possible, I&amp;rsquo;m missing initGradeIfItDoesNotExist
+ This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
     </item>
     
     <item>
@@ -59,9 +55,9 @@ It&#39;s approved for me but try to use return types as much as possible, I&#39;
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
  This Exercism exercise is straight forward.
 An extract from the instructions:
- Given students&amp;rsquo; names along with the grade that they are in, create a roster for the school.
+ Given students&#39; names along with the grade that they are in, create a roster for the school.
 In the end, you should be able to:
- Add a student&#39;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
+ Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
     </item>
     
     <item>

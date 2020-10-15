@@ -7,10 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 05 May 2020 06:34:25 +0200</lastBuildDate>
-    
-	<atom:link href="https://arueckauer.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 15 Oct 2020 06:46:34 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure Winmerge as Git Mergetool on Windows</title>
+      <link>https://arueckauer.github.io/posts/2020/10/configure-winmerge-as-git-mergetool-on-windows/</link>
+      <pubDate>Thu, 15 Oct 2020 06:46:34 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2020/10/configure-winmerge-as-git-mergetool-on-windows/</guid>
+      <description>Today I wanted to set up WinMerge as default mergetool for Git. In my research I came across this helpful Gist by Shawn Dumas.
+[mergetool] prompt = false keepBackup = false keepTemporaries = false [merge] tool = winmerge [mergetool &amp;quot;winmerge&amp;quot;] name = WinMerge trustExitCode = true cmd = &amp;quot;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&amp;quot; -u -e -dl \&amp;quot;Local\&amp;quot; -dr \&amp;quot;Remote\&amp;quot; $LOCAL $REMOTE $MERGED [diff] tool = winmerge [difftool &amp;quot;winmerge&amp;quot;] name = WinMerge trustExitCode = true cmd = &amp;quot;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.</description>
+    </item>
     
     <item>
       <title>Signing Git Commits with GPG on Windows</title>

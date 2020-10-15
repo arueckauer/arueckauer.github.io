@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 17 Jun 2019 16:45:52 +0200</lastBuildDate>
-    
-	<atom:link href="https://arueckauer.github.io/tags/100-days-of-code/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 17 Jun 2019 16:45:52 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/100-days-of-code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Intermediate Status</title>
       <link>https://arueckauer.github.io/posts/2019/06/intermediate-status/</link>
@@ -20,7 +16,7 @@
       <guid>https://arueckauer.github.io/posts/2019/06/intermediate-status/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D25
  25 % of my #100DaysOfCode and #100DaysOfBlogging challenges are completed. Time for an intermediate status review.
-Just do it As mentioned in my starting post, I wanted this to be a fun and learning experience. I am very happy to see that I&#39;ve reached all of my goals so far. My greatest concern was that I would get tired of writing (almost) every day.</description>
+Just do it As mentioned in my starting post, I wanted this to be a fun and learning experience. I am very happy to see that I&amp;rsquo;ve reached all of my goals so far. My greatest concern was that I would get tired of writing (almost) every day.</description>
     </item>
     
     <item>
@@ -31,7 +27,7 @@ Just do it As mentioned in my starting post, I wanted this to be a fun and learn
       <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D24
  After a mentor left some feedback:
- I like that you&#39;ve split out the direction and position. I think you can go a bit further though.
+ I like that you&amp;rsquo;ve split out the direction and position. I think you can go a bit further though.
  I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure.</description>
     </item>
     
@@ -42,7 +38,7 @@ Just do it As mentioned in my starting post, I wanted this to be a fun and learn
       
       <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
- Instructions Today&#39;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
+ Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
  turn right, turn left and advance.  A robot can also follow instructions on how to proceed.
   The letter-string &amp;ldquo;RAALAL&amp;rdquo; means:  Turn right Advance twice Turn left Advance once Turn left yet again   Say a robot starts at {7, 3} facing north.</description>
     </item>
@@ -54,11 +50,11 @@ Just do it As mentioned in my starting post, I wanted this to be a fun and learn
       
       <guid>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D22
- A mentor commented on my yesterday&#39;s solution to the Grade School exercise.
+ A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
  Good solution
 Awesome! using strict_types
-It&#39;s approved for me but try to use return types as much as possible, I&#39;m missing initGradeIfItDoesNotExist
- This post will reflect some of my personal thoughts. Since the mentor&#39;s suggestion could be just some personal preference, I will not name the mentor.</description>
+It&amp;rsquo;s approved for me but try to use return types as much as possible, I&amp;rsquo;m missing initGradeIfItDoesNotExist
+ This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
     </item>
     
     <item>
@@ -70,9 +66,9 @@ It&#39;s approved for me but try to use return types as much as possible, I&#39;
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
  This Exercism exercise is straight forward.
 An extract from the instructions:
- Given students&amp;rsquo; names along with the grade that they are in, create a roster for the school.
+ Given students&#39; names along with the grade that they are in, create a roster for the school.
 In the end, you should be able to:
- Add a student&#39;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
+ Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
     </item>
     
     <item>
@@ -109,7 +105,7 @@ While year, month and weekday are an exact representation of their values, the d
  Bruce Lawson gave an outstanding keynote called How to make Loveliness: an HTML Treasure Hunt at the IPC 2019.
 He shared that most 2-year-olds can say about 100 words and with 2 ½ years they know close to 300 words.
 One of his challenges was to
- Learn the semantics of HTML. There are 120(ish) elements, that&#39;s all!</description>
+ Learn the semantics of HTML. There are 120(ish) elements, that&amp;rsquo;s all!</description>
     </item>
     
     <item>
@@ -130,7 +126,7 @@ One of his challenges was to
       <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-three/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D16
  Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de
-Arne and Sebastian deliver messages from real world problems they tackled together. It&#39;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience.</description>
+Arne and Sebastian deliver messages from real world problems they tackled together. It&amp;rsquo;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience.</description>
     </item>
     
     <item>
@@ -153,7 +149,7 @@ Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;SQL renaissance
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D14
  This was a great first day
 How to make Loveliness: an HTML Treasure Hunt Keynote by Bruce Lawson, one of the editors of the W3C’s HTML5.3 specification
-To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&#39;s (well at least my) full attention.</description>
+To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&amp;rsquo;s (well at least my) full attention.</description>
     </item>
     
     <item>
@@ -222,7 +218,7 @@ Whilst the import of the module and invocation of the function worked, the Impor
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
 This is part one of a series of articles about the PHP Version Switcher.
- Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&#39;s still not the choice environment for a typical PHP web application.</description>
+ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.</description>
     </item>
     
     <item>
@@ -269,7 +265,7 @@ I see some issues with that.
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
- Today I&#39;m studying the Autoloader Optimization article of the Composer documentation.
+ Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
 Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.</description>
     </item>
@@ -281,9 +277,9 @@ Optimization levels There are two levels of optimization and the second level co
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-3-keep-a-changelog/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D3
- Today I was working with keep a changelog, especially with Matthew Weier O&#39;Phinney&amp;lsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
+ Today I was working with keep a changelog, especially with Matthew Weier O&amp;rsquo;Phinney&amp;rsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
 Installation Setup is thanks to composer straight-forward. You can either install it locally or globally. I went with the latter.
-composer global require phly/keep-a-changelog  If you haven&#39;t already, remember to add the global composer bin path to your PATH environment variable.</description>
+composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already, remember to add the global composer bin path to your PATH environment variable.</description>
     </item>
     
     <item>

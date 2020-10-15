@@ -40,14 +40,15 @@
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Php Version Manager: First Idea">
 <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D12
  With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the nvm. I am aware of the phpvm package. This package provided by Anthony Ferrara is far from stable and currently supports only Ubuntu.">
-<meta itemprop="datePublished" content="2019-06-01T21:27:11&#43;02:00" />
-<meta itemprop="dateModified" content="2019-06-01T22:09:11&#43;02:00" />
+<meta itemprop="datePublished" content="2019-06-01T21:27:11+02:00" />
+<meta itemprop="dateModified" content="2019-06-01T22:09:11+02:00" />
 <meta itemprop="wordCount" content="318">
 <meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="100-days-of-code,php," /><meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="100-days-of-code,php," />
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="Php Version Manager: First Idea"/>
@@ -140,7 +141,7 @@
 </ul>
 <h2 id="retrieve-available-php-versions">Retrieve available PHP versions</h2>
 <p>In order for this project to even work, I need to be able to fetch a list of available PHP versions. On <a href="https://windows.php.net/download">windows.php.net/download</a> the current releases are listed. Parsing that HTML is not too sexy. So, I am looking for anything else like a RSS feed or so. At first glance I cannot find anything. As I have a closer look on the download links, I notice there is a directory listing available for <a href="https://windows.php.net/downloads/releases/">releases</a>, <a href="https://windows.php.net/downloads/releases/archives/">archives</a> and <a href="https://windows.php.net/downloads/releases/latest/">&ldquo;latest&rdquo;</a>. The HTML does not look very strict. The capital tags remind me on how HTML used to be written ages ago. But that would work.</p>
-<p>Just to make sure I don't miss any other options, I'm <a href="https://twitter.com/arueckauer/status/1134907160092168193">pinging</a> Pierre Joye - Development Team Leader.</p>
+<p>Just to make sure I don&rsquo;t miss any other options, I&rsquo;m <a href="https://twitter.com/arueckauer/status/1134907160092168193">pinging</a> Pierre Joye - Development Team Leader.</p>
 <h2 id="next">Next</h2>
 <p>Each PHP version is currently offered for x86 and x64 system versions with each a thread safe and non-thread safe version. For now, I would only offer the x64 thread safe option, to go with Apache and PHP running as module. x86 versions should work similar and probably could be added pretty easily. However, I am not sure why one would want to use them anymore.</p>
 

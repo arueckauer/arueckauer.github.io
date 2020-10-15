@@ -40,14 +40,15 @@
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Format Seconds as Time in PHP">
 <meta itemprop="description" content="Somewhat over ten years ago I was working on a project, where we measured execution time and memory consumption of PHP scripts. To display the execution time in a human-readable way, we used a function to format the timestamp provided by microtime().
 &lt;?php class Application__Helper_Timer { /** * Calculates the execution time of a script * @param float $executionTime * @return string */ public static function formatExecutionTime($executionTime) { $seconds = $this-&gt;executionTime; $hours = 0; $minutes = 0; while (($seconds - 3600) &gt; 0) { $hours&#43;&#43;; $seconds -= 3600; } while (($seconds - 60) &gt; 0) { $minutes&#43;&#43;; $seconds -= 60; } if (1 === strlen((string) $hours)) { $hours = &#39;0&#39; .">
-<meta itemprop="datePublished" content="2019-06-28T09:04:39&#43;02:00" />
-<meta itemprop="dateModified" content="2019-07-05T10:43:14&#43;02:00" />
+<meta itemprop="datePublished" content="2019-06-28T09:04:39+02:00" />
+<meta itemprop="dateModified" content="2019-07-05T10:43:14+02:00" />
 <meta itemprop="wordCount" content="528">
 <meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="php," /><meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="php," />
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="Format Seconds as Time in PHP"/>

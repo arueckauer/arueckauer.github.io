@@ -44,14 +44,15 @@ Introduction The source of this exercise is Problem 6 of the Euler project." />
  Today I am solving the Difference of Squares of the PHP track on Exercism.
 Exercism offers its users learning new programming languages through exercises with the valuable feedback of mentors. It currently has 50 different language tracks like C#, Go, Kotlin, TypeScript and many others. Head over to Exercism to join.
 Introduction The source of this exercise is Problem 6 of the Euler project.">
-<meta itemprop="datePublished" content="2019-05-27T20:28:26&#43;02:00" />
-<meta itemprop="dateModified" content="2019-05-30T23:22:00&#43;02:00" />
+<meta itemprop="datePublished" content="2019-05-27T20:28:26+02:00" />
+<meta itemprop="dateModified" content="2019-05-30T23:22:00+02:00" />
 <meta itemprop="wordCount" content="939">
 <meta itemprop="image" content="https://arueckauer.github.io/"/>
 
 
 
-<meta itemprop="keywords" content="100-days-of-code,exercism,php," /><meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="keywords" content="100-days-of-code,exercism,php," />
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="Difference of Squares"/>
@@ -147,7 +148,7 @@ Introduction The source of this exercise is Problem 6 of the Euler project."/>
 <p>Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.</p>
 </blockquote>
 <h2 id="first-step">First step</h2>
-<p>Usually I start by downloading the tests, creating the required file (in this case <code>difference-of-squares.php</code>) and if possible, provide the required function(s) with a correct signature. Since I already know from the introduction section, the <code>difference()</code> function returns the difference of <code>squareOfSum()</code> and <code>sumOfSquares()</code>. So, I go ahead and write that down. I'm starting off with the following lines.</p>
+<p>Usually I start by downloading the tests, creating the required file (in this case <code>difference-of-squares.php</code>) and if possible, provide the required function(s) with a correct signature. Since I already know from the introduction section, the <code>difference()</code> function returns the difference of <code>squareOfSum()</code> and <code>sumOfSquares()</code>. So, I go ahead and write that down. I&rsquo;m starting off with the following lines.</p>
 <pre><code class="language-php">&lt;?php
 
 declare(strict_types = 1);
@@ -170,7 +171,7 @@ function difference(int $number) : int
 <p>I run the tests. As expected, they are all failing. But it confirms to me, that there are no syntax error or errors of undefined functions. So far, so good.</p>
 <p>Next, I like to break down the exercise. I can see, that three functions are required. I start with the first one <code>squareOfSum()</code>. I focus on one test at a time. I comment out all tests except the first and implement its described feature.</p>
 <h2 id="square-of-sum">Square of Sum</h2>
-<p>The description of <code>squareOfSum()</code> is straight forward. I'm thinking of first creating an array of numbers starting from 1 to n. <a href="https://php.net/range">range()</a> seems to be perfect for that. Next, I need to calculate the sum. Since I already have an array, I use <a href="https://php.net/array_sum">array_sum()</a>. And finally, I square the sum and return it.</p>
+<p>The description of <code>squareOfSum()</code> is straight forward. I&rsquo;m thinking of first creating an array of numbers starting from 1 to n. <a href="https://php.net/range">range()</a> seems to be perfect for that. Next, I need to calculate the sum. Since I already have an array, I use <a href="https://php.net/array_sum">array_sum()</a>. And finally, I square the sum and return it.</p>
 <pre><code class="language-php">&lt;?php
 
 function squareOfSum(int $number) : int
