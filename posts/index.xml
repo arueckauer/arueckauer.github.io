@@ -6,8 +6,42 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Thu, 15 Oct 2020 06:46:34 +0200</lastBuildDate>
+        <lastBuildDate>Fri, 27 Nov 2020 11:52:58 +0100</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Upgrade Xdebug 2 to 3</title>
+            <link>https://arueckauer.github.io/posts/2020/11/upgrade-xdebug-2-to-3/</link>
+            <pubDate>Fri, 27 Nov 2020 11:52:58 +0100</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2020/11/upgrade-xdebug-2-to-3/</guid>
+            <description>Xdebug is an essential tool in my developing process. Most often I use it for Step Debugging code invoked from a request or CLI. With the release of Xdebug 3.0 the configuration settings changed and need adjustment in the php.ini and in my case the environment variables as well.
+In this post I am recording what needed to be changed in upgrading Xdebug. For a complete description on what changed, have a look at Upgrading from Xdebug 2 to 3.</description>
+            <content type="html"><![CDATA[<p><a href="https://xdebug.org/">Xdebug</a> is an essential tool in my developing process. Most often I use it for Step Debugging code invoked from a request or CLI. With the release of <a href="https://xdebug.org/announcements/2020-11-25">Xdebug 3.0</a> the configuration settings changed and need adjustment in the <code>php.ini</code> and in my case the environment variables as well.</p>
+<p>In this post I am recording what needed to be changed in upgrading Xdebug. For a complete description on what changed, have a look at <a href="https://xdebug.org/docs/upgrade_guide">Upgrading from Xdebug 2 to 3</a>.</p>
+<h2 id="current-configuration-for-xdebug-29">Current configuration for Xdebug 2.9</h2>
+<pre><code class="language-ini">[Xdebug]
+zend_extension = &quot;php_xdebug-2.9.6-7.4-vc15-x86_64.dll&quot;
+xdebug.remote_enable = 1
+xdebug.remote_host = localhost
+xdebug.remote_port = 9000
+</code></pre>
+<p>Environment variables</p>
+<pre><code>XDEBUG_CONFIG=1
+</code></pre>
+<h2 id="new-configuration-for-xdebug-30">New configuration for Xdebug 3.0</h2>
+<pre><code class="language-ini">[Xdebug]
+zend_extension = &quot;php_xdebug-3.0.0-7.4-vc15-x86_64.dll&quot;
+xdebug.mode=debug
+xdebug.start_with_request=yes
+</code></pre>
+<p>Environment variables</p>
+<pre><code>XDEBUG_SESSION=xdebug_is_great
+</code></pre>
+<h2 id="sponsoring">Sponsoring</h2>
+<p>If Xdebug has helped you, you may want to consider <a href="https://github.com/sponsors/derickr">sponsoring Derick</a>.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Configure Winmerge as Git Mergetool on Windows</title>
