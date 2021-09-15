@@ -6,8 +6,31 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 04 Jan 2021 11:21:11 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 01 Feb 2021 13:54:00 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>could not bind to address [::]:80 - Webserver port 80 blocked on Windows</title>
+            <link>https://arueckauer.github.io/posts/2021/02/could-not-bind-to-address-80-webserver-port-80-blocked-on-windows/</link>
+            <pubDate>Mon, 01 Feb 2021 13:54:00 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2021/02/could-not-bind-to-address-80-webserver-port-80-blocked-on-windows/</guid>
+            <description>Several Windows services might block port 80 and the local webserver like Apache HTTP or Nginx from starting.
+PS C:\www\httpd-2.4.46-win64-VS16\Apache24&amp;gt; .\bin\httpd.exe (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address [::]:80 (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address 0.</description>
+            <content type="html"><![CDATA[<p>Several Windows services might block port 80 and the local webserver like <a href="https://httpd.apache.org/">Apache HTTP</a> or <a href="https://nginx.org/">Nginx</a> from starting.</p>
+<pre><code class="language-powershell">PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; .\bin\httpd.exe
+(OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions.  : AH00072: make_sock: could not bind to address [::]:80
+(OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions.  : AH00072: make_sock: could not bind to address 0.0.0.0:80
+AH00451: no listening sockets available, shutting down
+AH00015: Unable to open logs
+PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt;
+</code></pre>
+<p>The best way to identify the running service(s) I found on <a href="https://stackoverflow.com/a/26653919/9364246">Stackoverflow</a>.</p>
+<pre><code class="language-powershell">NET stop HTTP
+</code></pre>
+<p>It might be helpful to disable the stopped services to prevent further automated starts.</p>
+]]></content>
+        </item>
         
         <item>
             <title>PHPUnit Test Single Method</title>

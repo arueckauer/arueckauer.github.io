@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 04 Jan 2021 11:21:11 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Feb 2021 13:54:00 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>could not bind to address [::]:80 - Webserver port 80 blocked on Windows</title>
+      <link>https://arueckauer.github.io/posts/2021/02/could-not-bind-to-address-80-webserver-port-80-blocked-on-windows/</link>
+      <pubDate>Mon, 01 Feb 2021 13:54:00 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2021/02/could-not-bind-to-address-80-webserver-port-80-blocked-on-windows/</guid>
+      <description>Several Windows services might block port 80 and the local webserver like Apache HTTP or Nginx from starting.
+PS C:\www\httpd-2.4.46-win64-VS16\Apache24&amp;gt; .\bin\httpd.exe (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address [::]:80 (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address 0.</description>
+    </item>
+    
     <item>
       <title>PHPUnit Test Single Method</title>
       <link>https://arueckauer.github.io/posts/2021/01/phpunit-test-single-method/</link>
@@ -278,17 +288,6 @@ In the end, you should be able to:
 A function is provided with the arguments
  (int) year, (int) month, (string) descriptor and (string) weekday  and expected to process the input and return an instance of DateTime with the corresponding date.
 While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated.</description>
-    </item>
-    
-    <item>
-      <title>Sieve of Eratosthenes (Side Exercise)</title>
-      <link>https://arueckauer.github.io/posts/2019/06/sieve-of-eratosthenes-side-exercise/</link>
-      <pubDate>Mon, 10 Jun 2019 21:31:48 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/06/sieve-of-eratosthenes-side-exercise/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D19
- Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
- In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2.</description>
     </item>
     
   </channel>

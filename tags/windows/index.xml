@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 05 May 2020 06:34:25 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Feb 2021 13:54:00 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>could not bind to address [::]:80 - Webserver port 80 blocked on Windows</title>
+      <link>https://arueckauer.github.io/posts/2021/02/could-not-bind-to-address-80-webserver-port-80-blocked-on-windows/</link>
+      <pubDate>Mon, 01 Feb 2021 13:54:00 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2021/02/could-not-bind-to-address-80-webserver-port-80-blocked-on-windows/</guid>
+      <description>Several Windows services might block port 80 and the local webserver like Apache HTTP or Nginx from starting.
+PS C:\www\httpd-2.4.46-win64-VS16\Apache24&amp;gt; .\bin\httpd.exe (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address [::]:80 (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address 0.</description>
+    </item>
+    
     <item>
       <title>Signing Git Commits with GPG on Windows</title>
       <link>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</link>
