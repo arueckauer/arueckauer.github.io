@@ -1,424 +1,259 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://arueckauer.github.io/</loc>
-    <lastmod>2020-11-27T12:02:39+01:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-09-15T13:35:48+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/phpunit/</loc>
+    <lastmod>2021-09-15T13:35:48+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/posts/2021/01/phpunit-test-single-method/</loc>
+    <lastmod>2021-09-15T13:35:48+02:00</lastmod>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/</loc>
-    <lastmod>2020-11-27T12:02:39+01:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-09-15T13:35:48+02:00</lastmod>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/</loc>
-    <lastmod>2020-11-27T12:02:39+01:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-09-15T13:35:48+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/testing/</loc>
+    <lastmod>2021-09-15T13:35:48+02:00</lastmod>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2020/11/upgrade-xdebug-2-to-3/</loc>
     <lastmod>2020-11-27T12:02:39+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/xdebug/</loc>
     <lastmod>2020-11-27T12:02:39+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2020/10/configure-winmerge-as-git-mergetool-on-windows/</loc>
     <lastmod>2020-10-15T07:05:25+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/git/</loc>
     <lastmod>2020-10-15T07:05:25+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2020/06/determine-missing-required-parameters/</loc>
     <lastmod>2020-06-17T11:07:30+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/validation/</loc>
     <lastmod>2020-06-17T11:07:30+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/doctrine/</loc>
     <lastmod>2020-06-17T10:47:27+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2020/06/how-to-write-unit-tests-with-phpunit-involving-doctrine-entities/</loc>
     <lastmod>2020-06-17T10:47:27+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/phpunit/</loc>
-    <lastmod>2020-06-17T10:47:27+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://arueckauer.github.io/tags/testing/</loc>
-    <lastmod>2020-06-17T10:47:27+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/gpg/</loc>
     <lastmod>2020-05-06T09:04:23+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</loc>
     <lastmod>2020-05-06T09:04:23+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/windows/</loc>
     <lastmod>2020-05-06T09:04:23+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/bash/</loc>
     <lastmod>2020-05-01T11:19:37+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/linux/</loc>
     <lastmod>2020-05-01T11:19:37+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2020/05/replace-crlf-with-lf-in-bash/</loc>
     <lastmod>2020-05-01T11:19:37+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/composer/</loc>
     <lastmod>2020-05-01T11:05:21+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2020/04/install-composer-on-linux/</loc>
     <lastmod>2020-05-01T11:05:21+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2020/04/how-to-setup-passwordless-ssh-login-to-nine-server/</loc>
     <lastmod>2020-04-29T09:39:26+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/ssh/</loc>
     <lastmod>2020-04-29T10:05:02+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2020/04/generate-ssh-keys-for-windows-system-account/</loc>
     <lastmod>2020-04-29T10:05:02+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2020/01/how-to-minimize-signal-desktop-app-to-system-try/</loc>
     <lastmod>2020-04-29T11:01:34+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/signal/</loc>
     <lastmod>2020-04-29T11:01:34+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/php/</loc>
     <lastmod>2019-12-02T15:22:08+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/11/self-vs.-static/</loc>
     <lastmod>2019-11-03T19:52:16+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/</loc>
     <lastmod>2019-10-17T10:04:36+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/zend-expressive/</loc>
     <lastmod>2019-12-02T15:22:08+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/10/logical-operator-and-operator-precedence/</loc>
     <lastmod>2019-10-17T09:51:57+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/mysql/</loc>
     <lastmod>2019-08-06T17:14:59+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/08/mysql-utf8mb4-unicode/</loc>
     <lastmod>2019-08-06T17:14:59+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/utf8/</loc>
     <lastmod>2019-08-06T17:14:59+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/json-rpc/</loc>
     <lastmod>2019-08-05T17:06:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/08/json-rpc-call-as-invoke-webrequest/</loc>
     <lastmod>2019-08-05T17:06:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/powershell/</loc>
     <lastmod>2019-08-05T17:06:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/07/console-commands-in-an-expressive-applicaton/</loc>
     <lastmod>2019-10-17T10:04:36+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/06/format-seconds-as-time-in-php/</loc>
     <lastmod>2019-07-05T10:43:14+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/100-days-of-code/</loc>
     <lastmod>2019-12-02T15:22:08+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/blog/</loc>
     <lastmod>2019-06-18T17:12:40+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/06/intermediate-status/</loc>
     <lastmod>2019-06-18T17:12:40+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/exercism/</loc>
     <lastmod>2019-06-15T21:02:09+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</loc>
     <lastmod>2019-06-15T21:02:09+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/06/robot-simulator/</loc>
     <lastmod>2019-06-14T21:51:07+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</loc>
     <lastmod>2019-06-14T00:13:30+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/06/grade-school/</loc>
     <lastmod>2019-06-13T23:41:02+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/06/meetup-side-exercise/</loc>
     <lastmod>2019-06-11T22:08:42+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/06/sieve-of-eratosthenes-side-exercise/</loc>
     <lastmod>2019-06-11T21:40:06+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/06/120ish-html-elements/</loc>
     <lastmod>2019-06-10T21:00:59+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/html/</loc>
     <lastmod>2019-06-10T21:00:59+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/auth/</loc>
     <lastmod>2019-06-10T20:24:35+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/jwt/</loc>
     <lastmod>2019-06-10T20:24:35+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/06/to-jwt-or-not-to-jwt/</loc>
     <lastmod>2019-06-10T20:24:35+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-three/</loc>
     <lastmod>2019-06-11T08:34:02+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/ipc19/</loc>
     <lastmod>2019-06-11T08:34:02+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-two/</loc>
     <lastmod>2019-06-10T20:05:10+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-one/</loc>
     <lastmod>2019-06-05T10:56:07+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/06/difference-of-squares-part-ii/</loc>
     <lastmod>2019-06-03T20:05:09+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/06/php-version-manager-first-idea/</loc>
     <lastmod>2019-06-01T22:09:11+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/</loc>
     <lastmod>2019-05-31T23:40:13+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-structure/</loc>
     <lastmod>2019-05-31T23:41:32+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-naming-convention/</loc>
     <lastmod>2019-05-31T23:41:32+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</loc>
     <lastmod>2019-05-31T23:41:32+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</loc>
     <lastmod>2019-05-30T23:22:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/dotenv/</loc>
     <lastmod>2019-05-30T23:22:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/</loc>
     <lastmod>2019-05-30T23:22:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/automation/</loc>
     <lastmod>2019-05-30T23:22:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/day-5-a-change-for-the-better/</loc>
     <lastmod>2019-05-30T23:22:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/autoloading/</loc>
     <lastmod>2019-05-30T23:22:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</loc>
     <lastmod>2019-05-30T23:22:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/day-3-keep-a-changelog/</loc>
     <lastmod>2019-05-30T23:22:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/keep-a-changelog/</loc>
     <lastmod>2019-05-30T23:22:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</loc>
     <lastmod>2019-12-02T15:22:08+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/laminas/</loc>
     <lastmod>2019-12-02T15:22:08+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/day-1-getting-started-with-terraform/</loc>
     <lastmod>2019-05-30T23:22:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/devops/</loc>
     <lastmod>2019-05-30T23:22:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/terraform/</loc>
     <lastmod>2019-05-30T23:22:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/about/</loc>
     <lastmod>2019-05-20T08:15:26+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/100-days-of-code/</loc>
     <lastmod>2019-05-27T21:53:34+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/from-flat-to-modular/</loc>
     <lastmod>2019-05-27T21:59:14+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/do-it/</loc>
     <lastmod>2019-05-27T21:53:34+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/just-do-it/</loc>
     <lastmod>2019-05-27T21:53:34+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://arueckauer.github.io/categories/</loc>
   </url>
-  
 </urlset>

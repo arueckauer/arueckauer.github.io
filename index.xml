@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 27 Nov 2020 11:52:58 +0100</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Jan 2021 11:21:11 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHPUnit Test Single Method</title>
+      <link>https://arueckauer.github.io/posts/2021/01/phpunit-test-single-method/</link>
+      <pubDate>Mon, 04 Jan 2021 11:21:11 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2021/01/phpunit-test-single-method/</guid>
+      <description>A common search I need to do after I have not used it in a while is, how to run a single test method.
+phpunit --filter methodName path/to/file.php  Credits go to Alex on Stackoverflow</description>
+    </item>
+    
     <item>
       <title>Upgrade Xdebug 2 to 3</title>
       <link>https://arueckauer.github.io/posts/2020/11/upgrade-xdebug-2-to-3/</link>
@@ -279,19 +289,6 @@ While year, month and weekday are an exact representation of their values, the d
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D19
  Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
  In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2.</description>
-    </item>
-    
-    <item>
-      <title>120(ish) HTML Elements</title>
-      <link>https://arueckauer.github.io/posts/2019/06/120ish-html-elements/</link>
-      <pubDate>Sat, 08 Jun 2019 20:32:34 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/06/120ish-html-elements/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D18
- Bruce Lawson gave an outstanding keynote called How to make Loveliness: an HTML Treasure Hunt at the IPC 2019.
-He shared that most 2-year-olds can say about 100 words and with 2 ½ years they know close to 300 words.
-One of his challenges was to
- Learn the semantics of HTML. There are 120(ish) elements, that&amp;rsquo;s all!</description>
     </item>
     
   </channel>

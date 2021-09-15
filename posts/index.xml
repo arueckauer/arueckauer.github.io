@@ -6,8 +6,23 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 27 Nov 2020 11:52:58 +0100</lastBuildDate>
+        <lastBuildDate>Mon, 04 Jan 2021 11:21:11 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>PHPUnit Test Single Method</title>
+            <link>https://arueckauer.github.io/posts/2021/01/phpunit-test-single-method/</link>
+            <pubDate>Mon, 04 Jan 2021 11:21:11 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2021/01/phpunit-test-single-method/</guid>
+            <description>A common search I need to do after I have not used it in a while is, how to run a single test method.
+phpunit --filter methodName path/to/file.php  Credits go to Alex on Stackoverflow</description>
+            <content type="html"><![CDATA[<p>A common search I need to do after I have not used it in a while is, how to run a single test method.</p>
+<pre><code class="language-bash">phpunit --filter methodName path/to/file.php
+</code></pre>
+<p>Credits go to <a href="https://stackoverflow.com/users/1581090/alex">Alex</a> on <a href="https://stackoverflow.com/questions/26095051/how-to-run-single-test-method-with-phpunit/26095567#26095567">Stackoverflow</a></p>
+]]></content>
+        </item>
         
         <item>
             <title>Upgrade Xdebug 2 to 3</title>
