@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 01 Mar 2021 14:14:48 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Apr 2021 14:50:55 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Log potential calls of a deprecated method</title>
+      <link>https://arueckauer.github.io/posts/2021/04/log-potential-calls-of-a-deprecated-method/</link>
+      <pubDate>Mon, 05 Apr 2021 14:50:55 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2021/04/log-potential-calls-of-a-deprecated-method/</guid>
+      <description>&amp;lt;?php declare(strict_types=1); namespace arueckauer\Php80; use Exception; use JetBrains\PhpStorm\Deprecated; use Psr\Log\LoggerInterface; use function explode; use const PHP_EOL; class SomeClass { private LoggerInterface $logger; public function __construct(LoggerInterface $logger) { $this-&amp;gt;logger = $logger; } #[Deprecated] public function deprecated(): void { $this-&amp;gt;logger-&amp;gt;error( __METHOD__, [ &#39;trace&#39; =&amp;gt; explode( PHP_EOL, (new Exception())-&amp;gt;getTraceAsString() ), ] ); } }  </description>
+    </item>
+    
     <item>
       <title>Comma separated list with and in PHP</title>
       <link>https://arueckauer.github.io/posts/2021/03/comma-separated-list-with-and-in-php/</link>
@@ -271,20 +280,6 @@ Just do it As mentioned in my starting post, I wanted this to be a fun and learn
 Awesome! using strict_types
 It&amp;rsquo;s approved for me but try to use return types as much as possible, I&amp;rsquo;m missing initGradeIfItDoesNotExist
  This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
-    </item>
-    
-    <item>
-      <title>Grade School</title>
-      <link>https://arueckauer.github.io/posts/2019/06/grade-school/</link>
-      <pubDate>Wed, 12 Jun 2019 23:32:10 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/06/grade-school/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
- This Exercism exercise is straight forward.
-An extract from the instructions:
- Given students&#39; names along with the grade that they are in, create a roster for the school.
-In the end, you should be able to:
- Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
     </item>
     
   </channel>

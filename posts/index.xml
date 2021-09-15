@@ -6,8 +6,57 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 01 Mar 2021 14:14:48 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 05 Apr 2021 14:50:55 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Log potential calls of a deprecated method</title>
+            <link>https://arueckauer.github.io/posts/2021/04/log-potential-calls-of-a-deprecated-method/</link>
+            <pubDate>Mon, 05 Apr 2021 14:50:55 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2021/04/log-potential-calls-of-a-deprecated-method/</guid>
+            <description>&amp;lt;?php declare(strict_types=1); namespace arueckauer\Php80; use Exception; use JetBrains\PhpStorm\Deprecated; use Psr\Log\LoggerInterface; use function explode; use const PHP_EOL; class SomeClass { private LoggerInterface $logger; public function __construct(LoggerInterface $logger) { $this-&amp;gt;logger = $logger; } #[Deprecated] public function deprecated(): void { $this-&amp;gt;logger-&amp;gt;error( __METHOD__, [ &#39;trace&#39; =&amp;gt; explode( PHP_EOL, (new Exception())-&amp;gt;getTraceAsString() ), ] ); } }  </description>
+            <content type="html"><![CDATA[<pre><code class="language-php">&lt;?php
+
+declare(strict_types=1);
+
+namespace arueckauer\Php80;
+
+use Exception;
+use JetBrains\PhpStorm\Deprecated;
+use Psr\Log\LoggerInterface;
+
+use function explode;
+
+use const PHP_EOL;
+
+class SomeClass
+{
+    private LoggerInterface $logger;
+
+    public function __construct(LoggerInterface $logger)
+    {
+        $this-&gt;logger = $logger;
+    }
+
+    #[Deprecated]
+    public function deprecated(): void
+    {
+        $this-&gt;logger-&gt;error(
+            __METHOD__,
+            [
+                'trace' =&gt; explode(
+                    PHP_EOL,
+                    (new Exception())-&gt;getTraceAsString()
+                ),
+            ]
+        );
+    }
+}
+
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Comma separated list with and in PHP</title>

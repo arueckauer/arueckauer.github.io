@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 01 Mar 2021 14:14:48 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Apr 2021 14:50:55 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Log potential calls of a deprecated method</title>
+      <link>https://arueckauer.github.io/posts/2021/04/log-potential-calls-of-a-deprecated-method/</link>
+      <pubDate>Mon, 05 Apr 2021 14:50:55 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2021/04/log-potential-calls-of-a-deprecated-method/</guid>
+      <description>&amp;lt;?php declare(strict_types=1); namespace arueckauer\Php80; use Exception; use JetBrains\PhpStorm\Deprecated; use Psr\Log\LoggerInterface; use function explode; use const PHP_EOL; class SomeClass { private LoggerInterface $logger; public function __construct(LoggerInterface $logger) { $this-&amp;gt;logger = $logger; } #[Deprecated] public function deprecated(): void { $this-&amp;gt;logger-&amp;gt;error( __METHOD__, [ &#39;trace&#39; =&amp;gt; explode( PHP_EOL, (new Exception())-&amp;gt;getTraceAsString() ), ] ); } }  </description>
+    </item>
+    
     <item>
       <title>Comma separated list with and in PHP</title>
       <link>https://arueckauer.github.io/posts/2021/03/comma-separated-list-with-and-in-php/</link>
@@ -289,18 +298,6 @@ I see some issues with that.
  Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
 Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.</description>
-    </item>
-    
-    <item>
-      <title>Day 3: Keep a Changelog</title>
-      <link>https://arueckauer.github.io/posts/2019/05/day-3-keep-a-changelog/</link>
-      <pubDate>Wed, 22 May 2019 20:39:27 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/05/day-3-keep-a-changelog/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D3
- Today I was working with keep a changelog, especially with Matthew Weier O&amp;rsquo;Phinney&amp;rsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
-Installation Setup is thanks to composer straight-forward. You can either install it locally or globally. I went with the latter.
-composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already, remember to add the global composer bin path to your PATH environment variable.</description>
     </item>
     
   </channel>
