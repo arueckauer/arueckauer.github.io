@@ -6,8 +6,32 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 01 Feb 2021 13:54:00 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 01 Mar 2021 14:14:48 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Comma separated list with and in PHP</title>
+            <link>https://arueckauer.github.io/posts/2021/03/comma-separated-list-with-and-in-php/</link>
+            <pubDate>Mon, 01 Mar 2021 14:14:48 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2021/03/comma-separated-list-with-and-in-php/</guid>
+            <description>How to display an array to comma separated values with a last &amp;ldquo;and&amp;rdquo; by Frédéric Bouchery.
+&amp;lt;?php declare(strict_types=1); $array = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;]; echo implode(&#39;, &#39;, array_slice($array, 0, -1)) . &#39; and &#39; . end($array);   3v4l.org Source  </description>
+            <content type="html"><![CDATA[<p>How to display an array to comma separated values with a last &ldquo;and&rdquo; by <a href="https://twitter.com/FredBouchery">Frédéric Bouchery</a>.</p>
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types=1);
+
+$array = ['a','b','c','d','e'];
+echo implode(', ', array_slice($array, 0, -1)) . ' and ' . end($array);
+
+</code></pre>
+<ul>
+<li><a href="https://3v4l.org/Nchc1">3v4l.org</a></li>
+<li><a href="https://twitter.com/FredBouchery/status/1273175925002317825">Source</a></li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>could not bind to address [::]:80 - Webserver port 80 blocked on Windows</title>

@@ -3,18 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://arueckauer.github.io/</loc>
-    <lastmod>2021-09-15T14:13:29+02:00</lastmod>
+    <lastmod>2021-09-15T14:19:36+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/array/</loc>
+    <lastmod>2021-09-15T14:19:36+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/posts/2021/03/comma-separated-list-with-and-in-php/</loc>
+    <lastmod>2021-09-15T14:19:36+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/php/</loc>
+    <lastmod>2021-09-15T14:19:36+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/posts/</loc>
+    <lastmod>2021-09-15T14:19:36+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/</loc>
+    <lastmod>2021-09-15T14:19:36+02:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/tags/apache/</loc>
     <lastmod>2021-09-15T14:13:29+02:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/posts/2021/02/could-not-bind-to-address-80-webserver-port-80-blocked-on-windows/</loc>
-    <lastmod>2021-09-15T14:13:29+02:00</lastmod>
-  </url><url>
-    <loc>https://arueckauer.github.io/posts/</loc>
-    <lastmod>2021-09-15T14:13:29+02:00</lastmod>
-  </url><url>
-    <loc>https://arueckauer.github.io/tags/</loc>
     <lastmod>2021-09-15T14:13:29+02:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/tags/webserver/</loc>
@@ -91,9 +100,6 @@
   </url><url>
     <loc>https://arueckauer.github.io/tags/signal/</loc>
     <lastmod>2020-04-29T11:01:34+02:00</lastmod>
-  </url><url>
-    <loc>https://arueckauer.github.io/tags/php/</loc>
-    <lastmod>2019-12-02T15:22:08+01:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/posts/2019/11/self-vs.-static/</loc>
     <lastmod>2019-11-03T19:52:16+01:00</lastmod>

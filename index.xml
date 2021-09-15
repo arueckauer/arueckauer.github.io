@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 01 Feb 2021 13:54:00 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Mar 2021 14:14:48 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comma separated list with and in PHP</title>
+      <link>https://arueckauer.github.io/posts/2021/03/comma-separated-list-with-and-in-php/</link>
+      <pubDate>Mon, 01 Mar 2021 14:14:48 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2021/03/comma-separated-list-with-and-in-php/</guid>
+      <description>How to display an array to comma separated values with a last &amp;ldquo;and&amp;rdquo; by Frédéric Bouchery.
+&amp;lt;?php declare(strict_types=1); $array = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;]; echo implode(&#39;, &#39;, array_slice($array, 0, -1)) . &#39; and &#39; . end($array);   3v4l.org Source  </description>
+    </item>
+    
     <item>
       <title>could not bind to address [::]:80 - Webserver port 80 blocked on Windows</title>
       <link>https://arueckauer.github.io/posts/2021/02/could-not-bind-to-address-80-webserver-port-80-blocked-on-windows/</link>
@@ -275,19 +285,6 @@ An extract from the instructions:
  Given students&#39; names along with the grade that they are in, create a roster for the school.
 In the end, you should be able to:
  Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
-    </item>
-    
-    <item>
-      <title>Meetup (Side Exercise)</title>
-      <link>https://arueckauer.github.io/posts/2019/06/meetup-side-exercise/</link>
-      <pubDate>Tue, 11 Jun 2019 21:29:52 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/06/meetup-side-exercise/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D20
- Next up in the PHP sidetrack is the Meetup exercise.
-A function is provided with the arguments
- (int) year, (int) month, (string) descriptor and (string) weekday  and expected to process the input and return an instance of DateTime with the corresponding date.
-While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated.</description>
     </item>
     
   </channel>
