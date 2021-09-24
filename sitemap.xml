@@ -3,18 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://arueckauer.github.io/</loc>
-    <lastmod>2021-09-15T14:53:53+02:00</lastmod>
+    <lastmod>2021-09-24T15:47:19+02:00</lastmod>
   </url><url>
-    <loc>https://arueckauer.github.io/posts/2021/04/log-potential-calls-of-a-deprecated-method/</loc>
-    <lastmod>2021-09-15T14:53:53+02:00</lastmod>
+    <loc>https://arueckauer.github.io/tags/legacy-code/</loc>
+    <lastmod>2021-09-24T15:47:19+02:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/tags/php/</loc>
-    <lastmod>2021-09-15T14:53:53+02:00</lastmod>
+    <lastmod>2021-09-24T15:47:19+02:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/posts/</loc>
-    <lastmod>2021-09-15T14:53:53+02:00</lastmod>
+    <lastmod>2021-09-24T15:47:19+02:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/tags/</loc>
+    <lastmod>2021-09-24T15:47:19+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/testing/</loc>
+    <lastmod>2021-09-24T15:47:19+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</loc>
+    <lastmod>2021-09-24T15:47:19+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-static-method-invocation/</loc>
+    <lastmod>2021-09-24T14:56:28+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-echo-output/</loc>
+    <lastmod>2021-09-24T15:31:26+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/posts/2021/04/log-potential-calls-of-a-deprecated-method/</loc>
     <lastmod>2021-09-15T14:53:53+02:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/tags/array/</loc>
@@ -39,9 +54,6 @@
     <lastmod>2021-09-15T14:13:10+02:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/posts/2021/01/phpunit-test-single-method/</loc>
-    <lastmod>2021-09-15T14:13:10+02:00</lastmod>
-  </url><url>
-    <loc>https://arueckauer.github.io/tags/testing/</loc>
     <lastmod>2021-09-15T14:13:10+02:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/posts/2020/11/upgrade-xdebug-2-to-3/</loc>

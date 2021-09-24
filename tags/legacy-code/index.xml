@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>testing on Andi Rückauer</title>
-    <link>https://arueckauer.github.io/tags/testing/</link>
-    <description>Recent content in testing on Andi Rückauer</description>
+    <title>legacy-code on Andi Rückauer</title>
+    <link>https://arueckauer.github.io/tags/legacy-code/</link>
+    <description>Recent content in legacy-code on Andi Rückauer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 08 Jul 2021 15:04:22 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jul 2021 15:04:22 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/legacy-code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Testing Legacy Code: Filesystem Interaction</title>
       <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</link>
@@ -36,26 +36,6 @@ The second example covers the invocation of static methods. One of the legacy pr
       <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-echo-output/</guid>
       <description>A tweet of Simon Schubert made me aware of an awesome talk entitled Testing Legacy Code: Safe Refactoring by Katy Ereira. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.
 Since refactoring legacy code is part of my daily job, some of these insights are quite useful and I would like to keep a note for myself in a few blog posts.</description>
-    </item>
-    
-    <item>
-      <title>PHPUnit Test Single Method</title>
-      <link>https://arueckauer.github.io/posts/2021/01/phpunit-test-single-method/</link>
-      <pubDate>Mon, 04 Jan 2021 11:21:11 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2021/01/phpunit-test-single-method/</guid>
-      <description>A common search I need to do after I have not used it in a while is, how to run a single test method.
-phpunit --filter methodName path/to/file.php  Credits go to Alex on Stackoverflow</description>
-    </item>
-    
-    <item>
-      <title>How to write unit tests with PHPUnit involving Doctrine entities</title>
-      <link>https://arueckauer.github.io/posts/2020/06/how-to-write-unit-tests-with-phpunit-involving-doctrine-entities/</link>
-      <pubDate>Tue, 09 Jun 2020 21:16:59 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2020/06/how-to-write-unit-tests-with-phpunit-involving-doctrine-entities/</guid>
-      <description>One of the main reasons for me why tight coupling is a less ideal design choice is the accompanied difficulty in testing these tight coupled components.
-Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code?</description>
     </item>
     
   </channel>

@@ -6,8 +6,272 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 05 Apr 2021 14:50:55 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 08 Jul 2021 15:04:22 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Testing Legacy Code: Filesystem Interaction</title>
+            <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</link>
+            <pubDate>Thu, 08 Jul 2021 15:04:22 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</guid>
+            <description>This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
+ vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.</description>
+            <content type="html"><![CDATA[<p>This is the third article in the series of Testing Legacy Code. Check out the first part <a href="/posts/2021/07/testing-legacy-code-echo-output/">Testing Legacy Code: Echo Output</a> in which I provide information about the origin of these examples.</p>
+<blockquote>
+<p>vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.</p>
+</blockquote>
+<p><a href="https://github.com/bovigo/vfsStream">https://github.com/bovigo/vfsStream</a></p>
+<h2 id="function-with-filesystem-interaction">Function with filesystem interaction</h2>
+<p>Given is a method which increments the counter persisted in the local filesystem.</p>
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types=1);
+
+namespace RefactoringLegacyCode;
+
+use function file_get_contents;
+use function file_put_contents;
+
+class FilesystemInteraction
+{
+    public function countHit(): void
+    {
+        $count = file_get_contents(__DIR__ . '/hit_counter.txt');
+        file_put_contents(__DIR__ . '/hit_counter.txt', ++$count);
+    }
+}
+
+</code></pre>
+<p>Before writing a test for it, a change to inject the dependency is required.</p>
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types=1);
+
+namespace RefactoringLegacyCode;
+
+use function file_get_contents;
+use function file_put_contents;
+
+class FilesystemInteraction
+{
+    public function countHit(string $file = __DIR__ . '/hit_counter.txt'): void
+    {
+        $count = file_get_contents($file);
+        file_put_contents($file, ++$count);
+    }
+}
+
+</code></pre>
+<h2 id="test">Test</h2>
+<p>With the changed method, vfsStream can now be utilized to inject a virtual file for testing.</p>
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types=1);
+
+namespace RefactoringLegacyCodeTest;
+
+use org\bovigo\vfs\vfsStream;
+use PHPUnit\Framework\TestCase;
+use RefactoringLegacyCode\FilesystemInteraction;
+
+class FilesystemInteractionTest extends TestCase
+{
+    /**
+     * @covers \RefactoringLegacyCode\FilesystemInteraction::countHit
+     */
+    public function test_countHit(): void
+    {
+        $vfs = vfsStream::setup();
+
+        $hitCounterFile = vfsStream::newFile('test_hit_counter.txt')
+            -&gt;at($vfs)
+            -&gt;setContent('1337');
+
+        $filesystemInteraction = new FilesystemInteraction();
+        $filesystemInteraction-&gt;countHit($hitCounterFile-&gt;url());
+
+        self::assertSame(
+            '1338',
+            $hitCounterFile-&gt;getContent()
+        );
+    }
+}
+
+</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Testing Legacy Code: Static Method Invocation</title>
+            <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-static-method-invocation/</link>
+            <pubDate>Wed, 07 Jul 2021 14:37:12 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-static-method-invocation/</guid>
+            <description>This is the second article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
+The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the staticExpects() method.</description>
+            <content type="html"><![CDATA[<p>This is the second article in the series of Testing Legacy Code. Check out the first part <a href="/posts/2021/07/testing-legacy-code-echo-output/">Testing Legacy Code: Echo Output</a> in which I provide information about the origin of these examples.</p>
+<p>The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the <code>staticExpects()</code> method. With the help of <a href="https://github.com/mockery/mockery">Mockery</a>, mocking static methods is possible.</p>
+<p>Be aware that aliasing classes is supported, but not recommended. See <a href="https://docs.mockery.io/en/latest/reference/creating_test_doubles.html#aliasing">Mockery documentation</a>. The prefered way would be to not use static methods.</p>
+<h2 id="function-with-invokes-a-static-method">Function with invokes a static method</h2>
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types=1);
+
+namespace RefactoringLegacyCode;
+
+class StaticMethodInvocation
+{
+    public function getPowerLevel(): string
+    {
+        $result = Goku::powerLevel();
+
+        return $result &gt; 9000 ? 'It is over 9000!' : 'Suppressed.';
+    }
+}
+
+</code></pre>
+<h2 id="test">Test</h2>
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types=1);
+
+namespace RefactoringLegacyCodeTest;
+
+use Mockery;
+use PHPUnit\Framework\TestCase;
+use RefactoringLegacyCode\StaticMethodInvocation;
+
+class StaticMethodInvocationTest extends TestCase
+{
+    /**
+     * @covers \RefactoringLegacyCode\StaticMethodInvocation::getPowerLevel
+     * @runInSeparateProcess
+     * @preserveGlobalState disabled
+     */
+    public function test_getPowerLevel_under_9000(): void
+    {
+        Mockery::mock('alias:RefactoringLegacyCode\Goku')
+            -&gt;shouldReceive('powerLevel')
+            -&gt;andReturn(37);
+
+        self::assertSame(
+            'Suppressed.',
+            (new StaticMethodInvocation())-&gt;getPowerLevel()
+        );
+    }
+
+    /**
+     * @covers \RefactoringLegacyCode\StaticMethodInvocation::getPowerLevel
+     * @runInSeparateProcess
+     * @preserveGlobalState disabled
+     */
+    public function test_getPowerLevel_over_9000(): void
+    {
+        Mockery::mock('alias:RefactoringLegacyCode\Goku')
+            -&gt;shouldReceive('powerLevel')
+            -&gt;andReturn(15000);
+
+        $legacyCode = new StaticMethodInvocation();
+
+        self::assertSame(
+            'It is over 9000!',
+            (new StaticMethodInvocation())-&gt;getPowerLevel()
+        );
+    }
+}
+
+</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Testing Legacy Code: Echo Output</title>
+            <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-echo-output/</link>
+            <pubDate>Tue, 06 Jul 2021 13:51:58 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-echo-output/</guid>
+            <description>A tweet of Simon Schubert made me aware of an awesome talk entitled Testing Legacy Code: Safe Refactoring by Katy Ereira. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.
+Since refactoring legacy code is part of my daily job, some of these insights are quite useful and I would like to keep a note for myself in a few blog posts.</description>
+            <content type="html"><![CDATA[<p>A <a href="https://twitter.com/fn_schubert/status/1393870665179140096">tweet</a> of <a href="https://twitter.com/fn_schubert">Simon Schubert</a> made me aware of an awesome talk entitled <a href="https://www.youtube.com/watch?v=U5BkMJpv_ZQ">Testing Legacy Code: Safe Refactoring</a> by <a href="https://twitter.com/maccath">Katy Ereira</a>. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.</p>
+<p>Since refactoring legacy code is part of my daily job, some of these insights are quite useful and I would like to keep a note for myself in a few blog posts.</p>
+<p>The used examples are all taken from the talk. I made few adjustments to make them runnable instead focusing on the bear minimum. They are also available int the <a href="https://github.com/arueckauer/testing-legacy-code">testing-legacy-code</a> repository.</p>
+<h2 id="function-with-echo-output">Function with echo output</h2>
+<p>Given is a function which echos or prints an output.</p>
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types=1);
+
+namespace RefactoringLegacyCode;
+
+class EchoOutput
+{
+    public function yodel(?string $tune = null): void
+    {
+        if ($tune) {
+            echo $tune;
+        } else {
+            echo 'Odl lay ee';
+        }
+    }
+}
+
+
+</code></pre>
+<h2 id="test">Test</h2>
+<p>The test is utilizing output buffering control to capture the echo output and make assertions on it.</p>
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types=1);
+
+namespace RefactoringLegacyCodeTest;
+
+use PHPUnit\Framework\TestCase;
+use RefactoringLegacyCode\EchoOutput;
+
+use function ob_get_clean;
+use function ob_start;
+
+class EchoOutputTest extends TestCase
+{
+    /**
+     * @covers \RefactoringLegacyCode\EchoOutput::yodel
+     */
+    public function test_yodel_with_null_argument(): void
+    {
+        ob_start();
+
+        (new EchoOutput())-&gt;yodel();
+
+        $output = ob_get_clean();
+
+        self::assertSame(
+            'Odl lay ee',
+            $output
+        );
+    }
+
+    /**
+     * @covers \RefactoringLegacyCode\EchoOutput::yodel
+     */
+    public function test_yodel_with_string_argument(): void
+    {
+        ob_start();
+
+        (new EchoOutput())-&gt;yodel('Oh, lorolo lolalalalalalalalolalalolalalola lo la lo');
+
+        $output = ob_get_clean();
+
+        self::assertSame(
+            'Oh, lorolo lolalalalalalalalolalalolalalola lo la lo',
+            $output
+        );
+    }
+}
+
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Log potential calls of a deprecated method</title>

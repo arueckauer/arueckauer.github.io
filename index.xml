@@ -7,7 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 05 Apr 2021 14:50:55 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jul 2021 15:04:22 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing Legacy Code: Filesystem Interaction</title>
+      <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</link>
+      <pubDate>Thu, 08 Jul 2021 15:04:22 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</guid>
+      <description>This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
+ vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.</description>
+    </item>
+    
+    <item>
+      <title>Testing Legacy Code: Static Method Invocation</title>
+      <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-static-method-invocation/</link>
+      <pubDate>Wed, 07 Jul 2021 14:37:12 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-static-method-invocation/</guid>
+      <description>This is the second article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
+The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the staticExpects() method.</description>
+    </item>
+    
+    <item>
+      <title>Testing Legacy Code: Echo Output</title>
+      <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-echo-output/</link>
+      <pubDate>Tue, 06 Jul 2021 13:51:58 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-echo-output/</guid>
+      <description>A tweet of Simon Schubert made me aware of an awesome talk entitled Testing Legacy Code: Safe Refactoring by Katy Ereira. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.
+Since refactoring legacy code is part of my daily job, some of these insights are quite useful and I would like to keep a note for myself in a few blog posts.</description>
+    </item>
+    
     <item>
       <title>Log potential calls of a deprecated method</title>
       <link>https://arueckauer.github.io/posts/2021/04/log-potential-calls-of-a-deprecated-method/</link>
@@ -242,44 +272,6 @@ Since I am not using the package within a Symfony application, I needed somehow 
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D25
  25 % of my #100DaysOfCode and #100DaysOfBlogging challenges are completed. Time for an intermediate status review.
 Just do it As mentioned in my starting post, I wanted this to be a fun and learning experience. I am very happy to see that I&amp;rsquo;ve reached all of my goals so far. My greatest concern was that I would get tired of writing (almost) every day.</description>
-    </item>
-    
-    <item>
-      <title>Robot Simulator Chapter 2</title>
-      <link>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</link>
-      <pubDate>Sat, 15 Jun 2019 20:57:36 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D24
- After a mentor left some feedback:
- I like that you&amp;rsquo;ve split out the direction and position. I think you can go a bit further though.
- I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure.</description>
-    </item>
-    
-    <item>
-      <title>Robot Simulator</title>
-      <link>https://arueckauer.github.io/posts/2019/06/robot-simulator/</link>
-      <pubDate>Fri, 14 Jun 2019 21:30:50 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
- Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
- turn right, turn left and advance.  A robot can also follow instructions on how to proceed.
-  The letter-string &amp;ldquo;RAALAL&amp;rdquo; means:  Turn right Advance twice Turn left Advance once Turn left yet again   Say a robot starts at {7, 3} facing north.</description>
-    </item>
-    
-    <item>
-      <title>Use return types as much as possible?</title>
-      <link>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</link>
-      <pubDate>Thu, 13 Jun 2019 23:42:55 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D22
- A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
- Good solution
-Awesome! using strict_types
-It&amp;rsquo;s approved for me but try to use return types as much as possible, I&amp;rsquo;m missing initGradeIfItDoesNotExist
- This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
     </item>
     
   </channel>
