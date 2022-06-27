@@ -6,8 +6,40 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Thu, 08 Jul 2021 15:04:22 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 06 Sep 2021 13:01:22 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Change one or more older commit messages</title>
+            <link>https://arueckauer.github.io/posts/2021/09/change-one-or-more-older-commit-messages/</link>
+            <pubDate>Mon, 06 Sep 2021 13:01:22 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2021/09/change-one-or-more-older-commit-messages/</guid>
+            <description>As EmmaBostian said:
+ If it makes you feel any better&amp;hellip; nobody actually knows how to use Git. We all just memorize a few shell commands and hope nothing implodes.
+ The post How to Change a Git Commit Message helped me to change the commit messages on previous commits. A word of caution: rebase rewrites the commit history. It is strongly discouraged to rebase commits that are already pushed remote/origin.</description>
+            <content type="html"><![CDATA[<p>As <a href="https://twitter.com/EmmaBostian">EmmaBostian</a> <a href="https://twitter.com/EmmaBostian/status/1288803743237103617">said</a>:</p>
+<blockquote>
+<p>If it makes you feel any better&hellip; nobody <em>actually</em> knows how to use Git. We all just memorize a few shell commands and hope nothing implodes.</p>
+</blockquote>
+<p>The post <a href="https://linuxize.com/post/change-git-commit-message/"><em>How to Change a Git Commit Message</em></a> helped me to change the commit messages on previous commits. A word of caution: <code>rebase</code> rewrites the commit history. It is <strong>strongly discouraged</strong> to rebase commits that are already pushed remote/origin.</p>
+<p>To change the message of any of the last 5 commits, execute the following command which will display the latest 5 commits in the editor.</p>
+<pre><code class="language-bash">git rebase -i HEAD~5
+</code></pre>
+<p>In the editor replace <code>pick</code> with <code>reword</code> of the messages, you would like to change.</p>
+<pre><code class="language-plain">pick 43f8707f9 Updates FooTest
+reword cea1fb88a Removes baz
+reword aa540c364 Adds foo and bar
+pick c5e078656 Fixes CS
+pick 11ce0ab34 Updates dependencies
+
+# Rebase 7e59e8ead..11ce0ab34 onto 7e59e8ead (5 commands)
+</code></pre>
+<p>Push the changes.</p>
+<pre><code>git push --force
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Testing Legacy Code: Filesystem Interaction</title>

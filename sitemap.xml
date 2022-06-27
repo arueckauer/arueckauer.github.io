@@ -3,18 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://arueckauer.github.io/</loc>
-    <lastmod>2021-09-24T15:47:19+02:00</lastmod>
+    <lastmod>2022-06-27T13:15:33+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/posts/2021/09/change-one-or-more-older-commit-messages/</loc>
+    <lastmod>2022-06-27T13:15:33+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/git/</loc>
+    <lastmod>2022-06-27T13:15:33+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/posts/</loc>
+    <lastmod>2022-06-27T13:15:33+02:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/</loc>
+    <lastmod>2022-06-27T13:15:33+02:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/tags/legacy-code/</loc>
     <lastmod>2021-09-24T15:47:19+02:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/tags/php/</loc>
-    <lastmod>2021-09-24T15:47:19+02:00</lastmod>
-  </url><url>
-    <loc>https://arueckauer.github.io/posts/</loc>
-    <lastmod>2021-09-24T15:47:19+02:00</lastmod>
-  </url><url>
-    <loc>https://arueckauer.github.io/tags/</loc>
     <lastmod>2021-09-24T15:47:19+02:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/tags/testing/</loc>
@@ -63,9 +69,6 @@
     <lastmod>2020-11-27T12:02:39+01:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/posts/2020/10/configure-winmerge-as-git-mergetool-on-windows/</loc>
-    <lastmod>2020-10-15T07:05:25+02:00</lastmod>
-  </url><url>
-    <loc>https://arueckauer.github.io/tags/git/</loc>
     <lastmod>2020-10-15T07:05:25+02:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/posts/2020/06/determine-missing-required-parameters/</loc>

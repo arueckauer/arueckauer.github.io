@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 08 Jul 2021 15:04:22 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Sep 2021 13:01:22 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Change one or more older commit messages</title>
+      <link>https://arueckauer.github.io/posts/2021/09/change-one-or-more-older-commit-messages/</link>
+      <pubDate>Mon, 06 Sep 2021 13:01:22 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2021/09/change-one-or-more-older-commit-messages/</guid>
+      <description>As EmmaBostian said:
+ If it makes you feel any better&amp;hellip; nobody actually knows how to use Git. We all just memorize a few shell commands and hope nothing implodes.
+ The post How to Change a Git Commit Message helped me to change the commit messages on previous commits. A word of caution: rebase rewrites the commit history. It is strongly discouraged to rebase commits that are already pushed remote/origin.</description>
+    </item>
+    
     <item>
       <title>Testing Legacy Code: Filesystem Interaction</title>
       <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</link>
@@ -261,17 +272,6 @@ Since I am not using the package within a Symfony application, I needed somehow 
       <guid>https://arueckauer.github.io/posts/2019/06/format-seconds-as-time-in-php/</guid>
       <description>Somewhat over ten years ago I was working on a project, where we measured execution time and memory consumption of PHP scripts. To display the execution time in a human-readable way, we used a function to format the timestamp provided by microtime().
 &amp;lt;?php class Application__Helper_Timer { /** * Calculates the execution time of a script * @param float $executionTime * @return string */ public static function formatExecutionTime($executionTime) { $seconds = $this-&amp;gt;executionTime; $hours = 0; $minutes = 0; while (($seconds - 3600) &amp;gt; 0) { $hours++; $seconds -= 3600; } while (($seconds - 60) &amp;gt; 0) { $minutes++; $seconds -= 60; } if (1 === strlen((string) $hours)) { $hours = &#39;0&#39; .</description>
-    </item>
-    
-    <item>
-      <title>Intermediate Status</title>
-      <link>https://arueckauer.github.io/posts/2019/06/intermediate-status/</link>
-      <pubDate>Mon, 17 Jun 2019 16:45:52 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/06/intermediate-status/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D25
- 25 % of my #100DaysOfCode and #100DaysOfBlogging challenges are completed. Time for an intermediate status review.
-Just do it As mentioned in my starting post, I wanted this to be a fun and learning experience. I am very happy to see that I&amp;rsquo;ve reached all of my goals so far. My greatest concern was that I would get tired of writing (almost) every day.</description>
     </item>
     
   </channel>

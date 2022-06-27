@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 08 Jul 2021 15:04:22 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Sep 2021 13:01:22 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git</title>
+      <link>https://arueckauer.github.io/tags/git/</link>
+      <pubDate>Mon, 06 Sep 2021 13:01:22 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>legacy-code</title>
       <link>https://arueckauer.github.io/tags/legacy-code/</link>
@@ -86,15 +95,6 @@
       <pubDate>Fri, 27 Nov 2020 11:52:58 +0100</pubDate>
       
       <guid>https://arueckauer.github.io/tags/xdebug/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>https://arueckauer.github.io/tags/git/</link>
-      <pubDate>Thu, 15 Oct 2020 06:46:34 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/tags/git/</guid>
       <description></description>
     </item>
     

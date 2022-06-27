@@ -7,17 +7,17 @@
 <meta name="author"
     content="Andi Rückauer ">
 <meta name="description"
-    content="While installing a new crontab from a file, an error occured.
-Error in cron: bad minute errors in crontab file, can&#39;t install  Since the file was previously edited on Windows, line breaks consisted of a CRLF, which breaks the crontab impoort. To convert thes to LF, I used a command taken from here.
-cat input.file | sed &#39;s/\r$//&#39; &amp;gt; output.file  " />
+    content="As EmmaBostian said:
+ If it makes you feel any better&amp;hellip; nobody actually knows how to use Git. We all just memorize a few shell commands and hope nothing implodes.
+ The post How to Change a Git Commit Message helped me to change the commit messages on previous commits. A word of caution: rebase rewrites the commit history. It is strongly discouraged to rebase commits that are already pushed remote/origin." />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://arueckauer.github.io/posts/2020/05/replace-crlf-with-lf-in-bash/" />
+<link rel="canonical" href="https://arueckauer.github.io/posts/2021/09/change-one-or-more-older-commit-messages/" />
 
 
 <title>
     
-    Replace Crlf With Lf in Bash :: Andi Rückauer  — Thoughts container
+    Change one or more older commit messages :: Andi Rückauer  — Thoughts container
     
 </title>
 
@@ -38,24 +38,24 @@ cat input.file | sed &#39;s/\r$//&#39; &amp;gt; output.file  " />
 <link rel="manifest" href="https://arueckauer.github.io/site.webmanifest">
 <link rel="mask-icon" href="https://arueckauer.github.io/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
-<meta name="theme-color" content="#252627"><meta itemprop="name" content="Replace Crlf With Lf in Bash">
-<meta itemprop="description" content="While installing a new crontab from a file, an error occured.
-Error in cron: bad minute errors in crontab file, can&#39;t install  Since the file was previously edited on Windows, line breaks consisted of a CRLF, which breaks the crontab impoort. To convert thes to LF, I used a command taken from here.
-cat input.file | sed &#39;s/\r$//&#39; &gt; output.file  "><meta itemprop="datePublished" content="2020-05-01T07:09:07+02:00" />
-<meta itemprop="dateModified" content="2020-05-01T11:19:37+02:00" />
-<meta itemprop="wordCount" content="60"><meta itemprop="image" content="https://arueckauer.github.io/"/>
-<meta itemprop="keywords" content="linux,bash," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="Change one or more older commit messages">
+<meta itemprop="description" content="As EmmaBostian said:
+ If it makes you feel any better&hellip; nobody actually knows how to use Git. We all just memorize a few shell commands and hope nothing implodes.
+ The post How to Change a Git Commit Message helped me to change the commit messages on previous commits. A word of caution: rebase rewrites the commit history. It is strongly discouraged to rebase commits that are already pushed remote/origin."><meta itemprop="datePublished" content="2021-09-06T13:01:22+02:00" />
+<meta itemprop="dateModified" content="2022-06-27T13:15:33+02:00" />
+<meta itemprop="wordCount" content="148"><meta itemprop="image" content="https://arueckauer.github.io/"/>
+<meta itemprop="keywords" content="git," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
-<meta name="twitter:title" content="Replace Crlf With Lf in Bash"/>
-<meta name="twitter:description" content="While installing a new crontab from a file, an error occured.
-Error in cron: bad minute errors in crontab file, can&#39;t install  Since the file was previously edited on Windows, line breaks consisted of a CRLF, which breaks the crontab impoort. To convert thes to LF, I used a command taken from here.
-cat input.file | sed &#39;s/\r$//&#39; &gt; output.file  "/>
+<meta name="twitter:title" content="Change one or more older commit messages"/>
+<meta name="twitter:description" content="As EmmaBostian said:
+ If it makes you feel any better&hellip; nobody actually knows how to use Git. We all just memorize a few shell commands and hope nothing implodes.
+ The post How to Change a Git Commit Message helped me to change the commit messages on previous commits. A word of caution: rebase rewrites the commit history. It is strongly discouraged to rebase commits that are already pushed remote/origin."/>
 
 
 
 
-<meta property="article:published_time" content="2020-05-01 07:09:07 &#43;0200 CEST" />
+<meta property="article:published_time" content="2021-09-06 13:01:22 &#43;0200 CEST" />
 
 
 
@@ -119,17 +119,30 @@ cat input.file | sed &#39;s/\r$//&#39; &gt; output.file  "/>
         </div>
 
         <article>
-            <h1 class="post-title"><a href="https://arueckauer.github.io/posts/2020/05/replace-crlf-with-lf-in-bash/">Replace Crlf With Lf in Bash</a></h1>
+            <h1 class="post-title"><a href="https://arueckauer.github.io/posts/2021/09/change-one-or-more-older-commit-messages/">Change one or more older commit messages</a></h1>
 
             
 
             <div class="post-content">
-                <p>While installing a new crontab from a file, an error occured.</p>
-<pre><code class="language-bash">Error in cron: bad minute
-errors in crontab file, can't install
+                <p>As <a href="https://twitter.com/EmmaBostian">EmmaBostian</a> <a href="https://twitter.com/EmmaBostian/status/1288803743237103617">said</a>:</p>
+<blockquote>
+<p>If it makes you feel any better&hellip; nobody <em>actually</em> knows how to use Git. We all just memorize a few shell commands and hope nothing implodes.</p>
+</blockquote>
+<p>The post <a href="https://linuxize.com/post/change-git-commit-message/"><em>How to Change a Git Commit Message</em></a> helped me to change the commit messages on previous commits. A word of caution: <code>rebase</code> rewrites the commit history. It is <strong>strongly discouraged</strong> to rebase commits that are already pushed remote/origin.</p>
+<p>To change the message of any of the last 5 commits, execute the following command which will display the latest 5 commits in the editor.</p>
+<pre><code class="language-bash">git rebase -i HEAD~5
 </code></pre>
-<p>Since the file was previously edited on Windows, line breaks consisted of a CRLF, which breaks the crontab impoort. To convert thes to LF, I used a command taken from <a href="https://stackoverflow.com/a/800644/9364246">here</a>.</p>
-<pre><code class="language-bash">cat input.file | sed 's/\r$//' &gt; output.file
+<p>In the editor replace <code>pick</code> with <code>reword</code> of the messages, you would like to change.</p>
+<pre><code class="language-plain">pick 43f8707f9 Updates FooTest
+reword cea1fb88a Removes baz
+reword aa540c364 Adds foo and bar
+pick c5e078656 Fixes CS
+pick 11ce0ab34 Updates dependencies
+
+# Rebase 7e59e8ead..11ce0ab34 onto 7e59e8ead (5 commands)
+</code></pre>
+<p>Push the changes.</p>
+<pre><code>git push --force
 </code></pre>
 
             </div>
@@ -139,13 +152,13 @@ errors in crontab file, can't install
 
         <div class="post-info">
                 <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://arueckauer.github.io/tags/linux">linux</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/bash">bash</a></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://arueckauer.github.io/tags/git">git</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>60 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>148 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-05-01 07:09 &#43;0200</p>
-                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/e54f548ac6f340961997d757e53ff118e58c7ab6" target="_blank" rel="noopener">e54f548</a> @ 2020-05-01</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2021-09-06 13:01 &#43;0200</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/712bc62602c4688facb9791b479c7dab8fd186eb" target="_blank" rel="noopener">712bc62</a> @ 2022-06-27</p>
         </div>
 
         
@@ -157,18 +170,11 @@ errors in crontab file, can't install
 
                 <div class="pagination__buttons">
                     
-                        <span class="button previous">
-                            <a href="https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/">
-                                <span class="button__icon">←</span>
-                                <span class="button__text">Signing Git Commits with GPG on Windows</span>
-                            </a>
-                        </span>
-                    
 
                     
                         <span class="button next">
-                            <a href="https://arueckauer.github.io/posts/2020/04/install-composer-on-linux/">
-                                <span class="button__text">Install Composer on Linux</span>
+                            <a href="https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/">
+                                <span class="button__text">Testing Legacy Code: Filesystem Interaction</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>
