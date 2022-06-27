@@ -6,8 +6,79 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 06 Sep 2021 13:01:22 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 27 Jun 2022 14:00:18 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Streaming Files as Zip in a Mezzio app</title>
+            <link>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</link>
+            <pubDate>Mon, 27 Jun 2022 14:00:18 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</guid>
+            <description>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive.
+With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
+ A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster.</description>
+            <content type="html"><![CDATA[<p>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive.</p>
+<p>With <a href="https://github.com/maennchen/ZipStream-PHP"><code>maennchen/zipstream-php</code></a>, initiated by <a href="https://twitter.com/maennchen_">Jonatan</a>, we found a simplistic and well functioning solution.</p>
+<blockquote>
+<p>A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster. It can work with S3 buckets or any PSR7 Stream.</p>
+</blockquote>
+<p>The <a href="https://www.php-fig.org/psr/psr-7/">PSR-7</a> support allows for easy integration in a Mezzio application. The following class illustrates the usage in a PSR-compliant request handler. For the full context, have a look at <a href="https://github.com/arueckauer/mezzio-zipstream">mezzio-zipstream</a>.</p>
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types=1);
+
+namespace App\Handler;
+
+use Laminas\Diactoros\CallbackStream;
+use Laminas\Diactoros\Response;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\RequestHandlerInterface;
+use ZipStream\Option\Archive;
+
+use function dirname;
+use function file_get_contents;
+use function sprintf;
+
+class ZipStream implements RequestHandlerInterface
+{
+    public function handle(ServerRequestInterface $request): ResponseInterface
+    {
+        $dataPath = dirname(__DIR__, 3);
+        $items    = [
+            'A.pdf' =&gt; file_get_contents($dataPath . '/data/A.pdf'),
+            'B.pdf' =&gt; file_get_contents($dataPath . '/data/B.pdf'),
+            'C.pdf' =&gt; file_get_contents($dataPath . '/data/C.pdf'),
+        ];
+
+        $zipName = 'test.zip';
+
+        $stream = new CallbackStream(static function () use ($items, $zipName) {
+            $options = new Archive();
+            $options-&gt;setContentType('application/octet-stream');
+
+            $zip = new \ZipStream\ZipStream($zipName, $options);
+
+            foreach ($items as $basename =&gt; $content) {
+                $zip-&gt;addFile($basename, $content);
+            }
+
+            $zip-&gt;finish();
+        });
+
+        $headers = [
+            'Cache-Control'       =&gt; 1200,
+            'Content-Type'        =&gt; 'application/octet-stream',
+            'Content-Disposition' =&gt; sprintf('attachment; filename=&quot;%s&quot;', $zipName),
+        ];
+
+        return new Response($stream, 200, $headers);
+    }
+}
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Change one or more older commit messages</title>

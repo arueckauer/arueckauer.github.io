@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 06 Sep 2021 13:01:22 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jun 2022 14:00:18 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Streaming Files as Zip in a Mezzio app</title>
+      <link>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</link>
+      <pubDate>Mon, 27 Jun 2022 14:00:18 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</guid>
+      <description>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive.
+With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
+ A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster.</description>
+    </item>
+    
     <item>
       <title>Change one or more older commit messages</title>
       <link>https://arueckauer.github.io/posts/2021/09/change-one-or-more-older-commit-messages/</link>
@@ -262,16 +273,6 @@ $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{
 Symfony provides a console component which is, among others, used by zendframework/zend-expressive-tooling. The documentation got me off to a quick start and I got my first Hello command running within minutes.
 I wanted to provide a re-usable package, where the implementation can provide the definition of a command list.
 Since I am not using the package within a Symfony application, I needed somehow access to the Service Container of the Expressive application.</description>
-    </item>
-    
-    <item>
-      <title>Format Seconds as Time in PHP</title>
-      <link>https://arueckauer.github.io/posts/2019/06/format-seconds-as-time-in-php/</link>
-      <pubDate>Fri, 28 Jun 2019 09:04:39 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/06/format-seconds-as-time-in-php/</guid>
-      <description>Somewhat over ten years ago I was working on a project, where we measured execution time and memory consumption of PHP scripts. To display the execution time in a human-readable way, we used a function to format the timestamp provided by microtime().
-&amp;lt;?php class Application__Helper_Timer { /** * Calculates the execution time of a script * @param float $executionTime * @return string */ public static function formatExecutionTime($executionTime) { $seconds = $this-&amp;gt;executionTime; $hours = 0; $minutes = 0; while (($seconds - 3600) &amp;gt; 0) { $hours++; $seconds -= 3600; } while (($seconds - 60) &amp;gt; 0) { $minutes++; $seconds -= 60; } if (1 === strlen((string) $hours)) { $hours = &#39;0&#39; .</description>
     </item>
     
   </channel>

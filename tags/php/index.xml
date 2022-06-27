@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 08 Jul 2021 15:04:22 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jun 2022 14:00:18 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Streaming Files as Zip in a Mezzio app</title>
+      <link>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</link>
+      <pubDate>Mon, 27 Jun 2022 14:00:18 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</guid>
+      <description>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive.
+With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
+ A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster.</description>
+    </item>
+    
     <item>
       <title>Testing Legacy Code: Filesystem Interaction</title>
       <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</link>
@@ -279,18 +290,6 @@ Administrator privileges Since the Apache services will be restarted, the module
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
 This is part one of a series of articles about the PHP Version Switcher.
  Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.</description>
-    </item>
-    
-    <item>
-      <title>Difference of Squares</title>
-      <link>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</link>
-      <pubDate>Mon, 27 May 2019 20:28:26 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D7
- Today I am solving the Difference of Squares of the PHP track on Exercism.
-Exercism offers its users learning new programming languages through exercises with the valuable feedback of mentors. It currently has 50 different language tracks like C#, Go, Kotlin, TypeScript and many others. Head over to Exercism to join.
-Introduction The source of this exercise is Problem 6 of the Euler project.</description>
     </item>
     
   </channel>

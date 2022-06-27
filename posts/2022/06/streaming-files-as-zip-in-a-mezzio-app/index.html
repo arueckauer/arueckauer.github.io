@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="Andi Rückauer ">
+<meta name="description"
+    content="A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive.
+With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
+ A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster." />
+<meta name="keywords" content="andi, rückauer, blog, software, development" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/" />
+
+
+<title>
+    
+    Streaming Files as Zip in a Mezzio app :: Andi Rückauer  — Thoughts container
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://arueckauer.github.io/main.min.cabb110faab88d3545467f36114f6bf3ac23f81434679cf37338752570b2eda1.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://arueckauer.github.io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://arueckauer.github.io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://arueckauer.github.io/favicon-16x16.png">
+<link rel="manifest" href="https://arueckauer.github.io/site.webmanifest">
+<link rel="mask-icon" href="https://arueckauer.github.io/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="Streaming Files as Zip in a Mezzio app">
+<meta itemprop="description" content="A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive.
+With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
+ A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster."><meta itemprop="datePublished" content="2022-06-27T14:00:18+02:00" />
+<meta itemprop="dateModified" content="2022-06-27T14:21:50+02:00" />
+<meta itemprop="wordCount" content="229"><meta itemprop="image" content="https://arueckauer.github.io/"/>
+<meta itemprop="keywords" content="php,stream,zip,psr-7," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://arueckauer.github.io/"/>
+
+<meta name="twitter:title" content="Streaming Files as Zip in a Mezzio app"/>
+<meta name="twitter:description" content="A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive.
+With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
+ A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster."/>
+
+
+
+
+<meta property="article:published_time" content="2022-06-27 14:00:18 &#43;0200 CEST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://arueckauer.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">Thoughts Container</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://arueckauer.github.io/about">About</a></li><li><a href="https://arueckauer.github.io/posts">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/">Streaming Files as Zip in a Mezzio app</a></h1>
+
+            
+
+            <div class="post-content">
+                <p>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive.</p>
+<p>With <a href="https://github.com/maennchen/ZipStream-PHP"><code>maennchen/zipstream-php</code></a>, initiated by <a href="https://twitter.com/maennchen_">Jonatan</a>, we found a simplistic and well functioning solution.</p>
+<blockquote>
+<p>A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster. It can work with S3 buckets or any PSR7 Stream.</p>
+</blockquote>
+<p>The <a href="https://www.php-fig.org/psr/psr-7/">PSR-7</a> support allows for easy integration in a Mezzio application. The following class illustrates the usage in a PSR-compliant request handler. For the full context, have a look at <a href="https://github.com/arueckauer/mezzio-zipstream">mezzio-zipstream</a>.</p>
+<pre><code class="language-php">&lt;?php
+
+declare(strict_types=1);
+
+namespace App\Handler;
+
+use Laminas\Diactoros\CallbackStream;
+use Laminas\Diactoros\Response;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\RequestHandlerInterface;
+use ZipStream\Option\Archive;
+
+use function dirname;
+use function file_get_contents;
+use function sprintf;
+
+class ZipStream implements RequestHandlerInterface
+{
+    public function handle(ServerRequestInterface $request): ResponseInterface
+    {
+        $dataPath = dirname(__DIR__, 3);
+        $items    = [
+            'A.pdf' =&gt; file_get_contents($dataPath . '/data/A.pdf'),
+            'B.pdf' =&gt; file_get_contents($dataPath . '/data/B.pdf'),
+            'C.pdf' =&gt; file_get_contents($dataPath . '/data/C.pdf'),
+        ];
+
+        $zipName = 'test.zip';
+
+        $stream = new CallbackStream(static function () use ($items, $zipName) {
+            $options = new Archive();
+            $options-&gt;setContentType('application/octet-stream');
+
+            $zip = new \ZipStream\ZipStream($zipName, $options);
+
+            foreach ($items as $basename =&gt; $content) {
+                $zip-&gt;addFile($basename, $content);
+            }
+
+            $zip-&gt;finish();
+        });
+
+        $headers = [
+            'Cache-Control'       =&gt; 1200,
+            'Content-Type'        =&gt; 'application/octet-stream',
+            'Content-Disposition' =&gt; sprintf('attachment; filename=&quot;%s&quot;', $zipName),
+        ];
+
+        return new Response($stream, 200, $headers);
+    }
+}
+</code></pre>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://arueckauer.github.io/tags/php">php</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/stream">stream</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/zip">zip</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/psr-7">psr-7</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>229 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2022-06-27 14:00 &#43;0200</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/3bc63b5384e842b00aa368044dba4034baa55e1d" target="_blank" rel="noopener">3bc63b5</a> @ 2022-06-27</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://arueckauer.github.io/posts/2021/09/change-one-or-more-older-commit-messages/">
+                                <span class="button__text">Change one or more older commit messages</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2022</span>
+            
+                <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="https://arueckauer.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.648cbdb411bb57181906d73a5e1c9f26680cde5c03e04de5350e4d20c491ff3db990efb0d71e1fd5f57604f06c78379555c7f829c9bf6c2782acfd6471867611.js" integrity="sha512-ZIy9tBG7VxgZBtc6XhyfJmgM3lwD4E3lNQ5NIMSR/z25kO&#43;w1x4f1fV2BPBseDeVVcf4Kcm/bCeCrP1kcYZ2EQ=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-35992501-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+	
+		<script src="https://unpkg.com/feather-icons"></script>
+	
+
+
+<script>
+    feather.replace()
+</script>
+
+    </body>
+</html>
