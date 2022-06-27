@@ -15,11 +15,9 @@
             <pubDate>Mon, 27 Jun 2022 14:00:18 +0200</pubDate>
             
             <guid>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</guid>
-            <description>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive.
-With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
+            <description>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
  A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster.</description>
-            <content type="html"><![CDATA[<p>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive.</p>
-<p>With <a href="https://github.com/maennchen/ZipStream-PHP"><code>maennchen/zipstream-php</code></a>, initiated by <a href="https://twitter.com/maennchen_">Jonatan</a>, we found a simplistic and well functioning solution.</p>
+            <content type="html"><![CDATA[<p>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With <a href="https://github.com/maennchen/ZipStream-PHP"><code>maennchen/zipstream-php</code></a>, initiated by <a href="https://twitter.com/maennchen_">Jonatan</a>, we found a simplistic and well functioning solution.</p>
 <blockquote>
 <p>A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster. It can work with S3 buckets or any PSR7 Stream.</p>
 </blockquote>
@@ -36,12 +34,13 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use ZipStream\Option\Archive;
+use ZipStream\ZipStream;
 
 use function dirname;
 use function file_get_contents;
 use function sprintf;
 
-class ZipStream implements RequestHandlerInterface
+class Zip implements RequestHandlerInterface
 {
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
@@ -54,18 +53,20 @@ class ZipStream implements RequestHandlerInterface
 
         $zipName = 'test.zip';
 
-        $stream = new CallbackStream(static function () use ($items, $zipName) {
-            $options = new Archive();
-            $options-&gt;setContentType('application/octet-stream');
+        $stream = new CallbackStream(
+            static function () use ($items, $zipName) {
+                $options = new Archive();
+                $options-&gt;setContentType('application/octet-stream');
 
-            $zip = new \ZipStream\ZipStream($zipName, $options);
+                $zip = new ZipStream($zipName, $options);
 
-            foreach ($items as $basename =&gt; $content) {
-                $zip-&gt;addFile($basename, $content);
+                foreach ($items as $basename =&gt; $content) {
+                    $zip-&gt;addFile($basename, $content);
+                }
+
+                $zip-&gt;finish();
             }
-
-            $zip-&gt;finish();
-        });
+        );
 
         $headers = [
             'Cache-Control'       =&gt; 1200,
@@ -76,6 +77,7 @@ class ZipStream implements RequestHandlerInterface
         return new Response($stream, 200, $headers);
     }
 }
+
 </code></pre>
 ]]></content>
         </item>

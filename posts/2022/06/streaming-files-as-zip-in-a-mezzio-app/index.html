@@ -7,8 +7,7 @@
 <meta name="author"
     content="Andi Rückauer ">
 <meta name="description"
-    content="A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive.
-With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
+    content="A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
  A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster." />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
 <meta name="robots" content="noodp" />
@@ -39,17 +38,15 @@ With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and we
 <link rel="mask-icon" href="https://arueckauer.github.io/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Streaming Files as Zip in a Mezzio app">
-<meta itemprop="description" content="A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive.
-With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
+<meta itemprop="description" content="A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
  A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster."><meta itemprop="datePublished" content="2022-06-27T14:00:18+02:00" />
-<meta itemprop="dateModified" content="2022-06-27T14:21:50+02:00" />
-<meta itemprop="wordCount" content="229"><meta itemprop="image" content="https://arueckauer.github.io/"/>
+<meta itemprop="dateModified" content="2022-06-27T17:06:59+02:00" />
+<meta itemprop="wordCount" content="233"><meta itemprop="image" content="https://arueckauer.github.io/"/>
 <meta itemprop="keywords" content="php,stream,zip,psr-7," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="Streaming Files as Zip in a Mezzio app"/>
-<meta name="twitter:description" content="A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive.
-With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
+<meta name="twitter:description" content="A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
  A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster."/>
 
 
@@ -124,8 +121,7 @@ With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and we
             
 
             <div class="post-content">
-                <p>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive.</p>
-<p>With <a href="https://github.com/maennchen/ZipStream-PHP"><code>maennchen/zipstream-php</code></a>, initiated by <a href="https://twitter.com/maennchen_">Jonatan</a>, we found a simplistic and well functioning solution.</p>
+                <p>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With <a href="https://github.com/maennchen/ZipStream-PHP"><code>maennchen/zipstream-php</code></a>, initiated by <a href="https://twitter.com/maennchen_">Jonatan</a>, we found a simplistic and well functioning solution.</p>
 <blockquote>
 <p>A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster. It can work with S3 buckets or any PSR7 Stream.</p>
 </blockquote>
@@ -142,12 +138,13 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use ZipStream\Option\Archive;
+use ZipStream\ZipStream;
 
 use function dirname;
 use function file_get_contents;
 use function sprintf;
 
-class ZipStream implements RequestHandlerInterface
+class Zip implements RequestHandlerInterface
 {
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
@@ -160,18 +157,20 @@ class ZipStream implements RequestHandlerInterface
 
         $zipName = 'test.zip';
 
-        $stream = new CallbackStream(static function () use ($items, $zipName) {
-            $options = new Archive();
-            $options-&gt;setContentType('application/octet-stream');
+        $stream = new CallbackStream(
+            static function () use ($items, $zipName) {
+                $options = new Archive();
+                $options-&gt;setContentType('application/octet-stream');
 
-            $zip = new \ZipStream\ZipStream($zipName, $options);
+                $zip = new ZipStream($zipName, $options);
 
-            foreach ($items as $basename =&gt; $content) {
-                $zip-&gt;addFile($basename, $content);
+                foreach ($items as $basename =&gt; $content) {
+                    $zip-&gt;addFile($basename, $content);
+                }
+
+                $zip-&gt;finish();
             }
-
-            $zip-&gt;finish();
-        });
+        );
 
         $headers = [
             'Cache-Control'       =&gt; 1200,
@@ -182,6 +181,7 @@ class ZipStream implements RequestHandlerInterface
         return new Response($stream, 200, $headers);
     }
 }
+
 </code></pre>
 
             </div>
@@ -194,10 +194,10 @@ class ZipStream implements RequestHandlerInterface
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://arueckauer.github.io/tags/php">php</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/stream">stream</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/zip">zip</a></span><span class="tag"><a href="https://arueckauer.github.io/tags/psr-7">psr-7</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>229 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>233 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2022-06-27 14:00 &#43;0200</p>
-                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/3bc63b5384e842b00aa368044dba4034baa55e1d" target="_blank" rel="noopener">3bc63b5</a> @ 2022-06-27</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/arueckauer/blog/commit/2cf06fbf1e316aaa395a7ab01d58fdd1524cc96f" target="_blank" rel="noopener">2cf06fb</a> @ 2022-06-27</p>
         </div>
 
         
