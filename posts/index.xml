@@ -6,8 +6,26 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 27 Jun 2022 14:00:18 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 11 Jul 2022 08:36:34 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Create DateTime from format without time</title>
+            <link>https://arueckauer.github.io/posts/2022/07/create-datetime-from-format-without-time/</link>
+            <pubDate>Mon, 11 Jul 2022 08:36:34 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2022/07/create-datetime-from-format-without-time/</guid>
+            <description>By adding an exclamation mark to the format argument, PHP will ignore the remaining date/time units and set them to zero.
+echo (DateTimeImmutable::createFromFormat(&#39;Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL; echo (DateTimeImmutable::createFromFormat(&#39;!Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL;  2022-07-11T08:35:53+02:00 2022-07-11T00:00:00+02:00  </description>
+            <content type="html"><![CDATA[<p>By adding an exclamation mark to the format argument, PHP will ignore the remaining date/time units and set them to zero.</p>
+<pre><code class="language-php">echo (DateTimeImmutable::createFromFormat('Y-m-d', '2022-07-11'))-&gt;format('c') . PHP_EOL;
+echo (DateTimeImmutable::createFromFormat('!Y-m-d', '2022-07-11'))-&gt;format('c') . PHP_EOL;
+</code></pre>
+<pre><code class="language-bash">2022-07-11T08:35:53+02:00
+2022-07-11T00:00:00+02:00
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Streaming Files as Zip in a Mezzio app</title>

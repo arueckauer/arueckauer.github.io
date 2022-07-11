@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>datetime on Andi Rückauer</title>
+    <link>https://arueckauer.github.io/tags/datetime/</link>
+    <description>Recent content in datetime on Andi Rückauer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 11 Jul 2022 08:36:34 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/datetime/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create DateTime from format without time</title>
+      <link>https://arueckauer.github.io/posts/2022/07/create-datetime-from-format-without-time/</link>
+      <pubDate>Mon, 11 Jul 2022 08:36:34 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2022/07/create-datetime-from-format-without-time/</guid>
+      <description>By adding an exclamation mark to the format argument, PHP will ignore the remaining date/time units and set them to zero.
+echo (DateTimeImmutable::createFromFormat(&#39;Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL; echo (DateTimeImmutable::createFromFormat(&#39;!Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL;  2022-07-11T08:35:53+02:00 2022-07-11T00:00:00+02:00  </description>
+    </item>
+    
+  </channel>
+</rss>

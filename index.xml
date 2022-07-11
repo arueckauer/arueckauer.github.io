@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 27 Jun 2022 14:00:18 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Jul 2022 08:36:34 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create DateTime from format without time</title>
+      <link>https://arueckauer.github.io/posts/2022/07/create-datetime-from-format-without-time/</link>
+      <pubDate>Mon, 11 Jul 2022 08:36:34 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2022/07/create-datetime-from-format-without-time/</guid>
+      <description>By adding an exclamation mark to the format argument, PHP will ignore the remaining date/time units and set them to zero.
+echo (DateTimeImmutable::createFromFormat(&#39;Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL; echo (DateTimeImmutable::createFromFormat(&#39;!Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL;  2022-07-11T08:35:53+02:00 2022-07-11T00:00:00+02:00  </description>
+    </item>
+    
     <item>
       <title>Streaming Files as Zip in a Mezzio app</title>
       <link>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</link>
@@ -260,18 +270,6 @@ While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3+ on a 
 Requesting the SMD is as simple as:
 Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39;  Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.
 $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;amp;C8P&amp;gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body  With the help of [guid]::NewGuid() a new UUIDv4 is created for each request.</description>
-    </item>
-    
-    <item>
-      <title>Console Commands in an Expressive Applicaton</title>
-      <link>https://arueckauer.github.io/posts/2019/07/console-commands-in-an-expressive-applicaton/</link>
-      <pubDate>Thu, 04 Jul 2019 16:09:13 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/07/console-commands-in-an-expressive-applicaton/</guid>
-      <description>In a current customer project, I needed the ability to run commands from the CLI.
-Symfony provides a console component which is, among others, used by zendframework/zend-expressive-tooling. The documentation got me off to a quick start and I got my first Hello command running within minutes.
-I wanted to provide a re-usable package, where the implementation can provide the definition of a command list.
-Since I am not using the package within a Symfony application, I needed somehow access to the Service Container of the Expressive application.</description>
     </item>
     
   </channel>

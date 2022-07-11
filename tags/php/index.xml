@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 27 Jun 2022 14:00:18 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Jul 2022 08:36:34 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create DateTime from format without time</title>
+      <link>https://arueckauer.github.io/posts/2022/07/create-datetime-from-format-without-time/</link>
+      <pubDate>Mon, 11 Jul 2022 08:36:34 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2022/07/create-datetime-from-format-without-time/</guid>
+      <description>By adding an exclamation mark to the format argument, PHP will ignore the remaining date/time units and set them to zero.
+echo (DateTimeImmutable::createFromFormat(&#39;Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL; echo (DateTimeImmutable::createFromFormat(&#39;!Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL;  2022-07-11T08:35:53+02:00 2022-07-11T00:00:00+02:00  </description>
+    </item>
+    
     <item>
       <title>Streaming Files as Zip in a Mezzio app</title>
       <link>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</link>
@@ -278,17 +288,6 @@ Square Of Sum For this function dstockto mentioned the Gauss formula.</descripti
 This is part four of a series of articles about the PHP Version Switcher.
  Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure   Today I finally breathe life into the module function. 🕺🏼
 Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges.</description>
-    </item>
-    
-    <item>
-      <title>Php Version Switcher: PowerShell Module</title>
-      <link>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</link>
-      <pubDate>Tue, 28 May 2019 20:36:42 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
-This is part one of a series of articles about the PHP Version Switcher.
- Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.</description>
     </item>
     
   </channel>
