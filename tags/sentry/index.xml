@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 26 Oct 2022 10:00:19 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/sentry/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Oct 2022 10:50:35 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/sentry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Capturing Exceptions in Sentry Thrown in Mezzio Application</title>
+      <link>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-mezzio-application/</link>
+      <pubDate>Wed, 26 Oct 2022 10:50:35 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-mezzio-application/</guid>
+      <description>The package arueckauer/mezzio-sentry-delegator provides a delegator factory and an error listener with which exceptions thrown in a Mezzio application can be captured in Sentry.
+The README describes how to use the package.</description>
+    </item>
+    
     <item>
       <title>Capturing Exceptions in Sentry Thrown in Symfony Console Application</title>
       <link>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-symfony-console-application/</link>

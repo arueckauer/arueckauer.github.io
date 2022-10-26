@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 26 Oct 2022 10:00:19 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Oct 2022 10:50:35 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Capturing Exceptions in Sentry Thrown in Mezzio Application</title>
+      <link>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-mezzio-application/</link>
+      <pubDate>Wed, 26 Oct 2022 10:50:35 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-mezzio-application/</guid>
+      <description>The package arueckauer/mezzio-sentry-delegator provides a delegator factory and an error listener with which exceptions thrown in a Mezzio application can be captured in Sentry.
+The README describes how to use the package.</description>
+    </item>
+    
     <item>
       <title>Capturing Exceptions in Sentry Thrown in Symfony Console Application</title>
       <link>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-symfony-console-application/</link>
@@ -277,16 +287,6 @@ To me, this was the best keynote I have ever attended. He presented a topic that
  In the meanwhile, dstockto reviewed and approved my solution. 🤘🏼 Funny story: He found my blog and saw my submission here before seeing it on Exercism.
 He gave me an interesting additional challenge, to use &amp;ldquo;closed&amp;rdquo; form math-based solutions. This would also allow performance improvement, since the current implementation will take longer the larger $number is.
 Square Of Sum For this function dstockto mentioned the Gauss formula.</description>
-    </item>
-    
-    <item>
-      <title>Php Version Manager: First Idea</title>
-      <link>https://arueckauer.github.io/posts/2019/06/php-version-manager-first-idea/</link>
-      <pubDate>Sat, 01 Jun 2019 21:27:11 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/06/php-version-manager-first-idea/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D12
- With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the nvm. I am aware of the phpvm package. This package provided by Anthony Ferrara is far from stable and currently supports only Ubuntu.</description>
     </item>
     
   </channel>

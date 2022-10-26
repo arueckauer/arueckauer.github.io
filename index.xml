@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 26 Oct 2022 10:00:19 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Oct 2022 10:50:35 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Capturing Exceptions in Sentry Thrown in Mezzio Application</title>
+      <link>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-mezzio-application/</link>
+      <pubDate>Wed, 26 Oct 2022 10:50:35 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-mezzio-application/</guid>
+      <description>The package arueckauer/mezzio-sentry-delegator provides a delegator factory and an error listener with which exceptions thrown in a Mezzio application can be captured in Sentry.
+The README describes how to use the package.</description>
+    </item>
+    
     <item>
       <title>Capturing Exceptions in Sentry Thrown in Symfony Console Application</title>
       <link>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-symfony-console-application/</link>
@@ -259,16 +269,6 @@ mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://open
 Michal compares the output of and and &amp;amp;&amp;amp;.
 &amp;lt;?php $a = 2 and 3; $b = 2 &amp;amp;&amp;amp; 3; var_dump($a, $b);  Result int(2) bool(true)  Wait what?
 Logical Operator &amp;ldquo;and&amp;rdquo; and &amp;ldquo;&amp;amp;&amp;amp;&amp;rdquo; are not identical Logical Operators The documentation for the Logical Operators states:</description>
-    </item>
-    
-    <item>
-      <title>MySQL utf8mb4 Unicode</title>
-      <link>https://arueckauer.github.io/posts/2019/08/mysql-utf8mb4-unicode/</link>
-      <pubDate>Tue, 06 Aug 2019 16:15:08 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/08/mysql-utf8mb4-unicode/</guid>
-      <description>In MySQL UTF-8 does not actually mean UTF-8. If you&amp;rsquo;re curious to see why, there is an excellent post by Mathias explaining in detail why you should choose utf8mb4 over utf8.
-While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3+ on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&amp;rsquo;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.</description>
     </item>
     
   </channel>
