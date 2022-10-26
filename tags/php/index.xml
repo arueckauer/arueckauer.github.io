@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 11 Jul 2022 08:36:34 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Oct 2022 10:00:19 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Capturing Exceptions in Sentry Thrown in Symfony Console Application</title>
+      <link>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-symfony-console-application/</link>
+      <pubDate>Wed, 26 Oct 2022 10:00:19 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-symfony-console-application/</guid>
+      <description>This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on StackOverflow. In here I describe it in more detail.
+To capture exceptions thrown in Symfony console application in Sentry, the Symfony Event Dispatcher is used.
+composer require symfony/event-dispatcher  The Event Dispatcher provides a console.error event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.</description>
+    </item>
+    
     <item>
       <title>Create DateTime from format without time</title>
       <link>https://arueckauer.github.io/posts/2022/07/create-datetime-from-format-without-time/</link>
@@ -276,18 +287,6 @@ Square Of Sum For this function dstockto mentioned the Gauss formula.</descripti
       <guid>https://arueckauer.github.io/posts/2019/06/php-version-manager-first-idea/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D12
  With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the nvm. I am aware of the phpvm package. This package provided by Anthony Ferrara is far from stable and currently supports only Ubuntu.</description>
-    </item>
-    
-    <item>
-      <title>Php Version Switcher: The Function</title>
-      <link>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/</link>
-      <pubDate>Fri, 31 May 2019 22:56:25 +0200</pubDate>
-      
-      <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D11
-This is part four of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure   Today I finally breathe life into the module function. 🕺🏼
-Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges.</description>
     </item>
     
   </channel>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sentry on Andi Rückauer</title>
+    <link>https://arueckauer.github.io/tags/sentry/</link>
+    <description>Recent content in sentry on Andi Rückauer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 26 Oct 2022 10:00:19 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/sentry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Capturing Exceptions in Sentry Thrown in Symfony Console Application</title>
+      <link>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-symfony-console-application/</link>
+      <pubDate>Wed, 26 Oct 2022 10:00:19 +0200</pubDate>
+      
+      <guid>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-symfony-console-application/</guid>
+      <description>This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on StackOverflow. In here I describe it in more detail.
+To capture exceptions thrown in Symfony console application in Sentry, the Symfony Event Dispatcher is used.
+composer require symfony/event-dispatcher  The Event Dispatcher provides a console.error event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.</description>
+    </item>
+    
+  </channel>
+</rss>

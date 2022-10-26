@@ -6,8 +6,43 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 11 Jul 2022 08:36:34 +0200</lastBuildDate>
+        <lastBuildDate>Wed, 26 Oct 2022 10:00:19 +0200</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Capturing Exceptions in Sentry Thrown in Symfony Console Application</title>
+            <link>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-symfony-console-application/</link>
+            <pubDate>Wed, 26 Oct 2022 10:00:19 +0200</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-symfony-console-application/</guid>
+            <description>This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on StackOverflow. In here I describe it in more detail.
+To capture exceptions thrown in Symfony console application in Sentry, the Symfony Event Dispatcher is used.
+composer require symfony/event-dispatcher  The Event Dispatcher provides a console.error event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.</description>
+            <content type="html"><![CDATA[<p>This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on <a href="https://stackoverflow.com/a/60411421/9364246">StackOverflow</a>. In here I describe it in more detail.</p>
+<p>To capture exceptions thrown in Symfony console application in Sentry, the Symfony Event Dispatcher is used.</p>
+<pre><code class="language-bash">composer require symfony/event-dispatcher
+</code></pre>
+<p>The Event Dispatcher provides a <code>console.error</code> event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.</p>
+<pre><code class="language-php">use Symfony\Component\EventDispatcher\EventDispatcher;
+
+// Ensure Sentry is initialized
+
+$dispatcher = new EventDispatcher();
+$dispatcher-&gt;addListener(
+    ConsoleEvents::ERROR,
+    static function (ConsoleErrorEvent $event) {
+        captureException($event-&gt;getError());
+    }
+);
+</code></pre>
+<p>The dispatcher is then passed to the <code>Application</code> class.</p>
+<pre><code class="language-php">use Symfony\Component\Console\Application;
+
+$application = new Application('My Application', '1.0.0');
+$application-&gt;setDispatcher($dispatcher);
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Create DateTime from format without time</title>
