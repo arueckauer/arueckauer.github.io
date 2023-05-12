@@ -15,7 +15,8 @@
       
       <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</guid>
       <description>This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
- vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.</description>
+vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.
+https://github.com/bovigo/vfsStream</description>
     </item>
     
     <item>

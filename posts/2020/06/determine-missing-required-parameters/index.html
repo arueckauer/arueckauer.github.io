@@ -8,7 +8,7 @@
     content="Andi Rückauer ">
 <meta name="description"
     content="Frequently checking for required parameters is needed. Locating the missing parameters helps in creating a helpful message for the client.
-Test &amp;lt;?php declare(strict_types=1); namespace AppTest\Validator; use PHPUnit\Framework\TestCase; use function array_diff_key; use function array_flip; use function array_keys; class RequiredParameterTest extends TestCase { public function testGetMissingParameters(): void { $required = [ &#39;requiredParameterA&#39;, &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, &#39;requiredParameterD&#39;, ]; $data = [ &#39;requiredParameterA&#39; =&amp;gt; &#39;foo&#39;, &#39;requiredParameterD&#39; =&amp;gt; null, ]; $missing = [ &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, ]; $result = array_keys(array_diff_key(array_flip($required), $data)); $this-&amp;gt;assertEquals($missing, $result); } }  &amp;ldquo;Validator&amp;rdquo; &amp;lt;?" />
+Test &amp;lt;?php declare(strict_types=1); namespace AppTest\Validator; use PHPUnit\Framework\TestCase; use function array_diff_key; use function array_flip; use function array_keys; class RequiredParameterTest extends TestCase { public function testGetMissingParameters(): void { $required = [ &#39;requiredParameterA&#39;, &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, &#39;requiredParameterD&#39;, ]; $data = [ &#39;requiredParameterA&#39; =&amp;gt; &#39;foo&#39;, &#39;requiredParameterD&#39; =&amp;gt; null, ]; $missing = [ &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, ]; $result = array_keys(array_diff_key(array_flip($required), $data)); $this-&amp;gt;assertEquals($missing, $result); } } &amp;ldquo;Validator&amp;rdquo; &amp;lt;?" />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://arueckauer.github.io/posts/2020/06/determine-missing-required-parameters/" />
@@ -39,7 +39,7 @@ Test &amp;lt;?php declare(strict_types=1); namespace AppTest\Validator; use PHPU
 <link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Determine missing required parameters">
 <meta itemprop="description" content="Frequently checking for required parameters is needed. Locating the missing parameters helps in creating a helpful message for the client.
-Test &lt;?php declare(strict_types=1); namespace AppTest\Validator; use PHPUnit\Framework\TestCase; use function array_diff_key; use function array_flip; use function array_keys; class RequiredParameterTest extends TestCase { public function testGetMissingParameters(): void { $required = [ &#39;requiredParameterA&#39;, &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, &#39;requiredParameterD&#39;, ]; $data = [ &#39;requiredParameterA&#39; =&gt; &#39;foo&#39;, &#39;requiredParameterD&#39; =&gt; null, ]; $missing = [ &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, ]; $result = array_keys(array_diff_key(array_flip($required), $data)); $this-&gt;assertEquals($missing, $result); } }  &ldquo;Validator&rdquo; &lt;?"><meta itemprop="datePublished" content="2020-06-12T13:50:26+02:00" />
+Test &lt;?php declare(strict_types=1); namespace AppTest\Validator; use PHPUnit\Framework\TestCase; use function array_diff_key; use function array_flip; use function array_keys; class RequiredParameterTest extends TestCase { public function testGetMissingParameters(): void { $required = [ &#39;requiredParameterA&#39;, &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, &#39;requiredParameterD&#39;, ]; $data = [ &#39;requiredParameterA&#39; =&gt; &#39;foo&#39;, &#39;requiredParameterD&#39; =&gt; null, ]; $missing = [ &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, ]; $result = array_keys(array_diff_key(array_flip($required), $data)); $this-&gt;assertEquals($missing, $result); } } &ldquo;Validator&rdquo; &lt;?"><meta itemprop="datePublished" content="2020-06-12T13:50:26+02:00" />
 <meta itemprop="dateModified" content="2020-06-17T11:07:30+02:00" />
 <meta itemprop="wordCount" content="108"><meta itemprop="image" content="https://arueckauer.github.io/"/>
 <meta itemprop="keywords" content="validation," /><meta name="twitter:card" content="summary_large_image"/>
@@ -47,7 +47,7 @@ Test &lt;?php declare(strict_types=1); namespace AppTest\Validator; use PHPUnit\
 
 <meta name="twitter:title" content="Determine missing required parameters"/>
 <meta name="twitter:description" content="Frequently checking for required parameters is needed. Locating the missing parameters helps in creating a helpful message for the client.
-Test &lt;?php declare(strict_types=1); namespace AppTest\Validator; use PHPUnit\Framework\TestCase; use function array_diff_key; use function array_flip; use function array_keys; class RequiredParameterTest extends TestCase { public function testGetMissingParameters(): void { $required = [ &#39;requiredParameterA&#39;, &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, &#39;requiredParameterD&#39;, ]; $data = [ &#39;requiredParameterA&#39; =&gt; &#39;foo&#39;, &#39;requiredParameterD&#39; =&gt; null, ]; $missing = [ &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, ]; $result = array_keys(array_diff_key(array_flip($required), $data)); $this-&gt;assertEquals($missing, $result); } }  &ldquo;Validator&rdquo; &lt;?"/>
+Test &lt;?php declare(strict_types=1); namespace AppTest\Validator; use PHPUnit\Framework\TestCase; use function array_diff_key; use function array_flip; use function array_keys; class RequiredParameterTest extends TestCase { public function testGetMissingParameters(): void { $required = [ &#39;requiredParameterA&#39;, &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, &#39;requiredParameterD&#39;, ]; $data = [ &#39;requiredParameterA&#39; =&gt; &#39;foo&#39;, &#39;requiredParameterD&#39; =&gt; null, ]; $missing = [ &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, ]; $result = array_keys(array_diff_key(array_flip($required), $data)); $this-&gt;assertEquals($missing, $result); } } &ldquo;Validator&rdquo; &lt;?"/>
 
 
 
@@ -235,7 +235,7 @@ class RequiredParameter
                 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2022</span>
+            <span>&copy; 2023</span>
             
                 <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
             
@@ -264,15 +264,15 @@ class RequiredParameter
 
 
 
-<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.648cbdb411bb57181906d73a5e1c9f26680cde5c03e04de5350e4d20c491ff3db990efb0d71e1fd5f57604f06c78379555c7f829c9bf6c2782acfd6471867611.js" integrity="sha512-ZIy9tBG7VxgZBtc6XhyfJmgM3lwD4E3lNQ5NIMSR/z25kO&#43;w1x4f1fV2BPBseDeVVcf4Kcm/bCeCrP1kcYZ2EQ=="></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-35992501-5', 'auto');
-        ga('send', 'pageview');
-    </script>
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.70004749d7b6d0f87e110ca85b40838ec55915bb2dd29b18758517db8b3a131bbb53cdbb99a553d079f8e5e30a6c5eccf4a057356a7d24d94a071f05100fd11b.js" integrity="sha512-cABHSde20Ph&#43;EQyoW0CDjsVZFbst0psYdYUX24s6Exu7U827maVT0Hn45eMKbF7M9KBXNWp9JNlKBx8FEA/RGw=="></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-DS58P4P02H');
+	</script>
 
 
 	
@@ -283,6 +283,7 @@ class RequiredParameter
 <script>
     feather.replace()
 </script>
+g
 
     </body>
 </html>

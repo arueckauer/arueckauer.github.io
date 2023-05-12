@@ -15,8 +15,8 @@
       
       <guid>https://arueckauer.github.io/posts/2020/04/install-composer-on-linux/</guid>
       <description>A self-reminde ron how to install on Linux. Instruction taken from here.
-curl -sS https://getcomposer.org/installer | php mv composer.phar /usr/local/bin/composer   Note: If the above fails due to permissions, run the mv line again with sudo.
- curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer  </description>
+curl -sS https://getcomposer.org/installer | php mv composer.phar /usr/local/bin/composer Note: If the above fails due to permissions, run the mv line again with sudo.
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer </description>
     </item>
     
     <item>
@@ -26,9 +26,9 @@ curl -sS https://getcomposer.org/installer | php mv composer.phar /usr/local/bin
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-5-a-change-for-the-better/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D5
- Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
+Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
 I see some issues with that.
- Build has a dependency on configuration. The build process for an application should stay the same.</description>
+Build has a dependency on configuration. The build process for an application should stay the same.</description>
     </item>
     
     <item>
@@ -38,7 +38,7 @@ I see some issues with that.
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
- Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
+Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
 Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.</description>
     </item>

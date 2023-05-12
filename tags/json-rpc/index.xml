@@ -16,8 +16,8 @@
       <guid>https://arueckauer.github.io/posts/2019/08/json-rpc-call-as-invoke-webrequest/</guid>
       <description>Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.
 Requesting the SMD is as simple as:
-Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39;  Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.
-$Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;amp;C8P&amp;gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body  With the help of [guid]::NewGuid() a new UUIDv4 is created for each request.</description>
+Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.
+$Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;amp;C8P&amp;gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request.</description>
     </item>
     
   </channel>

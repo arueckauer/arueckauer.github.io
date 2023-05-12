@@ -15,7 +15,7 @@
       
       <guid>https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/</guid>
       <description>This is an addition to my previous post Console Commands in an Expressive Applicaton. It provides two more real-world examples for Console Commands in Expressive applications.
-mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run();  Source</description>
+mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run(); Source</description>
     </item>
     
     <item>
@@ -37,10 +37,11 @@ Since I am not using the package within a Symfony application, I needed somehow 
       
       <guid>https://arueckauer.github.io/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D6
-  [The Twelve-Factor App] requires strict separation of config from code.
- Taken from factor three of The Twelve-Factor App.
+[The Twelve-Factor App] requires strict separation of config from code.
+Taken from factor three of The Twelve-Factor App.
 Today I am studying about how to achieve this requirement making usage of phpdotenv in a Zend Expressive context.
-I will not go into details on and advantages of this concept. A leave that up to other resources.</description>
+I will not go into details on and advantages of this concept. A leave that up to other resources.
+phpdotenv This package</description>
     </item>
     
     <item>
@@ -50,8 +51,8 @@ I will not go into details on and advantages of this concept. A leave that up to
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D2
- Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
- code structure, DI container, router, template engine and error handler.  It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.</description>
+Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
+code structure, DI container, router, template engine and error handler. It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.</description>
     </item>
     
     <item>

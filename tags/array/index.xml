@@ -15,7 +15,7 @@
       
       <guid>https://arueckauer.github.io/posts/2021/03/comma-separated-list-with-and-in-php/</guid>
       <description>How to display an array to comma separated values with a last &amp;ldquo;and&amp;rdquo; by Frédéric Bouchery.
-&amp;lt;?php declare(strict_types=1); $array = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;]; echo implode(&#39;, &#39;, array_slice($array, 0, -1)) . &#39; and &#39; . end($array);   3v4l.org Source  </description>
+&amp;lt;?php declare(strict_types=1); $array = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;]; echo implode(&#39;, &#39;, array_slice($array, 0, -1)) . &#39; and &#39; . end($array); 3v4l.org Source </description>
     </item>
     
   </channel>

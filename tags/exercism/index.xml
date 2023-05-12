@@ -15,9 +15,9 @@
       
       <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D24
- After a mentor left some feedback:
- I like that you&amp;rsquo;ve split out the direction and position. I think you can go a bit further though.
- I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure.</description>
+After a mentor left some feedback:
+I like that you&amp;rsquo;ve split out the direction and position. I think you can go a bit further though.
+I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure.</description>
     </item>
     
     <item>
@@ -27,9 +27,9 @@
       
       <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
- Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
- turn right, turn left and advance.  A robot can also follow instructions on how to proceed.
-  The letter-string &amp;ldquo;RAALAL&amp;rdquo; means:  Turn right Advance twice Turn left Advance once Turn left yet again   Say a robot starts at {7, 3} facing north.</description>
+Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
+turn right, turn left and advance. A robot can also follow instructions on how to proceed.
+The letter-string &amp;ldquo;RAALAL&amp;rdquo; means: Turn right Advance twice Turn left Advance once Turn left yet again Say a robot starts at {7, 3} facing north.</description>
     </item>
     
     <item>
@@ -39,11 +39,11 @@
       
       <guid>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D22
- A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
- Good solution
+A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
+Good solution
 Awesome! using strict_types
 It&amp;rsquo;s approved for me but try to use return types as much as possible, I&amp;rsquo;m missing initGradeIfItDoesNotExist
- This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
+This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
     </item>
     
     <item>
@@ -53,11 +53,11 @@ It&amp;rsquo;s approved for me but try to use return types as much as possible, 
       
       <guid>https://arueckauer.github.io/posts/2019/06/grade-school/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
- This Exercism exercise is straight forward.
+This Exercism exercise is straight forward.
 An extract from the instructions:
- Given students&#39; names along with the grade that they are in, create a roster for the school.
+Given students&amp;rsquo; names along with the grade that they are in, create a roster for the school.
 In the end, you should be able to:
- Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
+Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
     </item>
     
     <item>
@@ -67,9 +67,9 @@ In the end, you should be able to:
       
       <guid>https://arueckauer.github.io/posts/2019/06/meetup-side-exercise/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D20
- Next up in the PHP sidetrack is the Meetup exercise.
+Next up in the PHP sidetrack is the Meetup exercise.
 A function is provided with the arguments
- (int) year, (int) month, (string) descriptor and (string) weekday  and expected to process the input and return an instance of DateTime with the corresponding date.
+(int) year, (int) month, (string) descriptor and (string) weekday and expected to process the input and return an instance of DateTime with the corresponding date.
 While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated.</description>
     </item>
     
@@ -80,8 +80,8 @@ While year, month and weekday are an exact representation of their values, the d
       
       <guid>https://arueckauer.github.io/posts/2019/06/sieve-of-eratosthenes-side-exercise/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D19
- Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
- In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2.</description>
+Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
+In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime.</description>
     </item>
     
     <item>
@@ -91,7 +91,7 @@ While year, month and weekday are an exact representation of their values, the d
       
       <guid>https://arueckauer.github.io/posts/2019/06/difference-of-squares-part-ii/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D13
- In the meanwhile, dstockto reviewed and approved my solution. 🤘🏼 Funny story: He found my blog and saw my submission here before seeing it on Exercism.
+In the meanwhile, dstockto reviewed and approved my solution. 🤘🏼 Funny story: He found my blog and saw my submission here before seeing it on Exercism.
 He gave me an interesting additional challenge, to use &amp;ldquo;closed&amp;rdquo; form math-based solutions. This would also allow performance improvement, since the current implementation will take longer the larger $number is.
 Square Of Sum For this function dstockto mentioned the Gauss formula.</description>
     </item>
@@ -103,7 +103,7 @@ Square Of Sum For this function dstockto mentioned the Gauss formula.</descripti
       
       <guid>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D7
- Today I am solving the Difference of Squares of the PHP track on Exercism.
+Today I am solving the Difference of Squares of the PHP track on Exercism.
 Exercism offers its users learning new programming languages through exercises with the valuable feedback of mentors. It currently has 50 different language tracks like C#, Go, Kotlin, TypeScript and many others. Head over to Exercism to join.
 Introduction The source of this exercise is Problem 6 of the Euler project.</description>
     </item>

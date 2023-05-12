@@ -25,8 +25,8 @@ PS C:\www\httpd-2.4.46-win64-VS16\Apache24&amp;gt; .\bin\httpd.exe (OS 10013)An 
       
       <guid>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</guid>
       <description>Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.
- Disclaimer: This article does not describe setting up / creating GPG keys.
- Check your GPG keys gpg --list-secret-keys --keyid-format LONG  Which gives you a list like the following.
+Disclaimer: This article does not describe setting up / creating GPG keys.
+Check your GPG keys gpg --list-secret-keys --keyid-format LONG Which gives you a list like the following.
 C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx ---------------------------------------------------- sec rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC] 2B30F6F709EF48E6AF669C3FD7EB1106B4940744 uid [ ultimativ ] Andi Rückauer &amp;lt;arueckauer@example.</description>
     </item>
     

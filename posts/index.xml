@@ -30,7 +30,7 @@ The README describes how to use the package.</description>
             <guid>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-symfony-console-application/</guid>
             <description>This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on StackOverflow. In here I describe it in more detail.
 To capture exceptions thrown in Symfony console application in Sentry, the Symfony Event Dispatcher is used.
-composer require symfony/event-dispatcher  The Event Dispatcher provides a console.error event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.</description>
+composer require symfony/event-dispatcher The Event Dispatcher provides a console.error event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.</description>
             <content type="html"><![CDATA[<p>This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on <a href="https://stackoverflow.com/a/60411421/9364246">StackOverflow</a>. In here I describe it in more detail.</p>
 <p>To capture exceptions thrown in Symfony console application in Sentry, the Symfony Event Dispatcher is used.</p>
 <pre><code class="language-bash">composer require symfony/event-dispatcher
@@ -64,7 +64,7 @@ $application-&gt;setDispatcher($dispatcher);
             
             <guid>https://arueckauer.github.io/posts/2022/07/create-datetime-from-format-without-time/</guid>
             <description>By adding an exclamation mark to the format argument, PHP will ignore the remaining date/time units and set them to zero.
-echo (DateTimeImmutable::createFromFormat(&#39;Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL; echo (DateTimeImmutable::createFromFormat(&#39;!Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL;  2022-07-11T08:35:53+02:00 2022-07-11T00:00:00+02:00  </description>
+echo (DateTimeImmutable::createFromFormat(&#39;Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL; echo (DateTimeImmutable::createFromFormat(&#39;!Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL; 2022-07-11T08:35:53+02:00 2022-07-11T00:00:00+02:00 </description>
             <content type="html"><![CDATA[<p>By adding an exclamation mark to the format argument, PHP will ignore the remaining date/time units and set them to zero.</p>
 <pre><code class="language-php">echo (DateTimeImmutable::createFromFormat('Y-m-d', '2022-07-11'))-&gt;format('c') . PHP_EOL;
 echo (DateTimeImmutable::createFromFormat('!Y-m-d', '2022-07-11'))-&gt;format('c') . PHP_EOL;
@@ -82,7 +82,7 @@ echo (DateTimeImmutable::createFromFormat('!Y-m-d', '2022-07-11'))-&gt;format('c
             
             <guid>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</guid>
             <description>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
- A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster.</description>
+A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster.</description>
             <content type="html"><![CDATA[<p>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With <a href="https://github.com/maennchen/ZipStream-PHP"><code>maennchen/zipstream-php</code></a>, initiated by <a href="https://twitter.com/maennchen_">Jonatan</a>, we found a simplistic and well functioning solution.</p>
 <blockquote>
 <p>A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster. It can work with S3 buckets or any PSR7 Stream.</p>
@@ -155,8 +155,9 @@ class Zip implements RequestHandlerInterface
             
             <guid>https://arueckauer.github.io/posts/2021/09/change-one-or-more-older-commit-messages/</guid>
             <description>As EmmaBostian said:
- If it makes you feel any better&amp;hellip; nobody actually knows how to use Git. We all just memorize a few shell commands and hope nothing implodes.
- The post How to Change a Git Commit Message helped me to change the commit messages on previous commits. A word of caution: rebase rewrites the commit history. It is strongly discouraged to rebase commits that are already pushed remote/origin.</description>
+If it makes you feel any better&amp;hellip; nobody actually knows how to use Git. We all just memorize a few shell commands and hope nothing implodes.
+The post How to Change a Git Commit Message helped me to change the commit messages on previous commits. A word of caution: rebase rewrites the commit history. It is strongly discouraged to rebase commits that are already pushed remote/origin.
+To change the message of any of the last 5 commits, execute the following command which will display the latest 5 commits in the editor.</description>
             <content type="html"><![CDATA[<p>As <a href="https://twitter.com/EmmaBostian">EmmaBostian</a> <a href="https://twitter.com/EmmaBostian/status/1288803743237103617">said</a>:</p>
 <blockquote>
 <p>If it makes you feel any better&hellip; nobody <em>actually</em> knows how to use Git. We all just memorize a few shell commands and hope nothing implodes.</p>
@@ -187,7 +188,8 @@ pick 11ce0ab34 Updates dependencies
             
             <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</guid>
             <description>This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
- vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.</description>
+vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.
+https://github.com/bovigo/vfsStream</description>
             <content type="html"><![CDATA[<p>This is the third article in the series of Testing Legacy Code. Check out the first part <a href="/posts/2021/07/testing-legacy-code-echo-output/">Testing Legacy Code: Echo Output</a> in which I provide information about the origin of these examples.</p>
 <blockquote>
 <p>vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.</p>
@@ -450,7 +452,7 @@ class EchoOutputTest extends TestCase
             <pubDate>Mon, 05 Apr 2021 14:50:55 +0200</pubDate>
             
             <guid>https://arueckauer.github.io/posts/2021/04/log-potential-calls-of-a-deprecated-method/</guid>
-            <description>&amp;lt;?php declare(strict_types=1); namespace arueckauer\Php80; use Exception; use JetBrains\PhpStorm\Deprecated; use Psr\Log\LoggerInterface; use function explode; use const PHP_EOL; class SomeClass { private LoggerInterface $logger; public function __construct(LoggerInterface $logger) { $this-&amp;gt;logger = $logger; } #[Deprecated] public function deprecated(): void { $this-&amp;gt;logger-&amp;gt;error( __METHOD__, [ &#39;trace&#39; =&amp;gt; explode( PHP_EOL, (new Exception())-&amp;gt;getTraceAsString() ), ] ); } }  </description>
+            <description>&amp;lt;?php declare(strict_types=1); namespace arueckauer\Php80; use Exception; use JetBrains\PhpStorm\Deprecated; use Psr\Log\LoggerInterface; use function explode; use const PHP_EOL; class SomeClass { private LoggerInterface $logger; public function __construct(LoggerInterface $logger) { $this-&amp;gt;logger = $logger; } #[Deprecated] public function deprecated(): void { $this-&amp;gt;logger-&amp;gt;error( __METHOD__, [ &#39;trace&#39; =&amp;gt; explode( PHP_EOL, (new Exception())-&amp;gt;getTraceAsString() ), ] ); } } </description>
             <content type="html"><![CDATA[<pre><code class="language-php">&lt;?php
 
 declare(strict_types=1);
@@ -500,7 +502,7 @@ class SomeClass
             
             <guid>https://arueckauer.github.io/posts/2021/03/comma-separated-list-with-and-in-php/</guid>
             <description>How to display an array to comma separated values with a last &amp;ldquo;and&amp;rdquo; by Frédéric Bouchery.
-&amp;lt;?php declare(strict_types=1); $array = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;]; echo implode(&#39;, &#39;, array_slice($array, 0, -1)) . &#39; and &#39; . end($array);   3v4l.org Source  </description>
+&amp;lt;?php declare(strict_types=1); $array = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;]; echo implode(&#39;, &#39;, array_slice($array, 0, -1)) . &#39; and &#39; . end($array); 3v4l.org Source </description>
             <content type="html"><![CDATA[<p>How to display an array to comma separated values with a last &ldquo;and&rdquo; by <a href="https://twitter.com/FredBouchery">Frédéric Bouchery</a>.</p>
 <pre><code class="language-php">&lt;?php
 
@@ -547,7 +549,7 @@ PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt;
             
             <guid>https://arueckauer.github.io/posts/2021/01/phpunit-test-single-method/</guid>
             <description>A common search I need to do after I have not used it in a while is, how to run a single test method.
-phpunit --filter methodName path/to/file.php  Credits go to Alex on Stackoverflow</description>
+phpunit --filter methodName path/to/file.php Credits go to Alex on Stackoverflow</description>
             <content type="html"><![CDATA[<p>A common search I need to do after I have not used it in a while is, how to run a single test method.</p>
 <pre><code class="language-bash">phpunit --filter methodName path/to/file.php
 </code></pre>
@@ -644,7 +646,7 @@ xdebug.start_with_request=yes
             
             <guid>https://arueckauer.github.io/posts/2020/06/determine-missing-required-parameters/</guid>
             <description>Frequently checking for required parameters is needed. Locating the missing parameters helps in creating a helpful message for the client.
-Test &amp;lt;?php declare(strict_types=1); namespace AppTest\Validator; use PHPUnit\Framework\TestCase; use function array_diff_key; use function array_flip; use function array_keys; class RequiredParameterTest extends TestCase { public function testGetMissingParameters(): void { $required = [ &#39;requiredParameterA&#39;, &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, &#39;requiredParameterD&#39;, ]; $data = [ &#39;requiredParameterA&#39; =&amp;gt; &#39;foo&#39;, &#39;requiredParameterD&#39; =&amp;gt; null, ]; $missing = [ &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, ]; $result = array_keys(array_diff_key(array_flip($required), $data)); $this-&amp;gt;assertEquals($missing, $result); } }  &amp;ldquo;Validator&amp;rdquo; &amp;lt;?</description>
+Test &amp;lt;?php declare(strict_types=1); namespace AppTest\Validator; use PHPUnit\Framework\TestCase; use function array_diff_key; use function array_flip; use function array_keys; class RequiredParameterTest extends TestCase { public function testGetMissingParameters(): void { $required = [ &#39;requiredParameterA&#39;, &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, &#39;requiredParameterD&#39;, ]; $data = [ &#39;requiredParameterA&#39; =&amp;gt; &#39;foo&#39;, &#39;requiredParameterD&#39; =&amp;gt; null, ]; $missing = [ &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, ]; $result = array_keys(array_diff_key(array_flip($required), $data)); $this-&amp;gt;assertEquals($missing, $result); } } &amp;ldquo;Validator&amp;rdquo; &amp;lt;?</description>
             <content type="html"><![CDATA[<p>Frequently checking for required parameters is needed. Locating the missing parameters helps in creating a helpful message for the client.</p>
 <h2 id="test">Test</h2>
 <pre><code class="language-php">&lt;?php
@@ -822,8 +824,8 @@ class RoadRunnerTest extends TestCase
             
             <guid>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</guid>
             <description>Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.
- Disclaimer: This article does not describe setting up / creating GPG keys.
- Check your GPG keys gpg --list-secret-keys --keyid-format LONG  Which gives you a list like the following.
+Disclaimer: This article does not describe setting up / creating GPG keys.
+Check your GPG keys gpg --list-secret-keys --keyid-format LONG Which gives you a list like the following.
 C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx ---------------------------------------------------- sec rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC] 2B30F6F709EF48E6AF669C3FD7EB1106B4940744 uid [ ultimativ ] Andi Rückauer &amp;lt;arueckauer@example.</description>
             <content type="html"><![CDATA[<p>Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.</p>
 <blockquote>
@@ -866,8 +868,8 @@ uid              [ ultimativ ] Andi Rückauer &lt;arueckauer@example.com&gt;
             
             <guid>https://arueckauer.github.io/posts/2020/05/replace-crlf-with-lf-in-bash/</guid>
             <description>While installing a new crontab from a file, an error occured.
-Error in cron: bad minute errors in crontab file, can&#39;t install  Since the file was previously edited on Windows, line breaks consisted of a CRLF, which breaks the crontab impoort. To convert thes to LF, I used a command taken from here.
-cat input.file | sed &#39;s/\r$//&#39; &amp;gt; output.file  </description>
+Error in cron: bad minute errors in crontab file, can&#39;t install Since the file was previously edited on Windows, line breaks consisted of a CRLF, which breaks the crontab impoort. To convert thes to LF, I used a command taken from here.
+cat input.file | sed &#39;s/\r$//&#39; &amp;gt; output.file </description>
             <content type="html"><![CDATA[<p>While installing a new crontab from a file, an error occured.</p>
 <pre><code class="language-bash">Error in cron: bad minute
 errors in crontab file, can't install
@@ -885,8 +887,8 @@ errors in crontab file, can't install
             
             <guid>https://arueckauer.github.io/posts/2020/04/install-composer-on-linux/</guid>
             <description>A self-reminde ron how to install on Linux. Instruction taken from here.
-curl -sS https://getcomposer.org/installer | php mv composer.phar /usr/local/bin/composer   Note: If the above fails due to permissions, run the mv line again with sudo.
- curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer  </description>
+curl -sS https://getcomposer.org/installer | php mv composer.phar /usr/local/bin/composer Note: If the above fails due to permissions, run the mv line again with sudo.
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer </description>
             <content type="html"><![CDATA[<p>A self-reminde ron how to install on Linux. Instruction taken from <a href="https://stackoverflow.com/a/32882331/9364246">here</a>.</p>
 <pre><code class="language-bash">curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
@@ -905,9 +907,9 @@ mv composer.phar /usr/local/bin/composer
             <pubDate>Wed, 29 Apr 2020 09:30:00 +0200</pubDate>
             
             <guid>https://arueckauer.github.io/posts/2020/04/how-to-setup-passwordless-ssh-login-to-nine-server/</guid>
-            <description>Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &amp;gt;&amp;gt; ~/.ssh/known_hosts  Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &#39;cat &amp;gt;&amp;gt; ~/.ssh/authorized_keys&#39; www-data@arueckauer01.nine.ch&#39;s password:  SSH Configuration ~/.ssh/config
-Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306  Alias ~/.bashrc
-alias arueckauer01=&#39;ssh arueckauer01&#39;  </description>
+            <description>Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &amp;gt;&amp;gt; ~/.ssh/known_hosts Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &#39;cat &amp;gt;&amp;gt; ~/.ssh/authorized_keys&#39; www-data@arueckauer01.nine.ch&#39;s password: SSH Configuration ~/.ssh/config
+Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306 Alias ~/.bashrc
+alias arueckauer01=&#39;ssh arueckauer01&#39; </description>
             <content type="html"><![CDATA[<h2 id="add-fingerprint-to-known_hosts">Add fingerprint to <code>known_hosts</code></h2>
 <pre><code class="language-bash">andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &gt;&gt; ~/.ssh/known_hosts
 </code></pre>
@@ -965,7 +967,8 @@ The Sysinternals Process Utilities provide PowerShell tools. Among these is PsEx
             
             <guid>https://arueckauer.github.io/posts/2020/01/how-to-minimize-signal-desktop-app-to-system-try/</guid>
             <description>Unfortunately the Signal desktop app does not offer any configuration in the GUI to allow minimization to the system tray. But there are start parameters, with which the application behavior can be controlled.
- --use-tray-icon will minimize the app to the system tray when hitting the close button --start-in-tray will start the app already minimized to the tray  To use a features, adding the wanted parameters to the shortcut.</description>
+--use-tray-icon will minimize the app to the system tray when hitting the close button --start-in-tray will start the app already minimized to the tray To use a features, adding the wanted parameters to the shortcut.
+Source</description>
             <content type="html"><![CDATA[<p>Unfortunately the Signal desktop app does not offer any configuration in the GUI to allow minimization to the system tray. But there are start parameters, with which the application behavior can be controlled.</p>
 <ul>
 <li><code>--use-tray-icon</code> will minimize the app to the system tray when hitting the close button</li>
@@ -983,9 +986,9 @@ The Sysinternals Process Utilities provide PowerShell tools. Among these is PsEx
             
             <guid>https://arueckauer.github.io/posts/2019/11/self-vs.-static/</guid>
             <description>I get confused with self and static. Then I research and learn it. Then I forget it again. And so on.
-TLDR  self refers to the same class in which the new keyword is actually written.
+TLDR self refers to the same class in which the new keyword is actually written.
 static, in PHP 5.3&amp;rsquo;s late static bindings, refers to whatever class in the hierarchy you called the method on.
- By BoltClock on Stack Overflow
+By BoltClock on Stack Overflow
 An example &amp;lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; .</description>
             <content type="html"><![CDATA[<p>I get confused with <code>self</code> and <code>static</code>. Then I research and learn it. Then I forget it again. And so on.</p>
 <h2 id="tldr">TLDR</h2>
@@ -1037,7 +1040,7 @@ get_called_class(): Bar
             
             <guid>https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/</guid>
             <description>This is an addition to my previous post Console Commands in an Expressive Applicaton. It provides two more real-world examples for Console Commands in Expressive applications.
-mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run();  Source</description>
+mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run(); Source</description>
             <content type="html"><![CDATA[<p>This is an addition to my previous post <a href="https://arueckauer.github.io/posts/2019/07/console-commands-in-an-expressive-applicaton/">Console Commands in an Expressive Applicaton</a>. It provides two more real-world examples for Console Commands in Expressive applications.</p>
 <h2 id="mwops-blog">mwop&rsquo;s blog</h2>
 <pre><code class="language-php">#!/usr/bin/env php
@@ -1115,10 +1118,10 @@ $application-&gt;run();
             
             <guid>https://arueckauer.github.io/posts/2019/10/logical-operator-and-operator-precedence/</guid>
             <description>@MichalBundyra tweeted yesterday:
- TIL &amp;amp;&amp;amp; and AND are not the same&amp;hellip; https://3v4l.org/dVVYc Thanks @geerteltink
- Honestly, I never use(d) and. But it is interesting to learn that there is an actual difference and not just a flavor.
+TIL &amp;amp;&amp;amp; and AND are not the same&amp;hellip; https://3v4l.org/dVVYc Thanks @geerteltink
+Honestly, I never use(d) and. But it is interesting to learn that there is an actual difference and not just a flavor.
 Michal compares the output of and and &amp;amp;&amp;amp;.
-&amp;lt;?php $a = 2 and 3; $b = 2 &amp;amp;&amp;amp; 3; var_dump($a, $b);  Result int(2) bool(true)  Wait what?
+&amp;lt;?php $a = 2 and 3; $b = 2 &amp;amp;&amp;amp; 3; var_dump($a, $b); Result int(2) bool(true) Wait what?
 Logical Operator &amp;ldquo;and&amp;rdquo; and &amp;ldquo;&amp;amp;&amp;amp;&amp;rdquo; are not identical Logical Operators The documentation for the Logical Operators states:</description>
             <content type="html"><![CDATA[<p><a href="https://twitter.com/MichalBundyra">@MichalBundyra</a> <a href="https://twitter.com/MichalBundyra/status/1184533617600544770">tweeted</a> yesterday:</p>
 <blockquote>
@@ -1314,8 +1317,8 @@ collation-connection=utf8mb4_unicode_ci
             <guid>https://arueckauer.github.io/posts/2019/08/json-rpc-call-as-invoke-webrequest/</guid>
             <description>Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.
 Requesting the SMD is as simple as:
-Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39;  Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.
-$Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;amp;C8P&amp;gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body  With the help of [guid]::NewGuid() a new UUIDv4 is created for each request.</description>
+Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.
+$Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;amp;C8P&amp;gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request.</description>
             <content type="html"><![CDATA[<p>Lately I needed to execute a JSON-RPC call, but had neither <a href="https://www.getpostman.com/">Postman</a> nor <a href="https://insomnia.rest/">Insomnia</a> available. I wondered, if <code>Invoke-WebRequest</code> could do the job.</p>
 <p>Requesting the SMD is as simple as:</p>
 <pre><code class="language-powershell">Invoke-WebRequest -Uri 'https://localhost/api/json-rpc/authentication'
@@ -1591,7 +1594,7 @@ class SecondsAsTimeTest extends TestCase
             
             <guid>https://arueckauer.github.io/posts/2019/06/intermediate-status/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D25
- 25 % of my #100DaysOfCode and #100DaysOfBlogging challenges are completed. Time for an intermediate status review.
+25 % of my #100DaysOfCode and #100DaysOfBlogging challenges are completed. Time for an intermediate status review.
 Just do it As mentioned in my starting post, I wanted this to be a fun and learning experience. I am very happy to see that I&amp;rsquo;ve reached all of my goals so far. My greatest concern was that I would get tired of writing (almost) every day.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D25</em></p>
 <hr>
@@ -1615,9 +1618,9 @@ Just do it As mentioned in my starting post, I wanted this to be a fun and learn
             
             <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D24
- After a mentor left some feedback:
- I like that you&amp;rsquo;ve split out the direction and position. I think you can go a bit further though.
- I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure.</description>
+After a mentor left some feedback:
+I like that you&amp;rsquo;ve split out the direction and position. I think you can go a bit further though.
+I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D24</em></p>
 <hr>
 <p>After a mentor left some feedback:</p>
@@ -1648,9 +1651,9 @@ Just do it As mentioned in my starting post, I wanted this to be a fun and learn
             
             <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
- Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
- turn right, turn left and advance.  A robot can also follow instructions on how to proceed.
-  The letter-string &amp;ldquo;RAALAL&amp;rdquo; means:  Turn right Advance twice Turn left Advance once Turn left yet again   Say a robot starts at {7, 3} facing north.</description>
+Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
+turn right, turn left and advance. A robot can also follow instructions on how to proceed.
+The letter-string &amp;ldquo;RAALAL&amp;rdquo; means: Turn right Advance twice Turn left Advance once Turn left yet again Say a robot starts at {7, 3} facing north.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D23</em></p>
 <hr>
 <h2 id="instructions">Instructions</h2>
@@ -2312,11 +2315,11 @@ class Robot
             
             <guid>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D22
- A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
- Good solution
+A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
+Good solution
 Awesome! using strict_types
 It&amp;rsquo;s approved for me but try to use return types as much as possible, I&amp;rsquo;m missing initGradeIfItDoesNotExist
- This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
+This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D22</em></p>
 <hr>
 <p>A mentor commented on my <a href="/posts/2019/06/grade-school/">yesterday&rsquo;s solution</a> to the Grade School exercise.</p>
@@ -2362,17 +2365,17 @@ It&amp;rsquo;s approved for me but try to use return types as much as possible, 
             
             <guid>https://arueckauer.github.io/posts/2019/06/grade-school/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
- This Exercism exercise is straight forward.
+This Exercism exercise is straight forward.
 An extract from the instructions:
- Given students&#39; names along with the grade that they are in, create a roster for the school.
+Given students&amp;rsquo; names along with the grade that they are in, create a roster for the school.
 In the end, you should be able to:
- Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
+Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D21</em></p>
 <hr>
 <p>This <a href="https://exercism.io">Exercism</a> exercise is straight forward.</p>
 <p>An extract from the instructions:</p>
 <blockquote>
-<p>Given students' names along with the grade that they are in, create a roster for the school.</p>
+<p>Given students&rsquo; names along with the grade that they are in, create a roster for the school.</p>
 <p>In the end, you should be able to:</p>
 <ul>
 <li>Add a student&rsquo;s name to the roster for a grade</li>
@@ -2430,9 +2433,9 @@ class School
             
             <guid>https://arueckauer.github.io/posts/2019/06/meetup-side-exercise/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D20
- Next up in the PHP sidetrack is the Meetup exercise.
+Next up in the PHP sidetrack is the Meetup exercise.
 A function is provided with the arguments
- (int) year, (int) month, (string) descriptor and (string) weekday  and expected to process the input and return an instance of DateTime with the corresponding date.
+(int) year, (int) month, (string) descriptor and (string) weekday and expected to process the input and return an instance of DateTime with the corresponding date.
 While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D20</em></p>
 <hr>
@@ -2559,8 +2562,8 @@ function modify_teenth_date(DateTime $date) : DateTime
             
             <guid>https://arueckauer.github.io/posts/2019/06/sieve-of-eratosthenes-side-exercise/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D19
- Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
- In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2.</description>
+Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
+In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D19</em></p>
 <hr>
 <p>Today I am solving the Sieve of Eratosthenes side exercise of the <a href="https://exercism.io">Exercism</a> PHP track.</p>
@@ -2619,10 +2622,11 @@ function removeMultiplesFromRange(int $prime, array &amp;$range) : void
             
             <guid>https://arueckauer.github.io/posts/2019/06/120ish-html-elements/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D18
- Bruce Lawson gave an outstanding keynote called How to make Loveliness: an HTML Treasure Hunt at the IPC 2019.
+Bruce Lawson gave an outstanding keynote called How to make Loveliness: an HTML Treasure Hunt at the IPC 2019.
 He shared that most 2-year-olds can say about 100 words and with 2 ½ years they know close to 300 words.
 One of his challenges was to
- Learn the semantics of HTML. There are 120(ish) elements, that&amp;rsquo;s all!</description>
+Learn the semantics of HTML. There are 120(ish) elements, that&amp;rsquo;s all!
+Bruce let us know that using HTML (and CSS) wherever possible, will be</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D18</em></p>
 <hr>
 <p><a href="https://twitter.com/brucel">Bruce Lawson</a> gave an outstanding keynote called <a href="https://phpconference.com/web-development/how-to-make-loveliness-an-html-treasure-hunt/">How to make Loveliness: an HTML Treasure Hunt</a> at the IPC 2019.</p>
@@ -2669,7 +2673,7 @@ One of his challenges was to
             
             <guid>https://arueckauer.github.io/posts/2019/06/to-jwt-or-not-to-jwt/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D17
- At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors.</description>
+At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D17</em></p>
 <hr>
 <p>At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors.</p>
@@ -2711,7 +2715,7 @@ One of his challenges was to
             
             <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-three/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D16
- Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de
+Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de
 Arne and Sebastian deliver messages from real world problems they tackled together. It&amp;rsquo;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D16</em></p>
 <hr>
@@ -2859,7 +2863,7 @@ Kubernetes is the new OS</p>
             
             <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-two/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D15
- I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
+I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
 Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;SQL renaissance ambassador&amp;rdquo;, independent author, trainer, and consultant on all things SQL</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D15</em></p>
 <hr>
@@ -3035,7 +3039,7 @@ GROUPING SETS</p>
             
             <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-one/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D14
- This was a great first day
+This was a great first day
 How to make Loveliness: an HTML Treasure Hunt Keynote by Bruce Lawson, one of the editors of the W3C’s HTML5.3 specification
 To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&amp;rsquo;s (well at least my) full attention.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D14</em></p>
@@ -3107,7 +3111,7 @@ To me, this was the best keynote I have ever attended. He presented a topic that
             
             <guid>https://arueckauer.github.io/posts/2019/06/difference-of-squares-part-ii/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D13
- In the meanwhile, dstockto reviewed and approved my solution. 🤘🏼 Funny story: He found my blog and saw my submission here before seeing it on Exercism.
+In the meanwhile, dstockto reviewed and approved my solution. 🤘🏼 Funny story: He found my blog and saw my submission here before seeing it on Exercism.
 He gave me an interesting additional challenge, to use &amp;ldquo;closed&amp;rdquo; form math-based solutions. This would also allow performance improvement, since the current implementation will take longer the larger $number is.
 Square Of Sum For this function dstockto mentioned the Gauss formula.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D13</em></p>
@@ -3145,7 +3149,7 @@ function squareOfSum(int $number) : int
             
             <guid>https://arueckauer.github.io/posts/2019/06/php-version-manager-first-idea/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D12
- With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the nvm. I am aware of the phpvm package. This package provided by Anthony Ferrara is far from stable and currently supports only Ubuntu.</description>
+With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the nvm. I am aware of the phpvm package. This package provided by Anthony Ferrara is far from stable and currently supports only Ubuntu.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D12</em></p>
 <hr>
 <p>With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the <a href="https://github.com/nvm-sh/nvm">nvm</a>. I am aware of the <a href="https://github.com/ircmaxell/phpvm">phpvm</a> package. This package provided by <a href="https://twitter.com/ircmaxell">Anthony Ferrara</a> is far from stable and currently supports only Ubuntu. My focus will be the Windows platform.</p>
@@ -3174,7 +3178,7 @@ function squareOfSum(int $number) : int
             <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D11
 This is part four of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure   Today I finally breathe life into the module function. 🕺🏼
+Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Today I finally breathe life into the module function. 🕺🏼
 Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D11</em></p>
 <p>This is part four of a series of articles about the <a href="https://github.com/arueckauer/pvs">PHP Version Switcher</a>.</p>
@@ -3321,7 +3325,7 @@ Export-ModuleMember -Function pvs
             <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-structure/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D10
 This is part three of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function   Today I will talk about the structural concept of the PHP Version Switcher.
+Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function Today I will talk about the structural concept of the PHP Version Switcher.
 On Windows you need to add the path of your PHP location to the system environment variable PATH.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D10</em></p>
 <p>This is part three of a series of articles about the <a href="https://github.com/arueckauer/pvs">PHP Version Switcher</a>.</p>
@@ -3359,7 +3363,7 @@ On Windows you need to add the path of your PHP location to the system environme
             <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-naming-convention/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D9
 This is part two of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Yesterday I started off, moving for my PHP version switcher to a new home by creating a PowerShell module.
+Part One: Php Version Switcher: PowerShell Module Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function Yesterday I started off, moving for my PHP version switcher to a new home by creating a PowerShell module.
 Whilst the import of the module and invocation of the function worked, the Import-Module throw a warning:</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D9</em></p>
 <p>This is part two of a series of articles about the <a href="https://github.com/arueckauer/pvs">PHP Version Switcher</a>.</p>
@@ -3461,7 +3465,7 @@ Use         Other
             <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
 This is part one of a series of articles about the PHP Version Switcher.
- Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.</description>
+Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D8</em></p>
 <p>This is part one of a series of articles about the <a href="https://github.com/arueckauer/pvs">PHP Version Switcher</a>.</p>
 <ul>
@@ -3593,7 +3597,7 @@ This is part one of a series of articles about the PHP Version Switcher.
             
             <guid>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D7
- Today I am solving the Difference of Squares of the PHP track on Exercism.
+Today I am solving the Difference of Squares of the PHP track on Exercism.
 Exercism offers its users learning new programming languages through exercises with the valuable feedback of mentors. It currently has 50 different language tracks like C#, Go, Kotlin, TypeScript and many others. Head over to Exercism to join.
 Introduction The source of this exercise is Problem 6 of the Euler project.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D7</em></p>
@@ -3737,10 +3741,11 @@ function difference(int $number) : int
             
             <guid>https://arueckauer.github.io/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D6
-  [The Twelve-Factor App] requires strict separation of config from code.
- Taken from factor three of The Twelve-Factor App.
+[The Twelve-Factor App] requires strict separation of config from code.
+Taken from factor three of The Twelve-Factor App.
 Today I am studying about how to achieve this requirement making usage of phpdotenv in a Zend Expressive context.
-I will not go into details on and advantages of this concept. A leave that up to other resources.</description>
+I will not go into details on and advantages of this concept. A leave that up to other resources.
+phpdotenv This package</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D6</em></p>
 <hr>
 <blockquote>
@@ -3818,9 +3823,9 @@ return [
             
             <guid>https://arueckauer.github.io/posts/2019/05/day-5-a-change-for-the-better/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D5
- Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
+Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
 I see some issues with that.
- Build has a dependency on configuration. The build process for an application should stay the same.</description>
+Build has a dependency on configuration. The build process for an application should stay the same.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D5</em></p>
 <hr>
 <p>Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.</p>
@@ -3891,7 +3896,7 @@ class ComposerScripts
             
             <guid>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
- Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
+Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
 Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D4</em></p>
@@ -3964,9 +3969,9 @@ Optimization levels There are two levels of optimization and the second level co
             
             <guid>https://arueckauer.github.io/posts/2019/05/day-3-keep-a-changelog/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D3
- Today I was working with keep a changelog, especially with Matthew Weier O&amp;rsquo;Phinney&amp;rsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
+Today I was working with keep a changelog, especially with Matthew Weier O&amp;rsquo;Phinney&amp;rsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
 Installation Setup is thanks to composer straight-forward. You can either install it locally or globally. I went with the latter.
-composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already, remember to add the global composer bin path to your PATH environment variable.</description>
+composer global require phly/keep-a-changelog If you haven&amp;rsquo;t already, remember to add the global composer bin path to your PATH environment variable.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D3</em></p>
 <hr>
 <p>Today I was working with <a href="https://keepachangelog.com/">keep a changelog</a>, especially with <a href="https://mwop.net/">Matthew Weier O&rsquo;Phinney</a>&rsquo;s <a href="https://github.com/phly/keep-a-changelog">implementation</a> of it. I am fascinated by the idea of managing the CHANGELOG from the command line.</p>
@@ -4014,8 +4019,8 @@ composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already,
             
             <guid>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D2
- Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
- code structure, DI container, router, template engine and error handler.  It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.</description>
+Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
+code structure, DI container, router, template engine and error handler. It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D2</em></p>
 <hr>
 <p>Whenever starting a new <a href="https://getexpressive.org">Zend Expressive</a> project, I use the handy <code>zendframework/zend-expressive-skeleton</code>. It creates an almost empty Expressive application structure with your choice of</p>
@@ -4138,7 +4143,7 @@ composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already,
             
             <guid>https://arueckauer.github.io/posts/2019/05/day-1-getting-started-with-terraform/</guid>
             <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D1
- This year I attended the Global Azure Bootcamp in Zürich. It was a very well organized conference with lots of interesting sessions. I definitely will go again next year!
+This year I attended the Global Azure Bootcamp in Zürich. It was a very well organized conference with lots of interesting sessions. I definitely will go again next year!
 One of my favorites was Terraform and Azure - How to GitOps by Sandro Koechli and Jörn Stenkamp. They introduced the idea of managing infrastructure as code with Git. This concept was new to me and very exciting.</description>
             <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D1</em></p>
 <hr>

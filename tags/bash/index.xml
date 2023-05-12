@@ -15,8 +15,8 @@
       
       <guid>https://arueckauer.github.io/posts/2020/05/replace-crlf-with-lf-in-bash/</guid>
       <description>While installing a new crontab from a file, an error occured.
-Error in cron: bad minute errors in crontab file, can&#39;t install  Since the file was previously edited on Windows, line breaks consisted of a CRLF, which breaks the crontab impoort. To convert thes to LF, I used a command taken from here.
-cat input.file | sed &#39;s/\r$//&#39; &amp;gt; output.file  </description>
+Error in cron: bad minute errors in crontab file, can&#39;t install Since the file was previously edited on Windows, line breaks consisted of a CRLF, which breaks the crontab impoort. To convert thes to LF, I used a command taken from here.
+cat input.file | sed &#39;s/\r$//&#39; &amp;gt; output.file </description>
     </item>
     
   </channel>

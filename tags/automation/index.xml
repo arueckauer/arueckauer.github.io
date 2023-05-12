@@ -15,9 +15,9 @@
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-5-a-change-for-the-better/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D5
- Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
+Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
 I see some issues with that.
- Build has a dependency on configuration. The build process for an application should stay the same.</description>
+Build has a dependency on configuration. The build process for an application should stay the same.</description>
     </item>
     
   </channel>

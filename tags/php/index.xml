@@ -26,7 +26,7 @@ The README describes how to use the package.</description>
       <guid>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-symfony-console-application/</guid>
       <description>This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on StackOverflow. In here I describe it in more detail.
 To capture exceptions thrown in Symfony console application in Sentry, the Symfony Event Dispatcher is used.
-composer require symfony/event-dispatcher  The Event Dispatcher provides a console.error event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.</description>
+composer require symfony/event-dispatcher The Event Dispatcher provides a console.error event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.</description>
     </item>
     
     <item>
@@ -36,7 +36,7 @@ composer require symfony/event-dispatcher  The Event Dispatcher provides a conso
       
       <guid>https://arueckauer.github.io/posts/2022/07/create-datetime-from-format-without-time/</guid>
       <description>By adding an exclamation mark to the format argument, PHP will ignore the remaining date/time units and set them to zero.
-echo (DateTimeImmutable::createFromFormat(&#39;Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL; echo (DateTimeImmutable::createFromFormat(&#39;!Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL;  2022-07-11T08:35:53+02:00 2022-07-11T00:00:00+02:00  </description>
+echo (DateTimeImmutable::createFromFormat(&#39;Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL; echo (DateTimeImmutable::createFromFormat(&#39;!Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL; 2022-07-11T08:35:53+02:00 2022-07-11T00:00:00+02:00 </description>
     </item>
     
     <item>
@@ -46,7 +46,7 @@ echo (DateTimeImmutable::createFromFormat(&#39;Y-m-d&#39;, &#39;2022-07-11&#39;)
       
       <guid>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</guid>
       <description>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
- A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster.</description>
+A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster.</description>
     </item>
     
     <item>
@@ -56,7 +56,8 @@ echo (DateTimeImmutable::createFromFormat(&#39;Y-m-d&#39;, &#39;2022-07-11&#39;)
       
       <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</guid>
       <description>This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
- vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.</description>
+vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.
+https://github.com/bovigo/vfsStream</description>
     </item>
     
     <item>
@@ -85,7 +86,7 @@ Since refactoring legacy code is part of my daily job, some of these insights ar
       <pubDate>Mon, 05 Apr 2021 14:50:55 +0200</pubDate>
       
       <guid>https://arueckauer.github.io/posts/2021/04/log-potential-calls-of-a-deprecated-method/</guid>
-      <description>&amp;lt;?php declare(strict_types=1); namespace arueckauer\Php80; use Exception; use JetBrains\PhpStorm\Deprecated; use Psr\Log\LoggerInterface; use function explode; use const PHP_EOL; class SomeClass { private LoggerInterface $logger; public function __construct(LoggerInterface $logger) { $this-&amp;gt;logger = $logger; } #[Deprecated] public function deprecated(): void { $this-&amp;gt;logger-&amp;gt;error( __METHOD__, [ &#39;trace&#39; =&amp;gt; explode( PHP_EOL, (new Exception())-&amp;gt;getTraceAsString() ), ] ); } }  </description>
+      <description>&amp;lt;?php declare(strict_types=1); namespace arueckauer\Php80; use Exception; use JetBrains\PhpStorm\Deprecated; use Psr\Log\LoggerInterface; use function explode; use const PHP_EOL; class SomeClass { private LoggerInterface $logger; public function __construct(LoggerInterface $logger) { $this-&amp;gt;logger = $logger; } #[Deprecated] public function deprecated(): void { $this-&amp;gt;logger-&amp;gt;error( __METHOD__, [ &#39;trace&#39; =&amp;gt; explode( PHP_EOL, (new Exception())-&amp;gt;getTraceAsString() ), ] ); } } </description>
     </item>
     
     <item>
@@ -95,7 +96,7 @@ Since refactoring legacy code is part of my daily job, some of these insights ar
       
       <guid>https://arueckauer.github.io/posts/2021/03/comma-separated-list-with-and-in-php/</guid>
       <description>How to display an array to comma separated values with a last &amp;ldquo;and&amp;rdquo; by Frédéric Bouchery.
-&amp;lt;?php declare(strict_types=1); $array = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;]; echo implode(&#39;, &#39;, array_slice($array, 0, -1)) . &#39; and &#39; . end($array);   3v4l.org Source  </description>
+&amp;lt;?php declare(strict_types=1); $array = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;]; echo implode(&#39;, &#39;, array_slice($array, 0, -1)) . &#39; and &#39; . end($array); 3v4l.org Source </description>
     </item>
     
     <item>
@@ -105,9 +106,9 @@ Since refactoring legacy code is part of my daily job, some of these insights ar
       
       <guid>https://arueckauer.github.io/posts/2019/11/self-vs.-static/</guid>
       <description>I get confused with self and static. Then I research and learn it. Then I forget it again. And so on.
-TLDR  self refers to the same class in which the new keyword is actually written.
+TLDR self refers to the same class in which the new keyword is actually written.
 static, in PHP 5.3&amp;rsquo;s late static bindings, refers to whatever class in the hierarchy you called the method on.
- By BoltClock on Stack Overflow
+By BoltClock on Stack Overflow
 An example &amp;lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; .</description>
     </item>
     
@@ -118,7 +119,7 @@ An example &amp;lt;?php class Foo { public function __invoke() { echo &#39;self:
       
       <guid>https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/</guid>
       <description>This is an addition to my previous post Console Commands in an Expressive Applicaton. It provides two more real-world examples for Console Commands in Expressive applications.
-mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run();  Source</description>
+mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run(); Source</description>
     </item>
     
     <item>
@@ -128,10 +129,10 @@ mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://open
       
       <guid>https://arueckauer.github.io/posts/2019/10/logical-operator-and-operator-precedence/</guid>
       <description>@MichalBundyra tweeted yesterday:
- TIL &amp;amp;&amp;amp; and AND are not the same&amp;hellip; https://3v4l.org/dVVYc Thanks @geerteltink
- Honestly, I never use(d) and. But it is interesting to learn that there is an actual difference and not just a flavor.
+TIL &amp;amp;&amp;amp; and AND are not the same&amp;hellip; https://3v4l.org/dVVYc Thanks @geerteltink
+Honestly, I never use(d) and. But it is interesting to learn that there is an actual difference and not just a flavor.
 Michal compares the output of and and &amp;amp;&amp;amp;.
-&amp;lt;?php $a = 2 and 3; $b = 2 &amp;amp;&amp;amp; 3; var_dump($a, $b);  Result int(2) bool(true)  Wait what?
+&amp;lt;?php $a = 2 and 3; $b = 2 &amp;amp;&amp;amp; 3; var_dump($a, $b); Result int(2) bool(true) Wait what?
 Logical Operator &amp;ldquo;and&amp;rdquo; and &amp;ldquo;&amp;amp;&amp;amp;&amp;rdquo; are not identical Logical Operators The documentation for the Logical Operators states:</description>
     </item>
     
@@ -164,9 +165,9 @@ Since I am not using the package within a Symfony application, I needed somehow 
       
       <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D24
- After a mentor left some feedback:
- I like that you&amp;rsquo;ve split out the direction and position. I think you can go a bit further though.
- I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure.</description>
+After a mentor left some feedback:
+I like that you&amp;rsquo;ve split out the direction and position. I think you can go a bit further though.
+I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure.</description>
     </item>
     
     <item>
@@ -176,9 +177,9 @@ Since I am not using the package within a Symfony application, I needed somehow 
       
       <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
- Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
- turn right, turn left and advance.  A robot can also follow instructions on how to proceed.
-  The letter-string &amp;ldquo;RAALAL&amp;rdquo; means:  Turn right Advance twice Turn left Advance once Turn left yet again   Say a robot starts at {7, 3} facing north.</description>
+Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
+turn right, turn left and advance. A robot can also follow instructions on how to proceed.
+The letter-string &amp;ldquo;RAALAL&amp;rdquo; means: Turn right Advance twice Turn left Advance once Turn left yet again Say a robot starts at {7, 3} facing north.</description>
     </item>
     
     <item>
@@ -188,11 +189,11 @@ Since I am not using the package within a Symfony application, I needed somehow 
       
       <guid>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D22
- A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
- Good solution
+A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
+Good solution
 Awesome! using strict_types
 It&amp;rsquo;s approved for me but try to use return types as much as possible, I&amp;rsquo;m missing initGradeIfItDoesNotExist
- This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
+This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
     </item>
     
     <item>
@@ -202,11 +203,11 @@ It&amp;rsquo;s approved for me but try to use return types as much as possible, 
       
       <guid>https://arueckauer.github.io/posts/2019/06/grade-school/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
- This Exercism exercise is straight forward.
+This Exercism exercise is straight forward.
 An extract from the instructions:
- Given students&#39; names along with the grade that they are in, create a roster for the school.
+Given students&amp;rsquo; names along with the grade that they are in, create a roster for the school.
 In the end, you should be able to:
- Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
+Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
     </item>
     
     <item>
@@ -216,9 +217,9 @@ In the end, you should be able to:
       
       <guid>https://arueckauer.github.io/posts/2019/06/meetup-side-exercise/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D20
- Next up in the PHP sidetrack is the Meetup exercise.
+Next up in the PHP sidetrack is the Meetup exercise.
 A function is provided with the arguments
- (int) year, (int) month, (string) descriptor and (string) weekday  and expected to process the input and return an instance of DateTime with the corresponding date.
+(int) year, (int) month, (string) descriptor and (string) weekday and expected to process the input and return an instance of DateTime with the corresponding date.
 While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated.</description>
     </item>
     
@@ -229,8 +230,8 @@ While year, month and weekday are an exact representation of their values, the d
       
       <guid>https://arueckauer.github.io/posts/2019/06/sieve-of-eratosthenes-side-exercise/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D19
- Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
- In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2.</description>
+Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
+In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime.</description>
     </item>
     
     <item>
@@ -240,7 +241,7 @@ While year, month and weekday are an exact representation of their values, the d
       
       <guid>https://arueckauer.github.io/posts/2019/06/to-jwt-or-not-to-jwt/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D17
- At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors.</description>
+At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors.</description>
     </item>
     
     <item>
@@ -250,7 +251,7 @@ While year, month and weekday are an exact representation of their values, the d
       
       <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-three/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D16
- Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de
+Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de
 Arne and Sebastian deliver messages from real world problems they tackled together. It&amp;rsquo;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience.</description>
     </item>
     
@@ -261,7 +262,7 @@ Arne and Sebastian deliver messages from real world problems they tackled togeth
       
       <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-two/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D15
- I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
+I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
 Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;SQL renaissance ambassador&amp;rdquo;, independent author, trainer, and consultant on all things SQL</description>
     </item>
     
@@ -272,7 +273,7 @@ Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;SQL renaissance
       
       <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-one/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D14
- This was a great first day
+This was a great first day
 How to make Loveliness: an HTML Treasure Hunt Keynote by Bruce Lawson, one of the editors of the W3C’s HTML5.3 specification
 To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&amp;rsquo;s (well at least my) full attention.</description>
     </item>
@@ -284,7 +285,7 @@ To me, this was the best keynote I have ever attended. He presented a topic that
       
       <guid>https://arueckauer.github.io/posts/2019/06/difference-of-squares-part-ii/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D13
- In the meanwhile, dstockto reviewed and approved my solution. 🤘🏼 Funny story: He found my blog and saw my submission here before seeing it on Exercism.
+In the meanwhile, dstockto reviewed and approved my solution. 🤘🏼 Funny story: He found my blog and saw my submission here before seeing it on Exercism.
 He gave me an interesting additional challenge, to use &amp;ldquo;closed&amp;rdquo; form math-based solutions. This would also allow performance improvement, since the current implementation will take longer the larger $number is.
 Square Of Sum For this function dstockto mentioned the Gauss formula.</description>
     </item>

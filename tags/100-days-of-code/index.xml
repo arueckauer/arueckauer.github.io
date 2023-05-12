@@ -15,7 +15,7 @@
       
       <guid>https://arueckauer.github.io/posts/2019/06/intermediate-status/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D25
- 25 % of my #100DaysOfCode and #100DaysOfBlogging challenges are completed. Time for an intermediate status review.
+25 % of my #100DaysOfCode and #100DaysOfBlogging challenges are completed. Time for an intermediate status review.
 Just do it As mentioned in my starting post, I wanted this to be a fun and learning experience. I am very happy to see that I&amp;rsquo;ve reached all of my goals so far. My greatest concern was that I would get tired of writing (almost) every day.</description>
     </item>
     
@@ -26,9 +26,9 @@ Just do it As mentioned in my starting post, I wanted this to be a fun and learn
       
       <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator-chapter-2/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D24
- After a mentor left some feedback:
- I like that you&amp;rsquo;ve split out the direction and position. I think you can go a bit further though.
- I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure.</description>
+After a mentor left some feedback:
+I like that you&amp;rsquo;ve split out the direction and position. I think you can go a bit further though.
+I went back to the drawing board. 😊 Seriously, I read the feedback on my mobile and let the thought process do its work. Then I took pen and paper and outlined an improved structure.</description>
     </item>
     
     <item>
@@ -38,9 +38,9 @@ Just do it As mentioned in my starting post, I wanted this to be a fun and learn
       
       <guid>https://arueckauer.github.io/posts/2019/06/robot-simulator/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
- Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
- turn right, turn left and advance.  A robot can also follow instructions on how to proceed.
-  The letter-string &amp;ldquo;RAALAL&amp;rdquo; means:  Turn right Advance twice Turn left Advance once Turn left yet again   Say a robot starts at {7, 3} facing north.</description>
+Instructions Today&amp;rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
+turn right, turn left and advance. A robot can also follow instructions on how to proceed.
+The letter-string &amp;ldquo;RAALAL&amp;rdquo; means: Turn right Advance twice Turn left Advance once Turn left yet again Say a robot starts at {7, 3} facing north.</description>
     </item>
     
     <item>
@@ -50,11 +50,11 @@ Just do it As mentioned in my starting post, I wanted this to be a fun and learn
       
       <guid>https://arueckauer.github.io/posts/2019/06/use-return-types-as-much-as-possible/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D22
- A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
- Good solution
+A mentor commented on my yesterday&amp;rsquo;s solution to the Grade School exercise.
+Good solution
 Awesome! using strict_types
 It&amp;rsquo;s approved for me but try to use return types as much as possible, I&amp;rsquo;m missing initGradeIfItDoesNotExist
- This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
+This post will reflect some of my personal thoughts. Since the mentor&amp;rsquo;s suggestion could be just some personal preference, I will not name the mentor.</description>
     </item>
     
     <item>
@@ -64,11 +64,11 @@ It&amp;rsquo;s approved for me but try to use return types as much as possible, 
       
       <guid>https://arueckauer.github.io/posts/2019/06/grade-school/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D21
- This Exercism exercise is straight forward.
+This Exercism exercise is straight forward.
 An extract from the instructions:
- Given students&#39; names along with the grade that they are in, create a roster for the school.
+Given students&amp;rsquo; names along with the grade that they are in, create a roster for the school.
 In the end, you should be able to:
- Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
+Add a student&amp;rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.</description>
     </item>
     
     <item>
@@ -78,9 +78,9 @@ In the end, you should be able to:
       
       <guid>https://arueckauer.github.io/posts/2019/06/meetup-side-exercise/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D20
- Next up in the PHP sidetrack is the Meetup exercise.
+Next up in the PHP sidetrack is the Meetup exercise.
 A function is provided with the arguments
- (int) year, (int) month, (string) descriptor and (string) weekday  and expected to process the input and return an instance of DateTime with the corresponding date.
+(int) year, (int) month, (string) descriptor and (string) weekday and expected to process the input and return an instance of DateTime with the corresponding date.
 While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated.</description>
     </item>
     
@@ -91,8 +91,8 @@ While year, month and weekday are an exact representation of their values, the d
       
       <guid>https://arueckauer.github.io/posts/2019/06/sieve-of-eratosthenes-side-exercise/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D19
- Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
- In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2.</description>
+Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
+In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime.</description>
     </item>
     
     <item>
@@ -102,10 +102,11 @@ While year, month and weekday are an exact representation of their values, the d
       
       <guid>https://arueckauer.github.io/posts/2019/06/120ish-html-elements/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D18
- Bruce Lawson gave an outstanding keynote called How to make Loveliness: an HTML Treasure Hunt at the IPC 2019.
+Bruce Lawson gave an outstanding keynote called How to make Loveliness: an HTML Treasure Hunt at the IPC 2019.
 He shared that most 2-year-olds can say about 100 words and with 2 ½ years they know close to 300 words.
 One of his challenges was to
- Learn the semantics of HTML. There are 120(ish) elements, that&amp;rsquo;s all!</description>
+Learn the semantics of HTML. There are 120(ish) elements, that&amp;rsquo;s all!
+Bruce let us know that using HTML (and CSS) wherever possible, will be</description>
     </item>
     
     <item>
@@ -115,7 +116,7 @@ One of his challenges was to
       
       <guid>https://arueckauer.github.io/posts/2019/06/to-jwt-or-not-to-jwt/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D17
- At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors.</description>
+At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors.</description>
     </item>
     
     <item>
@@ -125,7 +126,7 @@ One of his challenges was to
       
       <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-three/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D16
- Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de
+Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de
 Arne and Sebastian deliver messages from real world problems they tackled together. It&amp;rsquo;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience.</description>
     </item>
     
@@ -136,7 +137,7 @@ Arne and Sebastian deliver messages from real world problems they tackled togeth
       
       <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-two/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D15
- I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
+I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
 Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;SQL renaissance ambassador&amp;rdquo;, independent author, trainer, and consultant on all things SQL</description>
     </item>
     
@@ -147,7 +148,7 @@ Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;SQL renaissance
       
       <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-one/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D14
- This was a great first day
+This was a great first day
 How to make Loveliness: an HTML Treasure Hunt Keynote by Bruce Lawson, one of the editors of the W3C’s HTML5.3 specification
 To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&amp;rsquo;s (well at least my) full attention.</description>
     </item>
@@ -159,7 +160,7 @@ To me, this was the best keynote I have ever attended. He presented a topic that
       
       <guid>https://arueckauer.github.io/posts/2019/06/difference-of-squares-part-ii/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D13
- In the meanwhile, dstockto reviewed and approved my solution. 🤘🏼 Funny story: He found my blog and saw my submission here before seeing it on Exercism.
+In the meanwhile, dstockto reviewed and approved my solution. 🤘🏼 Funny story: He found my blog and saw my submission here before seeing it on Exercism.
 He gave me an interesting additional challenge, to use &amp;ldquo;closed&amp;rdquo; form math-based solutions. This would also allow performance improvement, since the current implementation will take longer the larger $number is.
 Square Of Sum For this function dstockto mentioned the Gauss formula.</description>
     </item>
@@ -171,7 +172,7 @@ Square Of Sum For this function dstockto mentioned the Gauss formula.</descripti
       
       <guid>https://arueckauer.github.io/posts/2019/06/php-version-manager-first-idea/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D12
- With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the nvm. I am aware of the phpvm package. This package provided by Anthony Ferrara is far from stable and currently supports only Ubuntu.</description>
+With a working CLI PHP version switcher, it would be very neat to also have a CLI PHP version manager, which allows the automated installation of available PHP versions. As an inspiration I am looking with one eye toward the nvm. I am aware of the phpvm package. This package provided by Anthony Ferrara is far from stable and currently supports only Ubuntu.</description>
     </item>
     
     <item>
@@ -182,7 +183,7 @@ Square Of Sum For this function dstockto mentioned the Gauss formula.</descripti
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D11
 This is part four of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure   Today I finally breathe life into the module function. 🕺🏼
+Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Today I finally breathe life into the module function. 🕺🏼
 Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges.</description>
     </item>
     
@@ -194,7 +195,7 @@ Administrator privileges Since the Apache services will be restarted, the module
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-structure/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D10
 This is part three of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function   Today I will talk about the structural concept of the PHP Version Switcher.
+Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function Today I will talk about the structural concept of the PHP Version Switcher.
 On Windows you need to add the path of your PHP location to the system environment variable PATH.</description>
     </item>
     
@@ -206,7 +207,7 @@ On Windows you need to add the path of your PHP location to the system environme
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-naming-convention/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D9
 This is part two of a series of articles about the PHP Version Switcher.
- Part One: Php Version Switcher: PowerShell Module Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Yesterday I started off, moving for my PHP version switcher to a new home by creating a PowerShell module.
+Part One: Php Version Switcher: PowerShell Module Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function Yesterday I started off, moving for my PHP version switcher to a new home by creating a PowerShell module.
 Whilst the import of the module and invocation of the function worked, the Import-Module throw a warning:</description>
     </item>
     
@@ -218,7 +219,7 @@ Whilst the import of the module and invocation of the function worked, the Impor
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
 This is part one of a series of articles about the PHP Version Switcher.
- Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function   Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.</description>
+Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.</description>
     </item>
     
     <item>
@@ -228,7 +229,7 @@ This is part one of a series of articles about the PHP Version Switcher.
       
       <guid>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D7
- Today I am solving the Difference of Squares of the PHP track on Exercism.
+Today I am solving the Difference of Squares of the PHP track on Exercism.
 Exercism offers its users learning new programming languages through exercises with the valuable feedback of mentors. It currently has 50 different language tracks like C#, Go, Kotlin, TypeScript and many others. Head over to Exercism to join.
 Introduction The source of this exercise is Problem 6 of the Euler project.</description>
     </item>
@@ -240,10 +241,11 @@ Introduction The source of this exercise is Problem 6 of the Euler project.</des
       
       <guid>https://arueckauer.github.io/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D6
-  [The Twelve-Factor App] requires strict separation of config from code.
- Taken from factor three of The Twelve-Factor App.
+[The Twelve-Factor App] requires strict separation of config from code.
+Taken from factor three of The Twelve-Factor App.
 Today I am studying about how to achieve this requirement making usage of phpdotenv in a Zend Expressive context.
-I will not go into details on and advantages of this concept. A leave that up to other resources.</description>
+I will not go into details on and advantages of this concept. A leave that up to other resources.
+phpdotenv This package</description>
     </item>
     
     <item>
@@ -253,9 +255,9 @@ I will not go into details on and advantages of this concept. A leave that up to
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-5-a-change-for-the-better/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D5
- Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
+Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
 I see some issues with that.
- Build has a dependency on configuration. The build process for an application should stay the same.</description>
+Build has a dependency on configuration. The build process for an application should stay the same.</description>
     </item>
     
     <item>
@@ -265,7 +267,7 @@ I see some issues with that.
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
- Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
+Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
 Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.</description>
     </item>
@@ -277,9 +279,9 @@ Optimization levels There are two levels of optimization and the second level co
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-3-keep-a-changelog/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D3
- Today I was working with keep a changelog, especially with Matthew Weier O&amp;rsquo;Phinney&amp;rsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
+Today I was working with keep a changelog, especially with Matthew Weier O&amp;rsquo;Phinney&amp;rsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
 Installation Setup is thanks to composer straight-forward. You can either install it locally or globally. I went with the latter.
-composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already, remember to add the global composer bin path to your PATH environment variable.</description>
+composer global require phly/keep-a-changelog If you haven&amp;rsquo;t already, remember to add the global composer bin path to your PATH environment variable.</description>
     </item>
     
     <item>
@@ -289,8 +291,8 @@ composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already,
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D2
- Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
- code structure, DI container, router, template engine and error handler.  It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.</description>
+Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
+code structure, DI container, router, template engine and error handler. It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.</description>
     </item>
     
     <item>
@@ -300,7 +302,7 @@ composer global require phly/keep-a-changelog  If you haven&amp;rsquo;t already,
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-1-getting-started-with-terraform/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D1
- This year I attended the Global Azure Bootcamp in Zürich. It was a very well organized conference with lots of interesting sessions. I definitely will go again next year!
+This year I attended the Global Azure Bootcamp in Zürich. It was a very well organized conference with lots of interesting sessions. I definitely will go again next year!
 One of my favorites was Terraform and Azure - How to GitOps by Sandro Koechli and Jörn Stenkamp. They introduced the idea of managing infrastructure as code with Git. This concept was new to me and very exciting.</description>
     </item>
     

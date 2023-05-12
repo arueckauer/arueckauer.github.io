@@ -15,7 +15,7 @@
       
       <guid>https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/</guid>
       <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
- Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
+Today I&amp;rsquo;m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
 Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.</description>
     </item>

@@ -8,7 +8,7 @@
     content="Andi Rückauer ">
 <meta name="description"
     content="This is an addition to my previous post Console Commands in an Expressive Applicaton. It provides two more real-world examples for Console Commands in Expressive applications.
-mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run();  Source" />
+mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run(); Source" />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/" />
@@ -39,7 +39,7 @@ mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://open
 <link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Console Commands in an Expressive Applicaton II">
 <meta itemprop="description" content="This is an addition to my previous post Console Commands in an Expressive Applicaton. It provides two more real-world examples for Console Commands in Expressive applications.
-mwop&rsquo;s blog #!/usr/bin/env php &lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&gt; Console\FeedAggregator::class, ])); $application-&gt;setDefaultCommand(&#39;list&#39;); $application-&gt;run();  Source"><meta itemprop="datePublished" content="2019-10-18T07:23:59+02:00" />
+mwop&rsquo;s blog #!/usr/bin/env php &lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&gt; Console\FeedAggregator::class, ])); $application-&gt;setDefaultCommand(&#39;list&#39;); $application-&gt;run(); Source"><meta itemprop="datePublished" content="2019-10-18T07:23:59+02:00" />
 <meta itemprop="dateModified" content="2019-10-17T10:04:36+02:00" />
 <meta itemprop="wordCount" content="161"><meta itemprop="image" content="https://arueckauer.github.io/"/>
 <meta itemprop="keywords" content="php,zend-expressive," /><meta name="twitter:card" content="summary_large_image"/>
@@ -47,7 +47,7 @@ mwop&rsquo;s blog #!/usr/bin/env php &lt;?php /** * @license http://opensource.o
 
 <meta name="twitter:title" content="Console Commands in an Expressive Applicaton II"/>
 <meta name="twitter:description" content="This is an addition to my previous post Console Commands in an Expressive Applicaton. It provides two more real-world examples for Console Commands in Expressive applications.
-mwop&rsquo;s blog #!/usr/bin/env php &lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&gt; Console\FeedAggregator::class, ])); $application-&gt;setDefaultCommand(&#39;list&#39;); $application-&gt;run();  Source"/>
+mwop&rsquo;s blog #!/usr/bin/env php &lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&gt; Console\FeedAggregator::class, ])); $application-&gt;setDefaultCommand(&#39;list&#39;); $application-&gt;run(); Source"/>
 
 
 
@@ -243,7 +243,7 @@ $application-&gt;run();
                 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2022</span>
+            <span>&copy; 2023</span>
             
                 <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
             
@@ -272,15 +272,15 @@ $application-&gt;run();
 
 
 
-<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.648cbdb411bb57181906d73a5e1c9f26680cde5c03e04de5350e4d20c491ff3db990efb0d71e1fd5f57604f06c78379555c7f829c9bf6c2782acfd6471867611.js" integrity="sha512-ZIy9tBG7VxgZBtc6XhyfJmgM3lwD4E3lNQ5NIMSR/z25kO&#43;w1x4f1fV2BPBseDeVVcf4Kcm/bCeCrP1kcYZ2EQ=="></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-35992501-5', 'auto');
-        ga('send', 'pageview');
-    </script>
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.70004749d7b6d0f87e110ca85b40838ec55915bb2dd29b18758517db8b3a131bbb53cdbb99a553d079f8e5e30a6c5eccf4a057356a7d24d94a071f05100fd11b.js" integrity="sha512-cABHSde20Ph&#43;EQyoW0CDjsVZFbst0psYdYUX24s6Exu7U827maVT0Hn45eMKbF7M9KBXNWp9JNlKBx8FEA/RGw=="></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-DS58P4P02H');
+	</script>
 
 
 	
@@ -291,6 +291,7 @@ $application-&gt;run();
 <script>
     feather.replace()
 </script>
+g
 
     </body>
 </html>

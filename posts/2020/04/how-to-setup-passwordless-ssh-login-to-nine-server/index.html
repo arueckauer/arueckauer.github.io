@@ -7,9 +7,9 @@
 <meta name="author"
     content="Andi Rückauer ">
 <meta name="description"
-    content="Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &amp;gt;&amp;gt; ~/.ssh/known_hosts  Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &#39;cat &amp;gt;&amp;gt; ~/.ssh/authorized_keys&#39; www-data@arueckauer01.nine.ch&#39;s password:  SSH Configuration ~/.ssh/config
-Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306  Alias ~/.bashrc
-alias arueckauer01=&#39;ssh arueckauer01&#39;  " />
+    content="Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &amp;gt;&amp;gt; ~/.ssh/known_hosts Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &#39;cat &amp;gt;&amp;gt; ~/.ssh/authorized_keys&#39; www-data@arueckauer01.nine.ch&#39;s password: SSH Configuration ~/.ssh/config
+Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306 Alias ~/.bashrc
+alias arueckauer01=&#39;ssh arueckauer01&#39; " />
 <meta name="keywords" content="andi, rückauer, blog, software, development" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://arueckauer.github.io/posts/2020/04/how-to-setup-passwordless-ssh-login-to-nine-server/" />
@@ -39,18 +39,18 @@ alias arueckauer01=&#39;ssh arueckauer01&#39;  " />
 <link rel="mask-icon" href="https://arueckauer.github.io/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="https://arueckauer.github.io/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="How to Setup passwordless SSH Login to Nine Server">
-<meta itemprop="description" content="Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &gt;&gt; ~/.ssh/known_hosts  Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &#39;cat &gt;&gt; ~/.ssh/authorized_keys&#39; www-data@arueckauer01.nine.ch&#39;s password:  SSH Configuration ~/.ssh/config
-Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306  Alias ~/.bashrc
-alias arueckauer01=&#39;ssh arueckauer01&#39;  "><meta itemprop="datePublished" content="2020-04-29T09:30:00+02:00" />
+<meta itemprop="description" content="Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &gt;&gt; ~/.ssh/known_hosts Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &#39;cat &gt;&gt; ~/.ssh/authorized_keys&#39; www-data@arueckauer01.nine.ch&#39;s password: SSH Configuration ~/.ssh/config
+Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306 Alias ~/.bashrc
+alias arueckauer01=&#39;ssh arueckauer01&#39; "><meta itemprop="datePublished" content="2020-04-29T09:30:00+02:00" />
 <meta itemprop="dateModified" content="2020-04-29T09:39:26+02:00" />
 <meta itemprop="wordCount" content="45"><meta itemprop="image" content="https://arueckauer.github.io/"/>
 <meta itemprop="keywords" content="ssh,linux," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://arueckauer.github.io/"/>
 
 <meta name="twitter:title" content="How to Setup passwordless SSH Login to Nine Server"/>
-<meta name="twitter:description" content="Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &gt;&gt; ~/.ssh/known_hosts  Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &#39;cat &gt;&gt; ~/.ssh/authorized_keys&#39; www-data@arueckauer01.nine.ch&#39;s password:  SSH Configuration ~/.ssh/config
-Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306  Alias ~/.bashrc
-alias arueckauer01=&#39;ssh arueckauer01&#39;  "/>
+<meta name="twitter:description" content="Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &gt;&gt; ~/.ssh/known_hosts Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &#39;cat &gt;&gt; ~/.ssh/authorized_keys&#39; www-data@arueckauer01.nine.ch&#39;s password: SSH Configuration ~/.ssh/config
+Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306 Alias ~/.bashrc
+alias arueckauer01=&#39;ssh arueckauer01&#39; "/>
 
 
 
@@ -198,7 +198,7 @@ www-data@arueckauer01.nine.ch's password:
                 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2022</span>
+            <span>&copy; 2023</span>
             
                 <span><a href="https://arueckauer.github.io/">Andi Rückauer</a></span>
             
@@ -227,15 +227,15 @@ www-data@arueckauer01.nine.ch's password:
 
 
 
-<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.648cbdb411bb57181906d73a5e1c9f26680cde5c03e04de5350e4d20c491ff3db990efb0d71e1fd5f57604f06c78379555c7f829c9bf6c2782acfd6471867611.js" integrity="sha512-ZIy9tBG7VxgZBtc6XhyfJmgM3lwD4E3lNQ5NIMSR/z25kO&#43;w1x4f1fV2BPBseDeVVcf4Kcm/bCeCrP1kcYZ2EQ=="></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-35992501-5', 'auto');
-        ga('send', 'pageview');
-    </script>
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.70004749d7b6d0f87e110ca85b40838ec55915bb2dd29b18758517db8b3a131bbb53cdbb99a553d079f8e5e30a6c5eccf4a057356a7d24d94a071f05100fd11b.js" integrity="sha512-cABHSde20Ph&#43;EQyoW0CDjsVZFbst0psYdYUX24s6Exu7U827maVT0Hn45eMKbF7M9KBXNWp9JNlKBx8FEA/RGw=="></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-DS58P4P02H');
+	</script>
 
 
 	
@@ -246,6 +246,7 @@ www-data@arueckauer01.nine.ch's password:
 <script>
     feather.replace()
 </script>
+g
 
     </body>
 </html>
