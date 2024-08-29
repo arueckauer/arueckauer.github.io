@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>json-rpc on Andi Rückauer</title>
+    <title>Json-Rpc on Andi Rückauer</title>
     <link>https://arueckauer.github.io/tags/json-rpc/</link>
-    <description>Recent content in json-rpc on Andi Rückauer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <description>Recent content in Json-Rpc on Andi Rückauer</description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 05 Aug 2019 16:56:17 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/json-rpc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Aug 2019 16:56:17 +0200</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/tags/json-rpc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JSON-RPC call as Invoke-WebRequest</title>
       <link>https://arueckauer.github.io/posts/2019/08/json-rpc-call-as-invoke-webrequest/</link>
       <pubDate>Mon, 05 Aug 2019 16:56:17 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/08/json-rpc-call-as-invoke-webrequest/</guid>
-      <description>Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.
-Requesting the SMD is as simple as:
-Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.
-$Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;amp;C8P&amp;gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request.</description>
+      <description>Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.&#xA;Requesting the SMD is as simple as:&#xA;Invoke-WebRequest -Uri &amp;#39;https://localhost/api/json-rpc/authentication&amp;#39; Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.&#xA;$Body = @{ jsonrpc = &amp;#39;2.0&amp;#39;; method = &amp;#39;authenticate&amp;#39;; params = @{ username = &amp;#39;arueckauer&amp;#39;; password = &amp;#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;amp;C8P&amp;gt;=x^6)Hasdh]HHtXQ#dLg&amp;#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &amp;#39;https://localhost/api/json-rpc/authentication&amp;#39; -Method &amp;#39;POST&amp;#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request.</description>
     </item>
-    
   </channel>
 </rss>

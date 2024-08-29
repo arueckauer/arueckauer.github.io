@@ -1,43 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>legacy-code on Andi Rückauer</title>
+    <title>Legacy-Code on Andi Rückauer</title>
     <link>https://arueckauer.github.io/tags/legacy-code/</link>
-    <description>Recent content in legacy-code on Andi Rückauer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <description>Recent content in Legacy-Code on Andi Rückauer</description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 08 Jul 2021 15:04:22 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/legacy-code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jul 2021 15:04:22 +0200</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/tags/legacy-code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Testing Legacy Code: Filesystem Interaction</title>
       <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</link>
       <pubDate>Thu, 08 Jul 2021 15:04:22 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</guid>
-      <description>This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
-vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.
-https://github.com/bovigo/vfsStream</description>
+      <description>This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.&#xA;vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.&#xA;https://github.com/bovigo/vfsStream</description>
     </item>
-    
     <item>
       <title>Testing Legacy Code: Static Method Invocation</title>
       <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-static-method-invocation/</link>
       <pubDate>Wed, 07 Jul 2021 14:37:12 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-static-method-invocation/</guid>
-      <description>This is the second article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
-The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the staticExpects() method.</description>
+      <description>This is the second article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.&#xA;The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the staticExpects() method.</description>
     </item>
-    
     <item>
       <title>Testing Legacy Code: Echo Output</title>
       <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-echo-output/</link>
       <pubDate>Tue, 06 Jul 2021 13:51:58 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-echo-output/</guid>
-      <description>A tweet of Simon Schubert made me aware of an awesome talk entitled Testing Legacy Code: Safe Refactoring by Katy Ereira. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.
-Since refactoring legacy code is part of my daily job, some of these insights are quite useful and I would like to keep a note for myself in a few blog posts.</description>
+      <description>A tweet of Simon Schubert made me aware of an awesome talk entitled Testing Legacy Code: Safe Refactoring by Katy Ereira. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.&#xA;Since refactoring legacy code is part of my daily job, some of these insights are quite useful and I would like to keep a note for myself in a few blog posts.</description>
     </item>
-    
   </channel>
 </rss>

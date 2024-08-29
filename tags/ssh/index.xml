@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ssh on Andi Rückauer</title>
+    <title>Ssh on Andi Rückauer</title>
     <link>https://arueckauer.github.io/tags/ssh/</link>
-    <description>Recent content in ssh on Andi Rückauer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <description>Recent content in Ssh on Andi Rückauer</description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 29 Apr 2020 09:30:00 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Apr 2020 09:30:00 +0200</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Setup passwordless SSH Login to Nine Server</title>
       <link>https://arueckauer.github.io/posts/2020/04/how-to-setup-passwordless-ssh-login-to-nine-server/</link>
       <pubDate>Wed, 29 Apr 2020 09:30:00 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/04/how-to-setup-passwordless-ssh-login-to-nine-server/</guid>
-      <description>Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &amp;gt;&amp;gt; ~/.ssh/known_hosts Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &#39;cat &amp;gt;&amp;gt; ~/.ssh/authorized_keys&#39; www-data@arueckauer01.nine.ch&#39;s password: SSH Configuration ~/.ssh/config
-Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306 Alias ~/.bashrc
-alias arueckauer01=&#39;ssh arueckauer01&#39; </description>
+      <description>Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &amp;gt;&amp;gt; ~/.ssh/known_hosts Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &amp;#39;cat &amp;gt;&amp;gt; ~/.ssh/authorized_keys&amp;#39; www-data@arueckauer01.nine.ch&amp;#39;s password: SSH Configuration ~/.ssh/config&#xA;Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306 Alias ~/.bashrc&#xA;alias arueckauer01=&amp;#39;ssh arueckauer01&amp;#39; </description>
     </item>
-    
     <item>
       <title>Generate SSH Keys for Windows System account</title>
       <link>https://arueckauer.github.io/posts/2020/04/generate-ssh-keys-for-windows-system-account/</link>
       <pubDate>Tue, 21 Apr 2020 10:27:32 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/04/generate-ssh-keys-for-windows-system-account/</guid>
-      <description>Windows services usually run under the System account. In cases where a service needs SSH access like cloning a Git repository, a SSH key pair might be required. But how do you generate these keys for the System account?
-The Sysinternals Process Utilities provide PowerShell tools. Among these is PsExec, which can be used to invoke a process on a remote machine. But it also allows executing a process on the same machine under a different user.</description>
+      <description>Windows services usually run under the System account. In cases where a service needs SSH access like cloning a Git repository, a SSH key pair might be required. But how do you generate these keys for the System account?&#xA;The Sysinternals Process Utilities provide PowerShell tools. Among these is PsExec, which can be used to invoke a process on a remote machine. But it also allows executing a process on the same machine under a different user.</description>
     </item>
-    
   </channel>
 </rss>

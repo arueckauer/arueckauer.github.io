@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>signal on Andi Rückauer</title>
+    <title>Signal on Andi Rückauer</title>
     <link>https://arueckauer.github.io/tags/signal/</link>
-    <description>Recent content in signal on Andi Rückauer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <description>Recent content in Signal on Andi Rückauer</description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 20 Jan 2020 10:45:25 +0100</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/signal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jan 2020 10:45:25 +0100</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/tags/signal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to minimize Signal desktop app to system try</title>
       <link>https://arueckauer.github.io/posts/2020/01/how-to-minimize-signal-desktop-app-to-system-try/</link>
       <pubDate>Mon, 20 Jan 2020 10:45:25 +0100</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/01/how-to-minimize-signal-desktop-app-to-system-try/</guid>
-      <description>Unfortunately the Signal desktop app does not offer any configuration in the GUI to allow minimization to the system tray. But there are start parameters, with which the application behavior can be controlled.
---use-tray-icon will minimize the app to the system tray when hitting the close button --start-in-tray will start the app already minimized to the tray To use a features, adding the wanted parameters to the shortcut.
-Source</description>
+      <description>Unfortunately the Signal desktop app does not offer any configuration in the GUI to allow minimization to the system tray. But there are start parameters, with which the application behavior can be controlled.&#xA;--use-tray-icon will minimize the app to the system tray when hitting the close button --start-in-tray will start the app already minimized to the tray To use a features, adding the wanted parameters to the shortcut.&#xA;Source</description>
     </item>
-    
   </channel>
 </rss>

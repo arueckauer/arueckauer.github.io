@@ -1,71 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>powershell on Andi Rückauer</title>
+    <title>Powershell on Andi Rückauer</title>
     <link>https://arueckauer.github.io/tags/powershell/</link>
-    <description>Recent content in powershell on Andi Rückauer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <description>Recent content in Powershell on Andi Rückauer</description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 05 Aug 2019 16:56:17 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Aug 2019 16:56:17 +0200</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JSON-RPC call as Invoke-WebRequest</title>
       <link>https://arueckauer.github.io/posts/2019/08/json-rpc-call-as-invoke-webrequest/</link>
       <pubDate>Mon, 05 Aug 2019 16:56:17 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/08/json-rpc-call-as-invoke-webrequest/</guid>
-      <description>Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.
-Requesting the SMD is as simple as:
-Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.
-$Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;amp;C8P&amp;gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request.</description>
+      <description>Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.&#xA;Requesting the SMD is as simple as:&#xA;Invoke-WebRequest -Uri &amp;#39;https://localhost/api/json-rpc/authentication&amp;#39; Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.&#xA;$Body = @{ jsonrpc = &amp;#39;2.0&amp;#39;; method = &amp;#39;authenticate&amp;#39;; params = @{ username = &amp;#39;arueckauer&amp;#39;; password = &amp;#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;amp;C8P&amp;gt;=x^6)Hasdh]HHtXQ#dLg&amp;#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &amp;#39;https://localhost/api/json-rpc/authentication&amp;#39; -Method &amp;#39;POST&amp;#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request.</description>
     </item>
-    
     <item>
       <title>Php Version Switcher: The Function</title>
       <link>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/</link>
       <pubDate>Fri, 31 May 2019 22:56:25 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-function/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D11
-This is part four of a series of articles about the PHP Version Switcher.
-Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Today I finally breathe life into the module function. 🕺🏼
-Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges.</description>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D11&#xA;This is part four of a series of articles about the PHP Version Switcher.&#xA;Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Today I finally breathe life into the module function. 🕺🏼&#xA;Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges.</description>
     </item>
-    
     <item>
       <title>Php Version Switcher: The Structure</title>
       <link>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-structure/</link>
       <pubDate>Thu, 30 May 2019 22:47:03 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-the-structure/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D10
-This is part three of a series of articles about the PHP Version Switcher.
-Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function Today I will talk about the structural concept of the PHP Version Switcher.
-On Windows you need to add the path of your PHP location to the system environment variable PATH.</description>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D10&#xA;This is part three of a series of articles about the PHP Version Switcher.&#xA;Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Four: Php Version Switcher: The Function Today I will talk about the structural concept of the PHP Version Switcher.&#xA;On Windows you need to add the path of your PHP location to the system environment variable PATH.</description>
     </item>
-    
     <item>
       <title>Php Version Switcher: PowerShell Naming Convention</title>
       <link>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-naming-convention/</link>
       <pubDate>Wed, 29 May 2019 20:03:47 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-naming-convention/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D9
-This is part two of a series of articles about the PHP Version Switcher.
-Part One: Php Version Switcher: PowerShell Module Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function Yesterday I started off, moving for my PHP version switcher to a new home by creating a PowerShell module.
-Whilst the import of the module and invocation of the function worked, the Import-Module throw a warning:</description>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D9&#xA;This is part two of a series of articles about the PHP Version Switcher.&#xA;Part One: Php Version Switcher: PowerShell Module Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function Yesterday I started off, moving for my PHP version switcher to a new home by creating a PowerShell module.&#xA;Whilst the import of the module and invocation of the function worked, the Import-Module throw a warning:</description>
     </item>
-    
     <item>
       <title>Php Version Switcher: PowerShell Module</title>
       <link>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</link>
       <pubDate>Tue, 28 May 2019 20:36:42 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
-This is part one of a series of articles about the PHP Version Switcher.
-Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.</description>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8&#xA;This is part one of a series of articles about the PHP Version Switcher.&#xA;Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&amp;rsquo;s still not the choice environment for a typical PHP web application.</description>
     </item>
-    
   </channel>
 </rss>

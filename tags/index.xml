@@ -4,234 +4,185 @@
     <title>Tags on Andi Rückauer</title>
     <link>https://arueckauer.github.io/tags/</link>
     <description>Recent content in Tags on Andi Rückauer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 26 Oct 2022 10:50:35 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Oct 2022 10:50:35 +0200</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>mezzio</title>
+      <title>Mezzio</title>
       <link>https://arueckauer.github.io/tags/mezzio/</link>
       <pubDate>Wed, 26 Oct 2022 10:50:35 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/mezzio/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>php</title>
+      <title>Php</title>
       <link>https://arueckauer.github.io/tags/php/</link>
       <pubDate>Wed, 26 Oct 2022 10:50:35 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/php/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>sentry</title>
+      <title>Sentry</title>
       <link>https://arueckauer.github.io/tags/sentry/</link>
       <pubDate>Wed, 26 Oct 2022 10:50:35 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/sentry/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>symfony</title>
+      <title>Symfony</title>
       <link>https://arueckauer.github.io/tags/symfony/</link>
       <pubDate>Wed, 26 Oct 2022 10:00:19 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/symfony/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>datetime</title>
+      <title>Datetime</title>
       <link>https://arueckauer.github.io/tags/datetime/</link>
       <pubDate>Mon, 11 Jul 2022 08:36:34 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/datetime/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>psr-7</title>
+      <title>Psr-7</title>
       <link>https://arueckauer.github.io/tags/psr-7/</link>
       <pubDate>Mon, 27 Jun 2022 14:00:18 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/psr-7/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>stream</title>
+      <title>Stream</title>
       <link>https://arueckauer.github.io/tags/stream/</link>
       <pubDate>Mon, 27 Jun 2022 14:00:18 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/stream/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>zip</title>
+      <title>Zip</title>
       <link>https://arueckauer.github.io/tags/zip/</link>
       <pubDate>Mon, 27 Jun 2022 14:00:18 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/zip/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>git</title>
+      <title>Git</title>
       <link>https://arueckauer.github.io/tags/git/</link>
       <pubDate>Mon, 06 Sep 2021 13:01:22 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/git/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>legacy-code</title>
+      <title>Legacy-Code</title>
       <link>https://arueckauer.github.io/tags/legacy-code/</link>
       <pubDate>Thu, 08 Jul 2021 15:04:22 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/legacy-code/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>testing</title>
+      <title>Testing</title>
       <link>https://arueckauer.github.io/tags/testing/</link>
       <pubDate>Thu, 08 Jul 2021 15:04:22 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/testing/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>array</title>
+      <title>Array</title>
       <link>https://arueckauer.github.io/tags/array/</link>
       <pubDate>Mon, 01 Mar 2021 14:14:48 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/array/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>apache</title>
+      <title>Apache</title>
       <link>https://arueckauer.github.io/tags/apache/</link>
       <pubDate>Mon, 01 Feb 2021 13:54:00 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/apache/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>webserver</title>
+      <title>Webserver</title>
       <link>https://arueckauer.github.io/tags/webserver/</link>
       <pubDate>Mon, 01 Feb 2021 13:54:00 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/webserver/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>windows</title>
+      <title>Windows</title>
       <link>https://arueckauer.github.io/tags/windows/</link>
       <pubDate>Mon, 01 Feb 2021 13:54:00 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/windows/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>phpunit</title>
+      <title>Phpunit</title>
       <link>https://arueckauer.github.io/tags/phpunit/</link>
       <pubDate>Mon, 04 Jan 2021 11:21:11 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/phpunit/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>xdebug</title>
+      <title>Xdebug</title>
       <link>https://arueckauer.github.io/tags/xdebug/</link>
       <pubDate>Fri, 27 Nov 2020 11:52:58 +0100</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/xdebug/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>validation</title>
+      <title>Validation</title>
       <link>https://arueckauer.github.io/tags/validation/</link>
       <pubDate>Fri, 12 Jun 2020 13:50:26 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/validation/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>doctrine</title>
+      <title>Doctrine</title>
       <link>https://arueckauer.github.io/tags/doctrine/</link>
       <pubDate>Tue, 09 Jun 2020 21:16:59 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/doctrine/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>gpg</title>
+      <title>Gpg</title>
       <link>https://arueckauer.github.io/tags/gpg/</link>
       <pubDate>Tue, 05 May 2020 06:34:25 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/gpg/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>bash</title>
+      <title>Bash</title>
       <link>https://arueckauer.github.io/tags/bash/</link>
       <pubDate>Fri, 01 May 2020 07:09:07 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/bash/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>linux</title>
+      <title>Linux</title>
       <link>https://arueckauer.github.io/tags/linux/</link>
       <pubDate>Fri, 01 May 2020 07:09:07 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/linux/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>composer</title>
+      <title>Composer</title>
       <link>https://arueckauer.github.io/tags/composer/</link>
       <pubDate>Thu, 30 Apr 2020 08:06:13 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/composer/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ssh</title>
+      <title>Ssh</title>
       <link>https://arueckauer.github.io/tags/ssh/</link>
       <pubDate>Wed, 29 Apr 2020 09:30:00 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/ssh/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>signal</title>
+      <title>Signal</title>
       <link>https://arueckauer.github.io/tags/signal/</link>
       <pubDate>Mon, 20 Jan 2020 10:45:25 +0100</pubDate>
-      
       <guid>https://arueckauer.github.io/tags/signal/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

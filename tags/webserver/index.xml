@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>webserver on Andi Rückauer</title>
+    <title>Webserver on Andi Rückauer</title>
     <link>https://arueckauer.github.io/tags/webserver/</link>
-    <description>Recent content in webserver on Andi Rückauer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <description>Recent content in Webserver on Andi Rückauer</description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 01 Feb 2021 13:54:00 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/webserver/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Feb 2021 13:54:00 +0200</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/tags/webserver/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>could not bind to address [::]:80 - Webserver port 80 blocked on Windows</title>
       <link>https://arueckauer.github.io/posts/2021/02/could-not-bind-to-address-80-webserver-port-80-blocked-on-windows/</link>
       <pubDate>Mon, 01 Feb 2021 13:54:00 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2021/02/could-not-bind-to-address-80-webserver-port-80-blocked-on-windows/</guid>
-      <description>Several Windows services might block port 80 and the local webserver like Apache HTTP or Nginx from starting.
-PS C:\www\httpd-2.4.46-win64-VS16\Apache24&amp;gt; .\bin\httpd.exe (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address [::]:80 (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address 0.</description>
+      <description>Several Windows services might block port 80 and the local webserver like Apache HTTP or Nginx from starting.&#xA;PS C:\www\httpd-2.4.46-win64-VS16\Apache24&amp;gt; .\bin\httpd.exe (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address [::]:80 (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address 0.</description>
     </item>
-    
   </channel>
 </rss>

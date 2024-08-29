@@ -1,45 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on Andi Rückauer</title>
+    <title>Linux on Andi Rückauer</title>
     <link>https://arueckauer.github.io/tags/linux/</link>
-    <description>Recent content in linux on Andi Rückauer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <description>Recent content in Linux on Andi Rückauer</description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 01 May 2020 07:09:07 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 May 2020 07:09:07 +0200</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Replace Crlf With Lf in Bash</title>
       <link>https://arueckauer.github.io/posts/2020/05/replace-crlf-with-lf-in-bash/</link>
       <pubDate>Fri, 01 May 2020 07:09:07 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/05/replace-crlf-with-lf-in-bash/</guid>
-      <description>While installing a new crontab from a file, an error occured.
-Error in cron: bad minute errors in crontab file, can&#39;t install Since the file was previously edited on Windows, line breaks consisted of a CRLF, which breaks the crontab impoort. To convert thes to LF, I used a command taken from here.
-cat input.file | sed &#39;s/\r$//&#39; &amp;gt; output.file </description>
+      <description>While installing a new crontab from a file, an error occured.&#xA;Error in cron: bad minute errors in crontab file, can&amp;#39;t install Since the file was previously edited on Windows, line breaks consisted of a CRLF, which breaks the crontab impoort. To convert thes to LF, I used a command taken from here.&#xA;cat input.file | sed &amp;#39;s/\r$//&amp;#39; &amp;gt; output.file </description>
     </item>
-    
     <item>
       <title>Install Composer on Linux</title>
       <link>https://arueckauer.github.io/posts/2020/04/install-composer-on-linux/</link>
       <pubDate>Thu, 30 Apr 2020 08:06:13 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/04/install-composer-on-linux/</guid>
-      <description>A self-reminde ron how to install on Linux. Instruction taken from here.
-curl -sS https://getcomposer.org/installer | php mv composer.phar /usr/local/bin/composer Note: If the above fails due to permissions, run the mv line again with sudo.
-curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer </description>
+      <description>A self-reminde ron how to install on Linux. Instruction taken from here.&#xA;curl -sS https://getcomposer.org/installer | php mv composer.phar /usr/local/bin/composer Note: If the above fails due to permissions, run the mv line again with sudo.&#xA;curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer </description>
     </item>
-    
     <item>
       <title>How to Setup passwordless SSH Login to Nine Server</title>
       <link>https://arueckauer.github.io/posts/2020/04/how-to-setup-passwordless-ssh-login-to-nine-server/</link>
       <pubDate>Wed, 29 Apr 2020 09:30:00 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/04/how-to-setup-passwordless-ssh-login-to-nine-server/</guid>
-      <description>Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &amp;gt;&amp;gt; ~/.ssh/known_hosts Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &#39;cat &amp;gt;&amp;gt; ~/.ssh/authorized_keys&#39; www-data@arueckauer01.nine.ch&#39;s password: SSH Configuration ~/.ssh/config
-Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306 Alias ~/.bashrc
-alias arueckauer01=&#39;ssh arueckauer01&#39; </description>
+      <description>Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &amp;gt;&amp;gt; ~/.ssh/known_hosts Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &amp;#39;cat &amp;gt;&amp;gt; ~/.ssh/authorized_keys&amp;#39; www-data@arueckauer01.nine.ch&amp;#39;s password: SSH Configuration ~/.ssh/config&#xA;Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306 Alias ~/.bashrc&#xA;alias arueckauer01=&amp;#39;ssh arueckauer01&amp;#39; </description>
     </item>
-    
   </channel>
 </rss>

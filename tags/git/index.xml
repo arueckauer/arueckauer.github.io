@@ -1,46 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>git on Andi Rückauer</title>
+    <title>Git on Andi Rückauer</title>
     <link>https://arueckauer.github.io/tags/git/</link>
-    <description>Recent content in git on Andi Rückauer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <description>Recent content in Git on Andi Rückauer</description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 06 Sep 2021 13:01:22 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Sep 2021 13:01:22 +0200</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Change one or more older commit messages</title>
       <link>https://arueckauer.github.io/posts/2021/09/change-one-or-more-older-commit-messages/</link>
       <pubDate>Mon, 06 Sep 2021 13:01:22 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2021/09/change-one-or-more-older-commit-messages/</guid>
-      <description>As EmmaBostian said:
-If it makes you feel any better&amp;hellip; nobody actually knows how to use Git. We all just memorize a few shell commands and hope nothing implodes.
-The post How to Change a Git Commit Message helped me to change the commit messages on previous commits. A word of caution: rebase rewrites the commit history. It is strongly discouraged to rebase commits that are already pushed remote/origin.
-To change the message of any of the last 5 commits, execute the following command which will display the latest 5 commits in the editor.</description>
+      <description>As EmmaBostian said:&#xA;If it makes you feel any better&amp;hellip; nobody actually knows how to use Git. We all just memorize a few shell commands and hope nothing implodes.&#xA;The post How to Change a Git Commit Message helped me to change the commit messages on previous commits. A word of caution: rebase rewrites the commit history. It is strongly discouraged to rebase commits that are already pushed remote/origin.&#xA;To change the message of any of the last 5 commits, execute the following command which will display the latest 5 commits in the editor.</description>
     </item>
-    
     <item>
       <title>Configure Winmerge as Git Mergetool on Windows</title>
       <link>https://arueckauer.github.io/posts/2020/10/configure-winmerge-as-git-mergetool-on-windows/</link>
       <pubDate>Thu, 15 Oct 2020 06:46:34 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/10/configure-winmerge-as-git-mergetool-on-windows/</guid>
-      <description>Today I wanted to set up WinMerge as default mergetool for Git. In my research I came across this helpful Gist by Shawn Dumas.
-[mergetool] prompt = false keepBackup = false keepTemporaries = false [merge] tool = winmerge [mergetool &amp;quot;winmerge&amp;quot;] name = WinMerge trustExitCode = true cmd = &amp;quot;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&amp;quot; -u -e -dl \&amp;quot;Local\&amp;quot; -dr \&amp;quot;Remote\&amp;quot; $LOCAL $REMOTE $MERGED [diff] tool = winmerge [difftool &amp;quot;winmerge&amp;quot;] name = WinMerge trustExitCode = true cmd = &amp;quot;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.</description>
+      <description>Today I wanted to set up WinMerge as default mergetool for Git. In my research I came across this helpful Gist by Shawn Dumas.&#xA;[mergetool] prompt = false keepBackup = false keepTemporaries = false [merge] tool = winmerge [mergetool &amp;#34;winmerge&amp;#34;] name = WinMerge trustExitCode = true cmd = &amp;#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&amp;#34; -u -e -dl \&amp;#34;Local\&amp;#34; -dr \&amp;#34;Remote\&amp;#34; $LOCAL $REMOTE $MERGED [diff] tool = winmerge [difftool &amp;#34;winmerge&amp;#34;] name = WinMerge trustExitCode = true cmd = &amp;#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.</description>
     </item>
-    
     <item>
       <title>Signing Git Commits with GPG on Windows</title>
       <link>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</link>
       <pubDate>Tue, 05 May 2020 06:34:25 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</guid>
-      <description>Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.
-Disclaimer: This article does not describe setting up / creating GPG keys.
-Check your GPG keys gpg --list-secret-keys --keyid-format LONG Which gives you a list like the following.
-C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx ---------------------------------------------------- sec rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC] 2B30F6F709EF48E6AF669C3FD7EB1106B4940744 uid [ ultimativ ] Andi Rückauer &amp;lt;arueckauer@example.</description>
+      <description>Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.&#xA;Disclaimer: This article does not describe setting up / creating GPG keys.&#xA;Check your GPG keys gpg --list-secret-keys --keyid-format LONG Which gives you a list like the following.&#xA;C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx ---------------------------------------------------- sec rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC] 2B30F6F709EF48E6AF669C3FD7EB1106B4940744 uid [ ultimativ ] Andi Rückauer &amp;lt;arueckauer@example.</description>
     </item>
-    
   </channel>
 </rss>

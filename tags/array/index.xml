@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>array on Andi Rückauer</title>
+    <title>Array on Andi Rückauer</title>
     <link>https://arueckauer.github.io/tags/array/</link>
-    <description>Recent content in array on Andi Rückauer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <description>Recent content in Array on Andi Rückauer</description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 01 Mar 2021 14:14:48 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/array/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Mar 2021 14:14:48 +0200</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/tags/array/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Comma separated list with and in PHP</title>
       <link>https://arueckauer.github.io/posts/2021/03/comma-separated-list-with-and-in-php/</link>
       <pubDate>Mon, 01 Mar 2021 14:14:48 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2021/03/comma-separated-list-with-and-in-php/</guid>
-      <description>How to display an array to comma separated values with a last &amp;ldquo;and&amp;rdquo; by Frédéric Bouchery.
-&amp;lt;?php declare(strict_types=1); $array = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;]; echo implode(&#39;, &#39;, array_slice($array, 0, -1)) . &#39; and &#39; . end($array); 3v4l.org Source </description>
+      <description>How to display an array to comma separated values with a last &amp;ldquo;and&amp;rdquo; by Frédéric Bouchery.&#xA;&amp;lt;?php declare(strict_types=1); $array = [&amp;#39;a&amp;#39;,&amp;#39;b&amp;#39;,&amp;#39;c&amp;#39;,&amp;#39;d&amp;#39;,&amp;#39;e&amp;#39;]; echo implode(&amp;#39;, &amp;#39;, array_slice($array, 0, -1)) . &amp;#39; and &amp;#39; . end($array); 3v4l.org Source </description>
     </item>
-    
   </channel>
 </rss>

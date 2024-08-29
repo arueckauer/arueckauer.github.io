@@ -4,30 +4,24 @@
     <title>DevOps on Andi Rückauer</title>
     <link>https://arueckauer.github.io/tags/devops/</link>
     <description>Recent content in DevOps on Andi Rückauer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 20 May 2019 22:00:00 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 May 2019 22:00:00 +0200</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Day 1: Getting started with Terraform</title>
       <link>https://arueckauer.github.io/posts/2019/05/day-1-getting-started-with-terraform/</link>
       <pubDate>Mon, 20 May 2019 22:00:00 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/05/day-1-getting-started-with-terraform/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D1
-This year I attended the Global Azure Bootcamp in Zürich. It was a very well organized conference with lots of interesting sessions. I definitely will go again next year!
-One of my favorites was Terraform and Azure - How to GitOps by Sandro Koechli and Jörn Stenkamp. They introduced the idea of managing infrastructure as code with Git. This concept was new to me and very exciting.</description>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D1&#xA;This year I attended the Global Azure Bootcamp in Zürich. It was a very well organized conference with lots of interesting sessions. I definitely will go again next year!&#xA;One of my favorites was Terraform and Azure - How to GitOps by Sandro Koechli and Jörn Stenkamp. They introduced the idea of managing infrastructure as code with Git. This concept was new to me and very exciting.</description>
     </item>
-    
     <item>
       <title>100 Days of Code</title>
       <link>https://arueckauer.github.io/posts/2019/05/100-days-of-code/</link>
       <pubDate>Mon, 20 May 2019 06:00:00 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/05/100-days-of-code/</guid>
-      <description>Lately quite a few posts on the #100DaysOfCode challenge have come up on my Twitter timeline. I was curious what it is all about. So, I started to do some research and I really liked what I was reading.
-In this post I am writing about my own commitment to the challenge. If you want to know more about it yourself, start reading the initial article on medium or go straight to the official website.</description>
+      <description>Lately quite a few posts on the #100DaysOfCode challenge have come up on my Twitter timeline. I was curious what it is all about. So, I started to do some research and I really liked what I was reading.&#xA;In this post I am writing about my own commitment to the challenge. If you want to know more about it yourself, start reading the initial article on medium or go straight to the official website.</description>
     </item>
-    
   </channel>
 </rss>

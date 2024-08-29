@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>validation on Andi Rückauer</title>
+    <title>Validation on Andi Rückauer</title>
     <link>https://arueckauer.github.io/tags/validation/</link>
-    <description>Recent content in validation on Andi Rückauer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <description>Recent content in Validation on Andi Rückauer</description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 12 Jun 2020 13:50:26 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/validation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Jun 2020 13:50:26 +0200</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/tags/validation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Determine missing required parameters</title>
       <link>https://arueckauer.github.io/posts/2020/06/determine-missing-required-parameters/</link>
       <pubDate>Fri, 12 Jun 2020 13:50:26 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/06/determine-missing-required-parameters/</guid>
-      <description>Frequently checking for required parameters is needed. Locating the missing parameters helps in creating a helpful message for the client.
-Test &amp;lt;?php declare(strict_types=1); namespace AppTest\Validator; use PHPUnit\Framework\TestCase; use function array_diff_key; use function array_flip; use function array_keys; class RequiredParameterTest extends TestCase { public function testGetMissingParameters(): void { $required = [ &#39;requiredParameterA&#39;, &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, &#39;requiredParameterD&#39;, ]; $data = [ &#39;requiredParameterA&#39; =&amp;gt; &#39;foo&#39;, &#39;requiredParameterD&#39; =&amp;gt; null, ]; $missing = [ &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, ]; $result = array_keys(array_diff_key(array_flip($required), $data)); $this-&amp;gt;assertEquals($missing, $result); } } &amp;ldquo;Validator&amp;rdquo; &amp;lt;?</description>
+      <description>Frequently checking for required parameters is needed. Locating the missing parameters helps in creating a helpful message for the client.&#xA;Test &amp;lt;?php declare(strict_types=1); namespace AppTest\Validator; use PHPUnit\Framework\TestCase; use function array_diff_key; use function array_flip; use function array_keys; class RequiredParameterTest extends TestCase { public function testGetMissingParameters(): void { $required = [ &amp;#39;requiredParameterA&amp;#39;, &amp;#39;requiredParameterB&amp;#39;, &amp;#39;requiredParameterC&amp;#39;, &amp;#39;requiredParameterD&amp;#39;, ]; $data = [ &amp;#39;requiredParameterA&amp;#39; =&amp;gt; &amp;#39;foo&amp;#39;, &amp;#39;requiredParameterD&amp;#39; =&amp;gt; null, ]; $missing = [ &amp;#39;requiredParameterB&amp;#39;, &amp;#39;requiredParameterC&amp;#39;, ]; $result = array_keys(array_diff_key(array_flip($required), $data)); $this-&amp;gt;assertEquals($missing, $result); } } &amp;ldquo;Validator&amp;rdquo; &amp;lt;?</description>
     </item>
-    
   </channel>
 </rss>

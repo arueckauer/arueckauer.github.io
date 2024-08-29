@@ -4,275 +4,185 @@
     <title>Andi Rückauer</title>
     <link>https://arueckauer.github.io/</link>
     <description>Recent content on Andi Rückauer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 26 Oct 2022 10:50:35 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Oct 2022 10:50:35 +0200</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Capturing Exceptions in Sentry Thrown in Mezzio Application</title>
       <link>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-mezzio-application/</link>
       <pubDate>Wed, 26 Oct 2022 10:50:35 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-mezzio-application/</guid>
-      <description>The package arueckauer/mezzio-sentry-delegator provides a delegator factory and an error listener with which exceptions thrown in a Mezzio application can be captured in Sentry.
-The README describes how to use the package.</description>
+      <description>The package arueckauer/mezzio-sentry-delegator provides a delegator factory and an error listener with which exceptions thrown in a Mezzio application can be captured in Sentry.&#xA;The README describes how to use the package.</description>
     </item>
-    
     <item>
       <title>Capturing Exceptions in Sentry Thrown in Symfony Console Application</title>
       <link>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-symfony-console-application/</link>
       <pubDate>Wed, 26 Oct 2022 10:00:19 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-symfony-console-application/</guid>
-      <description>This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on StackOverflow. In here I describe it in more detail.
-To capture exceptions thrown in Symfony console application in Sentry, the Symfony Event Dispatcher is used.
-composer require symfony/event-dispatcher The Event Dispatcher provides a console.error event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.</description>
+      <description>This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on StackOverflow. In here I describe it in more detail.&#xA;To capture exceptions thrown in Symfony console application in Sentry, the Symfony Event Dispatcher is used.&#xA;composer require symfony/event-dispatcher The Event Dispatcher provides a console.error event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.</description>
     </item>
-    
     <item>
       <title>Create DateTime from format without time</title>
       <link>https://arueckauer.github.io/posts/2022/07/create-datetime-from-format-without-time/</link>
       <pubDate>Mon, 11 Jul 2022 08:36:34 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2022/07/create-datetime-from-format-without-time/</guid>
-      <description>By adding an exclamation mark to the format argument, PHP will ignore the remaining date/time units and set them to zero.
-echo (DateTimeImmutable::createFromFormat(&#39;Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL; echo (DateTimeImmutable::createFromFormat(&#39;!Y-m-d&#39;, &#39;2022-07-11&#39;))-&amp;gt;format(&#39;c&#39;) . PHP_EOL; 2022-07-11T08:35:53+02:00 2022-07-11T00:00:00+02:00 </description>
+      <description>By adding an exclamation mark to the format argument, PHP will ignore the remaining date/time units and set them to zero.&#xA;echo (DateTimeImmutable::createFromFormat(&amp;#39;Y-m-d&amp;#39;, &amp;#39;2022-07-11&amp;#39;))-&amp;gt;format(&amp;#39;c&amp;#39;) . PHP_EOL; echo (DateTimeImmutable::createFromFormat(&amp;#39;!Y-m-d&amp;#39;, &amp;#39;2022-07-11&amp;#39;))-&amp;gt;format(&amp;#39;c&amp;#39;) . PHP_EOL; 2022-07-11T08:35:53+02:00 2022-07-11T00:00:00+02:00 </description>
     </item>
-    
     <item>
       <title>Streaming Files as Zip in a Mezzio app</title>
       <link>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</link>
       <pubDate>Mon, 27 Jun 2022 14:00:18 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</guid>
-      <description>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
-A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster.</description>
+      <description>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.&#xA;A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster.</description>
     </item>
-    
     <item>
       <title>Change one or more older commit messages</title>
       <link>https://arueckauer.github.io/posts/2021/09/change-one-or-more-older-commit-messages/</link>
       <pubDate>Mon, 06 Sep 2021 13:01:22 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2021/09/change-one-or-more-older-commit-messages/</guid>
-      <description>As EmmaBostian said:
-If it makes you feel any better&amp;hellip; nobody actually knows how to use Git. We all just memorize a few shell commands and hope nothing implodes.
-The post How to Change a Git Commit Message helped me to change the commit messages on previous commits. A word of caution: rebase rewrites the commit history. It is strongly discouraged to rebase commits that are already pushed remote/origin.
-To change the message of any of the last 5 commits, execute the following command which will display the latest 5 commits in the editor.</description>
+      <description>As EmmaBostian said:&#xA;If it makes you feel any better&amp;hellip; nobody actually knows how to use Git. We all just memorize a few shell commands and hope nothing implodes.&#xA;The post How to Change a Git Commit Message helped me to change the commit messages on previous commits. A word of caution: rebase rewrites the commit history. It is strongly discouraged to rebase commits that are already pushed remote/origin.&#xA;To change the message of any of the last 5 commits, execute the following command which will display the latest 5 commits in the editor.</description>
     </item>
-    
     <item>
       <title>Testing Legacy Code: Filesystem Interaction</title>
       <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</link>
       <pubDate>Thu, 08 Jul 2021 15:04:22 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</guid>
-      <description>This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
-vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.
-https://github.com/bovigo/vfsStream</description>
+      <description>This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.&#xA;vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.&#xA;https://github.com/bovigo/vfsStream</description>
     </item>
-    
     <item>
       <title>Testing Legacy Code: Static Method Invocation</title>
       <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-static-method-invocation/</link>
       <pubDate>Wed, 07 Jul 2021 14:37:12 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-static-method-invocation/</guid>
-      <description>This is the second article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
-The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the staticExpects() method.</description>
+      <description>This is the second article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.&#xA;The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the staticExpects() method.</description>
     </item>
-    
     <item>
       <title>Testing Legacy Code: Echo Output</title>
       <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-echo-output/</link>
       <pubDate>Tue, 06 Jul 2021 13:51:58 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-echo-output/</guid>
-      <description>A tweet of Simon Schubert made me aware of an awesome talk entitled Testing Legacy Code: Safe Refactoring by Katy Ereira. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.
-Since refactoring legacy code is part of my daily job, some of these insights are quite useful and I would like to keep a note for myself in a few blog posts.</description>
+      <description>A tweet of Simon Schubert made me aware of an awesome talk entitled Testing Legacy Code: Safe Refactoring by Katy Ereira. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.&#xA;Since refactoring legacy code is part of my daily job, some of these insights are quite useful and I would like to keep a note for myself in a few blog posts.</description>
     </item>
-    
     <item>
       <title>Log potential calls of a deprecated method</title>
       <link>https://arueckauer.github.io/posts/2021/04/log-potential-calls-of-a-deprecated-method/</link>
       <pubDate>Mon, 05 Apr 2021 14:50:55 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2021/04/log-potential-calls-of-a-deprecated-method/</guid>
-      <description>&amp;lt;?php declare(strict_types=1); namespace arueckauer\Php80; use Exception; use JetBrains\PhpStorm\Deprecated; use Psr\Log\LoggerInterface; use function explode; use const PHP_EOL; class SomeClass { private LoggerInterface $logger; public function __construct(LoggerInterface $logger) { $this-&amp;gt;logger = $logger; } #[Deprecated] public function deprecated(): void { $this-&amp;gt;logger-&amp;gt;error( __METHOD__, [ &#39;trace&#39; =&amp;gt; explode( PHP_EOL, (new Exception())-&amp;gt;getTraceAsString() ), ] ); } } </description>
+      <description>&amp;lt;?php declare(strict_types=1); namespace arueckauer\Php80; use Exception; use JetBrains\PhpStorm\Deprecated; use Psr\Log\LoggerInterface; use function explode; use const PHP_EOL; class SomeClass { private LoggerInterface $logger; public function __construct(LoggerInterface $logger) { $this-&amp;gt;logger = $logger; } #[Deprecated] public function deprecated(): void { $this-&amp;gt;logger-&amp;gt;error( __METHOD__, [ &amp;#39;trace&amp;#39; =&amp;gt; explode( PHP_EOL, (new Exception())-&amp;gt;getTraceAsString() ), ] ); } } </description>
     </item>
-    
     <item>
       <title>Comma separated list with and in PHP</title>
       <link>https://arueckauer.github.io/posts/2021/03/comma-separated-list-with-and-in-php/</link>
       <pubDate>Mon, 01 Mar 2021 14:14:48 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2021/03/comma-separated-list-with-and-in-php/</guid>
-      <description>How to display an array to comma separated values with a last &amp;ldquo;and&amp;rdquo; by Frédéric Bouchery.
-&amp;lt;?php declare(strict_types=1); $array = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;]; echo implode(&#39;, &#39;, array_slice($array, 0, -1)) . &#39; and &#39; . end($array); 3v4l.org Source </description>
+      <description>How to display an array to comma separated values with a last &amp;ldquo;and&amp;rdquo; by Frédéric Bouchery.&#xA;&amp;lt;?php declare(strict_types=1); $array = [&amp;#39;a&amp;#39;,&amp;#39;b&amp;#39;,&amp;#39;c&amp;#39;,&amp;#39;d&amp;#39;,&amp;#39;e&amp;#39;]; echo implode(&amp;#39;, &amp;#39;, array_slice($array, 0, -1)) . &amp;#39; and &amp;#39; . end($array); 3v4l.org Source </description>
     </item>
-    
     <item>
       <title>could not bind to address [::]:80 - Webserver port 80 blocked on Windows</title>
       <link>https://arueckauer.github.io/posts/2021/02/could-not-bind-to-address-80-webserver-port-80-blocked-on-windows/</link>
       <pubDate>Mon, 01 Feb 2021 13:54:00 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2021/02/could-not-bind-to-address-80-webserver-port-80-blocked-on-windows/</guid>
-      <description>Several Windows services might block port 80 and the local webserver like Apache HTTP or Nginx from starting.
-PS C:\www\httpd-2.4.46-win64-VS16\Apache24&amp;gt; .\bin\httpd.exe (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address [::]:80 (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address 0.</description>
+      <description>Several Windows services might block port 80 and the local webserver like Apache HTTP or Nginx from starting.&#xA;PS C:\www\httpd-2.4.46-win64-VS16\Apache24&amp;gt; .\bin\httpd.exe (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address [::]:80 (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address 0.</description>
     </item>
-    
     <item>
       <title>PHPUnit Test Single Method</title>
       <link>https://arueckauer.github.io/posts/2021/01/phpunit-test-single-method/</link>
       <pubDate>Mon, 04 Jan 2021 11:21:11 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2021/01/phpunit-test-single-method/</guid>
-      <description>A common search I need to do after I have not used it in a while is, how to run a single test method.
-phpunit --filter methodName path/to/file.php Credits go to Alex on Stackoverflow</description>
+      <description>A common search I need to do after I have not used it in a while is, how to run a single test method.&#xA;phpunit --filter methodName path/to/file.php Credits go to Alex on Stackoverflow</description>
     </item>
-    
     <item>
       <title>Upgrade Xdebug 2 to 3</title>
       <link>https://arueckauer.github.io/posts/2020/11/upgrade-xdebug-2-to-3/</link>
       <pubDate>Fri, 27 Nov 2020 11:52:58 +0100</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/11/upgrade-xdebug-2-to-3/</guid>
-      <description>Xdebug is an essential tool in my developing process. Most often I use it for Step Debugging code invoked from a request or CLI. With the release of Xdebug 3.0 the configuration settings changed and need adjustment in the php.ini and in my case the environment variables as well.
-In this post I am recording what needed to be changed in upgrading Xdebug. For a complete description on what changed, have a look at Upgrading from Xdebug 2 to 3.</description>
+      <description>Xdebug is an essential tool in my developing process. Most often I use it for Step Debugging code invoked from a request or CLI. With the release of Xdebug 3.0 the configuration settings changed and need adjustment in the php.ini and in my case the environment variables as well.&#xA;In this post I am recording what needed to be changed in upgrading Xdebug. For a complete description on what changed, have a look at Upgrading from Xdebug 2 to 3.</description>
     </item>
-    
     <item>
       <title>Configure Winmerge as Git Mergetool on Windows</title>
       <link>https://arueckauer.github.io/posts/2020/10/configure-winmerge-as-git-mergetool-on-windows/</link>
       <pubDate>Thu, 15 Oct 2020 06:46:34 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/10/configure-winmerge-as-git-mergetool-on-windows/</guid>
-      <description>Today I wanted to set up WinMerge as default mergetool for Git. In my research I came across this helpful Gist by Shawn Dumas.
-[mergetool] prompt = false keepBackup = false keepTemporaries = false [merge] tool = winmerge [mergetool &amp;quot;winmerge&amp;quot;] name = WinMerge trustExitCode = true cmd = &amp;quot;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&amp;quot; -u -e -dl \&amp;quot;Local\&amp;quot; -dr \&amp;quot;Remote\&amp;quot; $LOCAL $REMOTE $MERGED [diff] tool = winmerge [difftool &amp;quot;winmerge&amp;quot;] name = WinMerge trustExitCode = true cmd = &amp;quot;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.</description>
+      <description>Today I wanted to set up WinMerge as default mergetool for Git. In my research I came across this helpful Gist by Shawn Dumas.&#xA;[mergetool] prompt = false keepBackup = false keepTemporaries = false [merge] tool = winmerge [mergetool &amp;#34;winmerge&amp;#34;] name = WinMerge trustExitCode = true cmd = &amp;#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&amp;#34; -u -e -dl \&amp;#34;Local\&amp;#34; -dr \&amp;#34;Remote\&amp;#34; $LOCAL $REMOTE $MERGED [diff] tool = winmerge [difftool &amp;#34;winmerge&amp;#34;] name = WinMerge trustExitCode = true cmd = &amp;#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.</description>
     </item>
-    
     <item>
       <title>Determine missing required parameters</title>
       <link>https://arueckauer.github.io/posts/2020/06/determine-missing-required-parameters/</link>
       <pubDate>Fri, 12 Jun 2020 13:50:26 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/06/determine-missing-required-parameters/</guid>
-      <description>Frequently checking for required parameters is needed. Locating the missing parameters helps in creating a helpful message for the client.
-Test &amp;lt;?php declare(strict_types=1); namespace AppTest\Validator; use PHPUnit\Framework\TestCase; use function array_diff_key; use function array_flip; use function array_keys; class RequiredParameterTest extends TestCase { public function testGetMissingParameters(): void { $required = [ &#39;requiredParameterA&#39;, &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, &#39;requiredParameterD&#39;, ]; $data = [ &#39;requiredParameterA&#39; =&amp;gt; &#39;foo&#39;, &#39;requiredParameterD&#39; =&amp;gt; null, ]; $missing = [ &#39;requiredParameterB&#39;, &#39;requiredParameterC&#39;, ]; $result = array_keys(array_diff_key(array_flip($required), $data)); $this-&amp;gt;assertEquals($missing, $result); } } &amp;ldquo;Validator&amp;rdquo; &amp;lt;?</description>
+      <description>Frequently checking for required parameters is needed. Locating the missing parameters helps in creating a helpful message for the client.&#xA;Test &amp;lt;?php declare(strict_types=1); namespace AppTest\Validator; use PHPUnit\Framework\TestCase; use function array_diff_key; use function array_flip; use function array_keys; class RequiredParameterTest extends TestCase { public function testGetMissingParameters(): void { $required = [ &amp;#39;requiredParameterA&amp;#39;, &amp;#39;requiredParameterB&amp;#39;, &amp;#39;requiredParameterC&amp;#39;, &amp;#39;requiredParameterD&amp;#39;, ]; $data = [ &amp;#39;requiredParameterA&amp;#39; =&amp;gt; &amp;#39;foo&amp;#39;, &amp;#39;requiredParameterD&amp;#39; =&amp;gt; null, ]; $missing = [ &amp;#39;requiredParameterB&amp;#39;, &amp;#39;requiredParameterC&amp;#39;, ]; $result = array_keys(array_diff_key(array_flip($required), $data)); $this-&amp;gt;assertEquals($missing, $result); } } &amp;ldquo;Validator&amp;rdquo; &amp;lt;?</description>
     </item>
-    
     <item>
       <title>How to write unit tests with PHPUnit involving Doctrine entities</title>
       <link>https://arueckauer.github.io/posts/2020/06/how-to-write-unit-tests-with-phpunit-involving-doctrine-entities/</link>
       <pubDate>Tue, 09 Jun 2020 21:16:59 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/06/how-to-write-unit-tests-with-phpunit-involving-doctrine-entities/</guid>
-      <description>One of the main reasons for me why tight coupling is a less ideal design choice is the accompanied difficulty in testing these tight coupled components.
-Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code?</description>
+      <description>One of the main reasons for me why tight coupling is a less ideal design choice is the accompanied difficulty in testing these tight coupled components.&#xA;Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code?</description>
     </item>
-    
     <item>
       <title>Signing Git Commits with GPG on Windows</title>
       <link>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</link>
       <pubDate>Tue, 05 May 2020 06:34:25 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</guid>
-      <description>Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.
-Disclaimer: This article does not describe setting up / creating GPG keys.
-Check your GPG keys gpg --list-secret-keys --keyid-format LONG Which gives you a list like the following.
-C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx ---------------------------------------------------- sec rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC] 2B30F6F709EF48E6AF669C3FD7EB1106B4940744 uid [ ultimativ ] Andi Rückauer &amp;lt;arueckauer@example.</description>
+      <description>Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.&#xA;Disclaimer: This article does not describe setting up / creating GPG keys.&#xA;Check your GPG keys gpg --list-secret-keys --keyid-format LONG Which gives you a list like the following.&#xA;C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx ---------------------------------------------------- sec rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC] 2B30F6F709EF48E6AF669C3FD7EB1106B4940744 uid [ ultimativ ] Andi Rückauer &amp;lt;arueckauer@example.</description>
     </item>
-    
     <item>
       <title>Replace Crlf With Lf in Bash</title>
       <link>https://arueckauer.github.io/posts/2020/05/replace-crlf-with-lf-in-bash/</link>
       <pubDate>Fri, 01 May 2020 07:09:07 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/05/replace-crlf-with-lf-in-bash/</guid>
-      <description>While installing a new crontab from a file, an error occured.
-Error in cron: bad minute errors in crontab file, can&#39;t install Since the file was previously edited on Windows, line breaks consisted of a CRLF, which breaks the crontab impoort. To convert thes to LF, I used a command taken from here.
-cat input.file | sed &#39;s/\r$//&#39; &amp;gt; output.file </description>
+      <description>While installing a new crontab from a file, an error occured.&#xA;Error in cron: bad minute errors in crontab file, can&amp;#39;t install Since the file was previously edited on Windows, line breaks consisted of a CRLF, which breaks the crontab impoort. To convert thes to LF, I used a command taken from here.&#xA;cat input.file | sed &amp;#39;s/\r$//&amp;#39; &amp;gt; output.file </description>
     </item>
-    
     <item>
       <title>Install Composer on Linux</title>
       <link>https://arueckauer.github.io/posts/2020/04/install-composer-on-linux/</link>
       <pubDate>Thu, 30 Apr 2020 08:06:13 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/04/install-composer-on-linux/</guid>
-      <description>A self-reminde ron how to install on Linux. Instruction taken from here.
-curl -sS https://getcomposer.org/installer | php mv composer.phar /usr/local/bin/composer Note: If the above fails due to permissions, run the mv line again with sudo.
-curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer </description>
+      <description>A self-reminde ron how to install on Linux. Instruction taken from here.&#xA;curl -sS https://getcomposer.org/installer | php mv composer.phar /usr/local/bin/composer Note: If the above fails due to permissions, run the mv line again with sudo.&#xA;curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer </description>
     </item>
-    
     <item>
       <title>How to Setup passwordless SSH Login to Nine Server</title>
       <link>https://arueckauer.github.io/posts/2020/04/how-to-setup-passwordless-ssh-login-to-nine-server/</link>
       <pubDate>Wed, 29 Apr 2020 09:30:00 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/04/how-to-setup-passwordless-ssh-login-to-nine-server/</guid>
-      <description>Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &amp;gt;&amp;gt; ~/.ssh/known_hosts Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &#39;cat &amp;gt;&amp;gt; ~/.ssh/authorized_keys&#39; www-data@arueckauer01.nine.ch&#39;s password: SSH Configuration ~/.ssh/config
-Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306 Alias ~/.bashrc
-alias arueckauer01=&#39;ssh arueckauer01&#39; </description>
+      <description>Add fingerprint to known_hosts andi@arueckauer:~$ ssh-keyscan -H arueckauer01.nine.ch &amp;gt;&amp;gt; ~/.ssh/known_hosts Add key to server andi@arueckauer:~$ cat ~/.ssh/id_rsa.pub | ssh www-data@arueckauer01.nine.ch &amp;#39;cat &amp;gt;&amp;gt; ~/.ssh/authorized_keys&amp;#39; www-data@arueckauer01.nine.ch&amp;#39;s password: SSH Configuration ~/.ssh/config&#xA;Host arueckauer01 arueckauer01.nine.ch HostName arueckauer01.nine.ch IdentityFile ~/.ssh/id_rsa User www-data LocalForward 3310 localhost:3306 Alias ~/.bashrc&#xA;alias arueckauer01=&amp;#39;ssh arueckauer01&amp;#39; </description>
     </item>
-    
     <item>
       <title>Generate SSH Keys for Windows System account</title>
       <link>https://arueckauer.github.io/posts/2020/04/generate-ssh-keys-for-windows-system-account/</link>
       <pubDate>Tue, 21 Apr 2020 10:27:32 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/04/generate-ssh-keys-for-windows-system-account/</guid>
-      <description>Windows services usually run under the System account. In cases where a service needs SSH access like cloning a Git repository, a SSH key pair might be required. But how do you generate these keys for the System account?
-The Sysinternals Process Utilities provide PowerShell tools. Among these is PsExec, which can be used to invoke a process on a remote machine. But it also allows executing a process on the same machine under a different user.</description>
+      <description>Windows services usually run under the System account. In cases where a service needs SSH access like cloning a Git repository, a SSH key pair might be required. But how do you generate these keys for the System account?&#xA;The Sysinternals Process Utilities provide PowerShell tools. Among these is PsExec, which can be used to invoke a process on a remote machine. But it also allows executing a process on the same machine under a different user.</description>
     </item>
-    
     <item>
       <title>How to minimize Signal desktop app to system try</title>
       <link>https://arueckauer.github.io/posts/2020/01/how-to-minimize-signal-desktop-app-to-system-try/</link>
       <pubDate>Mon, 20 Jan 2020 10:45:25 +0100</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2020/01/how-to-minimize-signal-desktop-app-to-system-try/</guid>
-      <description>Unfortunately the Signal desktop app does not offer any configuration in the GUI to allow minimization to the system tray. But there are start parameters, with which the application behavior can be controlled.
---use-tray-icon will minimize the app to the system tray when hitting the close button --start-in-tray will start the app already minimized to the tray To use a features, adding the wanted parameters to the shortcut.
-Source</description>
+      <description>Unfortunately the Signal desktop app does not offer any configuration in the GUI to allow minimization to the system tray. But there are start parameters, with which the application behavior can be controlled.&#xA;--use-tray-icon will minimize the app to the system tray when hitting the close button --start-in-tray will start the app already minimized to the tray To use a features, adding the wanted parameters to the shortcut.&#xA;Source</description>
     </item>
-    
     <item>
       <title>self vs. static</title>
       <link>https://arueckauer.github.io/posts/2019/11/self-vs.-static/</link>
       <pubDate>Mon, 04 Nov 2019 06:41:23 +0100</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/11/self-vs.-static/</guid>
-      <description>I get confused with self and static. Then I research and learn it. Then I forget it again. And so on.
-TLDR self refers to the same class in which the new keyword is actually written.
-static, in PHP 5.3&amp;rsquo;s late static bindings, refers to whatever class in the hierarchy you called the method on.
-By BoltClock on Stack Overflow
-An example &amp;lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; .</description>
+      <description>I get confused with self and static. Then I research and learn it. Then I forget it again. And so on.&#xA;TLDR self refers to the same class in which the new keyword is actually written.&#xA;static, in PHP 5.3&amp;rsquo;s late static bindings, refers to whatever class in the hierarchy you called the method on.&#xA;By BoltClock on Stack Overflow&#xA;An example &amp;lt;?php class Foo { public function __invoke() { echo &amp;#39;self: &amp;#39; .</description>
     </item>
-    
     <item>
       <title>Console Commands in an Expressive Applicaton II</title>
       <link>https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/</link>
       <pubDate>Fri, 18 Oct 2019 07:23:59 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/</guid>
-      <description>This is an addition to my previous post Console Commands in an Expressive Applicaton. It provides two more real-world examples for Console Commands in Expressive applications.
-mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run(); Source</description>
+      <description>This is an addition to my previous post Console Commands in an Expressive Applicaton. It provides two more real-world examples for Console Commands in Expressive applications.&#xA;mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&amp;#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &amp;#39;/../&amp;#39;); require_once &amp;#39;vendor/autoload.php&amp;#39;; $container = require &amp;#39;config/container.php&amp;#39;; $application = new Application(&amp;#39;mwop.net&amp;#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &amp;#39;asset:copy-symlinks&amp;#39; =&amp;gt; Console\CopyAssetSymlinks::class, &amp;#39;asset:create-symlinks&amp;#39; =&amp;gt; Console\CreateAssetSymlinks::class, &amp;#39;asset:use-dist-templates&amp;#39; =&amp;gt; Console\UseDistTemplates::class, &amp;#39;blog:clear-cache&amp;#39; =&amp;gt; Blog\Console\ClearCache::class, &amp;#39;blog:feed-generator&amp;#39; =&amp;gt; Blog\Console\FeedGenerator::class, &amp;#39;blog:generate-search-data&amp;#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &amp;#39;blog:seed-db&amp;#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &amp;#39;blog:tag-cloud&amp;#39; =&amp;gt; Blog\Console\TagCloud::class, &amp;#39;clear-cache&amp;#39; =&amp;gt; Console\ClearCache::class, &amp;#39;github:fetch-activity&amp;#39; =&amp;gt; Github\Console\Fetch::class, &amp;#39;homepage-feeds&amp;#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&amp;#39;list&amp;#39;); $application-&amp;gt;run(); Source</description>
     </item>
-    
     <item>
       <title>Logical Operator and Operator Precedence</title>
       <link>https://arueckauer.github.io/posts/2019/10/logical-operator-and-operator-precedence/</link>
       <pubDate>Thu, 17 Oct 2019 09:20:19 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/10/logical-operator-and-operator-precedence/</guid>
-      <description>@MichalBundyra tweeted yesterday:
-TIL &amp;amp;&amp;amp; and AND are not the same&amp;hellip; https://3v4l.org/dVVYc Thanks @geerteltink
-Honestly, I never use(d) and. But it is interesting to learn that there is an actual difference and not just a flavor.
-Michal compares the output of and and &amp;amp;&amp;amp;.
-&amp;lt;?php $a = 2 and 3; $b = 2 &amp;amp;&amp;amp; 3; var_dump($a, $b); Result int(2) bool(true) Wait what?
-Logical Operator &amp;ldquo;and&amp;rdquo; and &amp;ldquo;&amp;amp;&amp;amp;&amp;rdquo; are not identical Logical Operators The documentation for the Logical Operators states:</description>
+      <description>@MichalBundyra tweeted yesterday:&#xA;TIL &amp;amp;&amp;amp; and AND are not the same&amp;hellip; https://3v4l.org/dVVYc Thanks @geerteltink&#xA;Honestly, I never use(d) and. But it is interesting to learn that there is an actual difference and not just a flavor.&#xA;Michal compares the output of and and &amp;amp;&amp;amp;.&#xA;&amp;lt;?php $a = 2 and 3; $b = 2 &amp;amp;&amp;amp; 3; var_dump($a, $b); Result int(2) bool(true) Wait what?&#xA;Logical Operator &amp;ldquo;and&amp;rdquo; and &amp;ldquo;&amp;amp;&amp;amp;&amp;rdquo; are not identical Logical Operators The documentation for the Logical Operators states:</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,46 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ipc19 on Andi Rückauer</title>
+    <title>Ipc19 on Andi Rückauer</title>
     <link>https://arueckauer.github.io/tags/ipc19/</link>
-    <description>Recent content in ipc19 on Andi Rückauer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <description>Recent content in Ipc19 on Andi Rückauer</description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 06 Jun 2019 20:49:38 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/ipc19/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Jun 2019 20:49:38 +0200</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/tags/ipc19/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>IPC 2019: Day Three</title>
       <link>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-three/</link>
       <pubDate>Thu, 06 Jun 2019 20:49:38 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-three/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D16
-Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de
-Arne and Sebastian deliver messages from real world problems they tackled together. It&amp;rsquo;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience.</description>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D16&#xA;Pragmatic Queue Processing at Scale By Arne Blankerts, Principal Consultant at thePHP.cc and Sebastian Heuer, Developer Advocate at kartenmacherei.de&#xA;Arne and Sebastian deliver messages from real world problems they tackled together. It&amp;rsquo;s not the first presentation of the duo. These sessions belong to the highlights of the conference (Casino night is still #1 😋). The talk gave a wonderful narrative overview of queue pressing, further readings of what might be of interest as well as learnings from their experience.</description>
     </item>
-    
     <item>
       <title>IPC 2019: Day Two</title>
       <link>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-two/</link>
       <pubDate>Wed, 05 Jun 2019 21:32:35 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-two/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D15
-I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!
-Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;SQL renaissance ambassador&amp;rdquo;, independent author, trainer, and consultant on all things SQL</description>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D15&#xA;I have to say that I am surprised by the overall high-quality sessions. This is one of the best conferences I attended. Thanks to all the speakers and their effort and time they put into preparation. You rock!&#xA;Modern SQL: Evolution of a Dinosaur By Markus Winand, &amp;ldquo;SQL renaissance ambassador&amp;rdquo;, independent author, trainer, and consultant on all things SQL</description>
     </item>
-    
     <item>
       <title>IPC 2019: Day One</title>
       <link>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-one/</link>
       <pubDate>Tue, 04 Jun 2019 22:53:29 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-one/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D14
-This was a great first day
-How to make Loveliness: an HTML Treasure Hunt Keynote by Bruce Lawson, one of the editors of the W3C’s HTML5.3 specification
-To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&amp;rsquo;s (well at least my) full attention.</description>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D14&#xA;This was a great first day&#xA;How to make Loveliness: an HTML Treasure Hunt Keynote by Bruce Lawson, one of the editors of the W3C’s HTML5.3 specification&#xA;To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&amp;rsquo;s (well at least my) full attention.</description>
     </item>
-    
   </channel>
 </rss>

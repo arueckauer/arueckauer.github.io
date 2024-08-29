@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Json on Andi Rückauer</title>
+    <link>https://arueckauer.github.io/tags/json/</link>
+    <description>Recent content in Json on Andi Rückauer</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 05 Aug 2019 09:17:00 +0200</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL JSON functions</title>
+      <link>https://arueckauer.github.io/posts/2019/08/sql-json-functions/</link>
+      <pubDate>Mon, 05 Aug 2019 09:17:00 +0200</pubDate>
+      <guid>https://arueckauer.github.io/posts/2019/08/sql-json-functions/</guid>
+      <description>With version 8.0 MySQL comes with support for JSON. This allows the storage of JSON data in a column and the usage of JSON functions.&#xA;In a project I needed to check which values are available for a particular property, the JSON column path operator came in handy.&#xA;SELECT `publicDataJson__de`-&amp;gt;&amp;#39;$.preisFaktor&amp;#39; AS `preisFaktor`, COUNT(*) AS `numberOfHits` FROM `products` GROUP BY `preisFaktor`; Another query was to check for non-empty JSON fields.&#xA;WHERE JSON_LENGTH(structure) !</description>
+    </item>
+  </channel>
+</rss>

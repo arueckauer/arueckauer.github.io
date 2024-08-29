@@ -1,69 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>zend-expressive on Andi Rückauer</title>
+    <title>Zend-Expressive on Andi Rückauer</title>
     <link>https://arueckauer.github.io/tags/zend-expressive/</link>
-    <description>Recent content in zend-expressive on Andi Rückauer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <description>Recent content in Zend-Expressive on Andi Rückauer</description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 18 Oct 2019 07:23:59 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/zend-expressive/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Oct 2019 07:23:59 +0200</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/tags/zend-expressive/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Console Commands in an Expressive Applicaton II</title>
       <link>https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/</link>
       <pubDate>Fri, 18 Oct 2019 07:23:59 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/</guid>
-      <description>This is an addition to my previous post Console Commands in an Expressive Applicaton. It provides two more real-world examples for Console Commands in Expressive applications.
-mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&amp;gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&amp;gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&amp;gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&amp;gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&amp;gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&amp;gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&amp;gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&amp;gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&#39;list&#39;); $application-&amp;gt;run(); Source</description>
+      <description>This is an addition to my previous post Console Commands in an Expressive Applicaton. It provides two more real-world examples for Console Commands in Expressive applications.&#xA;mwop&amp;rsquo;s blog #!/usr/bin/env php &amp;lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&amp;#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &amp;#39;/../&amp;#39;); require_once &amp;#39;vendor/autoload.php&amp;#39;; $container = require &amp;#39;config/container.php&amp;#39;; $application = new Application(&amp;#39;mwop.net&amp;#39;); $application-&amp;gt;setCommandLoader(new ContainerCommandLoader($container, [ &amp;#39;asset:copy-symlinks&amp;#39; =&amp;gt; Console\CopyAssetSymlinks::class, &amp;#39;asset:create-symlinks&amp;#39; =&amp;gt; Console\CreateAssetSymlinks::class, &amp;#39;asset:use-dist-templates&amp;#39; =&amp;gt; Console\UseDistTemplates::class, &amp;#39;blog:clear-cache&amp;#39; =&amp;gt; Blog\Console\ClearCache::class, &amp;#39;blog:feed-generator&amp;#39; =&amp;gt; Blog\Console\FeedGenerator::class, &amp;#39;blog:generate-search-data&amp;#39; =&amp;gt; Blog\Console\GenerateSearchData::class, &amp;#39;blog:seed-db&amp;#39; =&amp;gt; Blog\Console\SeedBlogDatabase::class, &amp;#39;blog:tag-cloud&amp;#39; =&amp;gt; Blog\Console\TagCloud::class, &amp;#39;clear-cache&amp;#39; =&amp;gt; Console\ClearCache::class, &amp;#39;github:fetch-activity&amp;#39; =&amp;gt; Github\Console\Fetch::class, &amp;#39;homepage-feeds&amp;#39; =&amp;gt; Console\FeedAggregator::class, ])); $application-&amp;gt;setDefaultCommand(&amp;#39;list&amp;#39;); $application-&amp;gt;run(); Source</description>
     </item>
-    
     <item>
       <title>Console Commands in an Expressive Applicaton</title>
       <link>https://arueckauer.github.io/posts/2019/07/console-commands-in-an-expressive-applicaton/</link>
       <pubDate>Thu, 04 Jul 2019 16:09:13 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/07/console-commands-in-an-expressive-applicaton/</guid>
-      <description>In a current customer project, I needed the ability to run commands from the CLI.
-Symfony provides a console component which is, among others, used by zendframework/zend-expressive-tooling. The documentation got me off to a quick start and I got my first Hello command running within minutes.
-I wanted to provide a re-usable package, where the implementation can provide the definition of a command list.
-Since I am not using the package within a Symfony application, I needed somehow access to the Service Container of the Expressive application.</description>
+      <description>In a current customer project, I needed the ability to run commands from the CLI.&#xA;Symfony provides a console component which is, among others, used by zendframework/zend-expressive-tooling. The documentation got me off to a quick start and I got my first Hello command running within minutes.&#xA;I wanted to provide a re-usable package, where the implementation can provide the definition of a command list.&#xA;Since I am not using the package within a Symfony application, I needed somehow access to the Service Container of the Expressive application.</description>
     </item>
-    
     <item>
       <title>Use dotenv to configure a Zend Expressive application</title>
       <link>https://arueckauer.github.io/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/</link>
       <pubDate>Sat, 25 May 2019 20:43:15 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D6
-[The Twelve-Factor App] requires strict separation of config from code.
-Taken from factor three of The Twelve-Factor App.
-Today I am studying about how to achieve this requirement making usage of phpdotenv in a Zend Expressive context.
-I will not go into details on and advantages of this concept. A leave that up to other resources.
-phpdotenv This package</description>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D6&#xA;[The Twelve-Factor App] requires strict separation of config from code.&#xA;Taken from factor three of The Twelve-Factor App.&#xA;Today I am studying about how to achieve this requirement making usage of phpdotenv in a Zend Expressive context.&#xA;I will not go into details on and advantages of this concept. A leave that up to other resources.&#xA;phpdotenv This package</description>
     </item>
-    
     <item>
       <title>Day 2: Clean Expressive Skeleton</title>
       <link>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</link>
       <pubDate>Tue, 21 May 2019 20:45:00 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</guid>
-      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D2
-Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of
-code structure, DI container, router, template engine and error handler. It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.</description>
+      <description>This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D2&#xA;Whenever starting a new Zend Expressive project, I use the handy zendframework/zend-expressive-skeleton. It creates an almost empty Expressive application structure with your choice of&#xA;code structure, DI container, router, template engine and error handler. It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.</description>
     </item>
-    
     <item>
       <title>From Flat to Modular</title>
       <link>https://arueckauer.github.io/posts/2019/05/from-flat-to-modular/</link>
       <pubDate>Fri, 17 May 2019 06:30:00 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2019/05/from-flat-to-modular/</guid>
-      <description>Transforming of a flat application structure to a modular one in a Zend Expressive project
-In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure.</description>
+      <description>Transforming of a flat application structure to a modular one in a Zend Expressive project&#xA;In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure.</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>zip on Andi Rückauer</title>
+    <title>Zip on Andi Rückauer</title>
     <link>https://arueckauer.github.io/tags/zip/</link>
-    <description>Recent content in zip on Andi Rückauer</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <description>Recent content in Zip on Andi Rückauer</description>
+    <generator>Hugo</generator>
+    <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 27 Jun 2022 14:00:18 +0200</lastBuildDate><atom:link href="https://arueckauer.github.io/tags/zip/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jun 2022 14:00:18 +0200</lastBuildDate>
+    <atom:link href="https://arueckauer.github.io/tags/zip/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Streaming Files as Zip in a Mezzio app</title>
       <link>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</link>
       <pubDate>Mon, 27 Jun 2022 14:00:18 +0200</pubDate>
-      
       <guid>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</guid>
-      <description>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
-A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster.</description>
+      <description>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.&#xA;A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster.</description>
     </item>
-    
   </channel>
 </rss>
