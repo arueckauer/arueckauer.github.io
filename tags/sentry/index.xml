@@ -14,14 +14,14 @@
       <link>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-mezzio-application/</link>
       <pubDate>Wed, 26 Oct 2022 10:50:35 +0200</pubDate>
       <guid>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-mezzio-application/</guid>
-      <description>The package arueckauer/mezzio-sentry-delegator provides a delegator factory and an error listener with which exceptions thrown in a Mezzio application can be captured in Sentry.&#xA;The README describes how to use the package.</description>
+      <description>&lt;p&gt;The package &lt;code&gt;arueckauer/mezzio-sentry-delegator&lt;/code&gt; provides a delegator factory and an error listener with which exceptions thrown in a Mezzio application can be captured in Sentry.&lt;/p&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://github.com/arueckauer/mezzio-sentry-delegator&#34;&gt;README&lt;/a&gt; describes how to use the package.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Capturing Exceptions in Sentry Thrown in Symfony Console Application</title>
       <link>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-symfony-console-application/</link>
       <pubDate>Wed, 26 Oct 2022 10:00:19 +0200</pubDate>
       <guid>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-symfony-console-application/</guid>
-      <description>This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on StackOverflow. In here I describe it in more detail.&#xA;To capture exceptions thrown in Symfony console application in Sentry, the Symfony Event Dispatcher is used.&#xA;composer require symfony/event-dispatcher The Event Dispatcher provides a console.error event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.</description>
+      <description>&lt;p&gt;This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on &lt;a href=&#34;https://stackoverflow.com/a/60411421/9364246&#34;&gt;StackOverflow&lt;/a&gt;. In here I describe it in more detail.&lt;/p&gt;&#xA;&lt;p&gt;To capture exceptions thrown in Symfony console application in Sentry, the Symfony Event Dispatcher is used.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;composer require symfony/event-dispatcher&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The Event Dispatcher provides a &lt;code&gt;console.error&lt;/code&gt; event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

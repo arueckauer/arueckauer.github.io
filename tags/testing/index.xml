@@ -14,35 +14,35 @@
       <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</link>
       <pubDate>Thu, 08 Jul 2021 15:04:22 +0200</pubDate>
       <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/</guid>
-      <description>This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.&#xA;vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.&#xA;https://github.com/bovigo/vfsStream</description>
+      <description>&lt;p&gt;This is the third article in the series of Testing Legacy Code. Check out the first part &lt;a href=&#34;https://arueckauer.github.io/posts/2021/07/testing-legacy-code-echo-output/&#34;&gt;Testing Legacy Code: Echo Output&lt;/a&gt; in which I provide information about the origin of these examples.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/bovigo/vfsStream&#34;&gt;https://github.com/bovigo/vfsStream&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Testing Legacy Code: Static Method Invocation</title>
       <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-static-method-invocation/</link>
       <pubDate>Wed, 07 Jul 2021 14:37:12 +0200</pubDate>
       <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-static-method-invocation/</guid>
-      <description>This is the second article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.&#xA;The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the staticExpects() method.</description>
+      <description>&lt;p&gt;This is the second article in the series of Testing Legacy Code. Check out the first part &lt;a href=&#34;https://arueckauer.github.io/posts/2021/07/testing-legacy-code-echo-output/&#34;&gt;Testing Legacy Code: Echo Output&lt;/a&gt; in which I provide information about the origin of these examples.&lt;/p&gt;&#xA;&lt;p&gt;The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the &lt;code&gt;staticExpects()&lt;/code&gt; method. With the help of &lt;a href=&#34;https://github.com/mockery/mockery&#34;&gt;Mockery&lt;/a&gt;, mocking static methods is possible.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Testing Legacy Code: Echo Output</title>
       <link>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-echo-output/</link>
       <pubDate>Tue, 06 Jul 2021 13:51:58 +0200</pubDate>
       <guid>https://arueckauer.github.io/posts/2021/07/testing-legacy-code-echo-output/</guid>
-      <description>A tweet of Simon Schubert made me aware of an awesome talk entitled Testing Legacy Code: Safe Refactoring by Katy Ereira. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.&#xA;Since refactoring legacy code is part of my daily job, some of these insights are quite useful and I would like to keep a note for myself in a few blog posts.</description>
+      <description>&lt;p&gt;A &lt;a href=&#34;https://twitter.com/fn_schubert/status/1393870665179140096&#34;&gt;tweet&lt;/a&gt; of &lt;a href=&#34;https://twitter.com/fn_schubert&#34;&gt;Simon Schubert&lt;/a&gt; made me aware of an awesome talk entitled &lt;a href=&#34;https://www.youtube.com/watch?v=U5BkMJpv_ZQ&#34;&gt;Testing Legacy Code: Safe Refactoring&lt;/a&gt; by &lt;a href=&#34;https://twitter.com/maccath&#34;&gt;Katy Ereira&lt;/a&gt;. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.&lt;/p&gt;&#xA;&lt;p&gt;Since refactoring legacy code is part of my daily job, some of these insights are quite useful and I would like to keep a note for myself in a few blog posts.&lt;/p&gt;</description>
     </item>
     <item>
       <title>PHPUnit Test Single Method</title>
       <link>https://arueckauer.github.io/posts/2021/01/phpunit-test-single-method/</link>
       <pubDate>Mon, 04 Jan 2021 11:21:11 +0200</pubDate>
       <guid>https://arueckauer.github.io/posts/2021/01/phpunit-test-single-method/</guid>
-      <description>A common search I need to do after I have not used it in a while is, how to run a single test method.&#xA;phpunit --filter methodName path/to/file.php Credits go to Alex on Stackoverflow</description>
+      <description>&lt;p&gt;A common search I need to do after I have not used it in a while is, how to run a single test method.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;phpunit --filter methodName path/to/file.php&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Credits go to &lt;a href=&#34;https://stackoverflow.com/users/1581090/alex&#34;&gt;Alex&lt;/a&gt; on &lt;a href=&#34;https://stackoverflow.com/questions/26095051/how-to-run-single-test-method-with-phpunit/26095567#26095567&#34;&gt;Stackoverflow&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to write unit tests with PHPUnit involving Doctrine entities</title>
       <link>https://arueckauer.github.io/posts/2020/06/how-to-write-unit-tests-with-phpunit-involving-doctrine-entities/</link>
       <pubDate>Tue, 09 Jun 2020 21:16:59 +0200</pubDate>
       <guid>https://arueckauer.github.io/posts/2020/06/how-to-write-unit-tests-with-phpunit-involving-doctrine-entities/</guid>
-      <description>One of the main reasons for me why tight coupling is a less ideal design choice is the accompanied difficulty in testing these tight coupled components.&#xA;Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code?</description>
+      <description>&lt;p&gt;&lt;em&gt;One of the main reasons for me why tight coupling is a less ideal design choice is the accompanied difficulty in testing these tight coupled components.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code? In a perfect world scenario, each unit would be so small and decoupled that writing a test would be simple, not having to deal with the variance of a changing dataset. After some contemplation, I decided to start by writing tests with a defined dataset for the tests, making it possible to rely on test data.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

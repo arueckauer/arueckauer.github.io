@@ -9,7 +9,8 @@
 <meta name="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D3
 Today I was working with keep a changelog, especially with Matthew Weier O&rsquo;Phinney&rsquo;s implementation of it. I am fascinated by the idea of managing the CHANGELOG from the command line.
 Installation Setup is thanks to composer straight-forward. You can either install it locally or globally. I went with the latter.
-composer global require phly/keep-a-changelog If you haven&rsquo;t already, remember to add the global composer bin path to your PATH environment variable." />
+composer global require phly/keep-a-changelog If you haven&rsquo;t already, remember to add the global composer bin path to your PATH environment variable.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, 100-days-of-code, keep-a-changelog, php" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -94,8 +95,6 @@ composer global require phly/keep-a-changelog If you haven’t already, remember
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -110,10 +109,6 @@ composer global require phly/keep-a-changelog If you haven’t already, remember
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -197,7 +192,7 @@ composer global require phly/keep-a-changelog If you haven’t already, remember
 </span></span></code></pre></div><p>If you haven&rsquo;t already, remember to add the global composer bin path to your PATH environment variable.</p>
 <h2 id="commands">Commands</h2>
 <p>Now let&rsquo;s have a look at it.</p>
-<p><img alt="keep-a-changelog commands" src="https://arueckauer.github.io/img/day-3-keep-a-changelog/keep-a-changelog-commands.png"></p>
+<p><img src="https://arueckauer.github.io/img/day-3-keep-a-changelog/keep-a-changelog-commands.png" alt="keep-a-changelog commands"></p>
 <h2 id="setup">Setup</h2>
 <p>Getting started is as simple as</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>keep-a-changelog new
@@ -218,7 +213,7 @@ composer global require phly/keep-a-changelog If you haven’t already, remember
 <h2 id="to-infinity-and-beyond">To infinity and beyond</h2>
 <p>Awesome. I rolled up my sleeves and started implementing a Beanstalk provider. Thanks to the neat code the internal features were done in couple of minutes. Now only adding a Beanstalk API client and that would be it. At least that is what I thought.</p>
 <h2 id="disillusionment">Disillusionment</h2>
-<p>Looking for candidates on <a href="https://github.com/search?l=PHP&q=beanstalk+api&type=Repositories">GitHub</a> and <a href="https://packagist.org/?query=beanstalk%20api">Packagist</a> did not look good at all. There might be a package or two that might work, but neither received any updates in years and the code has great improvement potential.</p>
+<p>Looking for candidates on <a href="https://github.com/search?l=PHP&amp;q=beanstalk&#43;api&amp;type=Repositories">GitHub</a> and <a href="https://packagist.org/?query=beanstalk%20api">Packagist</a> did not look good at all. There might be a package or two that might work, but neither received any updates in years and the code has great improvement potential.</p>
 <p>Implementing a PHP client library for the <a href="http://api.beanstalkapp.com/">Beanstalk API</a> goes beyond the scope of today&rsquo;s challenge.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>Although there is currently no working provider for Beanstalk, I still want to see the keep-a-changelog in action in a project. On another day I will evaluate the tool in a GitHub or GitLab project and see how it fits into our workflow. So long.</p>

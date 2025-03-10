@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
 <meta name="description" content="This is the second article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
-The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the staticExpects() method." />
+The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the staticExpects() method. With the help of Mockery, mocking static methods is possible.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, php, testing, legacy-code" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -40,7 +41,7 @@ The second example covers the invocation of static methods. One of the legacy pr
 
   <meta itemprop="name" content="Testing Legacy Code: Static Method Invocation">
   <meta itemprop="description" content="This is the second article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
-The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the staticExpects() method.">
+The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the staticExpects() method. With the help of Mockery, mocking static methods is possible.">
   <meta itemprop="datePublished" content="2021-07-07T14:37:12+02:00">
   <meta itemprop="dateModified" content="2021-07-07T14:37:12+02:00">
   <meta itemprop="wordCount" content="220">
@@ -51,7 +52,7 @@ The second example covers the invocation of static methods. One of the legacy pr
   <meta name="twitter:image" content="https://arueckauer.github.io/">
   <meta name="twitter:title" content="Testing Legacy Code: Static Method Invocation">
   <meta name="twitter:description" content="This is the second article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
-The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the staticExpects() method.">
+The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the staticExpects() method. With the help of Mockery, mocking static methods is possible.">
 
 
 
@@ -59,7 +60,7 @@ The second example covers the invocation of static methods. One of the legacy pr
   <meta property="og:site_name" content="Andi Rückauer">
   <meta property="og:title" content="Testing Legacy Code: Static Method Invocation">
   <meta property="og:description" content="This is the second article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
-The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the staticExpects() method.">
+The second example covers the invocation of static methods. One of the legacy projects I am supporting is making heavily usage of static methods and no unit tests were written before I started on the project. PHPUnit used to support mocking of static methods with the staticExpects() method. With the help of Mockery, mocking static methods is possible.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -86,8 +87,6 @@ The second example covers the invocation of static methods. One of the legacy pr
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -102,10 +101,6 @@ The second example covers the invocation of static methods. One of the legacy pr
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>

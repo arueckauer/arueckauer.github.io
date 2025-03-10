@@ -9,7 +9,8 @@
 <meta name="description" content="Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.
 Requesting the SMD is as simple as:
 Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.
-$Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;C8P&gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request." />
+$Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;C8P&gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request. And piping the body object to ConvertTo-Json returns the necessary JSON representation.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, powershell, json-rpc" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -44,7 +45,7 @@ $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{
   <meta itemprop="description" content="Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.
 Requesting the SMD is as simple as:
 Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.
-$Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;C8P&gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request.">
+$Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;C8P&gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request. And piping the body object to ConvertTo-Json returns the necessary JSON representation.">
   <meta itemprop="datePublished" content="2019-08-05T16:56:17+02:00">
   <meta itemprop="dateModified" content="2019-08-05T16:56:17+02:00">
   <meta itemprop="wordCount" content="119">
@@ -57,7 +58,7 @@ $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{
   <meta name="twitter:description" content="Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.
 Requesting the SMD is as simple as:
 Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.
-$Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;C8P&gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request.">
+$Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;C8P&gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request. And piping the body object to ConvertTo-Json returns the necessary JSON representation.">
 
 
 
@@ -67,7 +68,7 @@ $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{
   <meta property="og:description" content="Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.
 Requesting the SMD is as simple as:
 Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.
-$Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;C8P&gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request.">
+$Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;C8P&gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request. And piping the body object to ConvertTo-Json returns the necessary JSON representation.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -93,8 +94,6 @@ $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -109,10 +108,6 @@ $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>

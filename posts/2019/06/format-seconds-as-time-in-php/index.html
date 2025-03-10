@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
 <meta name="description" content="Somewhat over ten years ago I was working on a project, where we measured execution time and memory consumption of PHP scripts. To display the execution time in a human-readable way, we used a function to format the timestamp provided by microtime().
-&lt;?php class Application__Helper_Timer { /** * Calculates the execution time of a script * @param float $executionTime * @return string */ public static function formatExecutionTime($executionTime) { $seconds = $this-&gt;executionTime; $hours = 0; $minutes = 0; while (($seconds - 3600) &gt; 0) { $hours&#43;&#43;; $seconds -= 3600; } while (($seconds - 60) &gt; 0) { $minutes&#43;&#43;; $seconds -= 60; } if (1 === strlen((string) $hours)) { $hours = &#39;0&#39; ." />
+&lt;?php class Application__Helper_Timer { /** * Calculates the execution time of a script * @param float $executionTime * @return string */ public static function formatExecutionTime($executionTime) { $seconds = $this-&gt;executionTime; $hours = 0; $minutes = 0; while (($seconds - 3600) &gt; 0) { $hours&#43;&#43;; $seconds -= 3600; } while (($seconds - 60) &gt; 0) { $minutes&#43;&#43;; $seconds -= 60; } if (1 === strlen((string) $hours)) { $hours = &#39;0&#39; . $hours; } if (1 === strlen((string) $minutes)) { $minutes = &#39;0&#39; . $minutes; } $seconds = round($seconds, 4); if (false !== strpos($seconds, &#39;.&#39;)) { list($seconds, $milliseconds) = explode(&#39;.&#39;, $seconds); if (1 === strlen((string) $seconds)) { $seconds = &#39;0&#39; . $seconds; } } else { $milliseconds = 0; } if (&#39;00&#39; !== $hours) { return sprintf(&#39;%s:%s:%s,%s&#39;, $hours, $minutes, $seconds, $milliseconds); } return sprintf(&#39;%s:%s,%s&#39;, $minutes, $seconds, $milliseconds); } } It served the purpose well and I used it in other projects as well.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, php" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -40,7 +41,7 @@
 
   <meta itemprop="name" content="Format Seconds as Time in PHP">
   <meta itemprop="description" content="Somewhat over ten years ago I was working on a project, where we measured execution time and memory consumption of PHP scripts. To display the execution time in a human-readable way, we used a function to format the timestamp provided by microtime().
-&lt;?php class Application__Helper_Timer { /** * Calculates the execution time of a script * @param float $executionTime * @return string */ public static function formatExecutionTime($executionTime) { $seconds = $this-&gt;executionTime; $hours = 0; $minutes = 0; while (($seconds - 3600) &gt; 0) { $hours&#43;&#43;; $seconds -= 3600; } while (($seconds - 60) &gt; 0) { $minutes&#43;&#43;; $seconds -= 60; } if (1 === strlen((string) $hours)) { $hours = &#39;0&#39; .">
+&lt;?php class Application__Helper_Timer { /** * Calculates the execution time of a script * @param float $executionTime * @return string */ public static function formatExecutionTime($executionTime) { $seconds = $this-&gt;executionTime; $hours = 0; $minutes = 0; while (($seconds - 3600) &gt; 0) { $hours&#43;&#43;; $seconds -= 3600; } while (($seconds - 60) &gt; 0) { $minutes&#43;&#43;; $seconds -= 60; } if (1 === strlen((string) $hours)) { $hours = &#39;0&#39; . $hours; } if (1 === strlen((string) $minutes)) { $minutes = &#39;0&#39; . $minutes; } $seconds = round($seconds, 4); if (false !== strpos($seconds, &#39;.&#39;)) { list($seconds, $milliseconds) = explode(&#39;.&#39;, $seconds); if (1 === strlen((string) $seconds)) { $seconds = &#39;0&#39; . $seconds; } } else { $milliseconds = 0; } if (&#39;00&#39; !== $hours) { return sprintf(&#39;%s:%s:%s,%s&#39;, $hours, $minutes, $seconds, $milliseconds); } return sprintf(&#39;%s:%s,%s&#39;, $minutes, $seconds, $milliseconds); } } It served the purpose well and I used it in other projects as well.">
   <meta itemprop="datePublished" content="2019-06-28T09:04:39+02:00">
   <meta itemprop="dateModified" content="2019-06-28T09:04:39+02:00">
   <meta itemprop="wordCount" content="528">
@@ -51,7 +52,7 @@
   <meta name="twitter:image" content="https://arueckauer.github.io/">
   <meta name="twitter:title" content="Format Seconds as Time in PHP">
   <meta name="twitter:description" content="Somewhat over ten years ago I was working on a project, where we measured execution time and memory consumption of PHP scripts. To display the execution time in a human-readable way, we used a function to format the timestamp provided by microtime().
-&lt;?php class Application__Helper_Timer { /** * Calculates the execution time of a script * @param float $executionTime * @return string */ public static function formatExecutionTime($executionTime) { $seconds = $this-&gt;executionTime; $hours = 0; $minutes = 0; while (($seconds - 3600) &gt; 0) { $hours&#43;&#43;; $seconds -= 3600; } while (($seconds - 60) &gt; 0) { $minutes&#43;&#43;; $seconds -= 60; } if (1 === strlen((string) $hours)) { $hours = &#39;0&#39; .">
+&lt;?php class Application__Helper_Timer { /** * Calculates the execution time of a script * @param float $executionTime * @return string */ public static function formatExecutionTime($executionTime) { $seconds = $this-&gt;executionTime; $hours = 0; $minutes = 0; while (($seconds - 3600) &gt; 0) { $hours&#43;&#43;; $seconds -= 3600; } while (($seconds - 60) &gt; 0) { $minutes&#43;&#43;; $seconds -= 60; } if (1 === strlen((string) $hours)) { $hours = &#39;0&#39; . $hours; } if (1 === strlen((string) $minutes)) { $minutes = &#39;0&#39; . $minutes; } $seconds = round($seconds, 4); if (false !== strpos($seconds, &#39;.&#39;)) { list($seconds, $milliseconds) = explode(&#39;.&#39;, $seconds); if (1 === strlen((string) $seconds)) { $seconds = &#39;0&#39; . $seconds; } } else { $milliseconds = 0; } if (&#39;00&#39; !== $hours) { return sprintf(&#39;%s:%s:%s,%s&#39;, $hours, $minutes, $seconds, $milliseconds); } return sprintf(&#39;%s:%s,%s&#39;, $minutes, $seconds, $milliseconds); } } It served the purpose well and I used it in other projects as well.">
 
 
 
@@ -59,7 +60,7 @@
   <meta property="og:site_name" content="Andi Rückauer">
   <meta property="og:title" content="Format Seconds as Time in PHP">
   <meta property="og:description" content="Somewhat over ten years ago I was working on a project, where we measured execution time and memory consumption of PHP scripts. To display the execution time in a human-readable way, we used a function to format the timestamp provided by microtime().
-&lt;?php class Application__Helper_Timer { /** * Calculates the execution time of a script * @param float $executionTime * @return string */ public static function formatExecutionTime($executionTime) { $seconds = $this-&gt;executionTime; $hours = 0; $minutes = 0; while (($seconds - 3600) &gt; 0) { $hours&#43;&#43;; $seconds -= 3600; } while (($seconds - 60) &gt; 0) { $minutes&#43;&#43;; $seconds -= 60; } if (1 === strlen((string) $hours)) { $hours = &#39;0&#39; .">
+&lt;?php class Application__Helper_Timer { /** * Calculates the execution time of a script * @param float $executionTime * @return string */ public static function formatExecutionTime($executionTime) { $seconds = $this-&gt;executionTime; $hours = 0; $minutes = 0; while (($seconds - 3600) &gt; 0) { $hours&#43;&#43;; $seconds -= 3600; } while (($seconds - 60) &gt; 0) { $minutes&#43;&#43;; $seconds -= 60; } if (1 === strlen((string) $hours)) { $hours = &#39;0&#39; . $hours; } if (1 === strlen((string) $minutes)) { $minutes = &#39;0&#39; . $minutes; } $seconds = round($seconds, 4); if (false !== strpos($seconds, &#39;.&#39;)) { list($seconds, $milliseconds) = explode(&#39;.&#39;, $seconds); if (1 === strlen((string) $seconds)) { $seconds = &#39;0&#39; . $seconds; } } else { $milliseconds = 0; } if (&#39;00&#39; !== $hours) { return sprintf(&#39;%s:%s:%s,%s&#39;, $hours, $minutes, $seconds, $milliseconds); } return sprintf(&#39;%s:%s,%s&#39;, $minutes, $seconds, $milliseconds); } } It served the purpose well and I used it in other projects as well.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -84,8 +85,6 @@
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -100,10 +99,6 @@
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>

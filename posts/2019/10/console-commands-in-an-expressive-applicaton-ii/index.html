@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
 <meta name="description" content="This is an addition to my previous post Console Commands in an Expressive Applicaton. It provides two more real-world examples for Console Commands in Expressive applications.
-mwop&rsquo;s blog #!/usr/bin/env php &lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&gt; Console\FeedAggregator::class, ])); $application-&gt;setDefaultCommand(&#39;list&#39;); $application-&gt;run(); Source" />
+mwop&rsquo;s blog #!/usr/bin/env php &lt;?php /** * @license http://opensource.org/licenses/BSD-2-Clause BSD-2-Clause * @copyright Copyright (c) Matthew Weier O&#39;Phinney */ namespace Mwop; use Symfony\Component\Console\Application; use Symfony\Component\Console\CommandLoader\ContainerCommandLoader; chdir(__DIR__ . &#39;/../&#39;); require_once &#39;vendor/autoload.php&#39;; $container = require &#39;config/container.php&#39;; $application = new Application(&#39;mwop.net&#39;); $application-&gt;setCommandLoader(new ContainerCommandLoader($container, [ &#39;asset:copy-symlinks&#39; =&gt; Console\CopyAssetSymlinks::class, &#39;asset:create-symlinks&#39; =&gt; Console\CreateAssetSymlinks::class, &#39;asset:use-dist-templates&#39; =&gt; Console\UseDistTemplates::class, &#39;blog:clear-cache&#39; =&gt; Blog\Console\ClearCache::class, &#39;blog:feed-generator&#39; =&gt; Blog\Console\FeedGenerator::class, &#39;blog:generate-search-data&#39; =&gt; Blog\Console\GenerateSearchData::class, &#39;blog:seed-db&#39; =&gt; Blog\Console\SeedBlogDatabase::class, &#39;blog:tag-cloud&#39; =&gt; Blog\Console\TagCloud::class, &#39;clear-cache&#39; =&gt; Console\ClearCache::class, &#39;github:fetch-activity&#39; =&gt; Github\Console\Fetch::class, &#39;homepage-feeds&#39; =&gt; Console\FeedAggregator::class, ])); $application-&gt;setDefaultCommand(&#39;list&#39;); $application-&gt;run(); Source
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, php, zend-expressive" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -85,8 +86,6 @@ mwop’s blog #!/usr/bin/env php &lt;?php /** * @license http://opensource.org/l
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -101,10 +100,6 @@ mwop’s blog #!/usr/bin/env php &lt;?php /** * @license http://opensource.org/l
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>

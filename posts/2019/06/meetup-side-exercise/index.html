@@ -10,7 +10,8 @@
 Next up in the PHP sidetrack is the Meetup exercise.
 A function is provided with the arguments
 (int) year, (int) month, (string) descriptor and (string) weekday and expected to process the input and return an instance of DateTime with the corresponding date.
-While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated." />
+While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated. It can hold one of the following values:
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, 100-days-of-code, exercism, php" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -46,7 +47,7 @@ While year, month and weekday are an exact representation of their values, the d
 Next up in the PHP sidetrack is the Meetup exercise.
 A function is provided with the arguments
 (int) year, (int) month, (string) descriptor and (string) weekday and expected to process the input and return an instance of DateTime with the corresponding date.
-While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated.">
+While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated. It can hold one of the following values:">
   <meta itemprop="datePublished" content="2019-06-11T21:29:52+02:00">
   <meta itemprop="dateModified" content="2019-06-11T21:29:52+02:00">
   <meta itemprop="wordCount" content="600">
@@ -60,7 +61,7 @@ While year, month and weekday are an exact representation of their values, the d
 Next up in the PHP sidetrack is the Meetup exercise.
 A function is provided with the arguments
 (int) year, (int) month, (string) descriptor and (string) weekday and expected to process the input and return an instance of DateTime with the corresponding date.
-While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated.">
+While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated. It can hold one of the following values:">
 
 
 
@@ -71,7 +72,7 @@ While year, month and weekday are an exact representation of their values, the d
 Next up in the PHP sidetrack is the Meetup exercise.
 A function is provided with the arguments
 (int) year, (int) month, (string) descriptor and (string) weekday and expected to process the input and return an instance of DateTime with the corresponding date.
-While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated.">
+While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated. It can hold one of the following values:">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -98,8 +99,6 @@ While year, month and weekday are an exact representation of their values, the d
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -114,10 +113,6 @@ While year, month and weekday are an exact representation of their values, the d
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -238,8 +233,7 @@ While year, month and weekday are an exact representation of their values, the d
 </span></span></code></pre></div><p>Now all tests are passing except for the descriptors with a value of <code>'teenth'</code>.</p>
 <h2 id="teenth">Teenth</h2>
 <blockquote>
-<p>Note that &ldquo;monteenth&rdquo;, &ldquo;tuesteenth&rdquo;, etc are all made up words. There was a meetup whose members realized that there are exactly 7 numbered days in a month that end in &lsquo;-teenth&rsquo;. Therefore, one is guaranteed that each day of the week (Monday, Tuesday, &hellip;) will have exactly one date that is named with &lsquo;-teenth&rsquo; in every month.</p>
-</blockquote>
+<p>Note that &ldquo;monteenth&rdquo;, &ldquo;tuesteenth&rdquo;, etc are all made up words. There was a meetup whose members realized that there are exactly 7 numbered days in a month that end in &lsquo;-teenth&rsquo;. Therefore, one is guaranteed that each day of the week (Monday, Tuesday, &hellip;) will have exactly one date that is named with &lsquo;-teenth&rsquo; in every month.</p></blockquote>
 <p>From the exercise description I learn that the day of month for the <code>'teenth'</code> descriptor has to be between 13 and 19 inclusive. However, it is not possible to know without doing some math, whether it is the second or third <em>weekday</em> in the month.</p>
 <p>The simplest solution that comes to my mind, is to add 1 week to the current date, while the day of the month in not in-between 12 and 20.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">modify_teenth_date</span>(<span style="color:#a6e22e">DateTime</span> $date) <span style="color:#f92672">:</span> <span style="color:#a6e22e">DateTime</span>

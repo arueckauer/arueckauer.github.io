@@ -14,7 +14,7 @@
       <link>https://arueckauer.github.io/posts/2020/11/upgrade-xdebug-2-to-3/</link>
       <pubDate>Fri, 27 Nov 2020 11:52:58 +0100</pubDate>
       <guid>https://arueckauer.github.io/posts/2020/11/upgrade-xdebug-2-to-3/</guid>
-      <description>Xdebug is an essential tool in my developing process. Most often I use it for Step Debugging code invoked from a request or CLI. With the release of Xdebug 3.0 the configuration settings changed and need adjustment in the php.ini and in my case the environment variables as well.&#xA;In this post I am recording what needed to be changed in upgrading Xdebug. For a complete description on what changed, have a look at Upgrading from Xdebug 2 to 3.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://xdebug.org/&#34;&gt;Xdebug&lt;/a&gt; is an essential tool in my developing process. Most often I use it for Step Debugging code invoked from a request or CLI. With the release of &lt;a href=&#34;https://xdebug.org/announcements/2020-11-25&#34;&gt;Xdebug 3.0&lt;/a&gt; the configuration settings changed and need adjustment in the &lt;code&gt;php.ini&lt;/code&gt; and in my case the environment variables as well.&lt;/p&gt;&#xA;&lt;p&gt;In this post I am recording what needed to be changed in upgrading Xdebug. For a complete description on what changed, have a look at &lt;a href=&#34;https://xdebug.org/docs/upgrade_guide&#34;&gt;Upgrading from Xdebug 2 to 3&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

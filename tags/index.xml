@@ -7,8 +7,43 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 26 Oct 2022 10:50:35 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 10 Mar 2025 11:04:12 +0100</lastBuildDate>
     <atom:link href="https://arueckauer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch</title>
+      <link>https://arueckauer.github.io/tags/arch/</link>
+      <pubDate>Mon, 10 Mar 2025 11:04:12 +0100</pubDate>
+      <guid>https://arueckauer.github.io/tags/arch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dependencies</title>
+      <link>https://arueckauer.github.io/tags/dependencies/</link>
+      <pubDate>Mon, 10 Mar 2025 11:04:12 +0100</pubDate>
+      <guid>https://arueckauer.github.io/tags/dependencies/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://arueckauer.github.io/tags/linux/</link>
+      <pubDate>Mon, 10 Mar 2025 11:04:12 +0100</pubDate>
+      <guid>https://arueckauer.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://arueckauer.github.io/tags/windows/</link>
+      <pubDate>Mon, 10 Mar 2025 11:04:12 +0100</pubDate>
+      <guid>https://arueckauer.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wsl</title>
+      <link>https://arueckauer.github.io/tags/wsl/</link>
+      <pubDate>Mon, 10 Mar 2025 11:04:12 +0100</pubDate>
+      <guid>https://arueckauer.github.io/tags/wsl/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Mezzio</title>
       <link>https://arueckauer.github.io/tags/mezzio/</link>
@@ -108,13 +143,6 @@
       <description></description>
     </item>
     <item>
-      <title>Windows</title>
-      <link>https://arueckauer.github.io/tags/windows/</link>
-      <pubDate>Mon, 01 Feb 2021 13:54:00 +0200</pubDate>
-      <guid>https://arueckauer.github.io/tags/windows/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Phpunit</title>
       <link>https://arueckauer.github.io/tags/phpunit/</link>
       <pubDate>Mon, 04 Jan 2021 11:21:11 +0200</pubDate>
@@ -154,34 +182,6 @@
       <link>https://arueckauer.github.io/tags/bash/</link>
       <pubDate>Fri, 01 May 2020 07:09:07 +0200</pubDate>
       <guid>https://arueckauer.github.io/tags/bash/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Linux</title>
-      <link>https://arueckauer.github.io/tags/linux/</link>
-      <pubDate>Fri, 01 May 2020 07:09:07 +0200</pubDate>
-      <guid>https://arueckauer.github.io/tags/linux/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Composer</title>
-      <link>https://arueckauer.github.io/tags/composer/</link>
-      <pubDate>Thu, 30 Apr 2020 08:06:13 +0200</pubDate>
-      <guid>https://arueckauer.github.io/tags/composer/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ssh</title>
-      <link>https://arueckauer.github.io/tags/ssh/</link>
-      <pubDate>Wed, 29 Apr 2020 09:30:00 +0200</pubDate>
-      <guid>https://arueckauer.github.io/tags/ssh/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Signal</title>
-      <link>https://arueckauer.github.io/tags/signal/</link>
-      <pubDate>Mon, 20 Jan 2020 10:45:25 +0100</pubDate>
-      <guid>https://arueckauer.github.io/tags/signal/</guid>
       <description></description>
     </item>
   </channel>

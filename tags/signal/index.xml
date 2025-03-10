@@ -14,7 +14,7 @@
       <link>https://arueckauer.github.io/posts/2020/01/how-to-minimize-signal-desktop-app-to-system-try/</link>
       <pubDate>Mon, 20 Jan 2020 10:45:25 +0100</pubDate>
       <guid>https://arueckauer.github.io/posts/2020/01/how-to-minimize-signal-desktop-app-to-system-try/</guid>
-      <description>Unfortunately the Signal desktop app does not offer any configuration in the GUI to allow minimization to the system tray. But there are start parameters, with which the application behavior can be controlled.&#xA;--use-tray-icon will minimize the app to the system tray when hitting the close button --start-in-tray will start the app already minimized to the tray To use a features, adding the wanted parameters to the shortcut.&#xA;Source</description>
+      <description>&lt;p&gt;Unfortunately the Signal desktop app does not offer any configuration in the GUI to allow minimization to the system tray. But there are start parameters, with which the application behavior can be controlled.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;--use-tray-icon&lt;/code&gt; will minimize the app to the system tray when hitting the close button&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;--start-in-tray&lt;/code&gt; will start the app already minimized to the tray&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;To use a features, adding the wanted parameters to the shortcut.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/signalapp/Signal-Desktop/issues/1480#issuecomment-369331290&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

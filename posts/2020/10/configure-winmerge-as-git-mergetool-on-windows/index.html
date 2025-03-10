@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
 <meta name="description" content="Today I wanted to set up WinMerge as default mergetool for Git. In my research I came across this helpful Gist by Shawn Dumas.
-[mergetool] prompt = false keepBackup = false keepTemporaries = false [merge] tool = winmerge [mergetool &#34;winmerge&#34;] name = WinMerge trustExitCode = true cmd = &#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&#34; -u -e -dl \&#34;Local\&#34; -dr \&#34;Remote\&#34; $LOCAL $REMOTE $MERGED [diff] tool = winmerge [difftool &#34;winmerge&#34;] name = WinMerge trustExitCode = true cmd = &#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU." />
+[mergetool] prompt = false keepBackup = false keepTemporaries = false [merge] tool = winmerge [mergetool &#34;winmerge&#34;] name = WinMerge trustExitCode = true cmd = &#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&#34; -u -e -dl \&#34;Local\&#34; -dr \&#34;Remote\&#34; $LOCAL $REMOTE $MERGED [diff] tool = winmerge [difftool &#34;winmerge&#34;] name = WinMerge trustExitCode = true cmd = &#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&#34; -u -e $LOCAL $REMOTE As was pointed out in the comments, this will work for diff but can potentially provide some trouble for merge.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, git" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -40,7 +41,7 @@
 
   <meta itemprop="name" content="Configure Winmerge as Git Mergetool on Windows">
   <meta itemprop="description" content="Today I wanted to set up WinMerge as default mergetool for Git. In my research I came across this helpful Gist by Shawn Dumas.
-[mergetool] prompt = false keepBackup = false keepTemporaries = false [merge] tool = winmerge [mergetool &#34;winmerge&#34;] name = WinMerge trustExitCode = true cmd = &#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&#34; -u -e -dl \&#34;Local\&#34; -dr \&#34;Remote\&#34; $LOCAL $REMOTE $MERGED [diff] tool = winmerge [difftool &#34;winmerge&#34;] name = WinMerge trustExitCode = true cmd = &#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.">
+[mergetool] prompt = false keepBackup = false keepTemporaries = false [merge] tool = winmerge [mergetool &#34;winmerge&#34;] name = WinMerge trustExitCode = true cmd = &#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&#34; -u -e -dl \&#34;Local\&#34; -dr \&#34;Remote\&#34; $LOCAL $REMOTE $MERGED [diff] tool = winmerge [difftool &#34;winmerge&#34;] name = WinMerge trustExitCode = true cmd = &#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&#34; -u -e $LOCAL $REMOTE As was pointed out in the comments, this will work for diff but can potentially provide some trouble for merge.">
   <meta itemprop="datePublished" content="2020-10-15T06:46:34+02:00">
   <meta itemprop="dateModified" content="2020-10-15T06:46:34+02:00">
   <meta itemprop="wordCount" content="186">
@@ -51,7 +52,7 @@
   <meta name="twitter:image" content="https://arueckauer.github.io/">
   <meta name="twitter:title" content="Configure Winmerge as Git Mergetool on Windows">
   <meta name="twitter:description" content="Today I wanted to set up WinMerge as default mergetool for Git. In my research I came across this helpful Gist by Shawn Dumas.
-[mergetool] prompt = false keepBackup = false keepTemporaries = false [merge] tool = winmerge [mergetool &#34;winmerge&#34;] name = WinMerge trustExitCode = true cmd = &#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&#34; -u -e -dl \&#34;Local\&#34; -dr \&#34;Remote\&#34; $LOCAL $REMOTE $MERGED [diff] tool = winmerge [difftool &#34;winmerge&#34;] name = WinMerge trustExitCode = true cmd = &#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.">
+[mergetool] prompt = false keepBackup = false keepTemporaries = false [merge] tool = winmerge [mergetool &#34;winmerge&#34;] name = WinMerge trustExitCode = true cmd = &#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&#34; -u -e -dl \&#34;Local\&#34; -dr \&#34;Remote\&#34; $LOCAL $REMOTE $MERGED [diff] tool = winmerge [difftool &#34;winmerge&#34;] name = WinMerge trustExitCode = true cmd = &#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&#34; -u -e $LOCAL $REMOTE As was pointed out in the comments, this will work for diff but can potentially provide some trouble for merge.">
 
 
 
@@ -59,7 +60,7 @@
   <meta property="og:site_name" content="Andi Rückauer">
   <meta property="og:title" content="Configure Winmerge as Git Mergetool on Windows">
   <meta property="og:description" content="Today I wanted to set up WinMerge as default mergetool for Git. In my research I came across this helpful Gist by Shawn Dumas.
-[mergetool] prompt = false keepBackup = false keepTemporaries = false [merge] tool = winmerge [mergetool &#34;winmerge&#34;] name = WinMerge trustExitCode = true cmd = &#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&#34; -u -e -dl \&#34;Local\&#34; -dr \&#34;Remote\&#34; $LOCAL $REMOTE $MERGED [diff] tool = winmerge [difftool &#34;winmerge&#34;] name = WinMerge trustExitCode = true cmd = &#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.">
+[mergetool] prompt = false keepBackup = false keepTemporaries = false [merge] tool = winmerge [mergetool &#34;winmerge&#34;] name = WinMerge trustExitCode = true cmd = &#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&#34; -u -e -dl \&#34;Local\&#34; -dr \&#34;Remote\&#34; $LOCAL $REMOTE $MERGED [diff] tool = winmerge [difftool &#34;winmerge&#34;] name = WinMerge trustExitCode = true cmd = &#34;/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe&#34; -u -e $LOCAL $REMOTE As was pointed out in the comments, this will work for diff but can potentially provide some trouble for merge.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -84,8 +85,6 @@
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -100,10 +99,6 @@
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>

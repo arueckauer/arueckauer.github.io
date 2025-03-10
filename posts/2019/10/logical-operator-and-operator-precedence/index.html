@@ -11,7 +11,9 @@ TIL &amp;&amp; and AND are not the same&hellip; https://3v4l.org/dVVYc Thanks @g
 Honestly, I never use(d) and. But it is interesting to learn that there is an actual difference and not just a flavor.
 Michal compares the output of and and &amp;&amp;.
 &lt;?php $a = 2 and 3; $b = 2 &amp;&amp; 3; var_dump($a, $b); Result int(2) bool(true) Wait what?
-Logical Operator &ldquo;and&rdquo; and &ldquo;&amp;&amp;&rdquo; are not identical Logical Operators The documentation for the Logical Operators states:" />
+Logical Operator &ldquo;and&rdquo; and &ldquo;&amp;&amp;&rdquo; are not identical Logical Operators The documentation for the Logical Operators states:
+The reason for the two different variations of &ldquo;and&rdquo; and &ldquo;or&rdquo; operators is that they operate at different precedences. (See Operator Precedence.)
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, php" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -48,7 +50,8 @@ TIL &amp;&amp; and AND are not the same… https://3v4l.org/dVVYc Thanks @geerte
 Honestly, I never use(d) and. But it is interesting to learn that there is an actual difference and not just a flavor.
 Michal compares the output of and and &amp;&amp;.
 &lt;?php $a = 2 and 3; $b = 2 &amp;&amp; 3; var_dump($a, $b); Result int(2) bool(true) Wait what?
-Logical Operator “and” and “&amp;&amp;” are not identical Logical Operators The documentation for the Logical Operators states:">
+Logical Operator “and” and “&amp;&amp;” are not identical Logical Operators The documentation for the Logical Operators states:
+The reason for the two different variations of “and” and “or” operators is that they operate at different precedences. (See Operator Precedence.)">
   <meta itemprop="datePublished" content="2019-10-17T09:20:19+02:00">
   <meta itemprop="dateModified" content="2019-10-17T09:20:19+02:00">
   <meta itemprop="wordCount" content="321">
@@ -63,7 +66,8 @@ TIL &amp;&amp; and AND are not the same… https://3v4l.org/dVVYc Thanks @geerte
 Honestly, I never use(d) and. But it is interesting to learn that there is an actual difference and not just a flavor.
 Michal compares the output of and and &amp;&amp;.
 &lt;?php $a = 2 and 3; $b = 2 &amp;&amp; 3; var_dump($a, $b); Result int(2) bool(true) Wait what?
-Logical Operator “and” and “&amp;&amp;” are not identical Logical Operators The documentation for the Logical Operators states:">
+Logical Operator “and” and “&amp;&amp;” are not identical Logical Operators The documentation for the Logical Operators states:
+The reason for the two different variations of “and” and “or” operators is that they operate at different precedences. (See Operator Precedence.)">
 
 
 
@@ -75,7 +79,8 @@ TIL &amp;&amp; and AND are not the same… https://3v4l.org/dVVYc Thanks @geerte
 Honestly, I never use(d) and. But it is interesting to learn that there is an actual difference and not just a flavor.
 Michal compares the output of and and &amp;&amp;.
 &lt;?php $a = 2 and 3; $b = 2 &amp;&amp; 3; var_dump($a, $b); Result int(2) bool(true) Wait what?
-Logical Operator “and” and “&amp;&amp;” are not identical Logical Operators The documentation for the Logical Operators states:">
+Logical Operator “and” and “&amp;&amp;” are not identical Logical Operators The documentation for the Logical Operators states:
+The reason for the two different variations of “and” and “or” operators is that they operate at different precedences. (See Operator Precedence.)">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -100,8 +105,6 @@ Logical Operator “and” and “&amp;&amp;” are not identical Logical Operat
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -116,10 +119,6 @@ Logical Operator “and” and “&amp;&amp;” are not identical Logical Operat
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -196,8 +195,7 @@ Logical Operator “and” and “&amp;&amp;” are not identical Logical Operat
       <div class="post-content">
         <p><a href="https://twitter.com/MichalBundyra">@MichalBundyra</a> <a href="https://twitter.com/MichalBundyra/status/1184533617600544770">tweeted</a> yesterday:</p>
 <blockquote>
-<p>TIL &amp;&amp; and AND are not the same&hellip; <a href="https://3v4l.org/dVVYc">https://3v4l.org/dVVYc</a> Thanks <a href="https://twitter.com/geerteltink">@geerteltink</a></p>
-</blockquote>
+<p>TIL &amp;&amp; and AND are not the same&hellip; <a href="https://3v4l.org/dVVYc">https://3v4l.org/dVVYc</a> Thanks <a href="https://twitter.com/geerteltink">@geerteltink</a></p></blockquote>
 <p>Honestly, I never use(d) <code>and</code>. But it is interesting to learn that there is an actual difference and not just a flavor.</p>
 <p>Michal compares the output of <code>and</code> and <code>&amp;&amp;</code>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
@@ -214,8 +212,7 @@ bool(true)
 <h3 id="logical-operators">Logical Operators</h3>
 <p>The documentation for the <a href="https://www.php.net/manual/en/language.operators.logical.php">Logical Operators</a> states:</p>
 <blockquote>
-<p>The reason for the two different variations of &ldquo;and&rdquo; and &ldquo;or&rdquo; operators is that they operate at different precedences. (See Operator Precedence.)</p>
-</blockquote>
+<p>The reason for the two different variations of &ldquo;and&rdquo; and &ldquo;or&rdquo; operators is that they operate at different precedences. (See Operator Precedence.)</p></blockquote>
 <h3 id="short-circuiting-operators">Short-circuiting operators</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 </span></span><span style="display:flex;"><span>
@@ -248,8 +245,7 @@ bool(true)
 <blockquote>
 <p>The precedence of an operator specifies how &ldquo;tightly&rdquo; it binds two expressions together.</p>
 <p>[..]</p>
-<p>Use of parentheses, even when not strictly necessary, can often increase readability of the code by making grouping explicit rather than relying on the implicit operator precedence and associativity.</p>
-</blockquote>
+<p>Use of parentheses, even when not strictly necessary, can often increase readability of the code by making grouping explicit rather than relying on the implicit operator precedence and associativity.</p></blockquote>
 <h2 id="conclusion">Conclusion</h2>
 <p>So, <code>and</code> can lead to unexpected results (unless you really know how it works). On the top of my head, I cannot think of a scenario, where <code>and</code> would be required.</p>
 <p>To prevent unwanted surprises, one can either put <code>and</code> comparison in parentheses or even better use the <code>&amp;&amp;</code> operator.</p>

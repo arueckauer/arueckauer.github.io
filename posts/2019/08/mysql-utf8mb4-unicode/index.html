@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
 <meta name="description" content="In MySQL UTF-8 does not actually mean UTF-8. If you&rsquo;re curious to see why, there is an excellent post by Mathias explaining in detail why you should choose utf8mb4 over utf8.
-While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3&#43; on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&rsquo;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self." />
+While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3&#43; on a Unix-Like system, I needed to configure MySQL 8.0.15 on Windows. Now, I won&rsquo;t tell the whole story of how I finally ended up with this configuration, leaving this just here for my future self.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, mysql, utf8" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -85,8 +86,6 @@ While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3&#43; o
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -101,10 +100,6 @@ While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3&#43; o
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -192,54 +187,54 @@ While Mathias nicely covers the upgrade and configuration for MySQL 5.5.3&#43; o
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SHOW</span> VARIABLES <span style="color:#66d9ef">WHERE</span> Variable_name <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;character\_set\_%&#39;</span> <span style="color:#66d9ef">OR</span> Variable_name <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;collation%&#39;</span>;
 </span></span></code></pre></div><p>&hellip;with the result being&hellip;</p>
 <table>
-<thead>
-<tr>
-<th>Variable_name</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>character_set_client</td>
-<td>utf8mb4</td>
-</tr>
-<tr>
-<td>character_set_connection</td>
-<td>utf8mb4</td>
-</tr>
-<tr>
-<td>character_set_database</td>
-<td>utf8mb4</td>
-</tr>
-<tr>
-<td>character_set_filesystem</td>
-<td>binary</td>
-</tr>
-<tr>
-<td>character_set_results</td>
-<td>utf8mb4</td>
-</tr>
-<tr>
-<td>character_set_server</td>
-<td>utf8mb4</td>
-</tr>
-<tr>
-<td>character_set_system</td>
-<td>utf8</td>
-</tr>
-<tr>
-<td>collation_connection</td>
-<td>utf8mb4_0900_ai_ci</td>
-</tr>
-<tr>
-<td>collation_database</td>
-<td>utf8mb4_unicode_ci</td>
-</tr>
-<tr>
-<td>collation_server</td>
-<td>utf8mb4_unicode_ci</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Variable_name</th>
+          <th>Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>character_set_client</td>
+          <td>utf8mb4</td>
+      </tr>
+      <tr>
+          <td>character_set_connection</td>
+          <td>utf8mb4</td>
+      </tr>
+      <tr>
+          <td>character_set_database</td>
+          <td>utf8mb4</td>
+      </tr>
+      <tr>
+          <td>character_set_filesystem</td>
+          <td>binary</td>
+      </tr>
+      <tr>
+          <td>character_set_results</td>
+          <td>utf8mb4</td>
+      </tr>
+      <tr>
+          <td>character_set_server</td>
+          <td>utf8mb4</td>
+      </tr>
+      <tr>
+          <td>character_set_system</td>
+          <td>utf8</td>
+      </tr>
+      <tr>
+          <td>collation_connection</td>
+          <td>utf8mb4_0900_ai_ci</td>
+      </tr>
+      <tr>
+          <td>collation_database</td>
+          <td>utf8mb4_unicode_ci</td>
+      </tr>
+      <tr>
+          <td>collation_server</td>
+          <td>utf8mb4_unicode_ci</td>
+      </tr>
+  </tbody>
 </table>
 <p>&hellip;alright except for the <code>collation_connection</code> parameter. Now, I am stil unsure, whether that can be set as server variable or not. Trying to set in in <code>my.ini</code>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[mysqld]</span>

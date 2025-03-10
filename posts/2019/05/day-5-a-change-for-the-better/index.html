@@ -9,7 +9,8 @@
 <meta name="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D5
 Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
 I see some issues with that.
-Build has a dependency on configuration. The build process for an application should stay the same." />
+Build has a dependency on configuration. The build process for an application should stay the same. It must not produce a different outcome depending on the local setup. Build process will not run on CI/CD. In this setup the application will never be run in CI/CD. Repetitive tasks. Why should every developer manage configuration, if it can be automated? Automation will lower risk of human error and speed up the process. On the topic of automating things, I can recommend following Ryan Bartram, the author of Don&rsquo;t forget to automate it. I got the chance to get to know him on the Global Azure Bootcamp, great and funny guy! Proper way The proper way to fix this, is to address the author of the abomination feature and improve the build process. This is what I will do.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, 100-days-of-code, automation, composer, php" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -44,7 +45,7 @@ Build has a dependency on configuration. The build process for an application sh
   <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D5
 Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
 I see some issues with that.
-Build has a dependency on configuration. The build process for an application should stay the same.">
+Build has a dependency on configuration. The build process for an application should stay the same. It must not produce a different outcome depending on the local setup. Build process will not run on CI/CD. In this setup the application will never be run in CI/CD. Repetitive tasks. Why should every developer manage configuration, if it can be automated? Automation will lower risk of human error and speed up the process. On the topic of automating things, I can recommend following Ryan Bartram, the author of Don’t forget to automate it. I got the chance to get to know him on the Global Azure Bootcamp, great and funny guy! Proper way The proper way to fix this, is to address the author of the abomination feature and improve the build process. This is what I will do.">
   <meta itemprop="datePublished" content="2019-05-24T23:37:51+02:00">
   <meta itemprop="dateModified" content="2019-05-24T23:37:51+02:00">
   <meta itemprop="wordCount" content="639">
@@ -57,7 +58,7 @@ Build has a dependency on configuration. The build process for an application sh
   <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D5
 Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
 I see some issues with that.
-Build has a dependency on configuration. The build process for an application should stay the same.">
+Build has a dependency on configuration. The build process for an application should stay the same. It must not produce a different outcome depending on the local setup. Build process will not run on CI/CD. In this setup the application will never be run in CI/CD. Repetitive tasks. Why should every developer manage configuration, if it can be automated? Automation will lower risk of human error and speed up the process. On the topic of automating things, I can recommend following Ryan Bartram, the author of Don’t forget to automate it. I got the chance to get to know him on the Global Azure Bootcamp, great and funny guy! Proper way The proper way to fix this, is to address the author of the abomination feature and improve the build process. This is what I will do.">
 
 
 
@@ -67,7 +68,7 @@ Build has a dependency on configuration. The build process for an application sh
   <meta property="og:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D5
 Yesterday I ran into an issue where the build process of an application depended on a proper configured application. There is a distributed configuration file. But for the build process to run successfully, the distributed file has to be copied (and if necessary adjusted) manually.
 I see some issues with that.
-Build has a dependency on configuration. The build process for an application should stay the same.">
+Build has a dependency on configuration. The build process for an application should stay the same. It must not produce a different outcome depending on the local setup. Build process will not run on CI/CD. In this setup the application will never be run in CI/CD. Repetitive tasks. Why should every developer manage configuration, if it can be automated? Automation will lower risk of human error and speed up the process. On the topic of automating things, I can recommend following Ryan Bartram, the author of Don’t forget to automate it. I got the chance to get to know him on the Global Azure Bootcamp, great and funny guy! Proper way The proper way to fix this, is to address the author of the abomination feature and improve the build process. This is what I will do.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -95,8 +96,6 @@ Build has a dependency on configuration. The build process for an application sh
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -111,10 +110,6 @@ Build has a dependency on configuration. The build process for an application sh
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>

@@ -11,7 +11,9 @@
 Taken from factor three of The Twelve-Factor App.
 Today I am studying about how to achieve this requirement making usage of phpdotenv in a Zend Expressive context.
 I will not go into details on and advantages of this concept. A leave that up to other resources.
-phpdotenv This package" />
+phpdotenv This package
+Loads environment variables from .env to getenv(), $_ENV and $_SERVER automagically.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, 100-days-of-code, dotenv, zend-expressive, php" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -48,7 +50,8 @@ phpdotenv This package" />
 Taken from factor three of The Twelve-Factor App.
 Today I am studying about how to achieve this requirement making usage of phpdotenv in a Zend Expressive context.
 I will not go into details on and advantages of this concept. A leave that up to other resources.
-phpdotenv This package">
+phpdotenv This package
+Loads environment variables from .env to getenv(), $_ENV and $_SERVER automagically.">
   <meta itemprop="datePublished" content="2019-05-25T20:43:15+02:00">
   <meta itemprop="dateModified" content="2019-05-25T20:43:15+02:00">
   <meta itemprop="wordCount" content="284">
@@ -63,7 +66,8 @@ phpdotenv This package">
 Taken from factor three of The Twelve-Factor App.
 Today I am studying about how to achieve this requirement making usage of phpdotenv in a Zend Expressive context.
 I will not go into details on and advantages of this concept. A leave that up to other resources.
-phpdotenv This package">
+phpdotenv This package
+Loads environment variables from .env to getenv(), $_ENV and $_SERVER automagically.">
 
 
 
@@ -75,7 +79,8 @@ phpdotenv This package">
 Taken from factor three of The Twelve-Factor App.
 Today I am studying about how to achieve this requirement making usage of phpdotenv in a Zend Expressive context.
 I will not go into details on and advantages of this concept. A leave that up to other resources.
-phpdotenv This package">
+phpdotenv This package
+Loads environment variables from .env to getenv(), $_ENV and $_SERVER automagically.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -103,8 +108,6 @@ phpdotenv This package">
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -119,10 +122,6 @@ phpdotenv This package">
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -200,16 +199,14 @@ phpdotenv This package">
         <p><em>This article is part of my <a href="https://arueckauer.github.io/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D6</em></p>
 <hr>
 <blockquote>
-<p>[The Twelve-Factor App] requires strict separation of config from code.</p>
-</blockquote>
+<p>[The Twelve-Factor App] requires strict separation of config from code.</p></blockquote>
 <p><em>Taken from <a href="https://12factor.net/config">factor three</a> of The Twelve-Factor App.</em></p>
 <p>Today I am studying about how to achieve this requirement making usage of <a href="https://github.com/vlucas/phpdotenv">phpdotenv</a> in a Zend Expressive context.</p>
 <p>I will not go into details on and advantages of this concept. A leave that up to other resources.</p>
 <h2 id="phpdotenv">phpdotenv</h2>
 <p>This package</p>
 <blockquote>
-<p>Loads environment variables from <code>.env</code> to <code>getenv()</code>, <code>$_ENV</code> and <code>$_SERVER</code> automagically.</p>
-</blockquote>
+<p>Loads environment variables from <code>.env</code> to <code>getenv()</code>, <code>$_ENV</code> and <code>$_SERVER</code> automagically.</p></blockquote>
 <p>It has a clean setup and interface. To load an <code>.env</code> file use</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$dotenv <span style="color:#f92672">=</span> <span style="color:#a6e22e">Dotenv\Dotenv</span><span style="color:#f92672">::</span><span style="color:#a6e22e">create</span>(<span style="color:#66d9ef">__DIR__</span>);
 </span></span><span style="display:flex;"><span>$dotenv<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">load</span>();

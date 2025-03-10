@@ -9,7 +9,8 @@
 <meta name="description" content="Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.
 Disclaimer: This article does not describe setting up / creating GPG keys.
 Check your GPG keys gpg --list-secret-keys --keyid-format LONG Which gives you a list like the following.
-C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx ---------------------------------------------------- sec rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC] 2B30F6F709EF48E6AF669C3FD7EB1106B4940744 uid [ ultimativ ] Andi Rückauer &lt;arueckauer@example." />
+C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx ---------------------------------------------------- sec rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC] 2B30F6F709EF48E6AF669C3FD7EB1106B4940744 uid [ ultimativ ] Andi Rückauer &lt;arueckauer@example.com&gt; Setting GPG signing key as configuration setting git config --global user.signingkey E1C0E2DB517C8FBC Configure GPG program git config --global gpg.program &#34;C:\Program Files (x86)\GnuPG\bin\gpg.exe&#34; Et voilà Now signing commits should work by passing the -S option with a commit.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, git, gpg, windows" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -44,7 +45,7 @@ C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx --------------------------
   <meta itemprop="description" content="Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.
 Disclaimer: This article does not describe setting up / creating GPG keys.
 Check your GPG keys gpg --list-secret-keys --keyid-format LONG Which gives you a list like the following.
-C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx ---------------------------------------------------- sec rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC] 2B30F6F709EF48E6AF669C3FD7EB1106B4940744 uid [ ultimativ ] Andi Rückauer &lt;arueckauer@example.">
+C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx ---------------------------------------------------- sec rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC] 2B30F6F709EF48E6AF669C3FD7EB1106B4940744 uid [ ultimativ ] Andi Rückauer &lt;arueckauer@example.com&gt; Setting GPG signing key as configuration setting git config --global user.signingkey E1C0E2DB517C8FBC Configure GPG program git config --global gpg.program &#34;C:\Program Files (x86)\GnuPG\bin\gpg.exe&#34; Et voilà Now signing commits should work by passing the -S option with a commit.">
   <meta itemprop="datePublished" content="2020-05-05T06:34:25+02:00">
   <meta itemprop="dateModified" content="2020-05-05T06:34:25+02:00">
   <meta itemprop="wordCount" content="145">
@@ -57,7 +58,7 @@ C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx --------------------------
   <meta name="twitter:description" content="Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.
 Disclaimer: This article does not describe setting up / creating GPG keys.
 Check your GPG keys gpg --list-secret-keys --keyid-format LONG Which gives you a list like the following.
-C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx ---------------------------------------------------- sec rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC] 2B30F6F709EF48E6AF669C3FD7EB1106B4940744 uid [ ultimativ ] Andi Rückauer &lt;arueckauer@example.">
+C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx ---------------------------------------------------- sec rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC] 2B30F6F709EF48E6AF669C3FD7EB1106B4940744 uid [ ultimativ ] Andi Rückauer &lt;arueckauer@example.com&gt; Setting GPG signing key as configuration setting git config --global user.signingkey E1C0E2DB517C8FBC Configure GPG program git config --global gpg.program &#34;C:\Program Files (x86)\GnuPG\bin\gpg.exe&#34; Et voilà Now signing commits should work by passing the -S option with a commit.">
 
 
 
@@ -67,7 +68,7 @@ C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx --------------------------
   <meta property="og:description" content="Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.
 Disclaimer: This article does not describe setting up / creating GPG keys.
 Check your GPG keys gpg --list-secret-keys --keyid-format LONG Which gives you a list like the following.
-C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx ---------------------------------------------------- sec rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC] 2B30F6F709EF48E6AF669C3FD7EB1106B4940744 uid [ ultimativ ] Andi Rückauer &lt;arueckauer@example.">
+C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx ---------------------------------------------------- sec rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC] 2B30F6F709EF48E6AF669C3FD7EB1106B4940744 uid [ ultimativ ] Andi Rückauer &lt;arueckauer@example.com&gt; Setting GPG signing key as configuration setting git config --global user.signingkey E1C0E2DB517C8FBC Configure GPG program git config --global gpg.program &#34;C:\Program Files (x86)\GnuPG\bin\gpg.exe&#34; Et voilà Now signing commits should work by passing the -S option with a commit.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -94,8 +95,6 @@ C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx --------------------------
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -110,10 +109,6 @@ C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx --------------------------
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -190,8 +185,7 @@ C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx --------------------------
       <div class="post-content">
         <p>Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.</p>
 <blockquote>
-<p>Disclaimer: This article does not describe setting up / creating GPG keys.</p>
-</blockquote>
+<p>Disclaimer: This article does not describe setting up / creating GPG keys.</p></blockquote>
 <h2 id="check-your-gpg-keys">Check your GPG keys</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>gpg --list-secret-keys --keyid-format LONG
 </span></span></code></pre></div><p>Which gives you a list like the following.</p>

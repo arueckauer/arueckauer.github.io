@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
 <meta name="description" content="Transforming of a flat application structure to a modular one in a Zend Expressive project
-In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure." />
+In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure. It also means not only having separate modules but also separate namespaces. This makes handling class names much easier.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, zend-expressive, laminas, php" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -40,7 +41,7 @@ In an Expressive project I ran into the issue, where the application grew much l
 
   <meta itemprop="name" content="From Flat to Modular">
   <meta itemprop="description" content="Transforming of a flat application structure to a modular one in a Zend Expressive project
-In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure.">
+In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure. It also means not only having separate modules but also separate namespaces. This makes handling class names much easier.">
   <meta itemprop="datePublished" content="2019-05-17T06:30:00+02:00">
   <meta itemprop="dateModified" content="2019-05-17T06:30:00+02:00">
   <meta itemprop="wordCount" content="488">
@@ -51,7 +52,7 @@ In an Expressive project I ran into the issue, where the application grew much l
   <meta name="twitter:image" content="https://arueckauer.github.io/">
   <meta name="twitter:title" content="From Flat to Modular">
   <meta name="twitter:description" content="Transforming of a flat application structure to a modular one in a Zend Expressive project
-In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure.">
+In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure. It also means not only having separate modules but also separate namespaces. This makes handling class names much easier.">
 
 
 
@@ -59,7 +60,7 @@ In an Expressive project I ran into the issue, where the application grew much l
   <meta property="og:site_name" content="Andi Rückauer">
   <meta property="og:title" content="From Flat to Modular">
   <meta property="og:description" content="Transforming of a flat application structure to a modular one in a Zend Expressive project
-In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure.">
+In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure. It also means not only having separate modules but also separate namespaces. This makes handling class names much easier.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -86,8 +87,6 @@ In an Expressive project I ran into the issue, where the application grew much l
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -102,10 +101,6 @@ In an Expressive project I ran into the issue, where the application grew much l
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -190,33 +185,33 @@ In an Expressive project I ran into the issue, where the application grew much l
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ composer create-project zendframework/zend-expressive-skeleton expressive-flat
 </span></span></code></pre></div><p>For modular structure first question <em>What type of installation would you like?</em> was answered with 3 - Modular. For all other options the default selections where chosen.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ composer create-project zendframework/zend-expressive-skeleton expressive-modular
-</span></span></code></pre></div><p><img alt="Create project with modular code structure" src="https://arueckauer.github.io/img/from-flat-to-modular/create-project-with-modular-code-structure.png"></p>
+</span></span></code></pre></div><p><img src="https://arueckauer.github.io/img/from-flat-to-modular/create-project-with-modular-code-structure.png" alt="Create project with modular code structure"></p>
 <p>The structural differences of the two projects are (1) the location of the source file within the <code>App</code> module, (2) a template folder and (3) the autoloading configuration.</p>
 <table>
-<thead>
-<tr>
-<th></th>
-<th>Flat</th>
-<th>Modular</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Source App Module</td>
-<td><code>src/App</code></td>
-<td><code>src/App/src</code></td>
-</tr>
-<tr>
-<td>Template Ordner</td>
-<td><em>n/a</em></td>
-<td><code>src/App/templates</code></td>
-</tr>
-<tr>
-<td>Autoload configuration</td>
-<td><code>&quot;App\\&quot;: &quot;src/App/&quot;</code></td>
-<td><code>&quot;App\\&quot;: &quot;src/App/src/&quot;</code></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th></th>
+          <th>Flat</th>
+          <th>Modular</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Source App Module</td>
+          <td><code>src/App</code></td>
+          <td><code>src/App/src</code></td>
+      </tr>
+      <tr>
+          <td>Template Ordner</td>
+          <td><em>n/a</em></td>
+          <td><code>src/App/templates</code></td>
+      </tr>
+      <tr>
+          <td>Autoload configuration</td>
+          <td><code>&quot;App\\&quot;: &quot;src/App/&quot;</code></td>
+          <td><code>&quot;App\\&quot;: &quot;src/App/src/&quot;</code></td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="making-the-transition">Making the transition</h2>
 <p>Consequently, I needed to make the following changes to convert the project structure:</p>

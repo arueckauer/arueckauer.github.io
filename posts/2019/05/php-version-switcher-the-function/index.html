@@ -9,7 +9,8 @@
 <meta name="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D11
 This is part four of a series of articles about the PHP Version Switcher.
 Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Today I finally breathe life into the module function. 🕺🏼
-Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges." />
+Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges. I define the requirement in the module by adding the following line.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, 100-days-of-code, powershell, php" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -44,7 +45,7 @@ Administrator privileges Since the Apache services will be restarted, the module
   <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D11
 This is part four of a series of articles about the PHP Version Switcher.
 Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Today I finally breathe life into the module function. 🕺🏼
-Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges.">
+Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges. I define the requirement in the module by adding the following line.">
   <meta itemprop="datePublished" content="2019-05-31T22:56:25+02:00">
   <meta itemprop="dateModified" content="2019-05-31T22:56:25+02:00">
   <meta itemprop="wordCount" content="650">
@@ -57,7 +58,7 @@ Administrator privileges Since the Apache services will be restarted, the module
   <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D11
 This is part four of a series of articles about the PHP Version Switcher.
 Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Today I finally breathe life into the module function. 🕺🏼
-Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges.">
+Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges. I define the requirement in the module by adding the following line.">
 
 
 
@@ -67,7 +68,7 @@ Administrator privileges Since the Apache services will be restarted, the module
   <meta property="og:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D11
 This is part four of a series of articles about the PHP Version Switcher.
 Part One: Php Version Switcher: PowerShell Module Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Today I finally breathe life into the module function. 🕺🏼
-Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges.">
+Administrator privileges Since the Apache services will be restarted, the module requires administrator privileges. I define the requirement in the module by adding the following line.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -94,8 +95,6 @@ Administrator privileges Since the Apache services will be restarted, the module
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -110,10 +109,6 @@ Administrator privileges Since the Apache services will be restarted, the module
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -201,7 +196,7 @@ Administrator privileges Since the Apache services will be restarted, the module
 <p>Since the Apache services will be restarted, the module requires administrator privileges. I define the requirement in the module by adding the following line.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e">#</span><span style="color:#66d9ef">Requires</span> <span style="color:#66d9ef">-RunAsAdministrator</span>
 </span></span></code></pre></div><p>When opening a new PowerShell, an error is raised.</p>
-<p><img alt="Module requires administrator-privileges" src="https://arueckauer.github.io/img/php-version-switcher-function/requires-run-as-administrator.png"></p>
+<p><img src="https://arueckauer.github.io/img/php-version-switcher-function/requires-run-as-administrator.png" alt="Module requires administrator-privileges"></p>
 <p>Now, I either</p>
 <ul>
 <li>a) add a condition/parameter that the module is only imported when running an elevated shell or</li>
@@ -309,7 +304,7 @@ Administrator privileges Since the Apache services will be restarted, the module
 <h2 id="test">Test</h2>
 <p>I will now test the <code>pvs</code> module by switching from PHP 7.2 to PHP 7.3.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>php -v;pvs <span style="color:#ae81ff">7.3</span>;php -v
-</span></span></code></pre></div><p><img alt="PHP Version Switcher in action" src="https://arueckauer.github.io/img/php-version-switcher-function/pvs-in-action.png"></p>
+</span></span></code></pre></div><p><img src="https://arueckauer.github.io/img/php-version-switcher-function/pvs-in-action.png" alt="PHP Version Switcher in action"></p>
 <p>Bingo! 🙌🏼</p>
 <h2 id="next-steps">Next steps</h2>
 <p>There is already a to-do list with improvements. Configuration is probably one of the most important due to reusability reasons. I would prefer a less verbose output.</p>

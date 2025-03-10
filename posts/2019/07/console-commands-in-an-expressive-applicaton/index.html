@@ -9,7 +9,8 @@
 <meta name="description" content="In a current customer project, I needed the ability to run commands from the CLI.
 Symfony provides a console component which is, among others, used by zendframework/zend-expressive-tooling. The documentation got me off to a quick start and I got my first Hello command running within minutes.
 I wanted to provide a re-usable package, where the implementation can provide the definition of a command list.
-Since I am not using the package within a Symfony application, I needed somehow access to the Service Container of the Expressive application." />
+Since I am not using the package within a Symfony application, I needed somehow access to the Service Container of the Expressive application. I quick search on the internet did not show up any useful results and I was left to use my own brain.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, php, zend-expressive" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -44,7 +45,7 @@ Since I am not using the package within a Symfony application, I needed somehow 
   <meta itemprop="description" content="In a current customer project, I needed the ability to run commands from the CLI.
 Symfony provides a console component which is, among others, used by zendframework/zend-expressive-tooling. The documentation got me off to a quick start and I got my first Hello command running within minutes.
 I wanted to provide a re-usable package, where the implementation can provide the definition of a command list.
-Since I am not using the package within a Symfony application, I needed somehow access to the Service Container of the Expressive application.">
+Since I am not using the package within a Symfony application, I needed somehow access to the Service Container of the Expressive application. I quick search on the internet did not show up any useful results and I was left to use my own brain.">
   <meta itemprop="datePublished" content="2019-07-04T16:09:13+02:00">
   <meta itemprop="dateModified" content="2019-07-04T16:09:13+02:00">
   <meta itemprop="wordCount" content="327">
@@ -57,7 +58,7 @@ Since I am not using the package within a Symfony application, I needed somehow 
   <meta name="twitter:description" content="In a current customer project, I needed the ability to run commands from the CLI.
 Symfony provides a console component which is, among others, used by zendframework/zend-expressive-tooling. The documentation got me off to a quick start and I got my first Hello command running within minutes.
 I wanted to provide a re-usable package, where the implementation can provide the definition of a command list.
-Since I am not using the package within a Symfony application, I needed somehow access to the Service Container of the Expressive application.">
+Since I am not using the package within a Symfony application, I needed somehow access to the Service Container of the Expressive application. I quick search on the internet did not show up any useful results and I was left to use my own brain.">
 
 
 
@@ -67,7 +68,7 @@ Since I am not using the package within a Symfony application, I needed somehow 
   <meta property="og:description" content="In a current customer project, I needed the ability to run commands from the CLI.
 Symfony provides a console component which is, among others, used by zendframework/zend-expressive-tooling. The documentation got me off to a quick start and I got my first Hello command running within minutes.
 I wanted to provide a re-usable package, where the implementation can provide the definition of a command list.
-Since I am not using the package within a Symfony application, I needed somehow access to the Service Container of the Expressive application.">
+Since I am not using the package within a Symfony application, I needed somehow access to the Service Container of the Expressive application. I quick search on the internet did not show up any useful results and I was left to use my own brain.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -93,8 +94,6 @@ Since I am not using the package within a Symfony application, I needed somehow 
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -109,10 +108,6 @@ Since I am not using the package within a Symfony application, I needed somehow 
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -240,7 +235,7 @@ Since I am not using the package within a Symfony application, I needed somehow 
 </span></span><span style="display:flex;"><span>    ],
 </span></span><span style="display:flex;"><span>];
 </span></span></code></pre></div><p>A day after I completed my implementation, two users mentioned an interesting post by Geert Eltink (aka <a href="https://twitter.com/xtreamwayz">@xtreamwayz</a>) from 2016 <a href="https://www.xtreamwayz.com/blog/2016-02-07-zend-expressive-console-cli-commands">zend-expressive console cli commands</a> and the <a href="https://github.com/zfcampus/zf-console">zfcampus/zf-console</a> library.</p>
-<p><img alt="Conversation on Slack" src="https://arueckauer.github.io/img/console-commands-in-an-expressive-applicaton/slack-thread.jpg"></p>
+<p><img src="https://arueckauer.github.io/img/console-commands-in-an-expressive-applicaton/slack-thread.jpg" alt="Conversation on Slack"></p>
 <p><em>(I blacked out the usernames, since I do not have their permission to use them.)</em></p>
 <p>Update 2019-10-18: In an <a href="https://arueckauer.github.io/posts/2019/10/console-commands-in-an-expressive-applicaton-ii/">additional post</a>, I show two more real-world examples.</p>
 

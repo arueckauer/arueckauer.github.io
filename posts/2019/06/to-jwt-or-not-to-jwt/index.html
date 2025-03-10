@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
 <meta name="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D17
-At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors." />
+At the IPC 2019 Authentication and Authorization was one of the two most interesting topics (event sourcing being the second). Sessions were comparing the usage of traditional authentication with the usage of JWT, maybe the future technology WebAuthn requiring no passwords for registration or login processes, using an identity provider instead of implementing our own processes over and over again, and not so quite common applications of web tokens - like physically opening doors.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, 100-days-of-code, jwt, auth, php" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -87,8 +88,6 @@ At the IPC 2019 Authentication and Authorization was one of the two most interes
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -103,10 +102,6 @@ At the IPC 2019 Authentication and Authorization was one of the two most interes
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -193,16 +188,14 @@ At the IPC 2019 Authentication and Authorization was one of the two most interes
 <h2 id="jwt---just-a-hype">JWT - just a hype?</h2>
 <p>Today <a href="https://twitter.com/lyrixx">Gregoire Pineau</a> published an article <em><a href="https://jolicode.com/blog/why-you-dont-need-jwt">Why you don’t need JWT</a></em>, in which he basically declares JWT as hype and says Basic Auth provides a simpler solution to the same problem (in most scenarios).</p>
 <blockquote>
-<p>But most of the time, you don’t need JWT, and your project will be simpler if you can resist to hype by refusing to use it.</p>
-</blockquote>
+<p>But most of the time, you don’t need JWT, and your project will be simpler if you can resist to hype by refusing to use it.</p></blockquote>
 <h2 id="jwt-adds-complexity">JWT adds complexity</h2>
 <p>Now, JWT is not something trivial. The process, purpose and usage of JWT, JWS, JWE as well as access tokens and refresh tokens take some time to grasp. Probably this complexity is why JWT is so often misused - one of the reasons which is used against the usage of JWT.</p>
 <p>Gregoire lists in his post the following complexity points:</p>
 <ul>
 <li>Usage of private and public key.
 <blockquote>
-<p>Like all other secrets, it’s always hard to keep them really secret.</p>
-</blockquote>
+<p>Like all other secrets, it’s always hard to keep them really secret.</p></blockquote>
 </li>
 <li>No revocation of valid tokens, adding the need of e.g. white-/blacklisting.</li>
 <li>Short validity requires reconnect via refresh tokens.</li>

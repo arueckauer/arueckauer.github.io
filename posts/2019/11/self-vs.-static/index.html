@@ -10,7 +10,8 @@
 TLDR self refers to the same class in which the new keyword is actually written.
 static, in PHP 5.3&rsquo;s late static bindings, refers to whatever class in the hierarchy you called the method on.
 By BoltClock on Stack Overflow
-An example &lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; ." />
+An example &lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; . self::class . PHP_EOL; echo &#39;static: &#39; . static::class . PHP_EOL; echo &#39;get_class(): &#39; . get_class() . PHP_EOL; echo &#39;get_class($this): &#39; . get_class($this) . PHP_EOL; echo &#39;get_called_class(): &#39; . get_called_class() . PHP_EOL; } } class Bar extends Foo { } (new Bar())(); Output
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, php" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -46,7 +47,7 @@ An example &lt;?php class Foo { public function __invoke() { echo &#39;self: &#3
 TLDR self refers to the same class in which the new keyword is actually written.
 static, in PHP 5.3’s late static bindings, refers to whatever class in the hierarchy you called the method on.
 By BoltClock on Stack Overflow
-An example &lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; .">
+An example &lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; . self::class . PHP_EOL; echo &#39;static: &#39; . static::class . PHP_EOL; echo &#39;get_class(): &#39; . get_class() . PHP_EOL; echo &#39;get_class($this): &#39; . get_class($this) . PHP_EOL; echo &#39;get_called_class(): &#39; . get_called_class() . PHP_EOL; } } class Bar extends Foo { } (new Bar())(); Output">
   <meta itemprop="datePublished" content="2019-11-04T06:41:23+01:00">
   <meta itemprop="dateModified" content="2019-11-04T06:41:23+01:00">
   <meta itemprop="wordCount" content="140">
@@ -60,7 +61,7 @@ An example &lt;?php class Foo { public function __invoke() { echo &#39;self: &#3
 TLDR self refers to the same class in which the new keyword is actually written.
 static, in PHP 5.3’s late static bindings, refers to whatever class in the hierarchy you called the method on.
 By BoltClock on Stack Overflow
-An example &lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; .">
+An example &lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; . self::class . PHP_EOL; echo &#39;static: &#39; . static::class . PHP_EOL; echo &#39;get_class(): &#39; . get_class() . PHP_EOL; echo &#39;get_class($this): &#39; . get_class($this) . PHP_EOL; echo &#39;get_called_class(): &#39; . get_called_class() . PHP_EOL; } } class Bar extends Foo { } (new Bar())(); Output">
 
 
 
@@ -71,7 +72,7 @@ An example &lt;?php class Foo { public function __invoke() { echo &#39;self: &#3
 TLDR self refers to the same class in which the new keyword is actually written.
 static, in PHP 5.3’s late static bindings, refers to whatever class in the hierarchy you called the method on.
 By BoltClock on Stack Overflow
-An example &lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; .">
+An example &lt;?php class Foo { public function __invoke() { echo &#39;self: &#39; . self::class . PHP_EOL; echo &#39;static: &#39; . static::class . PHP_EOL; echo &#39;get_class(): &#39; . get_class() . PHP_EOL; echo &#39;get_class($this): &#39; . get_class($this) . PHP_EOL; echo &#39;get_called_class(): &#39; . get_called_class() . PHP_EOL; } } class Bar extends Foo { } (new Bar())(); Output">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -96,8 +97,6 @@ An example &lt;?php class Foo { public function __invoke() { echo &#39;self: &#3
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -112,10 +111,6 @@ An example &lt;?php class Foo { public function __invoke() { echo &#39;self: &#3
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -194,8 +189,7 @@ An example &lt;?php class Foo { public function __invoke() { echo &#39;self: &#3
 <h2 id="tldr">TLDR</h2>
 <blockquote>
 <p><code>self</code> refers to the same class in which the new keyword is actually written.</p>
-<p><code>static</code>, in PHP 5.3&rsquo;s late static bindings, refers to whatever class in the hierarchy you called the method on.</p>
-</blockquote>
+<p><code>static</code>, in PHP 5.3&rsquo;s late static bindings, refers to whatever class in the hierarchy you called the method on.</p></blockquote>
 <p><a href="https://stackoverflow.com/a/5197655/9364246">By BoltClock on Stack Overflow</a></p>
 <h2 id="an-example">An example</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>

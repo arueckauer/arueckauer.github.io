@@ -9,7 +9,7 @@
 <meta name="description" content="With version 8.0 MySQL comes with support for JSON. This allows the storage of JSON data in a column and the usage of JSON functions.
 In a project I needed to check which values are available for a particular property, the JSON column path operator came in handy.
 SELECT `publicDataJson__de`-&gt;&#39;$.preisFaktor&#39; AS `preisFaktor`, COUNT(*) AS `numberOfHits` FROM `products` GROUP BY `preisFaktor`; Another query was to check for non-empty JSON fields.
-WHERE JSON_LENGTH(structure) !" />
+WHERE JSON_LENGTH(structure) != 0 " />
 <meta name="keywords" content="andi, rückauer, blog, software, development, mysql, sql, json" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -44,7 +44,7 @@ WHERE JSON_LENGTH(structure) !" />
   <meta itemprop="description" content="With version 8.0 MySQL comes with support for JSON. This allows the storage of JSON data in a column and the usage of JSON functions.
 In a project I needed to check which values are available for a particular property, the JSON column path operator came in handy.
 SELECT `publicDataJson__de`-&gt;&#39;$.preisFaktor&#39; AS `preisFaktor`, COUNT(*) AS `numberOfHits` FROM `products` GROUP BY `preisFaktor`; Another query was to check for non-empty JSON fields.
-WHERE JSON_LENGTH(structure) !">
+WHERE JSON_LENGTH(structure) != 0">
   <meta itemprop="datePublished" content="2019-08-05T09:17:00+02:00">
   <meta itemprop="dateModified" content="2019-08-05T09:17:00+02:00">
   <meta itemprop="wordCount" content="73">
@@ -57,7 +57,7 @@ WHERE JSON_LENGTH(structure) !">
   <meta name="twitter:description" content="With version 8.0 MySQL comes with support for JSON. This allows the storage of JSON data in a column and the usage of JSON functions.
 In a project I needed to check which values are available for a particular property, the JSON column path operator came in handy.
 SELECT `publicDataJson__de`-&gt;&#39;$.preisFaktor&#39; AS `preisFaktor`, COUNT(*) AS `numberOfHits` FROM `products` GROUP BY `preisFaktor`; Another query was to check for non-empty JSON fields.
-WHERE JSON_LENGTH(structure) !">
+WHERE JSON_LENGTH(structure) != 0">
 
 
 
@@ -67,7 +67,7 @@ WHERE JSON_LENGTH(structure) !">
   <meta property="og:description" content="With version 8.0 MySQL comes with support for JSON. This allows the storage of JSON data in a column and the usage of JSON functions.
 In a project I needed to check which values are available for a particular property, the JSON column path operator came in handy.
 SELECT `publicDataJson__de`-&gt;&#39;$.preisFaktor&#39; AS `preisFaktor`, COUNT(*) AS `numberOfHits` FROM `products` GROUP BY `preisFaktor`; Another query was to check for non-empty JSON fields.
-WHERE JSON_LENGTH(structure) !">
+WHERE JSON_LENGTH(structure) != 0">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -94,8 +94,6 @@ WHERE JSON_LENGTH(structure) !">
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -110,10 +108,6 @@ WHERE JSON_LENGTH(structure) !">
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>

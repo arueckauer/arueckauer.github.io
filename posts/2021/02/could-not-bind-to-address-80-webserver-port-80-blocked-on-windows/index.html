@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
 <meta name="description" content="Several Windows services might block port 80 and the local webserver like Apache HTTP or Nginx from starting.
-PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; .\bin\httpd.exe (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address [::]:80 (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address 0." />
+PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; .\bin\httpd.exe (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address [::]:80 (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address 0.0.0.0:80 AH00451: no listening sockets available, shutting down AH00015: Unable to open logs PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; The best way to identify the running service(s) I found on Stackoverflow.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, apache, webserver, windows" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -40,7 +41,7 @@ PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; .\bin\httpd.exe (OS 10013)An atte
 
   <meta itemprop="name" content="could not bind to address [::]:80 - Webserver port 80 blocked on Windows">
   <meta itemprop="description" content="Several Windows services might block port 80 and the local webserver like Apache HTTP or Nginx from starting.
-PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; .\bin\httpd.exe (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address [::]:80 (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address 0.">
+PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; .\bin\httpd.exe (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address [::]:80 (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address 0.0.0.0:80 AH00451: no listening sockets available, shutting down AH00015: Unable to open logs PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; The best way to identify the running service(s) I found on Stackoverflow.">
   <meta itemprop="datePublished" content="2021-02-01T13:54:00+02:00">
   <meta itemprop="dateModified" content="2021-02-01T13:54:00+02:00">
   <meta itemprop="wordCount" content="116">
@@ -51,7 +52,7 @@ PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; .\bin\httpd.exe (OS 10013)An atte
   <meta name="twitter:image" content="https://arueckauer.github.io/">
   <meta name="twitter:title" content="could not bind to address [::]:80 - Webserver port 80 blocked on Windows">
   <meta name="twitter:description" content="Several Windows services might block port 80 and the local webserver like Apache HTTP or Nginx from starting.
-PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; .\bin\httpd.exe (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address [::]:80 (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address 0.">
+PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; .\bin\httpd.exe (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address [::]:80 (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address 0.0.0.0:80 AH00451: no listening sockets available, shutting down AH00015: Unable to open logs PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; The best way to identify the running service(s) I found on Stackoverflow.">
 
 
 
@@ -59,7 +60,7 @@ PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; .\bin\httpd.exe (OS 10013)An atte
   <meta property="og:site_name" content="Andi Rückauer">
   <meta property="og:title" content="could not bind to address [::]:80 - Webserver port 80 blocked on Windows">
   <meta property="og:description" content="Several Windows services might block port 80 and the local webserver like Apache HTTP or Nginx from starting.
-PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; .\bin\httpd.exe (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address [::]:80 (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address 0.">
+PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; .\bin\httpd.exe (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address [::]:80 (OS 10013)An attempt was made to access a socket in a way forbidden by its access permissions. : AH00072: make_sock: could not bind to address 0.0.0.0:80 AH00451: no listening sockets available, shutting down AH00015: Unable to open logs PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; The best way to identify the running service(s) I found on Stackoverflow.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -86,8 +87,6 @@ PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; .\bin\httpd.exe (OS 10013)An atte
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -102,10 +101,6 @@ PS C:\www\httpd-2.4.46-win64-VS16\Apache24&gt; .\bin\httpd.exe (OS 10013)An atte
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>

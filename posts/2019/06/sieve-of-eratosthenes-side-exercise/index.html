@@ -8,7 +8,8 @@
 <meta name="author" content="">
 <meta name="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D19
 Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
-In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime." />
+In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime. This is the sieve&rsquo;s key distinction from using trial division to sequentially test each candidate number for divisibility by each prime.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, 100-days-of-code, exercism, php" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -42,7 +43,7 @@ In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for fin
   <meta itemprop="name" content="Sieve of Eratosthenes (Side Exercise)">
   <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D19
 Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
-In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime.">
+In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime. This is the sieve’s key distinction from using trial division to sequentially test each candidate number for divisibility by each prime.">
   <meta itemprop="datePublished" content="2019-06-10T21:31:48+02:00">
   <meta itemprop="dateModified" content="2019-06-10T21:31:48+02:00">
   <meta itemprop="wordCount" content="237">
@@ -54,7 +55,7 @@ In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for fin
   <meta name="twitter:title" content="Sieve of Eratosthenes (Side Exercise)">
   <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D19
 Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
-In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime.">
+In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime. This is the sieve’s key distinction from using trial division to sequentially test each candidate number for divisibility by each prime.">
 
 
 
@@ -63,7 +64,7 @@ In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for fin
   <meta property="og:title" content="Sieve of Eratosthenes (Side Exercise)">
   <meta property="og:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D19
 Today I am solving the Sieve of Eratosthenes side exercise of the Exercism PHP track.
-In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime.">
+In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit. It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime. This is the sieve’s key distinction from using trial division to sequentially test each candidate number for divisibility by each prime.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -90,8 +91,6 @@ In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for fin
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -106,10 +105,6 @@ In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for fin
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -189,8 +184,7 @@ In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for fin
 <p>Today I am solving the Sieve of Eratosthenes side exercise of the <a href="https://exercism.io">Exercism</a> PHP track.</p>
 <blockquote>
 <p>In mathematics, the Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to any given limit.
-It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime. This is the sieve&rsquo;s key distinction from using trial division to sequentially test each candidate number for divisibility by each prime.</p>
-</blockquote>
+It does so by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with the first prime number, 2. The multiples of a given prime are generated as a sequence of numbers starting from that prime, with constant difference between them that is equal to that prime. This is the sieve&rsquo;s key distinction from using trial division to sequentially test each candidate number for divisibility by each prime.</p></blockquote>
 <p>See <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes</a>.</p>
 <h2 id="my-solution">My solution</h2>
 <p>The algorithm is straight forward. There are two exceptions to a default behavior.</p>

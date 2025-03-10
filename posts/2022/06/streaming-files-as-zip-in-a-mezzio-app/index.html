@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
 <meta name="description" content="A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
-A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster." />
+A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster. It can work with S3 buckets or any PSR7 Stream.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, php, stream, zip, psr-7" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -40,7 +41,7 @@ A fast and simple streaming zip file downloader for PHP. Using this library will
 
   <meta itemprop="name" content="Streaming Files as Zip in a Mezzio app">
   <meta itemprop="description" content="A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
-A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster.">
+A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster. It can work with S3 buckets or any PSR7 Stream.">
   <meta itemprop="datePublished" content="2022-06-27T14:00:18+02:00">
   <meta itemprop="dateModified" content="2022-06-27T14:00:18+02:00">
   <meta itemprop="wordCount" content="233">
@@ -51,7 +52,7 @@ A fast and simple streaming zip file downloader for PHP. Using this library will
   <meta name="twitter:image" content="https://arueckauer.github.io/">
   <meta name="twitter:title" content="Streaming Files as Zip in a Mezzio app">
   <meta name="twitter:description" content="A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
-A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster.">
+A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster. It can work with S3 buckets or any PSR7 Stream.">
 
 
 
@@ -59,7 +60,7 @@ A fast and simple streaming zip file downloader for PHP. Using this library will
   <meta property="og:site_name" content="Andi Rückauer">
   <meta property="og:title" content="Streaming Files as Zip in a Mezzio app">
   <meta property="og:description" content="A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.
-A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster.">
+A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster. It can work with S3 buckets or any PSR7 Stream.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -87,8 +88,6 @@ A fast and simple streaming zip file downloader for PHP. Using this library will
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -103,10 +102,6 @@ A fast and simple streaming zip file downloader for PHP. Using this library will
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -183,8 +178,7 @@ A fast and simple streaming zip file downloader for PHP. Using this library will
       <div class="post-content">
         <p>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With <a href="https://github.com/maennchen/ZipStream-PHP"><code>maennchen/zipstream-php</code></a>, initiated by <a href="https://twitter.com/maennchen_">Jonatan</a>, we found a simplistic and well functioning solution.</p>
 <blockquote>
-<p>A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster. It can work with S3 buckets or any PSR7 Stream.</p>
-</blockquote>
+<p>A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster. It can work with S3 buckets or any PSR7 Stream.</p></blockquote>
 <p>The <a href="https://www.php-fig.org/psr/psr-7/">PSR-7</a> support allows for easy integration in a Mezzio application. The following class illustrates the usage in a PSR-compliant request handler. For the full context, have a look at <a href="https://github.com/arueckauer/mezzio-zipstream">mezzio-zipstream</a>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 </span></span><span style="display:flex;"><span>

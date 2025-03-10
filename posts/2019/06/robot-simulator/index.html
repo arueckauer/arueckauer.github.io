@@ -9,7 +9,8 @@
 <meta name="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
 Instructions Today&rsquo;s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
 turn right, turn left and advance. A robot can also follow instructions on how to proceed.
-The letter-string &ldquo;RAALAL&rdquo; means: Turn right Advance twice Turn left Advance once Turn left yet again Say a robot starts at {7, 3} facing north." />
+The letter-string &ldquo;RAALAL&rdquo; means: Turn right Advance twice Turn left Advance once Turn left yet again Say a robot starts at {7, 3} facing north. Then running this stream of instructions should leave it at {9, 4} facing west. Roll up my sleeves First, I provide a structure that is syntactical correct.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, 100-days-of-code, exercism, php" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -44,7 +45,7 @@ The letter-string &ldquo;RAALAL&rdquo; means: Turn right Advance twice Turn left
   <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
 Instructions Today’s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
 turn right, turn left and advance. A robot can also follow instructions on how to proceed.
-The letter-string “RAALAL” means: Turn right Advance twice Turn left Advance once Turn left yet again Say a robot starts at {7, 3} facing north.">
+The letter-string “RAALAL” means: Turn right Advance twice Turn left Advance once Turn left yet again Say a robot starts at {7, 3} facing north. Then running this stream of instructions should leave it at {9, 4} facing west. Roll up my sleeves First, I provide a structure that is syntactical correct.">
   <meta itemprop="datePublished" content="2019-06-14T21:30:50+02:00">
   <meta itemprop="dateModified" content="2019-06-14T21:30:50+02:00">
   <meta itemprop="wordCount" content="1471">
@@ -57,7 +58,7 @@ The letter-string “RAALAL” means: Turn right Advance twice Turn left Advance
   <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
 Instructions Today’s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
 turn right, turn left and advance. A robot can also follow instructions on how to proceed.
-The letter-string “RAALAL” means: Turn right Advance twice Turn left Advance once Turn left yet again Say a robot starts at {7, 3} facing north.">
+The letter-string “RAALAL” means: Turn right Advance twice Turn left Advance once Turn left yet again Say a robot starts at {7, 3} facing north. Then running this stream of instructions should leave it at {9, 4} facing west. Roll up my sleeves First, I provide a structure that is syntactical correct.">
 
 
 
@@ -67,7 +68,7 @@ The letter-string “RAALAL” means: Turn right Advance twice Turn left Advance
   <meta property="og:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D23
 Instructions Today’s challenge is to write a robot simulator. A robot is placed on a hypothetical infinite grid phasing either north, east, south or west. It has three possible movements:
 turn right, turn left and advance. A robot can also follow instructions on how to proceed.
-The letter-string “RAALAL” means: Turn right Advance twice Turn left Advance once Turn left yet again Say a robot starts at {7, 3} facing north.">
+The letter-string “RAALAL” means: Turn right Advance twice Turn left Advance once Turn left yet again Say a robot starts at {7, 3} facing north. Then running this stream of instructions should leave it at {9, 4} facing west. Roll up my sleeves First, I provide a structure that is syntactical correct.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -94,8 +95,6 @@ The letter-string “RAALAL” means: Turn right Advance twice Turn left Advance
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -110,10 +109,6 @@ The letter-string “RAALAL” means: Turn right Advance twice Turn left Advance
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -210,8 +205,7 @@ The letter-string “RAALAL” means: Turn right Advance twice Turn left Advance
 </ul>
 </li>
 <li>Say a robot starts at {7, 3} facing north. Then running this stream of instructions should leave it at {9, 4} facing west.</li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <h2 id="roll-up-my-sleeves">Roll up my sleeves</h2>
 <p>First, I provide a structure that is syntactical correct.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>

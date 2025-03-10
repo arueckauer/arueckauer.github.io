@@ -11,7 +11,8 @@ This Exercism exercise is straight forward.
 An extract from the instructions:
 Given students&rsquo; names along with the grade that they are in, create a roster for the school.
 In the end, you should be able to:
-Add a student&rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades." />
+Add a student&rsquo;s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades. Grades should sort as 1, 2, 3, etc., and students within a grade should be sorted alphabetically by name. Note that all our students only have one name. (It&rsquo;s a small town, what do you want?)
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, 100-days-of-code, exercism, php" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -48,7 +49,7 @@ This Exercism exercise is straight forward.
 An extract from the instructions:
 Given students’ names along with the grade that they are in, create a roster for the school.
 In the end, you should be able to:
-Add a student’s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.">
+Add a student’s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades. Grades should sort as 1, 2, 3, etc., and students within a grade should be sorted alphabetically by name. Note that all our students only have one name. (It’s a small town, what do you want?)">
   <meta itemprop="datePublished" content="2019-06-12T23:32:10+02:00">
   <meta itemprop="dateModified" content="2019-06-12T23:32:10+02:00">
   <meta itemprop="wordCount" content="229">
@@ -63,7 +64,7 @@ This Exercism exercise is straight forward.
 An extract from the instructions:
 Given students’ names along with the grade that they are in, create a roster for the school.
 In the end, you should be able to:
-Add a student’s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.">
+Add a student’s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades. Grades should sort as 1, 2, 3, etc., and students within a grade should be sorted alphabetically by name. Note that all our students only have one name. (It’s a small town, what do you want?)">
 
 
 
@@ -75,7 +76,7 @@ This Exercism exercise is straight forward.
 An extract from the instructions:
 Given students’ names along with the grade that they are in, create a roster for the school.
 In the end, you should be able to:
-Add a student’s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades.">
+Add a student’s name to the roster for a grade Get a list of all students enrolled in a grade Get a sorted list of all students in all grades. Grades should sort as 1, 2, 3, etc., and students within a grade should be sorted alphabetically by name. Note that all our students only have one name. (It’s a small town, what do you want?)">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -102,8 +103,6 @@ Add a student’s name to the roster for a grade Get a list of all students enro
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -118,10 +117,6 @@ Add a student’s name to the roster for a grade Get a list of all students enro
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -208,8 +203,7 @@ Add a student’s name to the roster for a grade Get a list of all students enro
 <li>Get a list of all students enrolled in a grade</li>
 <li>Get a sorted list of all students in all grades. Grades should sort as 1, 2, 3, etc., and students within a grade should be sorted alphabetically by name.</li>
 </ul>
-<p>Note that all our students only have one name. (It&rsquo;s a small town, what do you want?)</p>
-</blockquote>
+<p>Note that all our students only have one name. (It&rsquo;s a small town, what do you want?)</p></blockquote>
 <h2 id="my-solution">My solution</h2>
 <p>Although I am not happy with the usage of plain array in PHP, I used them here because of a closed setup where nothing will be added. In a regular project I would implement some custom collection class which checks allows type checking, since <a href="https://wiki.php.net/rfc/generics">Generic Types</a> are not (yet) available in PHP.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>

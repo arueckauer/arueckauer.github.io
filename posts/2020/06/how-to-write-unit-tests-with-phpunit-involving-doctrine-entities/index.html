@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
 <meta name="description" content="One of the main reasons for me why tight coupling is a less ideal design choice is the accompanied difficulty in testing these tight coupled components.
-Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code?" />
+Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code? In a perfect world scenario, each unit would be so small and decoupled that writing a test would be simple, not having to deal with the variance of a changing dataset. After some contemplation, I decided to start by writing tests with a defined dataset for the tests, making it possible to rely on test data.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, phpunit, doctrine, testing" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -40,7 +41,7 @@ Today I was asked to assist in refactoring a component which computes data retri
 
   <meta itemprop="name" content="How to write unit tests with PHPUnit involving Doctrine entities">
   <meta itemprop="description" content="One of the main reasons for me why tight coupling is a less ideal design choice is the accompanied difficulty in testing these tight coupled components.
-Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code?">
+Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code? In a perfect world scenario, each unit would be so small and decoupled that writing a test would be simple, not having to deal with the variance of a changing dataset. After some contemplation, I decided to start by writing tests with a defined dataset for the tests, making it possible to rely on test data.">
   <meta itemprop="datePublished" content="2020-06-09T21:16:59+02:00">
   <meta itemprop="dateModified" content="2020-06-09T21:16:59+02:00">
   <meta itemprop="wordCount" content="600">
@@ -51,7 +52,7 @@ Today I was asked to assist in refactoring a component which computes data retri
   <meta name="twitter:image" content="https://arueckauer.github.io/">
   <meta name="twitter:title" content="How to write unit tests with PHPUnit involving Doctrine entities">
   <meta name="twitter:description" content="One of the main reasons for me why tight coupling is a less ideal design choice is the accompanied difficulty in testing these tight coupled components.
-Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code?">
+Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code? In a perfect world scenario, each unit would be so small and decoupled that writing a test would be simple, not having to deal with the variance of a changing dataset. After some contemplation, I decided to start by writing tests with a defined dataset for the tests, making it possible to rely on test data.">
 
 
 
@@ -59,7 +60,7 @@ Today I was asked to assist in refactoring a component which computes data retri
   <meta property="og:site_name" content="Andi Rückauer">
   <meta property="og:title" content="How to write unit tests with PHPUnit involving Doctrine entities">
   <meta property="og:description" content="One of the main reasons for me why tight coupling is a less ideal design choice is the accompanied difficulty in testing these tight coupled components.
-Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code?">
+Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code? In a perfect world scenario, each unit would be so small and decoupled that writing a test would be simple, not having to deal with the variance of a changing dataset. After some contemplation, I decided to start by writing tests with a defined dataset for the tests, making it possible to rely on test data.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -86,8 +87,6 @@ Today I was asked to assist in refactoring a component which computes data retri
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -102,10 +101,6 @@ Today I was asked to assist in refactoring a component which computes data retri
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -183,15 +178,13 @@ Today I was asked to assist in refactoring a component which computes data retri
         <p><em>One of the main reasons for me why tight coupling is a less ideal design choice is the accompanied difficulty in testing these tight coupled components.</em></p>
 <p>Today I was asked to assist in refactoring a component which computes data retrieved from nearly all entities. There were no tests for the units in question. To ensure that the code would end with the expected result after refactoring, tests were needed. But how do you test such code? In a perfect world scenario, each unit would be so small and decoupled that writing a test would be simple, not having to deal with the variance of a changing dataset. After some contemplation, I decided to start by writing tests with a defined dataset for the tests, making it possible to rely on test data.</p>
 <blockquote>
-<p>Disclaimer: The solution presented in this article is to be considered as working solution for the described issue and nothing more. It is neither a general right fit for testing units relying on database interactions nor best practice.</p>
-</blockquote>
+<p>Disclaimer: The solution presented in this article is to be considered as working solution for the described issue and nothing more. It is neither a general right fit for testing units relying on database interactions nor best practice.</p></blockquote>
 <h2 id="test-data">Test data</h2>
 <p>For the tests, that rely on database interactions - in this article read-only - I provide a defined dataset as a MySQL dump. For generating a dump, please refer to the <a href="https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html">documentation</a>. Ensure that either the database or tables are dropped before creation, so that each time the dump is imported, a fresh clean database schema and data is provided. I zipped the dump and stored it in a place for test assets, in my case <code>test\TestAsset\Database\testing.sql.7z</code>.</p>
 <h2 id="installing-test-data-before-each-test">Installing test data before each test</h2>
 <p>With the help of the <code>setUp()</code> method, the dump is imported before each test. To safe on disk space, the dump is archived. On Windows my favorite choice is <a href="https://www.7-zip.org/">7-Zip</a> because of better compression rates and sometime speed compared to other formats. Extraction requires the 7-Zip binary. To import the dump, the <code>mysql.exe</code>, a database username and password as well as a database is required. The latter might be irrelevant if you set it up in the dump.</p>
 <blockquote>
-<p>This setup works on a Windows environment only and would need further changes to make automated testing including other environments possible.</p>
-</blockquote>
+<p>This setup works on a Windows environment only and would need further changes to make automated testing including other environments possible.</p></blockquote>
 <p>To configure the options, the PHPUnit configuration file put to work.</p>
 <h3 id="phpunitxmldist">phpunit.xml.dist</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>    <span style="color:#f92672">&lt;php&gt;</span>

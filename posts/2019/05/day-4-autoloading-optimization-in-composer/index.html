@@ -9,7 +9,9 @@
 <meta name="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
 Today I&rsquo;m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
-Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined." />
+Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.
+Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative class maps Optimization Level 2/B: APCu cache I will not get into detail, which level and options is doing what. The article is very brief and clear already.
+" />
 <meta name="keywords" content="andi, rückauer, blog, software, development, 100-days-of-code, composer, autoloading, php" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -44,7 +46,8 @@ Optimization levels There are two levels of optimization and the second level co
   <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
 Today I’m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
-Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.">
+Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.
+Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative class maps Optimization Level 2/B: APCu cache I will not get into detail, which level and options is doing what. The article is very brief and clear already.">
   <meta itemprop="datePublished" content="2019-05-23T23:00:00+02:00">
   <meta itemprop="dateModified" content="2019-05-23T23:00:00+02:00">
   <meta itemprop="wordCount" content="445">
@@ -57,7 +60,8 @@ Optimization levels There are two levels of optimization and the second level co
   <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
 Today I’m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
-Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.">
+Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.
+Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative class maps Optimization Level 2/B: APCu cache I will not get into detail, which level and options is doing what. The article is very brief and clear already.">
 
 
 
@@ -67,7 +71,8 @@ Optimization levels There are two levels of optimization and the second level co
   <meta property="og:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
 Today I’m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
-Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.">
+Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.
+Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative class maps Optimization Level 2/B: APCu cache I will not get into detail, which level and options is doing what. The article is very brief and clear already.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -95,8 +100,6 @@ Optimization levels There are two levels of optimization and the second level co
 
 
     
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
@@ -111,10 +114,6 @@ Optimization levels There are two levels of optimization and the second level co
           gtag('config', 'G-DS58P4P02H');
         }
       </script>
-    
-  
-
-
 
 
     </head>
@@ -235,8 +234,7 @@ Optimization levels There are two levels of optimization and the second level co
 </span></span></span></code></pre></div><h4 id="level-2a">Level 2/A</h4>
 <p>Whereas Level 2/A does not register PSR-0 and PSR-4 directories and instead sets <code>$classMapAuthoritative</code>in <code>Composer\Autoload\ClassLoader</code> to <code>true</code>.</p>
 <blockquote>
-<p>Turns off searching the prefix and fallback directories for classes that have not been registered with the class map.</p>
-</blockquote>
+<p>Turns off searching the prefix and fallback directories for classes that have not been registered with the class map.</p></blockquote>
 <p><code>.\vendor\composer\autoload_real.php</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// [..]
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        $loader<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setClassMapAuthoritative</span>(<span style="color:#66d9ef">true</span>);

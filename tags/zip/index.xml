@@ -14,7 +14,7 @@
       <link>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</link>
       <pubDate>Mon, 27 Jun 2022 14:00:18 +0200</pubDate>
       <guid>https://arueckauer.github.io/posts/2022/06/streaming-files-as-zip-in-a-mezzio-app/</guid>
-      <description>A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With maennchen/zipstream-php, initiated by Jonatan, we found a simplistic and well functioning solution.&#xA;A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster.</description>
+      <description>&lt;p&gt;A regular use case in our projects is to provide the user with the ability to download multiple files as a compressed archive. With &lt;a href=&#34;https://github.com/maennchen/ZipStream-PHP&#34;&gt;&lt;code&gt;maennchen/zipstream-php&lt;/code&gt;&lt;/a&gt;, initiated by &lt;a href=&#34;https://twitter.com/maennchen_&#34;&gt;Jonatan&lt;/a&gt;, we found a simplistic and well functioning solution.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;A fast and simple streaming zip file downloader for PHP. Using this library will save you from having to write the Zip to disk. You can directly send it to the user, which is much faster. It can work with S3 buckets or any PSR7 Stream.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
