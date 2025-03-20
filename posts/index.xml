@@ -6,8 +6,137 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 10 Mar 2025 11:04:12 +0100</lastBuildDate>
+        <lastBuildDate>Thu, 20 Mar 2025 17:16:20 +0100</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Use Dotenv to Configure a Laminas or Mezzio Application</title>
+            <link>https://arueckauer.github.io/posts/2025/03/use-dotenv-to-configure-a-laminas-or-mezzio-application/</link>
+            <pubDate>Thu, 20 Mar 2025 17:16:20 +0100</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2025/03/use-dotenv-to-configure-a-laminas-or-mezzio-application/</guid>
+            <description>&lt;p&gt;In 2019, I wrote an article about &lt;a href=&#34;https://arueckauer.github.io/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/&#34;&gt;using Dotenv to configure a Zend Expressive application&lt;/a&gt;. Since then, the project has been renamed to Laminas and the microframework to Mezzio. Plus, &lt;code&gt;vlucas/phpdotenv&lt;/code&gt; has been updated and the recommended way to use it has changed. Time for an update.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;starting-point&#34;&gt;Starting point&lt;/h2&gt;
+&lt;p&gt;Any laminas or mezzio application serves as a starting point. For this article, a minimal setup is used with a &lt;code&gt;container.php&lt;/code&gt; and &lt;code&gt;container.php&lt;/code&gt; as it is provided by &lt;a href=&#34;https://github.com/mezzio/mezzio-skeleton&#34;&gt;&lt;code&gt;mezzio-skeleton&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>In 2019, I wrote an article about <a href="/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/">using Dotenv to configure a Zend Expressive application</a>. Since then, the project has been renamed to Laminas and the microframework to Mezzio. Plus, <code>vlucas/phpdotenv</code> has been updated and the recommended way to use it has changed. Time for an update.</p>
+<hr>
+<h2 id="starting-point">Starting point</h2>
+<p>Any laminas or mezzio application serves as a starting point. For this article, a minimal setup is used with a <code>container.php</code> and <code>container.php</code> as it is provided by <a href="https://github.com/mezzio/mezzio-skeleton"><code>mezzio-skeleton</code></a>.</p>
+<p>In this example, the <code>.env</code> file is used to configure the database connection. The database connection is created using PDO. The database connection is created in a factory and the factory is registered in the container.</p>
+<h2 id="install-phpdotenv">Install phpdotenv</h2>
+<p><a href="https://github.com/vlucas/phpdotenv?tab=readme-ov-file#installation">Install it as recommended</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>composer require vlucas/phpdotenv
+</span></span></code></pre></div><h2 id="create-a-dotenv-file">Create a dotenv file</h2>
+<p><code>.env</code></p>
+<pre tabindex="0"><code class="language-dotenv" data-lang="dotenv">DB_DSN=sqlite::memory:
+DB_USERNAME=null
+DB_PASSWORD=null
+</code></pre><h2 id="connect-dotenv-to-the-application">Connect dotenv to the application</h2>
+<p>To make the <code>.env</code> file available to the application, the following code is added to <code>container.php</code>. It also ensures that the required environment variables are set.</p>
+<p><code>config/container.php</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Dotenv\Dotenv</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$dotenv <span style="color:#f92672">=</span> <span style="color:#a6e22e">Dotenv</span><span style="color:#f92672">::</span><span style="color:#a6e22e">createImmutable</span>(<span style="color:#a6e22e">dirname</span>(<span style="color:#66d9ef">__DIR__</span>));
+</span></span><span style="display:flex;"><span>$dotenv<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">load</span>();
+</span></span><span style="display:flex;"><span>$dotenv<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">required</span>([<span style="color:#e6db74">&#39;DB_DSN&#39;</span>, <span style="color:#e6db74">&#39;DB_USERNAME&#39;</span>, <span style="color:#e6db74">&#39;DB_PASSWORD&#39;</span>]);
+</span></span></code></pre></div><h2 id="application-configuration">Application configuration</h2>
+<p>As the <code>.env</code> file is environment-specific, and the application configuration is making usage of it, the configuration file can be global.</p>
+<p><code>config/autoload/db.global.php</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">return</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;db&#39;</span> <span style="color:#f92672">=&gt;</span> [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;dsn&#39;</span>      <span style="color:#f92672">=&gt;</span> $_ENV[<span style="color:#e6db74">&#39;DB_DSN&#39;</span>],
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;username&#39;</span> <span style="color:#f92672">=&gt;</span> $_ENV[<span style="color:#e6db74">&#39;DB_USERNAME&#39;</span>],
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;password&#39;</span> <span style="color:#f92672">=&gt;</span> $_ENV[<span style="color:#e6db74">&#39;DB_PASSWORD&#39;</span>],
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;options&#39;</span>  <span style="color:#f92672">=&gt;</span> [
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">ATTR_ERRMODE</span>            <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">ERRMODE_EXCEPTION</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">ATTR_DEFAULT_FETCH_MODE</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">FETCH_ASSOC</span>,
+</span></span><span style="display:flex;"><span>        ],
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>];
+</span></span></code></pre></div><h2 id="factory">Factory</h2>
+<p>The PDO instance is created in a factory.</p>
+<p><code>src/LaminasDotEnv/PdoFactory.php</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">LaminasDotEnv</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">PDO</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Psr\Container\ContainerExceptionInterface</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Psr\Container\ContainerInterface</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Psr\Container\NotFoundExceptionInterface</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PdoFactory</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     * @throws ContainerExceptionInterface
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     * @throws NotFoundExceptionInterface
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __invoke(<span style="color:#a6e22e">ContainerInterface</span> $container)<span style="color:#f92672">:</span> <span style="color:#a6e22e">PDO</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        $config <span style="color:#f92672">=</span> $container<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;config&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PDO</span>(
+</span></span><span style="display:flex;"><span>            $config[<span style="color:#e6db74">&#39;db&#39;</span>][<span style="color:#e6db74">&#39;dsn&#39;</span>],
+</span></span><span style="display:flex;"><span>            $config[<span style="color:#e6db74">&#39;db&#39;</span>][<span style="color:#e6db74">&#39;username&#39;</span>],
+</span></span><span style="display:flex;"><span>            $config[<span style="color:#e6db74">&#39;db&#39;</span>][<span style="color:#e6db74">&#39;password&#39;</span>],
+</span></span><span style="display:flex;"><span>        );
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Add a service definition as you wish. The PDO instance can then be retrieved from the container.</p>
+<p><code>bin/db.php</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Psr\Container\ContainerInterface</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">require_once</span> <span style="color:#a6e22e">dirname</span>(<span style="color:#66d9ef">__DIR__</span>) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;/vendor/autoload.php&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">function</span> ()<span style="color:#f92672">:</span> <span style="color:#a6e22e">void</span> {
+</span></span><span style="display:flex;"><span>    $container <span style="color:#f92672">=</span> <span style="color:#66d9ef">require</span> <span style="color:#a6e22e">dirname</span>(<span style="color:#66d9ef">__DIR__</span>) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;/config/container.php&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">assert</span>($container <span style="color:#a6e22e">instanceof</span> <span style="color:#a6e22e">ContainerInterface</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    $pdo <span style="color:#f92672">=</span> $container<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">assert</span>($pdo <span style="color:#a6e22e">instanceof</span> <span style="color:#a6e22e">PDO</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;Create table&#39;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">PHP_EOL</span>;
+</span></span><span style="display:flex;"><span>    $pdo<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">exec</span>(<span style="color:#e6db74">&#39;CREATE TABLE IF NOT EXISTS test (id INTEGER PRIMARY KEY, name TEXT NOT NULL)&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;Insert data&#39;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">PHP_EOL</span>;
+</span></span><span style="display:flex;"><span>    $pdo<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">exec</span>(<span style="color:#e6db74">&#39;INSERT INTO test (name) VALUES (&#34;Hello, World!&#34;)&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;Fetch data&#39;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">PHP_EOL</span>;
+</span></span><span style="display:flex;"><span>    $stmt <span style="color:#f92672">=</span> $pdo<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>(<span style="color:#e6db74">&#39;SELECT * FROM test&#39;</span>);
+</span></span><span style="display:flex;"><span>    $row  <span style="color:#f92672">=</span> $stmt<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">FETCH_ASSOC</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;Data: &#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> $row[<span style="color:#e6db74">&#39;name&#39;</span>] <span style="color:#f92672">.</span> <span style="color:#a6e22e">PHP_EOL</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;Done&#39;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">PHP_EOL</span>;
+</span></span><span style="display:flex;"><span>})();
+</span></span></code></pre></div><h2 id="run-the-application">Run the application</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>C:\source\laminas-dot-env [main <span style="color:#960050;background-color:#1e0010">≡</span>]&gt; php bin/db.php
+</span></span><span style="display:flex;"><span>Create table
+</span></span><span style="display:flex;"><span>Insert data
+</span></span><span style="display:flex;"><span>Fetch data
+</span></span><span style="display:flex;"><span>Data<span style="color:#960050;background-color:#1e0010">:</span> Hello, World!
+</span></span><span style="display:flex;"><span>Done
+</span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>Using Dotenv to configure a Laminas or Mezzio application is straightforward. The <code>.env</code> file is loaded in the container configuration and the required environment variables are checked. The PDO instance is created using the configuration via a factory registered to the container. The PDO instance is retrieved from the container.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://github.com/mezzio/mezzio-skeleton">mezzio/mezzio-skeleton</a></li>
+<li><a href="https://github.com/vlucas/phpdotenv">vlucas/phpdotenv</a></li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>Failed retrieving file &#39;community.db&#39; from mirror</title>
@@ -4013,18 +4142,18 @@ GROUPING SETS</p>
             <pubDate>Sat, 25 May 2019 20:43:15 +0200</pubDate>
             
             <guid>https://arueckauer.github.io/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/</guid>
-            <description>&lt;p&gt;&lt;em&gt;This article is part of my &lt;a href=&#34;https://arueckauer.github.io/tags/100-days-of-code/&#34;&gt;#100DaysOfCode&lt;/a&gt; and #100DaysOfBlogging challenge. R1D6&lt;/em&gt;&lt;/p&gt;
+            <description>&lt;p&gt;A new version of this article is available: &lt;a href=&#34;https://arueckauer.github.io/posts/2025/03/use-dotenv-to-configure-a-laminas-or-mezzio-application/&#34;&gt;Use Dotenv to Configure a Laminas or Mezzio Application&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;This article is part of my &lt;a href=&#34;https://arueckauer.github.io/tags/100-days-of-code/&#34;&gt;#100DaysOfCode&lt;/a&gt; and #100DaysOfBlogging challenge. R1D6&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[The Twelve-Factor App] requires strict separation of config from code.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;Taken from &lt;a href=&#34;https://12factor.net/config&#34;&gt;factor three&lt;/a&gt; of The Twelve-Factor App.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Today I am studying about how to achieve this requirement making usage of &lt;a href=&#34;https://github.com/vlucas/phpdotenv&#34;&gt;phpdotenv&lt;/a&gt; in a Zend Expressive context.&lt;/p&gt;
-&lt;p&gt;I will not go into details on and advantages of this concept. A leave that up to other resources.&lt;/p&gt;
-&lt;h2 id=&#34;phpdotenv&#34;&gt;phpdotenv&lt;/h2&gt;
-&lt;p&gt;This package&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Loads environment variables from &lt;code&gt;.env&lt;/code&gt; to &lt;code&gt;getenv()&lt;/code&gt;, &lt;code&gt;$_ENV&lt;/code&gt; and &lt;code&gt;$_SERVER&lt;/code&gt; automagically.&lt;/p&gt;</description>
-            <content type="html"><![CDATA[<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D6</em></p>
+&lt;p&gt;I will not go into details on and advantages of this concept. A leave that up to other resources.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>A new version of this article is available: <a href="/posts/2025/03/use-dotenv-to-configure-a-laminas-or-mezzio-application/">Use Dotenv to Configure a Laminas or Mezzio Application</a>.</p>
+<hr>
+<p><em>This article is part of my <a href="/tags/100-days-of-code/">#100DaysOfCode</a> and #100DaysOfBlogging challenge. R1D6</em></p>
 <hr>
 <blockquote>
 <p>[The Twelve-Factor App] requires strict separation of config from code.</p></blockquote>

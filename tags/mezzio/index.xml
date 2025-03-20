@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 26 Oct 2022 10:50:35 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 20 Mar 2025 17:16:20 +0100</lastBuildDate>
     <atom:link href="https://arueckauer.github.io/tags/mezzio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Use Dotenv to Configure a Laminas or Mezzio Application</title>
+      <link>https://arueckauer.github.io/posts/2025/03/use-dotenv-to-configure-a-laminas-or-mezzio-application/</link>
+      <pubDate>Thu, 20 Mar 2025 17:16:20 +0100</pubDate>
+      <guid>https://arueckauer.github.io/posts/2025/03/use-dotenv-to-configure-a-laminas-or-mezzio-application/</guid>
+      <description>&lt;p&gt;In 2019, I wrote an article about &lt;a href=&#34;https://arueckauer.github.io/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/&#34;&gt;using Dotenv to configure a Zend Expressive application&lt;/a&gt;. Since then, the project has been renamed to Laminas and the microframework to Mezzio. Plus, &lt;code&gt;vlucas/phpdotenv&lt;/code&gt; has been updated and the recommended way to use it has changed. Time for an update.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;starting-point&#34;&gt;Starting point&lt;/h2&gt;&#xA;&lt;p&gt;Any laminas or mezzio application serves as a starting point. For this article, a minimal setup is used with a &lt;code&gt;container.php&lt;/code&gt; and &lt;code&gt;container.php&lt;/code&gt; as it is provided by &lt;a href=&#34;https://github.com/mezzio/mezzio-skeleton&#34;&gt;&lt;code&gt;mezzio-skeleton&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Capturing Exceptions in Sentry Thrown in Mezzio Application</title>
       <link>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-mezzio-application/</link>

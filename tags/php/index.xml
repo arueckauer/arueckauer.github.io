@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 26 Oct 2022 10:50:35 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 20 Mar 2025 17:16:20 +0100</lastBuildDate>
     <atom:link href="https://arueckauer.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Use Dotenv to Configure a Laminas or Mezzio Application</title>
+      <link>https://arueckauer.github.io/posts/2025/03/use-dotenv-to-configure-a-laminas-or-mezzio-application/</link>
+      <pubDate>Thu, 20 Mar 2025 17:16:20 +0100</pubDate>
+      <guid>https://arueckauer.github.io/posts/2025/03/use-dotenv-to-configure-a-laminas-or-mezzio-application/</guid>
+      <description>&lt;p&gt;In 2019, I wrote an article about &lt;a href=&#34;https://arueckauer.github.io/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/&#34;&gt;using Dotenv to configure a Zend Expressive application&lt;/a&gt;. Since then, the project has been renamed to Laminas and the microframework to Mezzio. Plus, &lt;code&gt;vlucas/phpdotenv&lt;/code&gt; has been updated and the recommended way to use it has changed. Time for an update.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;starting-point&#34;&gt;Starting point&lt;/h2&gt;&#xA;&lt;p&gt;Any laminas or mezzio application serves as a starting point. For this article, a minimal setup is used with a &lt;code&gt;container.php&lt;/code&gt; and &lt;code&gt;container.php&lt;/code&gt; as it is provided by &lt;a href=&#34;https://github.com/mezzio/mezzio-skeleton&#34;&gt;&lt;code&gt;mezzio-skeleton&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Capturing Exceptions in Sentry Thrown in Mezzio Application</title>
       <link>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-mezzio-application/</link>
@@ -176,13 +183,6 @@
       <pubDate>Tue, 04 Jun 2019 22:53:29 +0200</pubDate>
       <guid>https://arueckauer.github.io/posts/2019/06/ipc-2019-day-one/</guid>
       <description>&lt;p&gt;&lt;em&gt;This article is part of my &lt;a href=&#34;https://arueckauer.github.io/tags/100-days-of-code/&#34;&gt;#100DaysOfCode&lt;/a&gt; and #100DaysOfBlogging challenge. R1D14&lt;/em&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;This was a great first day&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-to-make-loveliness-an-html-treasure-hunt&#34;&gt;How to make Loveliness: an HTML Treasure Hunt&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;Keynote by &lt;a href=&#34;https://twitter.com/brucel&#34;&gt;Bruce Lawson&lt;/a&gt;, one of the editors of the W3C’s HTML5.3 specification&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;To me, this was the best keynote I have ever attended. He presented a topic that could easily be boring and dry in a way that captured the audience&amp;rsquo;s (well at least my) full attention. Bruce managed to make this very informative and funny at the same time.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Difference of Squares -Part II</title>
-      <link>https://arueckauer.github.io/posts/2019/06/difference-of-squares-part-ii/</link>
-      <pubDate>Mon, 03 Jun 2019 19:25:05 +0200</pubDate>
-      <guid>https://arueckauer.github.io/posts/2019/06/difference-of-squares-part-ii/</guid>
-      <description>&lt;p&gt;&lt;em&gt;This article is part of my &lt;a href=&#34;https://arueckauer.github.io/tags/100-days-of-code/&#34;&gt;#100DaysOfCode&lt;/a&gt; and #100DaysOfBlogging challenge. R1D13&lt;/em&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;In the meanwhile, &lt;a href=&#34;https://twitter.com/dstockto&#34;&gt;dstockto&lt;/a&gt; reviewed and approved my solution. 🤘🏼 Funny story: He found my blog and saw my submission here before seeing it on Exercism.&lt;/p&gt;&#xA;&lt;p&gt;He gave me an interesting additional challenge, to use &amp;ldquo;closed&amp;rdquo; form math-based solutions. This would also allow performance improvement, since the current implementation will take longer the larger &lt;code&gt;$number&lt;/code&gt; is.&lt;/p&gt;&#xA;&lt;h2 id=&#34;square-of-sum&#34;&gt;Square Of Sum&lt;/h2&gt;&#xA;&lt;p&gt;For this function dstockto mentioned the &lt;a href=&#34;https://de.wikipedia.org/wiki/Gau%C3%9Fsche_Summenformel&#34;&gt;Gauss formula&lt;/a&gt;. This is a form to sum the first n positive integers.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

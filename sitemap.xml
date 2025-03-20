@@ -3,7 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://arueckauer.github.io/</loc>
-    <lastmod>2025-03-10T11:04:12+01:00</lastmod>
+    <lastmod>2025-03-20T17:16:20+01:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/dotenv/</loc>
+    <lastmod>2025-03-20T17:16:20+01:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/laminas/</loc>
+    <lastmod>2025-03-20T17:16:20+01:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/mezzio/</loc>
+    <lastmod>2025-03-20T17:16:20+01:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/php/</loc>
+    <lastmod>2025-03-20T17:16:20+01:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/posts/</loc>
+    <lastmod>2025-03-20T17:16:20+01:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/</loc>
+    <lastmod>2025-03-20T17:16:20+01:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/posts/2025/03/use-dotenv-to-configure-a-laminas-or-mezzio-application/</loc>
+    <lastmod>2025-03-20T17:16:20+01:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/tags/arch/</loc>
     <lastmod>2025-03-10T11:04:12+01:00</lastmod>
@@ -17,12 +38,6 @@
     <loc>https://arueckauer.github.io/tags/linux/</loc>
     <lastmod>2025-03-10T11:04:12+01:00</lastmod>
   </url><url>
-    <loc>https://arueckauer.github.io/posts/</loc>
-    <lastmod>2025-03-10T11:04:12+01:00</lastmod>
-  </url><url>
-    <loc>https://arueckauer.github.io/tags/</loc>
-    <lastmod>2025-03-10T11:04:12+01:00</lastmod>
-  </url><url>
     <loc>https://arueckauer.github.io/tags/windows/</loc>
     <lastmod>2025-03-10T11:04:12+01:00</lastmod>
   </url><url>
@@ -30,12 +45,6 @@
     <lastmod>2025-03-10T11:04:12+01:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-mezzio-application/</loc>
-    <lastmod>2022-10-26T10:50:35+02:00</lastmod>
-  </url><url>
-    <loc>https://arueckauer.github.io/tags/mezzio/</loc>
-    <lastmod>2022-10-26T10:50:35+02:00</lastmod>
-  </url><url>
-    <loc>https://arueckauer.github.io/tags/php/</loc>
     <lastmod>2022-10-26T10:50:35+02:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/tags/sentry/</loc>
@@ -287,9 +296,6 @@
     <loc>https://arueckauer.github.io/posts/2019/05/difference-of-squares/</loc>
     <lastmod>2019-05-27T20:28:26+02:00</lastmod>
   </url><url>
-    <loc>https://arueckauer.github.io/tags/dotenv/</loc>
-    <lastmod>2019-05-25T20:43:15+02:00</lastmod>
-  </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/</loc>
     <lastmod>2019-05-25T20:43:15+02:00</lastmod>
   </url><url>
@@ -312,9 +318,6 @@
     <lastmod>2019-05-22T20:39:27+02:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</loc>
-    <lastmod>2019-05-21T20:45:00+02:00</lastmod>
-  </url><url>
-    <loc>https://arueckauer.github.io/tags/laminas/</loc>
     <lastmod>2019-05-21T20:45:00+02:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/posts/2019/05/day-1-getting-started-with-terraform/</loc>
