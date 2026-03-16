@@ -6,8 +6,73 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Thu, 20 Mar 2025 17:16:20 +0100</lastBuildDate>
+        <lastBuildDate>Mon, 16 Mar 2026 11:30:00 +0100</lastBuildDate>
         <atom:link href="https://arueckauer.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Speed Up slow PHP_CodeSniffer execution on Windows</title>
+            <link>https://arueckauer.github.io/posts/2026/03/speed-up-slow-php_codesniffer-execution-on-windows/</link>
+            <pubDate>Mon, 16 Mar 2026 11:30:00 +0100</pubDate>
+            
+            <guid>https://arueckauer.github.io/posts/2026/03/speed-up-slow-php_codesniffer-execution-on-windows/</guid>
+            <description>&lt;p&gt;As projects grow, tool performance can silently degrade until it becomes unbearable. I recently hit a wall where &lt;code&gt;phpcs&lt;/code&gt;
+(PHP_CodeSniffer) took over &lt;strong&gt;41 minutes&lt;/strong&gt; to run on a Windows machine. For a local feedback loop, this is a
+productivity killer.&lt;/p&gt;
+&lt;p&gt;After a few optimizations, I managed to get the execution time down to under 1 minute (cold) and ~3.3 seconds (cached).
+Here is how.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-analysis&#34;&gt;The Analysis&lt;/h2&gt;
+&lt;p&gt;The project consists of about 3,549 files and roughly 176k lines of code (LOC). While substantial, it should not justify
+a 41-minute wait.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>As projects grow, tool performance can silently degrade until it becomes unbearable. I recently hit a wall where <code>phpcs</code>
+(PHP_CodeSniffer) took over <strong>41 minutes</strong> to run on a Windows machine. For a local feedback loop, this is a
+productivity killer.</p>
+<p>After a few optimizations, I managed to get the execution time down to under 1 minute (cold) and ~3.3 seconds (cached).
+Here is how.</p>
+<hr>
+<h2 id="the-analysis">The Analysis</h2>
+<p>The project consists of about 3,549 files and roughly 176k lines of code (LOC). While substantial, it should not justify
+a 41-minute wait.</p>
+<h3 id="performance-benchmarks">Performance Benchmarks</h3>
+<ul>
+<li><strong>Initial state:</strong> 41:23 min</li>
+<li><strong>After optimization (no cache):</strong> 53.79 sec</li>
+<li><strong>After optimization (with cache):</strong> 3.3 sec</li>
+</ul>
+<p>The massive gap between the initial state and the optimized cached state suggested that not only was the execution
+itself slow, but the caching mechanism was failing entirely on Windows.</p>
+<h2 id="applied-solutions">Applied Solutions</h2>
+<p>To fix this, I implemented a multi-layered approach involving OS configuration, tool settings, and shell aliases.</p>
+<h3 id="1-windows-defender-exception">1. Windows Defender Exception</h3>
+<p>Background processes (like Windows Defender) lock files during the high-I/O scan of <code>phpcs</code> which slows down execution
+due to process interference.</p>
+<p>Excluding source directory from real-time scanning. Beyond <code>phpcs</code>, this significantly boosts  performance when using
+JetBrains IDEs (like PhpStorm). It speeds up file indexing, reduces &ldquo;Scanning files to index&rdquo; wait times, and makes the
+entire UI feel more responsive since the IDE and Defender are not fighting for file handles.</p>
+<ul>
+<li><strong>Path:</strong> <code>C:\source</code> (my sources root).</li>
+</ul>
+<h3 id="2-fix-the-cache-file">2. Fix the Cache File</h3>
+<p>There were issues with the default hidden file <code>.phpcs-cache</code> not being reused correctly. While the cache was created on
+the initial run, <code>phpcs</code> was unable to reuse it in subsequent runs, forcing a full scan every time. Renaming it to a
+standard file name resolved this.</p>
+<ul>
+<li><strong>Action:</strong> Change the cache config in <code>phpcs.xml</code> (or <code>phpcs.xml.dist</code>) to <code>phpcs-cache</code>.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;cache&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;phpcs-cache&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span></code></pre></div></li>
+<li><strong>Git:</strong> Add <code>phpcs-cache</code> to global <code>~/.gitignore</code> to avoid committing local cache state.</li>
+</ul>
+<h3 id="3-disable-xdebug-for-cli-tools">3. Disable Xdebug for CLI Tools</h3>
+<p>Even if not actively debugging, the Xdebug extension adds significant overhead to PHP execution. Xdebug should be off by
+default for static analysis. This is achieved using the <code>-d</code> flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>php -d xdebug.mode=off vendor/bin/phpcs
+</span></span></code></pre></div><h3 id="4-powershell-aliases-for-speed">4. PowerShell Aliases for Speed</h3>
+<p>To make this permanent and easy to use, I updated my PowerShell profile with an aliases for <code>phpcs</code>. The alias ensures
+Xdebug is always off and parameters are passed through.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> s { php -d xdebug.mode=off vendor/bin/phpcs $args }
+</span></span></code></pre></div><p>Now, running <code>s</code> triggers a lightning-fast, cached phpcs check.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Use Dotenv to Configure a Laminas or Mezzio Application</title>

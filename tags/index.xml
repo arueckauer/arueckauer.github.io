@@ -7,8 +7,43 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 20 Mar 2025 17:16:20 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 11:30:00 +0100</lastBuildDate>
     <atom:link href="https://arueckauer.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Devops</title>
+      <link>https://arueckauer.github.io/tags/devops/</link>
+      <pubDate>Mon, 16 Mar 2026 11:30:00 +0100</pubDate>
+      <guid>https://arueckauer.github.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Performance</title>
+      <link>https://arueckauer.github.io/tags/performance/</link>
+      <pubDate>Mon, 16 Mar 2026 11:30:00 +0100</pubDate>
+      <guid>https://arueckauer.github.io/tags/performance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Phpcs</title>
+      <link>https://arueckauer.github.io/tags/phpcs/</link>
+      <pubDate>Mon, 16 Mar 2026 11:30:00 +0100</pubDate>
+      <guid>https://arueckauer.github.io/tags/phpcs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Powershell</title>
+      <link>https://arueckauer.github.io/tags/powershell/</link>
+      <pubDate>Mon, 16 Mar 2026 11:30:00 +0100</pubDate>
+      <guid>https://arueckauer.github.io/tags/powershell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://arueckauer.github.io/tags/windows/</link>
+      <pubDate>Mon, 16 Mar 2026 11:30:00 +0100</pubDate>
+      <guid>https://arueckauer.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Dotenv</title>
       <link>https://arueckauer.github.io/tags/dotenv/</link>
@@ -56,13 +91,6 @@
       <link>https://arueckauer.github.io/tags/linux/</link>
       <pubDate>Mon, 10 Mar 2025 11:04:12 +0100</pubDate>
       <guid>https://arueckauer.github.io/tags/linux/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Windows</title>
-      <link>https://arueckauer.github.io/tags/windows/</link>
-      <pubDate>Mon, 10 Mar 2025 11:04:12 +0100</pubDate>
-      <guid>https://arueckauer.github.io/tags/windows/</guid>
       <description></description>
     </item>
     <item>
@@ -154,34 +182,6 @@
       <link>https://arueckauer.github.io/tags/webserver/</link>
       <pubDate>Mon, 01 Feb 2021 13:54:00 +0200</pubDate>
       <guid>https://arueckauer.github.io/tags/webserver/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phpunit</title>
-      <link>https://arueckauer.github.io/tags/phpunit/</link>
-      <pubDate>Mon, 04 Jan 2021 11:21:11 +0200</pubDate>
-      <guid>https://arueckauer.github.io/tags/phpunit/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Xdebug</title>
-      <link>https://arueckauer.github.io/tags/xdebug/</link>
-      <pubDate>Fri, 27 Nov 2020 11:52:58 +0100</pubDate>
-      <guid>https://arueckauer.github.io/tags/xdebug/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Validation</title>
-      <link>https://arueckauer.github.io/tags/validation/</link>
-      <pubDate>Fri, 12 Jun 2020 13:50:26 +0200</pubDate>
-      <guid>https://arueckauer.github.io/tags/validation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Doctrine</title>
-      <link>https://arueckauer.github.io/tags/doctrine/</link>
-      <pubDate>Tue, 09 Jun 2020 21:16:59 +0200</pubDate>
-      <guid>https://arueckauer.github.io/tags/doctrine/</guid>
       <description></description>
     </item>
   </channel>
