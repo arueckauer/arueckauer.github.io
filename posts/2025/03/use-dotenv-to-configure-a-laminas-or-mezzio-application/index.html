@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="">
+<meta name="author" content="Andi Rückauer">
 <meta name="description" content="In 2019, I wrote an article about using Dotenv to configure a Zend Expressive application. Since then, the project has been renamed to Laminas and the microframework to Mezzio. Plus, vlucas/phpdotenv has been updated and the recommended way to use it has changed. Time for an update.
 Starting point Any laminas or mezzio application serves as a starting point. For this article, a minimal setup is used with a container.php and container.php as it is provided by mezzio-skeleton.
 " />
@@ -39,38 +39,38 @@ Starting point Any laminas or mezzio application serves as a starting point. For
 
 
 
-  <meta itemprop="name" content="Use Dotenv to Configure a Laminas or Mezzio Application">
-  <meta itemprop="description" content="In 2019, I wrote an article about using Dotenv to configure a Zend Expressive application. Since then, the project has been renamed to Laminas and the microframework to Mezzio. Plus, vlucas/phpdotenv has been updated and the recommended way to use it has changed. Time for an update.
+	<meta itemprop="name" content="Use Dotenv to Configure a Laminas or Mezzio Application">
+	<meta itemprop="description" content="In 2019, I wrote an article about using Dotenv to configure a Zend Expressive application. Since then, the project has been renamed to Laminas and the microframework to Mezzio. Plus, vlucas/phpdotenv has been updated and the recommended way to use it has changed. Time for an update.
 Starting point Any laminas or mezzio application serves as a starting point. For this article, a minimal setup is used with a container.php and container.php as it is provided by mezzio-skeleton.">
-  <meta itemprop="datePublished" content="2025-03-20T17:16:20+01:00">
-  <meta itemprop="dateModified" content="2025-03-20T17:16:20+01:00">
-  <meta itemprop="wordCount" content="451">
-  <meta itemprop="image" content="https://arueckauer.github.io/">
-  <meta itemprop="keywords" content="Dotenv,Laminas,Mezzio,Php">
+	<meta itemprop="datePublished" content="2025-03-20T17:16:20+01:00">
+	<meta itemprop="dateModified" content="2025-03-20T17:16:20+01:00">
+	<meta itemprop="wordCount" content="451">
+	<meta itemprop="image" content="https://arueckauer.github.io/">
+	<meta itemprop="keywords" content="Dotenv,Laminas,Mezzio,Php">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://arueckauer.github.io/">
-  <meta name="twitter:title" content="Use Dotenv to Configure a Laminas or Mezzio Application">
-  <meta name="twitter:description" content="In 2019, I wrote an article about using Dotenv to configure a Zend Expressive application. Since then, the project has been renamed to Laminas and the microframework to Mezzio. Plus, vlucas/phpdotenv has been updated and the recommended way to use it has changed. Time for an update.
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://arueckauer.github.io/">
+	<meta name="twitter:title" content="Use Dotenv to Configure a Laminas or Mezzio Application">
+	<meta name="twitter:description" content="In 2019, I wrote an article about using Dotenv to configure a Zend Expressive application. Since then, the project has been renamed to Laminas and the microframework to Mezzio. Plus, vlucas/phpdotenv has been updated and the recommended way to use it has changed. Time for an update.
 Starting point Any laminas or mezzio application serves as a starting point. For this article, a minimal setup is used with a container.php and container.php as it is provided by mezzio-skeleton.">
 
 
 
     <meta property="og:url" content="https://arueckauer.github.io/posts/2025/03/use-dotenv-to-configure-a-laminas-or-mezzio-application/">
-  <meta property="og:site_name" content="Andi Rückauer">
-  <meta property="og:title" content="Use Dotenv to Configure a Laminas or Mezzio Application">
-  <meta property="og:description" content="In 2019, I wrote an article about using Dotenv to configure a Zend Expressive application. Since then, the project has been renamed to Laminas and the microframework to Mezzio. Plus, vlucas/phpdotenv has been updated and the recommended way to use it has changed. Time for an update.
+	<meta property="og:site_name" content="Andi Rückauer">
+	<meta property="og:title" content="Use Dotenv to Configure a Laminas or Mezzio Application">
+	<meta property="og:description" content="In 2019, I wrote an article about using Dotenv to configure a Zend Expressive application. Since then, the project has been renamed to Laminas and the microframework to Mezzio. Plus, vlucas/phpdotenv has been updated and the recommended way to use it has changed. Time for an update.
 Starting point Any laminas or mezzio application serves as a starting point. For this article, a minimal setup is used with a container.php and container.php as it is provided by mezzio-skeleton.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-03-20T17:16:20+01:00">
-    <meta property="article:modified_time" content="2025-03-20T17:16:20+01:00">
-    <meta property="article:tag" content="Dotenv">
-    <meta property="article:tag" content="Laminas">
-    <meta property="article:tag" content="Mezzio">
-    <meta property="article:tag" content="Php">
-    <meta property="og:image" content="https://arueckauer.github.io/">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2025-03-20T17:16:20+01:00">
+		<meta property="article:modified_time" content="2025-03-20T17:16:20+01:00">
+		<meta property="article:tag" content="Dotenv">
+		<meta property="article:tag" content="Laminas">
+		<meta property="article:tag" content="Mezzio">
+		<meta property="article:tag" content="Php">
+		<meta property="og:image" content="https://arueckauer.github.io/">
 
 
 
@@ -91,7 +91,7 @@ Starting point Any laminas or mezzio application serves as a starting point. For
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -183,7 +183,7 @@ Starting point Any laminas or mezzio application serves as a starting point. For
 <p>In this example, the <code>.env</code> file is used to configure the database connection. The database connection is created using PDO. The database connection is created in a factory and the factory is registered in the container.</p>
 <h2 id="install-phpdotenv">Install phpdotenv</h2>
 <p><a href="https://github.com/vlucas/phpdotenv?tab=readme-ov-file#installation">Install it as recommended</a>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>composer require vlucas/phpdotenv
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>composer require vlucas/phpdotenv
 </span></span></code></pre></div><h2 id="create-a-dotenv-file">Create a dotenv file</h2>
 <p><code>.env</code></p>
 <pre tabindex="0"><code class="language-dotenv" data-lang="dotenv">DB_DSN=sqlite::memory:
@@ -192,7 +192,7 @@ DB_PASSWORD=null
 </code></pre><h2 id="connect-dotenv-to-the-application">Connect dotenv to the application</h2>
 <p>To make the <code>.env</code> file available to the application, the following code is added to <code>container.php</code>. It also ensures that the required environment variables are set.</p>
 <p><code>config/container.php</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Dotenv\Dotenv</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Dotenv\Dotenv</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$dotenv <span style="color:#f92672">=</span> <span style="color:#a6e22e">Dotenv</span><span style="color:#f92672">::</span><span style="color:#a6e22e">createImmutable</span>(<span style="color:#a6e22e">dirname</span>(<span style="color:#66d9ef">__DIR__</span>));
 </span></span><span style="display:flex;"><span>$dotenv<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">load</span>();
@@ -200,7 +200,7 @@ DB_PASSWORD=null
 </span></span></code></pre></div><h2 id="application-configuration">Application configuration</h2>
 <p>As the <code>.env</code> file is environment-specific, and the application configuration is making usage of it, the configuration file can be global.</p>
 <p><code>config/autoload/db.global.php</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>);
 </span></span><span style="display:flex;"><span>
@@ -218,7 +218,7 @@ DB_PASSWORD=null
 </span></span></code></pre></div><h2 id="factory">Factory</h2>
 <p>The PDO instance is created in a factory.</p>
 <p><code>src/LaminasDotEnv/PdoFactory.php</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>);
 </span></span><span style="display:flex;"><span>
@@ -235,7 +235,7 @@ DB_PASSWORD=null
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     * @throws ContainerExceptionInterface
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     * @throws NotFoundExceptionInterface
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     */</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __invoke(<span style="color:#a6e22e">ContainerInterface</span> $container)<span style="color:#f92672">:</span> <span style="color:#a6e22e">PDO</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">__invoke</span>(<span style="color:#a6e22e">ContainerInterface</span> $container)<span style="color:#f92672">:</span> <span style="color:#a6e22e">PDO</span>
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        $config <span style="color:#f92672">=</span> $container<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;config&#39;</span>);
 </span></span><span style="display:flex;"><span>
@@ -248,7 +248,7 @@ DB_PASSWORD=null
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Add a service definition as you wish. The PDO instance can then be retrieved from the container.</p>
 <p><code>bin/db.php</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>);
 </span></span><span style="display:flex;"><span>
@@ -279,7 +279,7 @@ DB_PASSWORD=null
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;Done&#39;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">PHP_EOL</span>;
 </span></span><span style="display:flex;"><span>})();
 </span></span></code></pre></div><h2 id="run-the-application">Run the application</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>C:\source\laminas-dot-env [main <span style="color:#960050;background-color:#1e0010">≡</span>]&gt; php bin/db.php
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>C:\source\laminas-dot-env [main <span style="color:#960050;background-color:#1e0010">≡</span>]&gt; php bin/db.php
 </span></span><span style="display:flex;"><span>Create table
 </span></span><span style="display:flex;"><span>Insert data
 </span></span><span style="display:flex;"><span>Fetch data
@@ -445,9 +445,9 @@ DB_PASSWORD=null
         <div class="pagination__buttons">
             
             <span class="button previous">
-                <a href="https://arueckauer.github.io/posts/2026/03/speed-up-slow-php_codesniffer-execution-on-windows/">
+                <a href="https://arueckauer.github.io/posts/2025/09/arch-wsl-crashes-due-to-pacman-lock-files/">
                     <span class="button__icon">←</span>
-                    <span class="button__text">Speed Up slow PHP_CodeSniffer execution on Windows</span>
+                    <span class="button__text">Arch WSL crashes due to Pacman Lock Files</span>
                 </a>
             </span>
             
@@ -503,7 +503,7 @@ DB_PASSWORD=null
 
 
 
-<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.ad54ad97364f77ede35def9096b162bb1f0b3973aa50b080f5e82fa147f6882e2a7200d7535adbf9b51bebf939f1c1ca9bbe6be87530092aca720eac4a226fda.js" integrity="sha512-rVStlzZPd&#43;3jXe&#43;QlrFiux8LOXOqULCA9egvoUf2iC4qcgDXU1rb&#43;bUb6/k58cHKm75r6HUwCSrKcg6sSiJv2g=="></script>
 
 
     

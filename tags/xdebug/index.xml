@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Xdebug on Andi Rückauer</title>
-    <link>https://arueckauer.github.io/tags/xdebug/</link>
-    <description>Recent content in Xdebug on Andi Rückauer</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 27 Nov 2020 11:52:58 +0100</lastBuildDate>
-    <atom:link href="https://arueckauer.github.io/tags/xdebug/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Upgrade Xdebug 2 to 3</title>
-      <link>https://arueckauer.github.io/posts/2020/11/upgrade-xdebug-2-to-3/</link>
-      <pubDate>Fri, 27 Nov 2020 11:52:58 +0100</pubDate>
-      <guid>https://arueckauer.github.io/posts/2020/11/upgrade-xdebug-2-to-3/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://xdebug.org/&#34;&gt;Xdebug&lt;/a&gt; is an essential tool in my developing process. Most often I use it for Step Debugging code invoked from a request or CLI. With the release of &lt;a href=&#34;https://xdebug.org/announcements/2020-11-25&#34;&gt;Xdebug 3.0&lt;/a&gt; the configuration settings changed and need adjustment in the &lt;code&gt;php.ini&lt;/code&gt; and in my case the environment variables as well.&lt;/p&gt;&#xA;&lt;p&gt;In this post I am recording what needed to be changed in upgrading Xdebug. For a complete description on what changed, have a look at &lt;a href=&#34;https://xdebug.org/docs/upgrade_guide&#34;&gt;Upgrading from Xdebug 2 to 3&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Xdebug on Andi Rückauer</title>
+		<link>https://arueckauer.github.io/tags/xdebug/</link>
+		<description>Recent content in Xdebug on Andi Rückauer</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+			<copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+		
+		
+			<lastBuildDate>Fri, 27 Nov 2020 11:52:58 +0100</lastBuildDate>
+		
+			<atom:link href="https://arueckauer.github.io/tags/xdebug/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Upgrade Xdebug 2 to 3</title>
+				<link>https://arueckauer.github.io/posts/2020/11/upgrade-xdebug-2-to-3/</link>
+				<pubDate>Fri, 27 Nov 2020 11:52:58 +0100</pubDate>
+				<guid>https://arueckauer.github.io/posts/2020/11/upgrade-xdebug-2-to-3/</guid>
+				<description>&lt;p&gt;&lt;a href=&#34;https://xdebug.org/&#34;&gt;Xdebug&lt;/a&gt; is an essential tool in my developing process. Most often I use it for Step Debugging code invoked from a request or CLI. With the release of &lt;a href=&#34;https://xdebug.org/announcements/2020-11-25&#34;&gt;Xdebug 3.0&lt;/a&gt; the configuration settings changed and need adjustment in the &lt;code&gt;php.ini&lt;/code&gt; and in my case the environment variables as well.&lt;/p&gt;&#xA;&lt;p&gt;In this post I am recording what needed to be changed in upgrading Xdebug. For a complete description on what changed, have a look at &lt;a href=&#34;https://xdebug.org/docs/upgrade_guide&#34;&gt;Upgrading from Xdebug 2 to 3&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

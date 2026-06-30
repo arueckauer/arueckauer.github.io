@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="">
+<meta name="author" content="Andi Rückauer">
 <meta name="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D20
 Next up in the PHP sidetrack is the Meetup exercise.
 A function is provided with the arguments
@@ -42,22 +42,22 @@ While year, month and weekday are an exact representation of their values, the d
 
 
 
-  <meta itemprop="name" content="Meetup (Side Exercise)">
-  <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D20
+	<meta itemprop="name" content="Meetup (Side Exercise)">
+	<meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D20
 Next up in the PHP sidetrack is the Meetup exercise.
 A function is provided with the arguments
 (int) year, (int) month, (string) descriptor and (string) weekday and expected to process the input and return an instance of DateTime with the corresponding date.
 While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated. It can hold one of the following values:">
-  <meta itemprop="datePublished" content="2019-06-11T21:29:52+02:00">
-  <meta itemprop="dateModified" content="2019-06-11T21:29:52+02:00">
-  <meta itemprop="wordCount" content="600">
-  <meta itemprop="image" content="https://arueckauer.github.io/">
-  <meta itemprop="keywords" content="100-Days-of-Code,Exercism,Php">
+	<meta itemprop="datePublished" content="2019-06-11T21:29:52+02:00">
+	<meta itemprop="dateModified" content="2019-06-11T21:29:52+02:00">
+	<meta itemprop="wordCount" content="600">
+	<meta itemprop="image" content="https://arueckauer.github.io/">
+	<meta itemprop="keywords" content="100-Days-of-Code,Exercism,Php">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://arueckauer.github.io/">
-  <meta name="twitter:title" content="Meetup (Side Exercise)">
-  <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D20
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://arueckauer.github.io/">
+	<meta name="twitter:title" content="Meetup (Side Exercise)">
+	<meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D20
 Next up in the PHP sidetrack is the Meetup exercise.
 A function is provided with the arguments
 (int) year, (int) month, (string) descriptor and (string) weekday and expected to process the input and return an instance of DateTime with the corresponding date.
@@ -66,22 +66,22 @@ While year, month and weekday are an exact representation of their values, the d
 
 
     <meta property="og:url" content="https://arueckauer.github.io/posts/2019/06/meetup-side-exercise/">
-  <meta property="og:site_name" content="Andi Rückauer">
-  <meta property="og:title" content="Meetup (Side Exercise)">
-  <meta property="og:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D20
+	<meta property="og:site_name" content="Andi Rückauer">
+	<meta property="og:title" content="Meetup (Side Exercise)">
+	<meta property="og:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D20
 Next up in the PHP sidetrack is the Meetup exercise.
 A function is provided with the arguments
 (int) year, (int) month, (string) descriptor and (string) weekday and expected to process the input and return an instance of DateTime with the corresponding date.
 While year, month and weekday are an exact representation of their values, the descriptor is a bit more complicated. It can hold one of the following values:">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2019-06-11T21:29:52+02:00">
-    <meta property="article:modified_time" content="2019-06-11T21:29:52+02:00">
-    <meta property="article:tag" content="100-Days-of-Code">
-    <meta property="article:tag" content="Exercism">
-    <meta property="article:tag" content="Php">
-    <meta property="og:image" content="https://arueckauer.github.io/">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2019-06-11T21:29:52+02:00">
+		<meta property="article:modified_time" content="2019-06-11T21:29:52+02:00">
+		<meta property="article:tag" content="100-Days-of-Code">
+		<meta property="article:tag" content="Exercism">
+		<meta property="article:tag" content="Php">
+		<meta property="og:image" content="https://arueckauer.github.io/">
 
 
 
@@ -102,7 +102,7 @@ While year, month and weekday are an exact representation of their values, the d
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -210,7 +210,7 @@ While year, month and weekday are an exact representation of their values, the d
 <p>Thus, making the actual date variable.</p>
 <h2 id="function-signature">Function signature</h2>
 <p>First, I create the required file <code>meetup.php</code> and declare the function <code>meetup_day()</code> with the known arguments.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">meetup_day</span>(<span style="color:#a6e22e">int</span> $year, <span style="color:#a6e22e">int</span> $month, <span style="color:#a6e22e">string</span> $descriptor, <span style="color:#a6e22e">string</span> $weekday) <span style="color:#f92672">:</span> <span style="color:#a6e22e">DateTime</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">meetup_day</span>(<span style="color:#a6e22e">int</span> $year, <span style="color:#a6e22e">int</span> $month, <span style="color:#a6e22e">string</span> $descriptor, <span style="color:#a6e22e">string</span> $weekday) <span style="color:#f92672">:</span> <span style="color:#a6e22e">DateTime</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>();
 </span></span><span style="display:flex;"><span>}
@@ -218,25 +218,26 @@ While year, month and weekday are an exact representation of their values, the d
 <h2 id="year-month-time">Year, month, time</h2>
 <p>Breaking this exercise up into pieces, I first comment out all but the first test method. That lets me focus on one feature/requirement at a time.</p>
 <p>Since there is only a description of a date and the tests assert always against a time of 0, I can start by initializing a <code>DateTime</code> object and setting the time.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$date <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$date <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>();
 </span></span><span style="display:flex;"><span>$date<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setTime</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>);
 </span></span></code></pre></div><p>Next, I add the year and month. Since <code>DateTime::setDate</code> is expecting also the day as third parameter and do not yet know it, I simply declare it as 1.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$date<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setDate</span>($year, $month, <span style="color:#ae81ff">1</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$date<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setDate</span>($year, $month, <span style="color:#ae81ff">1</span>);
 </span></span></code></pre></div><h2 id="modifier">Modifier</h2>
 <p>Now I can use <code>DateTime::modify</code> to set the actual date. I start off by just simply using first as modifier.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$date<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">modify</span>(<span style="color:#e6db74">&#34;first </span><span style="color:#e6db74">$weekday</span><span style="color:#e6db74"> of this month&#34;</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$date<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">modify</span>(<span style="color:#e6db74">&#34;first </span><span style="color:#e6db74">$weekday</span><span style="color:#e6db74"> of this month&#34;</span>);
 </span></span></code></pre></div><p>With this implementation, all tests against the first weekday are passing. To handle the other possible values of the descriptor, I first check whether it is equal to <code>'teenth'</code> since I will need to know that later on again. Then I will use <code>'first'</code> as modifier for the <code>'teenth'</code> descriptor. And finally, pass it to the <code>modify()</code> method.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$isTeenth <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;teenth&#39;</span> <span style="color:#f92672">===</span> $descriptor;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$isTeenth <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;teenth&#39;</span> <span style="color:#f92672">===</span> $descriptor;
 </span></span><span style="display:flex;"><span>$modifier <span style="color:#f92672">=</span> $isTeenth <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;first&#39;</span> <span style="color:#f92672">:</span> $descriptor;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$date<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">modify</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">$modifier</span><span style="color:#e6db74"> </span><span style="color:#e6db74">$weekday</span><span style="color:#e6db74"> of this month&#34;</span>);
 </span></span></code></pre></div><p>Now all tests are passing except for the descriptors with a value of <code>'teenth'</code>.</p>
 <h2 id="teenth">Teenth</h2>
 <blockquote>
-<p>Note that &ldquo;monteenth&rdquo;, &ldquo;tuesteenth&rdquo;, etc are all made up words. There was a meetup whose members realized that there are exactly 7 numbered days in a month that end in &lsquo;-teenth&rsquo;. Therefore, one is guaranteed that each day of the week (Monday, Tuesday, &hellip;) will have exactly one date that is named with &lsquo;-teenth&rsquo; in every month.</p></blockquote>
+<p>Note that &ldquo;monteenth&rdquo;, &ldquo;tuesteenth&rdquo;, etc are all made up words. There was a meetup whose members realized that there are exactly 7 numbered days in a month that end in &lsquo;-teenth&rsquo;. Therefore, one is guaranteed that each day of the week (Monday, Tuesday, &hellip;) will have exactly one date that is named with &lsquo;-teenth&rsquo; in every month.</p>
+</blockquote>
 <p>From the exercise description I learn that the day of month for the <code>'teenth'</code> descriptor has to be between 13 and 19 inclusive. However, it is not possible to know without doing some math, whether it is the second or third <em>weekday</em> in the month.</p>
 <p>The simplest solution that comes to my mind, is to add 1 week to the current date, while the day of the month in not in-between 12 and 20.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">modify_teenth_date</span>(<span style="color:#a6e22e">DateTime</span> $date) <span style="color:#f92672">:</span> <span style="color:#a6e22e">DateTime</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">modify_teenth_date</span>(<span style="color:#a6e22e">DateTime</span> $date) <span style="color:#f92672">:</span> <span style="color:#a6e22e">DateTime</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    $teenthDays <span style="color:#f92672">=</span> [
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;13&#39;</span>,
@@ -255,7 +256,7 @@ While year, month and weekday are an exact representation of their values, the d
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Et voilà, all tests are passing.</p>
 <h2 id="my-solution">My solution</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>);
 </span></span><span style="display:flex;"><span>
@@ -503,7 +504,7 @@ While year, month and weekday are an exact representation of their values, the d
 
 
 
-<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.ad54ad97364f77ede35def9096b162bb1f0b3973aa50b080f5e82fa147f6882e2a7200d7535adbf9b51bebf939f1c1ca9bbe6be87530092aca720eac4a226fda.js" integrity="sha512-rVStlzZPd&#43;3jXe&#43;QlrFiux8LOXOqULCA9egvoUf2iC4qcgDXU1rb&#43;bUb6/k58cHKm75r6HUwCSrKcg6sSiJv2g=="></script>
 
 
     

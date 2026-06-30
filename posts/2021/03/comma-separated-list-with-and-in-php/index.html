@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="">
+<meta name="author" content="Andi Rückauer">
 <meta name="description" content="How to display an array to comma separated values with a last &ldquo;and&rdquo; by Frédéric Bouchery.
 &lt;?php declare(strict_types=1); $array = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;]; echo implode(&#39;, &#39;, array_slice($array, 0, -1)) . &#39; and &#39; . end($array); 3v4l.org Source " />
 <meta name="keywords" content="andi, rückauer, blog, software, development, php, array" />
@@ -38,36 +38,36 @@
 
 
 
-  <meta itemprop="name" content="Comma separated list with and in PHP">
-  <meta itemprop="description" content="How to display an array to comma separated values with a last “and” by Frédéric Bouchery.
+	<meta itemprop="name" content="Comma separated list with and in PHP">
+	<meta itemprop="description" content="How to display an array to comma separated values with a last “and” by Frédéric Bouchery.
 &lt;?php declare(strict_types=1); $array = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;]; echo implode(&#39;, &#39;, array_slice($array, 0, -1)) . &#39; and &#39; . end($array); 3v4l.org Source">
-  <meta itemprop="datePublished" content="2021-03-01T14:14:48+02:00">
-  <meta itemprop="dateModified" content="2021-03-01T14:14:48+02:00">
-  <meta itemprop="wordCount" content="35">
-  <meta itemprop="image" content="https://arueckauer.github.io/">
-  <meta itemprop="keywords" content="Php,Array">
+	<meta itemprop="datePublished" content="2021-03-01T14:14:48+02:00">
+	<meta itemprop="dateModified" content="2021-03-01T14:14:48+02:00">
+	<meta itemprop="wordCount" content="35">
+	<meta itemprop="image" content="https://arueckauer.github.io/">
+	<meta itemprop="keywords" content="Php,Array">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://arueckauer.github.io/">
-  <meta name="twitter:title" content="Comma separated list with and in PHP">
-  <meta name="twitter:description" content="How to display an array to comma separated values with a last “and” by Frédéric Bouchery.
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://arueckauer.github.io/">
+	<meta name="twitter:title" content="Comma separated list with and in PHP">
+	<meta name="twitter:description" content="How to display an array to comma separated values with a last “and” by Frédéric Bouchery.
 &lt;?php declare(strict_types=1); $array = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;]; echo implode(&#39;, &#39;, array_slice($array, 0, -1)) . &#39; and &#39; . end($array); 3v4l.org Source">
 
 
 
     <meta property="og:url" content="https://arueckauer.github.io/posts/2021/03/comma-separated-list-with-and-in-php/">
-  <meta property="og:site_name" content="Andi Rückauer">
-  <meta property="og:title" content="Comma separated list with and in PHP">
-  <meta property="og:description" content="How to display an array to comma separated values with a last “and” by Frédéric Bouchery.
+	<meta property="og:site_name" content="Andi Rückauer">
+	<meta property="og:title" content="Comma separated list with and in PHP">
+	<meta property="og:description" content="How to display an array to comma separated values with a last “and” by Frédéric Bouchery.
 &lt;?php declare(strict_types=1); $array = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;]; echo implode(&#39;, &#39;, array_slice($array, 0, -1)) . &#39; and &#39; . end($array); 3v4l.org Source">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2021-03-01T14:14:48+02:00">
-    <meta property="article:modified_time" content="2021-03-01T14:14:48+02:00">
-    <meta property="article:tag" content="Php">
-    <meta property="article:tag" content="Array">
-    <meta property="og:image" content="https://arueckauer.github.io/">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2021-03-01T14:14:48+02:00">
+		<meta property="article:modified_time" content="2021-03-01T14:14:48+02:00">
+		<meta property="article:tag" content="Php">
+		<meta property="article:tag" content="Array">
+		<meta property="og:image" content="https://arueckauer.github.io/">
 
 
 
@@ -88,7 +88,7 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -174,7 +174,7 @@
 
       <div class="post-content">
         <p>How to display an array to comma separated values with a last &ldquo;and&rdquo; by <a href="https://twitter.com/FredBouchery">Frédéric Bouchery</a>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>);
 </span></span><span style="display:flex;"><span>
@@ -393,7 +393,7 @@
 
 
 
-<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.ad54ad97364f77ede35def9096b162bb1f0b3973aa50b080f5e82fa147f6882e2a7200d7535adbf9b51bebf939f1c1ca9bbe6be87530092aca720eac4a226fda.js" integrity="sha512-rVStlzZPd&#43;3jXe&#43;QlrFiux8LOXOqULCA9egvoUf2iC4qcgDXU1rb&#43;bUb6/k58cHKm75r6HUwCSrKcg6sSiJv2g=="></script>
 
 
     

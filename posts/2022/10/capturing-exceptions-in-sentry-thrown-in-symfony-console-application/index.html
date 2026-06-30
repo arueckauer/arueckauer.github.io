@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="">
+<meta name="author" content="Andi Rückauer">
 <meta name="description" content="This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on StackOverflow. In here I describe it in more detail.
 To capture exceptions thrown in Symfony console application in Sentry, the Symfony Event Dispatcher is used.
 composer require symfony/event-dispatcher The Event Dispatcher provides a console.error event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.
@@ -40,40 +40,40 @@ composer require symfony/event-dispatcher The Event Dispatcher provides a consol
 
 
 
-  <meta itemprop="name" content="Capturing Exceptions in Sentry Thrown in Symfony Console Application">
-  <meta itemprop="description" content="This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on StackOverflow. In here I describe it in more detail.
+	<meta itemprop="name" content="Capturing Exceptions in Sentry Thrown in Symfony Console Application">
+	<meta itemprop="description" content="This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on StackOverflow. In here I describe it in more detail.
 To capture exceptions thrown in Symfony console application in Sentry, the Symfony Event Dispatcher is used.
 composer require symfony/event-dispatcher The Event Dispatcher provides a console.error event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.">
-  <meta itemprop="datePublished" content="2022-10-26T10:00:19+02:00">
-  <meta itemprop="dateModified" content="2022-10-26T10:00:19+02:00">
-  <meta itemprop="wordCount" content="113">
-  <meta itemprop="image" content="https://arueckauer.github.io/">
-  <meta itemprop="keywords" content="Php,Sentry,Symfony">
+	<meta itemprop="datePublished" content="2022-10-26T10:00:19+02:00">
+	<meta itemprop="dateModified" content="2022-10-26T10:00:19+02:00">
+	<meta itemprop="wordCount" content="113">
+	<meta itemprop="image" content="https://arueckauer.github.io/">
+	<meta itemprop="keywords" content="Php,Sentry,Symfony">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://arueckauer.github.io/">
-  <meta name="twitter:title" content="Capturing Exceptions in Sentry Thrown in Symfony Console Application">
-  <meta name="twitter:description" content="This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on StackOverflow. In here I describe it in more detail.
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://arueckauer.github.io/">
+	<meta name="twitter:title" content="Capturing Exceptions in Sentry Thrown in Symfony Console Application">
+	<meta name="twitter:description" content="This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on StackOverflow. In here I describe it in more detail.
 To capture exceptions thrown in Symfony console application in Sentry, the Symfony Event Dispatcher is used.
 composer require symfony/event-dispatcher The Event Dispatcher provides a console.error event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.">
 
 
 
     <meta property="og:url" content="https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-symfony-console-application/">
-  <meta property="og:site_name" content="Andi Rückauer">
-  <meta property="og:title" content="Capturing Exceptions in Sentry Thrown in Symfony Console Application">
-  <meta property="og:description" content="This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on StackOverflow. In here I describe it in more detail.
+	<meta property="og:site_name" content="Andi Rückauer">
+	<meta property="og:title" content="Capturing Exceptions in Sentry Thrown in Symfony Console Application">
+	<meta property="og:description" content="This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on StackOverflow. In here I describe it in more detail.
 To capture exceptions thrown in Symfony console application in Sentry, the Symfony Event Dispatcher is used.
 composer require symfony/event-dispatcher The Event Dispatcher provides a console.error event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2022-10-26T10:00:19+02:00">
-    <meta property="article:modified_time" content="2022-10-26T10:00:19+02:00">
-    <meta property="article:tag" content="Php">
-    <meta property="article:tag" content="Sentry">
-    <meta property="article:tag" content="Symfony">
-    <meta property="og:image" content="https://arueckauer.github.io/">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2022-10-26T10:00:19+02:00">
+		<meta property="article:modified_time" content="2022-10-26T10:00:19+02:00">
+		<meta property="article:tag" content="Php">
+		<meta property="article:tag" content="Sentry">
+		<meta property="article:tag" content="Symfony">
+		<meta property="og:image" content="https://arueckauer.github.io/">
 
 
 
@@ -94,7 +94,7 @@ composer require symfony/event-dispatcher The Event Dispatcher provides a consol
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -181,12 +181,12 @@ composer require symfony/event-dispatcher The Event Dispatcher provides a consol
       <div class="post-content">
         <p>This article describes how to capture exceptions thrown in Symfony console application in Sentry. The fundamental solution is posted on <a href="https://stackoverflow.com/a/60411421/9364246">StackOverflow</a>. In here I describe it in more detail.</p>
 <p>To capture exceptions thrown in Symfony console application in Sentry, the Symfony Event Dispatcher is used.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>composer require symfony/event-dispatcher
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>composer require symfony/event-dispatcher
 </span></span></code></pre></div><p>The Event Dispatcher provides a <code>console.error</code> event. A listener will be called when an exception is thrown. The listener will then capture the exception in Sentry.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Symfony\Component\EventDispatcher\EventDispatcher</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Symfony\Component\EventDispatcher\EventDispatcher</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// Ensure Sentry is initialized
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$dispatcher <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">EventDispatcher</span>();
 </span></span><span style="display:flex;"><span>$dispatcher<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">addListener</span>(
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ConsoleEvents</span><span style="color:#f92672">::</span><span style="color:#a6e22e">ERROR</span>,
@@ -195,7 +195,7 @@ composer require symfony/event-dispatcher The Event Dispatcher provides a consol
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>);
 </span></span></code></pre></div><p>The dispatcher is then passed to the <code>Application</code> class.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Symfony\Component\Console\Application</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Symfony\Component\Console\Application</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$application <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Application</span>(<span style="color:#e6db74">&#39;My Application&#39;</span>, <span style="color:#e6db74">&#39;1.0.0&#39;</span>);
 </span></span><span style="display:flex;"><span>$application<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setDispatcher</span>($dispatcher);
@@ -409,7 +409,7 @@ composer require symfony/event-dispatcher The Event Dispatcher provides a consol
 
 
 
-<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.ad54ad97364f77ede35def9096b162bb1f0b3973aa50b080f5e82fa147f6882e2a7200d7535adbf9b51bebf939f1c1ca9bbe6be87530092aca720eac4a226fda.js" integrity="sha512-rVStlzZPd&#43;3jXe&#43;QlrFiux8LOXOqULCA9egvoUf2iC4qcgDXU1rb&#43;bUb6/k58cHKm75r6HUwCSrKcg6sSiJv2g=="></script>
 
 
     

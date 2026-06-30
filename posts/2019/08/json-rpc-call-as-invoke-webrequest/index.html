@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="">
+<meta name="author" content="Andi Rückauer">
 <meta name="description" content="Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.
 Requesting the SMD is as simple as:
 Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.
@@ -41,21 +41,21 @@ $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{
 
 
 
-  <meta itemprop="name" content="JSON-RPC call as Invoke-WebRequest">
-  <meta itemprop="description" content="Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.
+	<meta itemprop="name" content="JSON-RPC call as Invoke-WebRequest">
+	<meta itemprop="description" content="Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.
 Requesting the SMD is as simple as:
 Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.
 $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;C8P&gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request. And piping the body object to ConvertTo-Json returns the necessary JSON representation.">
-  <meta itemprop="datePublished" content="2019-08-05T16:56:17+02:00">
-  <meta itemprop="dateModified" content="2019-08-05T16:56:17+02:00">
-  <meta itemprop="wordCount" content="119">
-  <meta itemprop="image" content="https://arueckauer.github.io/">
-  <meta itemprop="keywords" content="Powershell,Json-Rpc">
+	<meta itemprop="datePublished" content="2019-08-05T16:56:17+02:00">
+	<meta itemprop="dateModified" content="2019-08-05T16:56:17+02:00">
+	<meta itemprop="wordCount" content="119">
+	<meta itemprop="image" content="https://arueckauer.github.io/">
+	<meta itemprop="keywords" content="Powershell,Json-Rpc">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://arueckauer.github.io/">
-  <meta name="twitter:title" content="JSON-RPC call as Invoke-WebRequest">
-  <meta name="twitter:description" content="Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://arueckauer.github.io/">
+	<meta name="twitter:title" content="JSON-RPC call as Invoke-WebRequest">
+	<meta name="twitter:description" content="Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.
 Requesting the SMD is as simple as:
 Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.
 $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;C8P&gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request. And piping the body object to ConvertTo-Json returns the necessary JSON representation.">
@@ -63,20 +63,20 @@ $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{
 
 
     <meta property="og:url" content="https://arueckauer.github.io/posts/2019/08/json-rpc-call-as-invoke-webrequest/">
-  <meta property="og:site_name" content="Andi Rückauer">
-  <meta property="og:title" content="JSON-RPC call as Invoke-WebRequest">
-  <meta property="og:description" content="Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.
+	<meta property="og:site_name" content="Andi Rückauer">
+	<meta property="og:title" content="JSON-RPC call as Invoke-WebRequest">
+	<meta property="og:description" content="Lately I needed to execute a JSON-RPC call, but had neither Postman nor Insomnia available. I wondered, if Invoke-WebRequest could do the job.
 Requesting the SMD is as simple as:
 Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.
 $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{ username = &#39;arueckauer&#39;; password = &#39;F^YgtU)p9Pd3ANTqm@F^sNWFSf9PU}OCg0N0xCC&amp;C8P&gt;=x^6)Hasdh]HHtXQ#dLg&#39; }; id = [guid]::NewGuid() } | ConvertTo-Json Invoke-WebRequest -Uri &#39;https://localhost/api/json-rpc/authentication&#39; -Method &#39;POST&#39; -Body $Body With the help of [guid]::NewGuid() a new UUIDv4 is created for each request. And piping the body object to ConvertTo-Json returns the necessary JSON representation.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2019-08-05T16:56:17+02:00">
-    <meta property="article:modified_time" content="2019-08-05T16:56:17+02:00">
-    <meta property="article:tag" content="Powershell">
-    <meta property="article:tag" content="Json-Rpc">
-    <meta property="og:image" content="https://arueckauer.github.io/">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2019-08-05T16:56:17+02:00">
+		<meta property="article:modified_time" content="2019-08-05T16:56:17+02:00">
+		<meta property="article:tag" content="Powershell">
+		<meta property="article:tag" content="Json-Rpc">
+		<meta property="og:image" content="https://arueckauer.github.io/">
 
 
 
@@ -97,7 +97,7 @@ $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -184,9 +184,9 @@ $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{
       <div class="post-content">
         <p>Lately I needed to execute a JSON-RPC call, but had neither <a href="https://www.getpostman.com/">Postman</a> nor <a href="https://insomnia.rest/">Insomnia</a> available. I wondered, if <code>Invoke-WebRequest</code> could do the job.</p>
 <p>Requesting the SMD is as simple as:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-WebRequest -Uri <span style="color:#e6db74">&#39;https://localhost/api/json-rpc/authentication&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-WebRequest -Uri <span style="color:#e6db74">&#39;https://localhost/api/json-rpc/authentication&#39;</span>
 </span></span></code></pre></div><p>Now I needed to send a POST request with some parameters. That needed some further research. After some trial and error I ended up with the following.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$Body = @{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$Body = @{
 </span></span><span style="display:flex;"><span>    jsonrpc = <span style="color:#e6db74">&#39;2.0&#39;</span>;
 </span></span><span style="display:flex;"><span>    method  = <span style="color:#e6db74">&#39;authenticate&#39;</span>;
 </span></span><span style="display:flex;"><span>    params  = @{
@@ -407,7 +407,7 @@ $Body = @{ jsonrpc = &#39;2.0&#39;; method = &#39;authenticate&#39;; params = @{
 
 
 
-<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.ad54ad97364f77ede35def9096b162bb1f0b3973aa50b080f5e82fa147f6882e2a7200d7535adbf9b51bebf939f1c1ca9bbe6be87530092aca720eac4a226fda.js" integrity="sha512-rVStlzZPd&#43;3jXe&#43;QlrFiux8LOXOqULCA9egvoUf2iC4qcgDXU1rb&#43;bUb6/k58cHKm75r6HUwCSrKcg6sSiJv2g=="></script>
 
 
     

@@ -29,6 +29,21 @@
     <loc>https://arueckauer.github.io/tags/windows/</loc>
     <lastmod>2026-03-16T11:30:00+01:00</lastmod>
   </url><url>
+    <loc>https://arueckauer.github.io/posts/2025/09/arch-wsl-crashes-due-to-pacman-lock-files/</loc>
+    <lastmod>2025-09-24T05:23:59+00:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/arch-linux/</loc>
+    <lastmod>2025-09-24T05:23:59+00:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/pacman/</loc>
+    <lastmod>2025-09-24T05:23:59+00:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/troubleshooting/</loc>
+    <lastmod>2025-09-24T05:23:59+00:00</lastmod>
+  </url><url>
+    <loc>https://arueckauer.github.io/tags/wsl/</loc>
+    <lastmod>2025-09-24T05:23:59+00:00</lastmod>
+  </url><url>
     <loc>https://arueckauer.github.io/tags/dotenv/</loc>
     <lastmod>2025-03-20T17:16:20+01:00</lastmod>
   </url><url>
@@ -54,9 +69,6 @@
     <lastmod>2025-03-10T11:04:12+01:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/tags/linux/</loc>
-    <lastmod>2025-03-10T11:04:12+01:00</lastmod>
-  </url><url>
-    <loc>https://arueckauer.github.io/tags/wsl/</loc>
     <lastmod>2025-03-10T11:04:12+01:00</lastmod>
   </url><url>
     <loc>https://arueckauer.github.io/posts/2022/10/capturing-exceptions-in-sentry-thrown-in-mezzio-application/</loc>

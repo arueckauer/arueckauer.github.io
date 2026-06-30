@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Gpg on Andi Rückauer</title>
-    <link>https://arueckauer.github.io/tags/gpg/</link>
-    <description>Recent content in Gpg on Andi Rückauer</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 05 May 2020 06:34:25 +0200</lastBuildDate>
-    <atom:link href="https://arueckauer.github.io/tags/gpg/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Signing Git Commits with GPG on Windows</title>
-      <link>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</link>
-      <pubDate>Tue, 05 May 2020 06:34:25 +0200</pubDate>
-      <guid>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</guid>
-      <description>&lt;p&gt;Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Disclaimer: This article does not describe setting up / creating GPG keys.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;check-your-gpg-keys&#34;&gt;Check your GPG keys&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gpg --list-secret-keys --keyid-format LONG&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Which gives you a list like the following.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx&#xA;----------------------------------------------------&#xA;sec   rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC]&#xA;      2B30F6F709EF48E6AF669C3FD7EB1106B4940744&#xA;&#xA;uid              [ ultimativ ] Andi Rückauer &amp;lt;arueckauer@example.com&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;setting-gpg-signing-key-as-configuration-setting&#34;&gt;Setting GPG signing key as configuration setting&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global user.signingkey E1C0E2DB517C8FBC&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;configure-gpg-program&#34;&gt;Configure GPG program&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global gpg.program &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C:\Program Files (x86)\GnuPG\bin\gpg.exe&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;et-voilà&#34;&gt;Et voilà&lt;/h2&gt;&#xA;&lt;p&gt;Now signing commits should work by passing the &lt;code&gt;-S&lt;/code&gt; option with a commit.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Gpg on Andi Rückauer</title>
+		<link>https://arueckauer.github.io/tags/gpg/</link>
+		<description>Recent content in Gpg on Andi Rückauer</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+			<copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+		
+		
+			<lastBuildDate>Tue, 05 May 2020 06:34:25 +0200</lastBuildDate>
+		
+			<atom:link href="https://arueckauer.github.io/tags/gpg/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Signing Git Commits with GPG on Windows</title>
+				<link>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</link>
+				<pubDate>Tue, 05 May 2020 06:34:25 +0200</pubDate>
+				<guid>https://arueckauer.github.io/posts/2020/05/signing-git-commits-with-gpg-on-windows/</guid>
+				<description>&lt;p&gt;Setting up signed commits on Windows gave me some troubles. In the end, and if you know how, it is straightforward and easy. This is to my future self or other wandering souls.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Disclaimer: This article does not describe setting up / creating GPG keys.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;check-your-gpg-keys&#34;&gt;Check your GPG keys&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gpg --list-secret-keys --keyid-format LONG&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Which gives you a list like the following.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;C:/Users/arueckauer/AppData/Roaming/gnupg/pubring.kbx&#xA;----------------------------------------------------&#xA;sec   rsa4096/E1C0E2DB517C8FBC 2016-07-21 [SC]&#xA;      2B30F6F709EF48E6AF669C3FD7EB1106B4940744&#xA;&#xA;uid              [ ultimativ ] Andi Rückauer &amp;lt;arueckauer@example.com&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;setting-gpg-signing-key-as-configuration-setting&#34;&gt;Setting GPG signing key as configuration setting&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global user.signingkey E1C0E2DB517C8FBC&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;configure-gpg-program&#34;&gt;Configure GPG program&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git config --global gpg.program &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C:\Program Files (x86)\GnuPG\bin\gpg.exe&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;et-voilà&#34;&gt;Et voilà&lt;/h2&gt;&#xA;&lt;p&gt;Now signing commits should work by passing the &lt;code&gt;-S&lt;/code&gt; option with a commit.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

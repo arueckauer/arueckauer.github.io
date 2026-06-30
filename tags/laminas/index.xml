@@ -1,34 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Laminas on Andi Rückauer</title>
-    <link>https://arueckauer.github.io/tags/laminas/</link>
-    <description>Recent content in Laminas on Andi Rückauer</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 20 Mar 2025 17:16:20 +0100</lastBuildDate>
-    <atom:link href="https://arueckauer.github.io/tags/laminas/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Use Dotenv to Configure a Laminas or Mezzio Application</title>
-      <link>https://arueckauer.github.io/posts/2025/03/use-dotenv-to-configure-a-laminas-or-mezzio-application/</link>
-      <pubDate>Thu, 20 Mar 2025 17:16:20 +0100</pubDate>
-      <guid>https://arueckauer.github.io/posts/2025/03/use-dotenv-to-configure-a-laminas-or-mezzio-application/</guid>
-      <description>&lt;p&gt;In 2019, I wrote an article about &lt;a href=&#34;https://arueckauer.github.io/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/&#34;&gt;using Dotenv to configure a Zend Expressive application&lt;/a&gt;. Since then, the project has been renamed to Laminas and the microframework to Mezzio. Plus, &lt;code&gt;vlucas/phpdotenv&lt;/code&gt; has been updated and the recommended way to use it has changed. Time for an update.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;starting-point&#34;&gt;Starting point&lt;/h2&gt;&#xA;&lt;p&gt;Any laminas or mezzio application serves as a starting point. For this article, a minimal setup is used with a &lt;code&gt;container.php&lt;/code&gt; and &lt;code&gt;container.php&lt;/code&gt; as it is provided by &lt;a href=&#34;https://github.com/mezzio/mezzio-skeleton&#34;&gt;&lt;code&gt;mezzio-skeleton&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Day 2: Clean Expressive Skeleton</title>
-      <link>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</link>
-      <pubDate>Tue, 21 May 2019 20:45:00 +0200</pubDate>
-      <guid>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</guid>
-      <description>&lt;p&gt;&lt;em&gt;This article is part of my &lt;a href=&#34;https://arueckauer.github.io/tags/100-days-of-code/&#34;&gt;#100DaysOfCode&lt;/a&gt; and #100DaysOfBlogging challenge. R1D2&lt;/em&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Whenever starting a new &lt;a href=&#34;https://getexpressive.org&#34;&gt;Zend Expressive&lt;/a&gt; project, I use the handy &lt;code&gt;zendframework/zend-expressive-skeleton&lt;/code&gt;. It creates an almost empty Expressive application structure with your choice of&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;code structure,&lt;/li&gt;&#xA;&lt;li&gt;DI container,&lt;/li&gt;&#xA;&lt;li&gt;router,&lt;/li&gt;&#xA;&lt;li&gt;template engine and&lt;/li&gt;&#xA;&lt;li&gt;error handler.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>From Flat to Modular</title>
-      <link>https://arueckauer.github.io/posts/2019/05/from-flat-to-modular/</link>
-      <pubDate>Fri, 17 May 2019 06:30:00 +0200</pubDate>
-      <guid>https://arueckauer.github.io/posts/2019/05/from-flat-to-modular/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Transforming of a flat application structure to a modular one in a Zend Expressive project&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;In an &lt;a href=&#34;https://docs.zendframework.com/zend-expressive/&#34;&gt;Expressive&lt;/a&gt; project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the &lt;a href=&#34;https://github.com/zendframework/zend-expressive-skeleton&#34;&gt;Expressive Skeleton&lt;/a&gt;. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure. It also means not only having separate modules but also separate namespaces. This makes handling class names much easier.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Laminas on Andi Rückauer</title>
+		<link>https://arueckauer.github.io/tags/laminas/</link>
+		<description>Recent content in Laminas on Andi Rückauer</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+			<copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+		
+		
+			<lastBuildDate>Thu, 20 Mar 2025 17:16:20 +0100</lastBuildDate>
+		
+			<atom:link href="https://arueckauer.github.io/tags/laminas/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Use Dotenv to Configure a Laminas or Mezzio Application</title>
+				<link>https://arueckauer.github.io/posts/2025/03/use-dotenv-to-configure-a-laminas-or-mezzio-application/</link>
+				<pubDate>Thu, 20 Mar 2025 17:16:20 +0100</pubDate>
+				<guid>https://arueckauer.github.io/posts/2025/03/use-dotenv-to-configure-a-laminas-or-mezzio-application/</guid>
+				<description>&lt;p&gt;In 2019, I wrote an article about &lt;a href=&#34;https://arueckauer.github.io/posts/2019/05/use-dotenv-to-configure-a-zend-expressive-application/&#34;&gt;using Dotenv to configure a Zend Expressive application&lt;/a&gt;. Since then, the project has been renamed to Laminas and the microframework to Mezzio. Plus, &lt;code&gt;vlucas/phpdotenv&lt;/code&gt; has been updated and the recommended way to use it has changed. Time for an update.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;starting-point&#34;&gt;Starting point&lt;/h2&gt;&#xA;&lt;p&gt;Any laminas or mezzio application serves as a starting point. For this article, a minimal setup is used with a &lt;code&gt;container.php&lt;/code&gt; and &lt;code&gt;container.php&lt;/code&gt; as it is provided by &lt;a href=&#34;https://github.com/mezzio/mezzio-skeleton&#34;&gt;&lt;code&gt;mezzio-skeleton&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Day 2: Clean Expressive Skeleton</title>
+				<link>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</link>
+				<pubDate>Tue, 21 May 2019 20:45:00 +0200</pubDate>
+				<guid>https://arueckauer.github.io/posts/2019/05/day-2-clean-expressive-skeleton/</guid>
+				<description>&lt;p&gt;&lt;em&gt;This article is part of my &lt;a href=&#34;https://arueckauer.github.io/tags/100-days-of-code/&#34;&gt;#100DaysOfCode&lt;/a&gt; and #100DaysOfBlogging challenge. R1D2&lt;/em&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Whenever starting a new &lt;a href=&#34;https://getexpressive.org&#34;&gt;Zend Expressive&lt;/a&gt; project, I use the handy &lt;code&gt;zendframework/zend-expressive-skeleton&lt;/code&gt;. It creates an almost empty Expressive application structure with your choice of&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;code structure,&lt;/li&gt;&#xA;&lt;li&gt;DI container,&lt;/li&gt;&#xA;&lt;li&gt;router,&lt;/li&gt;&#xA;&lt;li&gt;template engine and&lt;/li&gt;&#xA;&lt;li&gt;error handler.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;It comes also with two exemplary handlers and conditions for various routers and template engines. I wondered, what a cleaned-up skeleton would look like and how many bits and pieces were actually there which could be removed.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>From Flat to Modular</title>
+				<link>https://arueckauer.github.io/posts/2019/05/from-flat-to-modular/</link>
+				<pubDate>Fri, 17 May 2019 06:30:00 +0200</pubDate>
+				<guid>https://arueckauer.github.io/posts/2019/05/from-flat-to-modular/</guid>
+				<description>&lt;p&gt;&lt;em&gt;Transforming of a flat application structure to a modular one in a Zend Expressive project&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;In an &lt;a href=&#34;https://docs.zendframework.com/zend-expressive/&#34;&gt;Expressive&lt;/a&gt; project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the &lt;a href=&#34;https://github.com/zendframework/zend-expressive-skeleton&#34;&gt;Expressive Skeleton&lt;/a&gt;. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure. It also means not only having separate modules but also separate namespaces. This makes handling class names much easier.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

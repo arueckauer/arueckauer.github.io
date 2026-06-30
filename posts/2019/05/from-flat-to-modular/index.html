@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="">
+<meta name="author" content="Andi Rückauer">
 <meta name="description" content="Transforming of a flat application structure to a modular one in a Zend Expressive project
 In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure. It also means not only having separate modules but also separate namespaces. This makes handling class names much easier.
 " />
@@ -39,37 +39,37 @@ In an Expressive project I ran into the issue, where the application grew much l
 
 
 
-  <meta itemprop="name" content="From Flat to Modular">
-  <meta itemprop="description" content="Transforming of a flat application structure to a modular one in a Zend Expressive project
+	<meta itemprop="name" content="From Flat to Modular">
+	<meta itemprop="description" content="Transforming of a flat application structure to a modular one in a Zend Expressive project
 In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure. It also means not only having separate modules but also separate namespaces. This makes handling class names much easier.">
-  <meta itemprop="datePublished" content="2019-05-17T06:30:00+02:00">
-  <meta itemprop="dateModified" content="2019-05-17T06:30:00+02:00">
-  <meta itemprop="wordCount" content="488">
-  <meta itemprop="image" content="https://arueckauer.github.io/">
-  <meta itemprop="keywords" content="Zend-Expressive,Laminas,Php">
+	<meta itemprop="datePublished" content="2019-05-17T06:30:00+02:00">
+	<meta itemprop="dateModified" content="2019-05-17T06:30:00+02:00">
+	<meta itemprop="wordCount" content="488">
+	<meta itemprop="image" content="https://arueckauer.github.io/">
+	<meta itemprop="keywords" content="Zend-Expressive,Laminas,Php">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://arueckauer.github.io/">
-  <meta name="twitter:title" content="From Flat to Modular">
-  <meta name="twitter:description" content="Transforming of a flat application structure to a modular one in a Zend Expressive project
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://arueckauer.github.io/">
+	<meta name="twitter:title" content="From Flat to Modular">
+	<meta name="twitter:description" content="Transforming of a flat application structure to a modular one in a Zend Expressive project
 In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure. It also means not only having separate modules but also separate namespaces. This makes handling class names much easier.">
 
 
 
     <meta property="og:url" content="https://arueckauer.github.io/posts/2019/05/from-flat-to-modular/">
-  <meta property="og:site_name" content="Andi Rückauer">
-  <meta property="og:title" content="From Flat to Modular">
-  <meta property="og:description" content="Transforming of a flat application structure to a modular one in a Zend Expressive project
+	<meta property="og:site_name" content="Andi Rückauer">
+	<meta property="og:title" content="From Flat to Modular">
+	<meta property="og:description" content="Transforming of a flat application structure to a modular one in a Zend Expressive project
 In an Expressive project I ran into the issue, where the application grew much larger than initially expected. How about that? The project got initialized with a flat code structure, which is the default selection of the Expressive Skeleton. Flat basically means the application is organized in a single module in contrast to endless modules in the modular structure. It also means not only having separate modules but also separate namespaces. This makes handling class names much easier.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2019-05-17T06:30:00+02:00">
-    <meta property="article:modified_time" content="2019-05-17T06:30:00+02:00">
-    <meta property="article:tag" content="Zend-Expressive">
-    <meta property="article:tag" content="Laminas">
-    <meta property="article:tag" content="Php">
-    <meta property="og:image" content="https://arueckauer.github.io/">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2019-05-17T06:30:00+02:00">
+		<meta property="article:modified_time" content="2019-05-17T06:30:00+02:00">
+		<meta property="article:tag" content="Zend-Expressive">
+		<meta property="article:tag" content="Laminas">
+		<meta property="article:tag" content="Php">
+		<meta property="og:image" content="https://arueckauer.github.io/">
 
 
 
@@ -90,7 +90,7 @@ In an Expressive project I ran into the issue, where the application grew much l
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -182,36 +182,36 @@ In an Expressive project I ran into the issue, where the application grew much l
 <h2 id="flat-vs-modular-the-comparison">Flat vs. modular: the comparison</h2>
 <p>I could not find any documentation or user contributions on how to convert the structure. To find out what the differences are, I decided to create two new projects: one with a flat and one with a modular structure and then compare the two.</p>
 <p>I create a new project with flat code structure. All default selections were chosen.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ composer create-project zendframework/zend-expressive-skeleton expressive-flat
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ composer create-project zendframework/zend-expressive-skeleton expressive-flat
 </span></span></code></pre></div><p>For modular structure first question <em>What type of installation would you like?</em> was answered with 3 - Modular. For all other options the default selections where chosen.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ composer create-project zendframework/zend-expressive-skeleton expressive-modular
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ composer create-project zendframework/zend-expressive-skeleton expressive-modular
 </span></span></code></pre></div><p><img src="https://arueckauer.github.io/img/from-flat-to-modular/create-project-with-modular-code-structure.png" alt="Create project with modular code structure"></p>
 <p>The structural differences of the two projects are (1) the location of the source file within the <code>App</code> module, (2) a template folder and (3) the autoloading configuration.</p>
 <table>
-  <thead>
-      <tr>
-          <th></th>
-          <th>Flat</th>
-          <th>Modular</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Source App Module</td>
-          <td><code>src/App</code></td>
-          <td><code>src/App/src</code></td>
-      </tr>
-      <tr>
-          <td>Template Ordner</td>
-          <td><em>n/a</em></td>
-          <td><code>src/App/templates</code></td>
-      </tr>
-      <tr>
-          <td>Autoload configuration</td>
-          <td><code>&quot;App\\&quot;: &quot;src/App/&quot;</code></td>
-          <td><code>&quot;App\\&quot;: &quot;src/App/src/&quot;</code></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th></th>
+					<th>Flat</th>
+					<th>Modular</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Source App Module</td>
+					<td><code>src/App</code></td>
+					<td><code>src/App/src</code></td>
+			</tr>
+			<tr>
+					<td>Template Ordner</td>
+					<td><em>n/a</em></td>
+					<td><code>src/App/templates</code></td>
+			</tr>
+			<tr>
+					<td>Autoload configuration</td>
+					<td><code>&quot;App\\&quot;: &quot;src/App/&quot;</code></td>
+					<td><code>&quot;App\\&quot;: &quot;src/App/src/&quot;</code></td>
+			</tr>
+	</tbody>
 </table>
 <h2 id="making-the-transition">Making the transition</h2>
 <p>Consequently, I needed to make the following changes to convert the project structure:</p>
@@ -441,7 +441,7 @@ In an Expressive project I ran into the issue, where the application grew much l
 
 
 
-<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.ad54ad97364f77ede35def9096b162bb1f0b3973aa50b080f5e82fa147f6882e2a7200d7535adbf9b51bebf939f1c1ca9bbe6be87530092aca720eac4a226fda.js" integrity="sha512-rVStlzZPd&#43;3jXe&#43;QlrFiux8LOXOqULCA9egvoUf2iC4qcgDXU1rb&#43;bUb6/k58cHKm75r6HUwCSrKcg6sSiJv2g=="></script>
 
 
     

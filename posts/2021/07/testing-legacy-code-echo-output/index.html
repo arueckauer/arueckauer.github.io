@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="">
+<meta name="author" content="Andi Rückauer">
 <meta name="description" content="A tweet of Simon Schubert made me aware of an awesome talk entitled Testing Legacy Code: Safe Refactoring by Katy Ereira. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.
 Since refactoring legacy code is part of my daily job, some of these insights are quite useful and I would like to keep a note for myself in a few blog posts.
 " />
@@ -39,37 +39,37 @@ Since refactoring legacy code is part of my daily job, some of these insights ar
 
 
 
-  <meta itemprop="name" content="Testing Legacy Code: Echo Output">
-  <meta itemprop="description" content="A tweet of Simon Schubert made me aware of an awesome talk entitled Testing Legacy Code: Safe Refactoring by Katy Ereira. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.
+	<meta itemprop="name" content="Testing Legacy Code: Echo Output">
+	<meta itemprop="description" content="A tweet of Simon Schubert made me aware of an awesome talk entitled Testing Legacy Code: Safe Refactoring by Katy Ereira. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.
 Since refactoring legacy code is part of my daily job, some of these insights are quite useful and I would like to keep a note for myself in a few blog posts.">
-  <meta itemprop="datePublished" content="2021-07-06T13:51:58+02:00">
-  <meta itemprop="dateModified" content="2021-07-06T13:51:58+02:00">
-  <meta itemprop="wordCount" content="243">
-  <meta itemprop="image" content="https://arueckauer.github.io/">
-  <meta itemprop="keywords" content="Php,Testing,Legacy-Code">
+	<meta itemprop="datePublished" content="2021-07-06T13:51:58+02:00">
+	<meta itemprop="dateModified" content="2021-07-06T13:51:58+02:00">
+	<meta itemprop="wordCount" content="243">
+	<meta itemprop="image" content="https://arueckauer.github.io/">
+	<meta itemprop="keywords" content="Php,Testing,Legacy-Code">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://arueckauer.github.io/">
-  <meta name="twitter:title" content="Testing Legacy Code: Echo Output">
-  <meta name="twitter:description" content="A tweet of Simon Schubert made me aware of an awesome talk entitled Testing Legacy Code: Safe Refactoring by Katy Ereira. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://arueckauer.github.io/">
+	<meta name="twitter:title" content="Testing Legacy Code: Echo Output">
+	<meta name="twitter:description" content="A tweet of Simon Schubert made me aware of an awesome talk entitled Testing Legacy Code: Safe Refactoring by Katy Ereira. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.
 Since refactoring legacy code is part of my daily job, some of these insights are quite useful and I would like to keep a note for myself in a few blog posts.">
 
 
 
     <meta property="og:url" content="https://arueckauer.github.io/posts/2021/07/testing-legacy-code-echo-output/">
-  <meta property="og:site_name" content="Andi Rückauer">
-  <meta property="og:title" content="Testing Legacy Code: Echo Output">
-  <meta property="og:description" content="A tweet of Simon Schubert made me aware of an awesome talk entitled Testing Legacy Code: Safe Refactoring by Katy Ereira. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.
+	<meta property="og:site_name" content="Andi Rückauer">
+	<meta property="og:title" content="Testing Legacy Code: Echo Output">
+	<meta property="og:description" content="A tweet of Simon Schubert made me aware of an awesome talk entitled Testing Legacy Code: Safe Refactoring by Katy Ereira. She presented this last year at PHP UK 2020 with tons of valuable information about how to write tests for refactoring legacy code.
 Since refactoring legacy code is part of my daily job, some of these insights are quite useful and I would like to keep a note for myself in a few blog posts.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2021-07-06T13:51:58+02:00">
-    <meta property="article:modified_time" content="2021-07-06T13:51:58+02:00">
-    <meta property="article:tag" content="Php">
-    <meta property="article:tag" content="Testing">
-    <meta property="article:tag" content="Legacy-Code">
-    <meta property="og:image" content="https://arueckauer.github.io/">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2021-07-06T13:51:58+02:00">
+		<meta property="article:modified_time" content="2021-07-06T13:51:58+02:00">
+		<meta property="article:tag" content="Php">
+		<meta property="article:tag" content="Testing">
+		<meta property="article:tag" content="Legacy-Code">
+		<meta property="og:image" content="https://arueckauer.github.io/">
 
 
 
@@ -90,7 +90,7 @@ Since refactoring legacy code is part of my daily job, some of these insights ar
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -180,7 +180,7 @@ Since refactoring legacy code is part of my daily job, some of these insights ar
 <p>The used examples are all taken from the talk. I made few adjustments to make them runnable instead focusing on the bear minimum. They are also available int the <a href="https://github.com/arueckauer/testing-legacy-code">testing-legacy-code</a> repository.</p>
 <h2 id="function-with-echo-output">Function with echo output</h2>
 <p>Given is a function which echos or prints an output.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>);
 </span></span><span style="display:flex;"><span>
@@ -199,7 +199,7 @@ Since refactoring legacy code is part of my daily job, some of these insights ar
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="test">Test</h2>
 <p>The test is utilizing output buffering control to capture the echo output and make assertions on it.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>);
 </span></span><span style="display:flex;"><span>
@@ -457,7 +457,7 @@ Since refactoring legacy code is part of my daily job, some of these insights ar
 
 
 
-<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.ad54ad97364f77ede35def9096b162bb1f0b3973aa50b080f5e82fa147f6882e2a7200d7535adbf9b51bebf939f1c1ca9bbe6be87530092aca720eac4a226fda.js" integrity="sha512-rVStlzZPd&#43;3jXe&#43;QlrFiux8LOXOqULCA9egvoUf2iC4qcgDXU1rb&#43;bUb6/k58cHKm75r6HUwCSrKcg6sSiJv2g=="></script>
 
 
     

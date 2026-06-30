@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="">
+<meta name="author" content="Andi Rückauer">
 <meta name="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
 This is part one of a series of articles about the PHP Version Switcher.
 Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it&rsquo;s still not the choice environment for a typical PHP web application.
@@ -40,40 +40,40 @@ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Ver
 
 
 
-  <meta itemprop="name" content="Php Version Switcher: PowerShell Module">
-  <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
+	<meta itemprop="name" content="Php Version Switcher: PowerShell Module">
+	<meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
 This is part one of a series of articles about the PHP Version Switcher.
 Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it’s still not the choice environment for a typical PHP web application.">
-  <meta itemprop="datePublished" content="2019-05-28T20:36:42+02:00">
-  <meta itemprop="dateModified" content="2019-05-28T20:36:42+02:00">
-  <meta itemprop="wordCount" content="1058">
-  <meta itemprop="image" content="https://arueckauer.github.io/">
-  <meta itemprop="keywords" content="100-Days-of-Code,Php,Powershell">
+	<meta itemprop="datePublished" content="2019-05-28T20:36:42+02:00">
+	<meta itemprop="dateModified" content="2019-05-28T20:36:42+02:00">
+	<meta itemprop="wordCount" content="1058">
+	<meta itemprop="image" content="https://arueckauer.github.io/">
+	<meta itemprop="keywords" content="100-Days-of-Code,Php,Powershell">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://arueckauer.github.io/">
-  <meta name="twitter:title" content="Php Version Switcher: PowerShell Module">
-  <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://arueckauer.github.io/">
+	<meta name="twitter:title" content="Php Version Switcher: PowerShell Module">
+	<meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
 This is part one of a series of articles about the PHP Version Switcher.
 Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it’s still not the choice environment for a typical PHP web application.">
 
 
 
     <meta property="og:url" content="https://arueckauer.github.io/posts/2019/05/php-version-switcher-powershell-module/">
-  <meta property="og:site_name" content="Andi Rückauer">
-  <meta property="og:title" content="Php Version Switcher: PowerShell Module">
-  <meta property="og:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
+	<meta property="og:site_name" content="Andi Rückauer">
+	<meta property="og:title" content="Php Version Switcher: PowerShell Module">
+	<meta property="og:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D8
 This is part one of a series of articles about the PHP Version Switcher.
 Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Version Switcher: The Structure Part Four: Php Version Switcher: The Function Most of our costumers provide Windows Servers for the PHP applications we implement and maintain for them. Although it has become much easier to get a PHP running under Windows than ten years ago, it’s still not the choice environment for a typical PHP web application.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2019-05-28T20:36:42+02:00">
-    <meta property="article:modified_time" content="2019-05-28T20:36:42+02:00">
-    <meta property="article:tag" content="100-Days-of-Code">
-    <meta property="article:tag" content="Php">
-    <meta property="article:tag" content="Powershell">
-    <meta property="og:image" content="https://arueckauer.github.io/">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2019-05-28T20:36:42+02:00">
+		<meta property="article:modified_time" content="2019-05-28T20:36:42+02:00">
+		<meta property="article:tag" content="100-Days-of-Code">
+		<meta property="article:tag" content="Php">
+		<meta property="article:tag" content="Powershell">
+		<meta property="og:image" content="https://arueckauer.github.io/">
 
 
 
@@ -94,7 +94,7 @@ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Ver
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -196,7 +196,7 @@ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Ver
 <p>To create my first PowerShell module, I follow the article <a href="https://docs.microsoft.com/en-us/powershell/developer/module/how-to-write-a-powershell-script-module">How to Write a PowerShell Script Module</a>. Right now I only need steps 1 and 2. If you want to know more about the steps or further steps not mentioned here, head over to the referenced article.</p>
 <h3 id="1-save-powershell-script-with-a-psm1-extension">1. Save PowerShell script with a .psm1 extension</h3>
 <p>Since I don&rsquo;t have an existing PowerShell script and can&rsquo;t just dump in the batch file, I am starting with a fresh function. For now, I just want to declare my function and parameters. Then give the user some output. The real functionality will be added later.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Php-VersionSwitcher
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Php-VersionSwitcher
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Param</span> (
 </span></span><span style="display:flex;"><span>        [Parameter(<span style="color:#a6e22e">Mandatory</span>=$true, <span style="color:#a6e22e">ValueFromPipeline</span>=$true)] [Alias(<span style="color:#e6db74">&#34;v&#34;</span>)] [<span style="color:#66d9ef">String</span>]$version
@@ -210,12 +210,12 @@ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Ver
 </span></span></code></pre></div><p>I save this to the file <code>Php-VersionSwitcher.psm1</code>.</p>
 <h3 id="2-export-modulemember">2. Export-ModuleMember</h3>
 <p>The function would be exposed by default. It is recommended however, to explicitly declare functions one wants to expose. Here it goes.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Export-ModuleMember -Function Php-VersionSwitcher
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Export-ModuleMember -Function Php-VersionSwitcher
 </span></span></code></pre></div><h3 id="create-powershell-module-manifest">Create PowerShell Module Manifest</h3>
 <p>Next, I follow the instructions found in <a href="https://docs.microsoft.com/en-us/powershell/developer/module/how-to-write-a-powershell-module-manifest">How to Write a PowerShell Module Manifest</a>. I&rsquo;ll go with option 1.b. and create the Manifest with the <a href="https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/New-ModuleManifest">New-ModuleManifest</a> cmdlet.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>New-ModuleManifest .\Php-VersionSwitcher.psd1 -ModuleVersion <span style="color:#ae81ff">1.0</span> -Author <span style="color:#e6db74">&#34;Andi Rückauer&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>New-ModuleManifest .\Php-VersionSwitcher.psd1 -ModuleVersion <span style="color:#ae81ff">1.0</span> -Author <span style="color:#e6db74">&#34;Andi Rückauer&#34;</span>
 </span></span></code></pre></div><p>I open the <code>Php-VersionSwitcher.psd1</code> and update necessary and removing unnecessary information. This is what it looks like now.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>@{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>@{
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Die diesem Manifest zugeordnete Skript- oder Binärmoduldatei.</span>
 </span></span><span style="display:flex;"><span>    RootModule          = <span style="color:#e6db74">&#39;Php-VersionSwitcher.psm1&#39;</span>
@@ -283,12 +283,13 @@ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Ver
 <p>I am moving the two created files <code>Php-VersionSwitcher.psm1</code> and <code>Php-VersionSwitcher.psd1</code> to a new home for my custom module: <code>C:\Users\Rueckauer\Documents\WindowsPowerShell\Modules\Php-VersionSwitcher\1.0.0</code>.</p>
 <h2 id="import-module">Import-Module</h2>
 <p>In my PowerShell profile (<code>C:\Users\Rueckauer\Documents\WindowsPowerShell\profile.ps1</code>) I add a line to import my new module.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Import-Module Php-VersionSwitcher
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Import-Module Php-VersionSwitcher
 </span></span></code></pre></div><h2 id="test-it">Test it</h2>
 <p>Now I power up a new PowerShell and try to access the <code>Php-VersionSwitcher</code> function.</p>
 <p>Hm, I do get a warning. 🤔</p>
 <blockquote>
-<p>WARNUNG: Die Namen einiger importierter Befehle auf Modul &ldquo;Php-VersionSwitcher&rdquo; enthalten nicht genehmigte Verben, sodass deren Auffindbarkeit erschwert werden kann. Wenn Sie die Befehle mit nicht genehmigten Verben finden möchten, führen Sie den Import-Module-Befehl erneut mit dem Verbose-Parameter aus. Sie können durch Eingeben von &ldquo;Get-Verb&rdquo; eine Liste der genehmigten Verben anzeigen.</p></blockquote>
+<p>WARNUNG: Die Namen einiger importierter Befehle auf Modul &ldquo;Php-VersionSwitcher&rdquo; enthalten nicht genehmigte Verben, sodass deren Auffindbarkeit erschwert werden kann. Wenn Sie die Befehle mit nicht genehmigten Verben finden möchten, führen Sie den Import-Module-Befehl erneut mit dem Verbose-Parameter aus. Sie können durch Eingeben von &ldquo;Get-Verb&rdquo; eine Liste der genehmigten Verben anzeigen.</p>
+</blockquote>
 <p>Something is not right with the module name. I need to figure that out later. Let&rsquo;s see, if it works despite the warning.</p>
 <p><img src="https://arueckauer.github.io/img/php-version-switcher-powershell-module/php-versionswitcher.png" alt="Execution of Php-VersionSwitcher"></p>
 <p>Yes, neat! 💪🏻</p>
@@ -503,7 +504,7 @@ Part Two: Php Version Switcher: PowerShell Naming Convention Part Three: Php Ver
 
 
 
-<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.ad54ad97364f77ede35def9096b162bb1f0b3973aa50b080f5e82fa147f6882e2a7200d7535adbf9b51bebf939f1c1ca9bbe6be87530092aca720eac4a226fda.js" integrity="sha512-rVStlzZPd&#43;3jXe&#43;QlrFiux8LOXOqULCA9egvoUf2iC4qcgDXU1rb&#43;bUb6/k58cHKm75r6HUwCSrKcg6sSiJv2g=="></script>
 
 
     

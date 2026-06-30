@@ -5,10 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="">
+<meta name="author" content="Andi Rückauer">
 <meta name="description" content="This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
 vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.
 https://github.com/bovigo/vfsStream
+Function with filesystem interaction Given is a method which increments the counter persisted in the local filesystem.
 " />
 <meta name="keywords" content="andi, rückauer, blog, software, development, php, testing, legacy-code" />
 <meta name="robots" content="noodp" />
@@ -40,40 +41,43 @@ https://github.com/bovigo/vfsStream
 
 
 
-  <meta itemprop="name" content="Testing Legacy Code: Filesystem Interaction">
-  <meta itemprop="description" content="This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
+	<meta itemprop="name" content="Testing Legacy Code: Filesystem Interaction">
+	<meta itemprop="description" content="This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
 vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.
-https://github.com/bovigo/vfsStream">
-  <meta itemprop="datePublished" content="2021-07-08T15:04:22+02:00">
-  <meta itemprop="dateModified" content="2021-07-08T15:04:22+02:00">
-  <meta itemprop="wordCount" content="221">
-  <meta itemprop="image" content="https://arueckauer.github.io/">
-  <meta itemprop="keywords" content="Php,Testing,Legacy-Code">
+https://github.com/bovigo/vfsStream
+Function with filesystem interaction Given is a method which increments the counter persisted in the local filesystem.">
+	<meta itemprop="datePublished" content="2021-07-08T15:04:22+02:00">
+	<meta itemprop="dateModified" content="2021-07-08T15:04:22+02:00">
+	<meta itemprop="wordCount" content="221">
+	<meta itemprop="image" content="https://arueckauer.github.io/">
+	<meta itemprop="keywords" content="Php,Testing,Legacy-Code">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://arueckauer.github.io/">
-  <meta name="twitter:title" content="Testing Legacy Code: Filesystem Interaction">
-  <meta name="twitter:description" content="This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://arueckauer.github.io/">
+	<meta name="twitter:title" content="Testing Legacy Code: Filesystem Interaction">
+	<meta name="twitter:description" content="This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
 vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.
-https://github.com/bovigo/vfsStream">
+https://github.com/bovigo/vfsStream
+Function with filesystem interaction Given is a method which increments the counter persisted in the local filesystem.">
 
 
 
     <meta property="og:url" content="https://arueckauer.github.io/posts/2021/07/testing-legacy-code-filesystem-interaction/">
-  <meta property="og:site_name" content="Andi Rückauer">
-  <meta property="og:title" content="Testing Legacy Code: Filesystem Interaction">
-  <meta property="og:description" content="This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
+	<meta property="og:site_name" content="Andi Rückauer">
+	<meta property="og:title" content="Testing Legacy Code: Filesystem Interaction">
+	<meta property="og:description" content="This is the third article in the series of Testing Legacy Code. Check out the first part Testing Legacy Code: Echo Output in which I provide information about the origin of these examples.
 vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.
-https://github.com/bovigo/vfsStream">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2021-07-08T15:04:22+02:00">
-    <meta property="article:modified_time" content="2021-07-08T15:04:22+02:00">
-    <meta property="article:tag" content="Php">
-    <meta property="article:tag" content="Testing">
-    <meta property="article:tag" content="Legacy-Code">
-    <meta property="og:image" content="https://arueckauer.github.io/">
+https://github.com/bovigo/vfsStream
+Function with filesystem interaction Given is a method which increments the counter persisted in the local filesystem.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2021-07-08T15:04:22+02:00">
+		<meta property="article:modified_time" content="2021-07-08T15:04:22+02:00">
+		<meta property="article:tag" content="Php">
+		<meta property="article:tag" content="Testing">
+		<meta property="article:tag" content="Legacy-Code">
+		<meta property="og:image" content="https://arueckauer.github.io/">
 
 
 
@@ -94,7 +98,7 @@ https://github.com/bovigo/vfsStream">
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -181,11 +185,12 @@ https://github.com/bovigo/vfsStream">
       <div class="post-content">
         <p>This is the third article in the series of Testing Legacy Code. Check out the first part <a href="https://arueckauer.github.io/posts/2021/07/testing-legacy-code-echo-output/">Testing Legacy Code: Echo Output</a> in which I provide information about the origin of these examples.</p>
 <blockquote>
-<p>vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.</p></blockquote>
+<p>vfsStream is a stream wrapper for a virtual file system that may be helpful in unit tests to mock the real file system. It can be used with any unit test framework, like PHPUnit or SimpleTest.</p>
+</blockquote>
 <p><a href="https://github.com/bovigo/vfsStream">https://github.com/bovigo/vfsStream</a></p>
 <h2 id="function-with-filesystem-interaction">Function with filesystem interaction</h2>
 <p>Given is a method which increments the counter persisted in the local filesystem.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>);
 </span></span><span style="display:flex;"><span>
@@ -203,7 +208,7 @@ https://github.com/bovigo/vfsStream">
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Before writing a test for it, a change to inject the dependency is required.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>);
 </span></span><span style="display:flex;"><span>
@@ -222,7 +227,7 @@ https://github.com/bovigo/vfsStream">
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="test">Test</h2>
 <p>With the changed method, vfsStream can now be utilized to inject a virtual file for testing.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">declare</span>(<span style="color:#a6e22e">strict_types</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>);
 </span></span><span style="display:flex;"><span>
@@ -464,7 +469,7 @@ https://github.com/bovigo/vfsStream">
 
 
 
-<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.ad54ad97364f77ede35def9096b162bb1f0b3973aa50b080f5e82fa147f6882e2a7200d7535adbf9b51bebf939f1c1ca9bbe6be87530092aca720eac4a226fda.js" integrity="sha512-rVStlzZPd&#43;3jXe&#43;QlrFiux8LOXOqULCA9egvoUf2iC4qcgDXU1rb&#43;bUb6/k58cHKm75r6HUwCSrKcg6sSiJv2g=="></script>
 
 
     

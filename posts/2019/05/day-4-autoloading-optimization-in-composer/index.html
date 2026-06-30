@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="">
+<meta name="author" content="Andi Rückauer">
 <meta name="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
 Today I&rsquo;m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
@@ -42,22 +42,22 @@ Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative
 
 
 
-  <meta itemprop="name" content="Day 4: Autoloading Optimization in Composer">
-  <meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
+	<meta itemprop="name" content="Day 4: Autoloading Optimization in Composer">
+	<meta itemprop="description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
 Today I’m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
 Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.
 Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative class maps Optimization Level 2/B: APCu cache I will not get into detail, which level and options is doing what. The article is very brief and clear already.">
-  <meta itemprop="datePublished" content="2019-05-23T23:00:00+02:00">
-  <meta itemprop="dateModified" content="2019-05-23T23:00:00+02:00">
-  <meta itemprop="wordCount" content="445">
-  <meta itemprop="image" content="https://arueckauer.github.io/chuttersnap.jpg">
-  <meta itemprop="keywords" content="100-Days-of-Code,Composer,Autoloading,Php">
+	<meta itemprop="datePublished" content="2019-05-23T23:00:00+02:00">
+	<meta itemprop="dateModified" content="2019-05-23T23:00:00+02:00">
+	<meta itemprop="wordCount" content="445">
+	<meta itemprop="image" content="https://arueckauer.github.io/chuttersnap.jpg">
+	<meta itemprop="keywords" content="100-Days-of-Code,Composer,Autoloading,Php">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://arueckauer.github.io/chuttersnap.jpg">
-  <meta name="twitter:title" content="Day 4: Autoloading Optimization in Composer">
-  <meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://arueckauer.github.io/chuttersnap.jpg">
+	<meta name="twitter:title" content="Day 4: Autoloading Optimization in Composer">
+	<meta name="twitter:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
 Today I’m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
 Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.
@@ -66,23 +66,23 @@ Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative
 
 
     <meta property="og:url" content="https://arueckauer.github.io/posts/2019/05/day-4-autoloading-optimization-in-composer/">
-  <meta property="og:site_name" content="Andi Rückauer">
-  <meta property="og:title" content="Day 4: Autoloading Optimization in Composer">
-  <meta property="og:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
+	<meta property="og:site_name" content="Andi Rückauer">
+	<meta property="og:title" content="Day 4: Autoloading Optimization in Composer">
+	<meta property="og:description" content="This article is part of my #100DaysOfCode and #100DaysOfBlogging challenge. R1D4
 Today I’m studying the Autoloader Optimization article of the Composer documentation.
 Purpose The optimization is designed to reduce the performance impact of the autoloader. It is not intended for use in development as it will have undesired side-effects.
 Optimization levels There are two levels of optimization and the second level comes with two options. These two options cannot be combined.
 Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative class maps Optimization Level 2/B: APCu cache I will not get into detail, which level and options is doing what. The article is very brief and clear already.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2019-05-23T23:00:00+02:00">
-    <meta property="article:modified_time" content="2019-05-23T23:00:00+02:00">
-    <meta property="article:tag" content="100-Days-of-Code">
-    <meta property="article:tag" content="Composer">
-    <meta property="article:tag" content="Autoloading">
-    <meta property="article:tag" content="Php">
-    <meta property="og:image" content="https://arueckauer.github.io/chuttersnap.jpg">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2019-05-23T23:00:00+02:00">
+		<meta property="article:modified_time" content="2019-05-23T23:00:00+02:00">
+		<meta property="article:tag" content="100-Days-of-Code">
+		<meta property="article:tag" content="Composer">
+		<meta property="article:tag" content="Autoloading">
+		<meta property="article:tag" content="Php">
+		<meta property="og:image" content="https://arueckauer.github.io/chuttersnap.jpg">
 
 
 
@@ -103,7 +103,7 @@ Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS58P4P02H"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -210,7 +210,7 @@ Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative
 </ul>
 <h3 id="create-new-project">Create new project</h3>
 <p>To compare the different optimization levels any application utilizing the PSR-4 standard will do. I choose an empty <a href="https://symfony.com/">Symfony</a> application.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>composer create-project symfony/website-skeleton my-project
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>composer create-project symfony/website-skeleton my-project
 </span></span></code></pre></div><h3 id="create-autoloading-with-optimization-levels-0-1-and-2a">Create autoloading with optimization levels 0, 1 and 2/A</h3>
 <p>The <code>create-project</code> command will already execute an <code>install</code>. The application has now no autoloading optimization and is ready for development. I copy the <code>.\vendor\composer</code> folder to a different location. I then execute <code>composer dump-autoload -o</code> and <code>composer dump-autoload -a</code> and copy the <code>.\vendor\composer</code> after each command execution.</p>
 <h3 id="whats-the-difference">What&rsquo;s the difference?</h3>
@@ -220,8 +220,8 @@ Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative
 <h4 id="level-1">Level 1</h4>
 <p>Level 1 registers PSR-0 and PSR-4 directories to the <code>Composer\Autoload\ClassLoader</code>. If a given class cannot be found, it falls back to look in the filesystem according to the registered rules.</p>
 <p><code>.\vendor\composer\autoload_real.php</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// [..]
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            $map <span style="color:#f92672">=</span> <span style="color:#66d9ef">require</span> <span style="color:#66d9ef">__DIR__</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;/autoload_namespaces.php&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// [..]
+</span></span></span><span style="display:flex;"><span>            $map <span style="color:#f92672">=</span> <span style="color:#66d9ef">require</span> <span style="color:#66d9ef">__DIR__</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;/autoload_namespaces.php&#39;</span>;
 </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">foreach</span> ($map <span style="color:#66d9ef">as</span> $namespace <span style="color:#f92672">=&gt;</span> $path) {
 </span></span><span style="display:flex;"><span>                $loader<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">set</span>($namespace, $path);
 </span></span><span style="display:flex;"><span>            }
@@ -234,15 +234,16 @@ Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative
 </span></span></span></code></pre></div><h4 id="level-2a">Level 2/A</h4>
 <p>Whereas Level 2/A does not register PSR-0 and PSR-4 directories and instead sets <code>$classMapAuthoritative</code>in <code>Composer\Autoload\ClassLoader</code> to <code>true</code>.</p>
 <blockquote>
-<p>Turns off searching the prefix and fallback directories for classes that have not been registered with the class map.</p></blockquote>
+<p>Turns off searching the prefix and fallback directories for classes that have not been registered with the class map.</p>
+</blockquote>
 <p><code>.\vendor\composer\autoload_real.php</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// [..]
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        $loader<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setClassMapAuthoritative</span>(<span style="color:#66d9ef">true</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// [..]
+</span></span></span><span style="display:flex;"><span>        $loader<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setClassMapAuthoritative</span>(<span style="color:#66d9ef">true</span>);
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// [..]
 </span></span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
 <p>This study has helped me gain a better understanding of what is happening behind the scene in composer&rsquo;s autoloading. Although everything is already very well documented in the article, I learn much better, if I take things apart.</p>
 <p>So definitely in production.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>composer install --no-ansi --no-dev --no-interaction --no-progress --no-scripts --classmap-authoritative
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>composer install --no-ansi --no-dev --no-interaction --no-progress --no-scripts --classmap-authoritative
 </span></span></code></pre></div>
       </div>
     </article>
@@ -454,7 +455,7 @@ Optimization Level 1: Class map generation Optimization Level 2/A: Authoritative
 
 
 
-<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.e89fda0f29b95d33f6f4224dd9e5cf69d84aff3818be2b0d73e731689cc374261b016d17d46f8381962fb4a1577ba3017b1f23509d894f6e66431f988c00889e.js" integrity="sha512-6J/aDym5XTP29CJN2eXPadhK/zgYvisNc&#43;cxaJzDdCYbAW0X1G&#43;DgZYvtKFXe6MBex8jUJ2JT25mQx&#43;YjACIng=="></script>
+<script type="text/javascript" src="https://arueckauer.github.io/bundle.min.ad54ad97364f77ede35def9096b162bb1f0b3973aa50b080f5e82fa147f6882e2a7200d7535adbf9b51bebf939f1c1ca9bbe6be87530092aca720eac4a226fda.js" integrity="sha512-rVStlzZPd&#43;3jXe&#43;QlrFiux8LOXOqULCA9egvoUf2iC4qcgDXU1rb&#43;bUb6/k58cHKm75r6HUwCSrKcg6sSiJv2g=="></script>
 
 
     
